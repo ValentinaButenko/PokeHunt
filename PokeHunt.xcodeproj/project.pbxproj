@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F6DCD15E1D3FB09900FA576E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DCD15D1D3FB09900FA576E /* AppDelegate.swift */; };
-		F6DCD1601D3FB09900FA576E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DCD15F1D3FB09900FA576E /* ViewController.swift */; };
-		F6DCD1631D3FB09900FA576E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6DCD1611D3FB09900FA576E /* Main.storyboard */; };
+		F6DCD1601D3FB09900FA576E /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DCD15F1D3FB09900FA576E /* MapVC.swift */; };
 		F6DCD1651D3FB09900FA576E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6DCD1641D3FB09900FA576E /* Assets.xcassets */; };
 		F6DCD1681D3FB09900FA576E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6DCD1661D3FB09900FA576E /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -17,8 +16,7 @@
 /* Begin PBXFileReference section */
 		F6DCD15A1D3FB09900FA576E /* PokeHunt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeHunt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6DCD15D1D3FB09900FA576E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F6DCD15F1D3FB09900FA576E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F6DCD1621D3FB09900FA576E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F6DCD15F1D3FB09900FA576E /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		F6DCD1641D3FB09900FA576E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F6DCD1671D3FB09900FA576E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F6DCD1691D3FB09900FA576E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -55,8 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				F6DCD15D1D3FB09900FA576E /* AppDelegate.swift */,
-				F6DCD15F1D3FB09900FA576E /* ViewController.swift */,
-				F6DCD1611D3FB09900FA576E /* Main.storyboard */,
+				F6DCD15F1D3FB09900FA576E /* MapVC.swift */,
 				F6DCD1641D3FB09900FA576E /* Assets.xcassets */,
 				F6DCD1661D3FB09900FA576E /* LaunchScreen.storyboard */,
 				F6DCD1691D3FB09900FA576E /* Info.plist */,
@@ -124,7 +121,6 @@
 			files = (
 				F6DCD1681D3FB09900FA576E /* LaunchScreen.storyboard in Resources */,
 				F6DCD1651D3FB09900FA576E /* Assets.xcassets in Resources */,
-				F6DCD1631D3FB09900FA576E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,7 +131,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6DCD1601D3FB09900FA576E /* ViewController.swift in Sources */,
+				F6DCD1601D3FB09900FA576E /* MapVC.swift in Sources */,
 				F6DCD15E1D3FB09900FA576E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,14 +139,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F6DCD1611D3FB09900FA576E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F6DCD1621D3FB09900FA576E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F6DCD1661D3FB09900FA576E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -288,6 +276,7 @@
 				F6DCD16E1D3FB09900FA576E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
