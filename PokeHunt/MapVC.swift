@@ -11,7 +11,6 @@ import SnapKit
 import GoogleMaps
 
 class MapVC: UIViewController {
-
     var mapView: GMSMapView!
     var searchBtn: UIButton!
     var payBtn: UIButton!
@@ -19,10 +18,6 @@ class MapVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setup()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
     }
 
     func setup(){
@@ -36,21 +31,14 @@ class MapVC: UIViewController {
         guard let nc = self.navigationController else{
             return
         }
-//        let rightBtn = UIButton(frame: CGRectMake(0, 0, 19, 24))
-//        let leftBtn = UIButton(frame: CGRectMake(0, 0, 24, 24))
-//        let titleView = UIImageView(frame: CGRectMake(0, 0, 100, 30))
-
-//        rightBtn.setImage(UIImage(named: R.image.share.name), forState: UIControlState.Normal)
-//        rightBtn.addTarget(self, action: #selector(MapVC.selectedShare(_:)), forControlEvents: UIControlEvents.TouchUpInside)
-
-//        leftBtn.setImage(UIImage(named: R.image.settings.name), forState: UIControlState.Normal)
-//        leftBtn.addTarget(self, action: #selector(MapVC.selectedSettings(_:)), forControlEvents: UIControlEvents.TouchUpInside)
 
         let titleView = UIImageView(image: R.image.pokehunt()?.imageWithRenderingMode(.AlwaysOriginal))
 
         nc.navigationBar.barTintColor = UIColor(white: (255/255), alpha: 1.0)
-//        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: rightBtn)
-//        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: leftBtn)
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: R.image.settings()?.imageWithRenderingMode(.AlwaysOriginal),
+                                                                style: .Plain,
+                                                                target: nil,
+                                                                action: nil)
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: R.image.share()?.imageWithRenderingMode(.AlwaysOriginal),
                                                                  style: .Plain,
                                                                  target: nil,
@@ -83,7 +71,6 @@ class MapVC: UIViewController {
         searchBtn.snp_makeConstraints { (make) in
             make.trailing.equalTo(view).inset(12)
             make.bottom.equalTo(view).inset(18)
-//            make.width.height.equalTo(72)
         }
         self.searchBtn = searchBtn
     }
@@ -91,7 +78,9 @@ class MapVC: UIViewController {
     func setupPayButton(){
         let payBtn = UIButton()
         payBtn.translatesAutoresizingMaskIntoConstraints = false
-        payBtn.setBackgroundImage(UIImage(named: R.image.pay.name), forState: UIControlState.Normal)
+
+        payBtn.setBackgroundImage(R.image.pay()!.imageWithRenderingMode(.AlwaysOriginal),
+                                  forState: UIControlState.Normal)
         payBtn.addTarget(self, action: #selector(MapVC.removeAds(_:)), forControlEvents: UIControlEvents.TouchUpInside)
 
         view.addSubview(payBtn)
@@ -99,7 +88,6 @@ class MapVC: UIViewController {
         payBtn.snp_makeConstraints { (make) in
             make.leading.equalTo(view).inset(12)
             make.bottom.equalTo(view).inset(18)
-            make.width.height.equalTo(72)
         }
         self.payBtn = payBtn
     }
