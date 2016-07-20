@@ -13,6 +13,7 @@
 		12455EE11D3F9D1C005DE4F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12455EE01D3F9D1C005DE4F1 /* Assets.xcassets */; };
 		12455EE41D3F9D1C005DE4F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12455EE21D3F9D1C005DE4F1 /* LaunchScreen.storyboard */; };
 		65A3DC730FE5545ED86313ED /* Pods_PockeHunt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0F39773008AFAEB23E183C2 /* Pods_PockeHunt.framework */; };
+		F6DCD1501D3FA56800FA576E /* APIkey.csv in Resources */ = {isa = PBXBuildFile; fileRef = F6DCD14F1D3FA56800FA576E /* APIkey.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		19C71529E56FB399BFE74B16 /* Pods-PockeHunt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PockeHunt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PockeHunt/Pods-PockeHunt.debug.xcconfig"; sourceTree = "<group>"; };
 		A6214765ACC3BA7E4D53B119 /* Pods-PockeHunt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PockeHunt.release.xcconfig"; path = "Pods/Target Support Files/Pods-PockeHunt/Pods-PockeHunt.release.xcconfig"; sourceTree = "<group>"; };
 		F0F39773008AFAEB23E183C2 /* Pods_PockeHunt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PockeHunt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6DCD14F1D3FA56800FA576E /* APIkey.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = APIkey.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				12455EE01D3F9D1C005DE4F1 /* Assets.xcassets */,
 				12455EE21D3F9D1C005DE4F1 /* LaunchScreen.storyboard */,
 				12455EE51D3F9D1C005DE4F1 /* Info.plist */,
+				F6DCD14E1D3FA56800FA576E /* data */,
 			);
 			path = PockeHunt;
 			sourceTree = "<group>";
@@ -86,6 +89,14 @@
 				F0F39773008AFAEB23E183C2 /* Pods_PockeHunt.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F6DCD14E1D3FA56800FA576E /* data */ = {
+			isa = PBXGroup;
+			children = (
+				F6DCD14F1D3FA56800FA576E /* APIkey.csv */,
+			);
+			path = data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +163,7 @@
 				12455EE41D3F9D1C005DE4F1 /* LaunchScreen.storyboard in Resources */,
 				12455EE11D3F9D1C005DE4F1 /* Assets.xcassets in Resources */,
 				12455EDF1D3F9D1C005DE4F1 /* Main.storyboard in Resources */,
+				F6DCD1501D3FA56800FA576E /* APIkey.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
