@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  PockeHunt
+//  PokeHunt
 //
-//  Created by Dmitry Fa[n]tastik on 20/07/2016.
+//  Created by Valentina Butenko on 7/20/16.
 //  Copyright © 2016 Fantastik Solution. All rights reserved.
 //
 
