@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "pokeball.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "pokeball.png",
       "scale" : "2x"
     },
     {

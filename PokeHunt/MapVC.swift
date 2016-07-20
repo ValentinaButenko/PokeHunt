@@ -36,22 +36,25 @@ class MapVC: UIViewController {
         guard let nc = self.navigationController else{
             return
         }
-        let rightBtn = UIButton(frame: CGRectMake(0, 0, 19, 24))
-        let leftBtn = UIButton(frame: CGRectMake(0, 0, 24, 24))
-        let titleView = UIImageView(frame: CGRectMake(0, 0, 100, 30))
+//        let rightBtn = UIButton(frame: CGRectMake(0, 0, 19, 24))
+//        let leftBtn = UIButton(frame: CGRectMake(0, 0, 24, 24))
+//        let titleView = UIImageView(frame: CGRectMake(0, 0, 100, 30))
 
-        rightBtn.setImage(UIImage(named: R.image.share.name), forState: UIControlState.Normal)
-        rightBtn.addTarget(self, action: #selector(MapVC.selectedShare(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+//        rightBtn.setImage(UIImage(named: R.image.share.name), forState: UIControlState.Normal)
+//        rightBtn.addTarget(self, action: #selector(MapVC.selectedShare(_:)), forControlEvents: UIControlEvents.TouchUpInside)
 
-        leftBtn.setImage(UIImage(named: R.image.settings.name), forState: UIControlState.Normal)
-        leftBtn.addTarget(self, action: #selector(MapVC.selectedSettings(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+//        leftBtn.setImage(UIImage(named: R.image.settings.name), forState: UIControlState.Normal)
+//        leftBtn.addTarget(self, action: #selector(MapVC.selectedSettings(_:)), forControlEvents: UIControlEvents.TouchUpInside)
 
-        titleView.contentMode = .ScaleAspectFit
-        titleView.image = UIImage(named: R.image.pokehunt.name)
+        let titleView = UIImageView(image: R.image.pokehunt()?.imageWithRenderingMode(.AlwaysOriginal))
 
         nc.navigationBar.barTintColor = UIColor(white: (255/255), alpha: 1.0)
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: rightBtn)
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: leftBtn)
+//        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: rightBtn)
+//        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: leftBtn)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: R.image.share()?.imageWithRenderingMode(.AlwaysOriginal),
+                                                                 style: .Plain,
+                                                                 target: nil,
+                                                                 action: nil)
         self.navigationItem.titleView = titleView
     }
 
@@ -71,7 +74,8 @@ class MapVC: UIViewController {
     func setupSearchButton(){
         let searchBtn = UIButton()
         searchBtn.translatesAutoresizingMaskIntoConstraints = false
-        searchBtn.setBackgroundImage(UIImage(named: R.image.pokeball.name), forState: UIControlState.Normal)
+        searchBtn.setBackgroundImage(R.image.pokeball()!.imageWithRenderingMode(.AlwaysOriginal),
+                                     forState: UIControlState.Normal)
         searchBtn.addTarget(self, action: #selector(MapVC.searchPokemon(_:)), forControlEvents: UIControlEvents.TouchUpInside)
 
         view.addSubview(searchBtn)
@@ -79,7 +83,7 @@ class MapVC: UIViewController {
         searchBtn.snp_makeConstraints { (make) in
             make.trailing.equalTo(view).inset(12)
             make.bottom.equalTo(view).inset(18)
-            make.width.height.equalTo(72)
+//            make.width.height.equalTo(72)
         }
         self.searchBtn = searchBtn
     }
