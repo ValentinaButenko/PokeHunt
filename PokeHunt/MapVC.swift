@@ -14,12 +14,10 @@ class MapVC: UIViewController {
 
     var mapView: GMSMapView!
     var searchBtn: UIButton!
-    let locationManager = CLLocationManager()
+    var payBtn: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.locationManager.requestAlwaysAuthorization()
         self.setup()
     }
 
@@ -28,8 +26,33 @@ class MapVC: UIViewController {
     }
 
     func setup(){
+        self.setupNavigationController()
         self.setupMap()
         self.setupSearchButton()
+        self.setupPayButton()
+    }
+
+    func setupNavigationController(){
+        guard let nc = self.navigationController else{
+            return
+        }
+        let rightBtn = UIButton(frame: CGRectMake(0, 0, 19, 24))
+        let leftBtn = UIButton(frame: CGRectMake(0, 0, 24, 24))
+        let titleView = UIImageView(frame: CGRectMake(0, 0, 100, 30))
+
+        rightBtn.setImage(UIImage(named: R.image.share.name), forState: UIControlState.Normal)
+        rightBtn.addTarget(self, action: #selector(MapVC.selectedShare(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+
+        leftBtn.setImage(UIImage(named: R.image.settings.name), forState: UIControlState.Normal)
+        leftBtn.addTarget(self, action: #selector(MapVC.selectedSettings(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+
+        titleView.contentMode = .ScaleAspectFit
+        titleView.image = UIImage(named: R.image.pokehunt.name)
+
+        nc.navigationBar.barTintColor = UIColor(white: (255/255), alpha: 1.0)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: rightBtn)
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: leftBtn)
+        self.navigationItem.titleView = titleView
     }
 
     func setupMap(){
@@ -48,20 +71,49 @@ class MapVC: UIViewController {
     func setupSearchButton(){
         let searchBtn = UIButton()
         searchBtn.translatesAutoresizingMaskIntoConstraints = false
-        searchBtn.backgroundColor = UIColor.greenColor()
+        searchBtn.setBackgroundImage(UIImage(named: R.image.pokeball.name), forState: UIControlState.Normal)
         searchBtn.addTarget(self, action: #selector(MapVC.searchPokemon(_:)), forControlEvents: UIControlEvents.TouchUpInside)
 
         view.addSubview(searchBtn)
 
         searchBtn.snp_makeConstraints { (make) in
-            make.trailing.bottom.equalTo(view).inset(20)
-            make.width.height.equalTo(40)
+            make.trailing.equalTo(view).inset(12)
+            make.bottom.equalTo(view).inset(18)
+            make.width.height.equalTo(72)
         }
         self.searchBtn = searchBtn
     }
 
-    func searchPokemon(sender: UIButton!){
+    func setupPayButton(){
+        let payBtn = UIButton()
+        payBtn.translatesAutoresizingMaskIntoConstraints = false
+        payBtn.setBackgroundImage(UIImage(named: R.image.pay.name), forState: UIControlState.Normal)
+        payBtn.addTarget(self, action: #selector(MapVC.removeAds(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+
+        view.addSubview(payBtn)
+
+        payBtn.snp_makeConstraints { (make) in
+            make.leading.equalTo(view).inset(12)
+            make.bottom.equalTo(view).inset(18)
+            make.width.height.equalTo(72)
+        }
+        self.payBtn = payBtn
+    }
+
+    func searchPokemon(sender: UIButton){
         print("Searching...")
+    }
+
+    func removeAds(sender: UIButton){
+        print("I'll give U all my money honey!")
+    }
+
+    func selectedShare(sender: UIButton){
+        print("Share...")
+    }
+
+    func selectedSettings(sender: UIButton){
+        print("Settings...")
     }
 }
 
