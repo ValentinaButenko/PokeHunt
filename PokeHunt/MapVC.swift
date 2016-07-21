@@ -9,11 +9,14 @@
 import UIKit
 import SnapKit
 import GoogleMaps
+import Social
 
 class MapVC: UIViewController {
     var mapView: GMSMapView!
     var searchBtn: UIButton!
     var payBtn: UIButton!
+
+    var snapShot: UIImage!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,12 +40,12 @@ class MapVC: UIViewController {
         nc.navigationBar.barTintColor = UIColor(white: (255/255), alpha: 1.0)
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: R.image.settings()?.imageWithRenderingMode(.AlwaysOriginal),
                                                                 style: .Plain,
-                                                                target: nil,
-                                                                action: nil)
+                                                                target: self,
+                                                                action: #selector(MapVC.selectedSettings(_:)))
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: R.image.share()?.imageWithRenderingMode(.AlwaysOriginal),
                                                                  style: .Plain,
-                                                                 target: nil,
-                                                                 action: nil)
+                                                                 target: self,
+                                                                 action: #selector(MapVC.shapshotBg(_:)))
         self.navigationItem.titleView = titleView
     }
 
@@ -97,12 +100,28 @@ class MapVC: UIViewController {
         print("I'll give U all my money honey!")
     }
 
-    func selectedShare(sender: UIButton){
-        print("Share...")
+    func shapshotBg(sender: UIButton){
+        guard let snpShot = self.view?.pb_takeSnapshot() else{
+            return
+        }
+        UIImageWriteToSavedPhotosAlbum(snpShot, self, #selector(MapVC.image(_:didFinishSavingWithError:contextInfo:)), nil)
+        self.snapShot = snpShot
     }
 
     func selectedSettings(sender: UIButton){
         print("Settings...")
+    }
+
+    func image(image: UIImage, didFinishSavingWithError error: NSError?, contextInfo:UnsafePointer<Void>){
+        if error == nil{
+            let vc = UIActivityViewController(activityItems: [snapShot], applicationActivities: [])
+            self.presentViewController(vc, animated: true, completion: nil)
+        }
+        else{
+            let ac = UIAlertController(title: "Oops!", message: error?.localizedDescription, preferredStyle: .Alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+            self.presentViewController(ac, animated: true, completion: nil)
+        }
     }
 }
 
