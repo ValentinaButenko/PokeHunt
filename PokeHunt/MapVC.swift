@@ -37,12 +37,12 @@ class MapVC: UIViewController {
         nc.navigationBar.barTintColor = UIColor(white: (255/255), alpha: 1.0)
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: R.image.settings()?.imageWithRenderingMode(.AlwaysOriginal),
                                                                 style: .Plain,
-                                                                target: nil,
-                                                                action: nil)
+                                                                target: self,
+                                                                action: #selector(MapVC.selectedSettings(_:)))
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: R.image.share()?.imageWithRenderingMode(.AlwaysOriginal),
                                                                  style: .Plain,
-                                                                 target: nil,
-                                                                 action: nil)
+                                                                 target: self,
+                                                                 action: #selector(MapVC.shapshotBg(_:)))
         self.navigationItem.titleView = titleView
     }
 
@@ -100,12 +100,41 @@ class MapVC: UIViewController {
         print("I'll give U all my money honey!")
     }
 
-    func selectedShare(sender: UIButton){
-        print("Share...")
+    func shapshotBg(sender: UIButton){
+        guard let snpShot = self.view?.pb_takeSnapshot() else{
+            return
+        }
+        UIImageWriteToSavedPhotosAlbum(snpShot, self, #selector(MapVC.image(_:didFinishSavingWithError:contextInfo:)), nil)
     }
 
     func selectedSettings(sender: UIButton){
         print("Settings...")
+    }
+
+    func shareSnapshot(){
+        print("Now we will share snapshot")
+    }
+
+    func image(image: UIImage, didFinishSavingWithError error: NSError?, contextInfo:UnsafePointer<Void>){
+        if error == nil{
+            let ac = UIAlertController(title: "Gotcha!", message: "Your screenshot has been saved", preferredStyle: .Alert)
+
+            let okAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+            let shareAction = UIAlertAction(title: "Share", style: .Default, handler: {
+                (action: UIAlertAction) in
+                    self.shareSnapshot()
+                })
+        
+            ac.addAction(okAction)
+            ac.addAction(shareAction)
+
+            self.presentViewController(ac, animated: true, completion: nil)
+        }
+        else{
+            let ac = UIAlertController(title: "Oops!", message: "Let's try again \(error?.localizedDescription)", preferredStyle: .Alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+            self.presentViewController(ac, animated: true, completion: nil)
+        }
     }
 }
 
