@@ -9,11 +9,14 @@
 import UIKit
 import SnapKit
 import GoogleMaps
+import Social
 
 class MapVC: UIViewController {
     var mapView: GMSMapView!
     var searchBtn: UIButton!
     var payBtn: UIButton!
+
+    var snapShot: UIImage!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -105,33 +108,20 @@ class MapVC: UIViewController {
             return
         }
         UIImageWriteToSavedPhotosAlbum(snpShot, self, #selector(MapVC.image(_:didFinishSavingWithError:contextInfo:)), nil)
+        self.snapShot = snpShot
     }
 
     func selectedSettings(sender: UIButton){
         print("Settings...")
     }
 
-    func shareSnapshot(){
-        print("Now we will share snapshot")
-    }
-
     func image(image: UIImage, didFinishSavingWithError error: NSError?, contextInfo:UnsafePointer<Void>){
         if error == nil{
-            let ac = UIAlertController(title: "Gotcha!", message: "Your screenshot has been saved", preferredStyle: .Alert)
-
-            let okAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
-            let shareAction = UIAlertAction(title: "Share", style: .Default, handler: {
-                (action: UIAlertAction) in
-                    self.shareSnapshot()
-                })
-        
-            ac.addAction(okAction)
-            ac.addAction(shareAction)
-
-            self.presentViewController(ac, animated: true, completion: nil)
+            let vc = UIActivityViewController(activityItems: [snapShot], applicationActivities: [])
+            self.presentViewController(vc, animated: true, completion: nil)
         }
         else{
-            let ac = UIAlertController(title: "Oops!", message: "Let's try again \(error?.localizedDescription)", preferredStyle: .Alert)
+            let ac = UIAlertController(title: "Oops!", message: error?.localizedDescription, preferredStyle: .Alert)
             ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
             self.presentViewController(ac, animated: true, completion: nil)
         }
