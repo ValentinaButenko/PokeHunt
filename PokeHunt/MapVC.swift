@@ -50,7 +50,6 @@ class MapVC: UIViewController {
         let camera = GMSCameraPosition.cameraWithLatitude(-33.86,longitude: 151.20, zoom: 10)
         let mapView = GMSMapView.mapWithFrame(CGRectZero, camera: camera)
 
-        mapView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(mapView)
 
         mapView.snp_makeConstraints { (make) in
@@ -61,7 +60,6 @@ class MapVC: UIViewController {
 
     func setupSearchButton(){
         let searchBtn = UIButton()
-        searchBtn.translatesAutoresizingMaskIntoConstraints = false
         searchBtn.setBackgroundImage(R.image.pokeball()!.imageWithRenderingMode(.AlwaysOriginal),
                                      forState: UIControlState.Normal)
         searchBtn.addTarget(self, action: #selector(MapVC.searchPokemon(_:)), forControlEvents: UIControlEvents.TouchUpInside)
@@ -77,7 +75,6 @@ class MapVC: UIViewController {
 
     func setupPayButton(){
         let payBtn = UIButton()
-        payBtn.translatesAutoresizingMaskIntoConstraints = false
 
         payBtn.setBackgroundImage(R.image.pay()!.imageWithRenderingMode(.AlwaysOriginal),
                                   forState: UIControlState.Normal)
