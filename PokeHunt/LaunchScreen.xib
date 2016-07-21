@@ -10,7 +10,51 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="fl4-DU-4VA">
+                    <rect key="frame" x="190" y="201" width="220" height="198"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="startIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Xw7-hF-DN0">
+                            <rect key="frame" x="55" y="0.0" width="110" height="110"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="110" id="OmT-cj-FP3"/>
+                                <constraint firstAttribute="height" constant="110" id="OxO-9Z-29p"/>
+                                <constraint firstAttribute="width" constant="120" id="Zzt-ly-dde"/>
+                                <constraint firstAttribute="height" constant="120" id="geH-Fk-MXD"/>
+                            </constraints>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="Zzt-ly-dde"/>
+                                    <exclude reference="geH-Fk-MXD"/>
+                                </mask>
+                            </variation>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchscreenLogo" translatesAutoresizingMaskIntoConstraints="NO" id="8VJ-Js-jkM">
+                            <rect key="frame" x="0.0" y="128" width="220" height="70"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="215" id="Xzd-7k-Oka"/>
+                                <constraint firstAttribute="height" constant="46" id="mGG-J4-rQA"/>
+                                <constraint firstAttribute="width" constant="220" id="yaq-Cj-Lbi"/>
+                            </constraints>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="Xzd-7k-Oka"/>
+                                    <exclude reference="mGG-J4-rQA"/>
+                                </mask>
+                            </variation>
+                        </imageView>
+                    </subviews>
+                </stackView>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="fl4-DU-4VA" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="ADE-Ek-Erg"/>
+                <constraint firstItem="fl4-DU-4VA" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="vTP-1K-gr2"/>
+            </constraints>
         </view>
     </objects>
+    <resources>
+        <image name="launchscreenLogo" width="287" height="70"/>
+        <image name="startIcon" width="217" height="190"/>
+    </resources>
 </document>
