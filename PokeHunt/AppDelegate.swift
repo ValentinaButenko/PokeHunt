@@ -14,17 +14,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
         // need to set keyes properly
         GMSServices.provideAPIKey("AIzaSyBuZpNjqeaG65T53YfwDkBBow_fANZ05HA")
 
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        let vc = MapVC()
-        let startVC = UINavigationController(rootViewController: vc)
+        let vc = LoginVC()
 
-        window!.rootViewController = startVC
+        window!.rootViewController = vc
         window!.makeKeyAndVisible()
         return true
     }
