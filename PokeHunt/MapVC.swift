@@ -109,7 +109,9 @@ class MapVC: UIViewController {
     }
 
     func selectedSettings(sender: UIButton){
-        print("Settings...")
+        let storyboard = UIStoryboard(name: "Settings", bundle: nil)
+        let vc = storyboard.instantiateViewControllerWithIdentifier("SettingsStrBrd")
+        self.navigationController!.pushViewController(vc, animated: true)
     }
 
     func image(image: UIImage, didFinishSavingWithError error: NSError?, contextInfo:UnsafePointer<Void>){
