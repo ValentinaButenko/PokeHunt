@@ -17,21 +17,30 @@ class LoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setup()
-        
+
         view.backgroundColor = UIColor.whiteColor()
+    }
+
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+
+        self.logoViewWillMove()
     }
 
     func setup(){
         self.setupLogoView()
-      //  self.setupLoginBtn()
+        self.setupLoginBtn()
     }
 
     func setupLogoView(){
-        let logoView = LogoView(frame: CGRectMake(0, 0, 220, 198))
+        let logoView = LogoView()
         logoView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(logoView)
         logoView.snp_makeConstraints { (make) in
-            make.centerX.centerY.equalTo(view)
+            make.centerY.equalTo(view.snp_centerY)
+            make.centerX.equalTo(view.snp_centerX)
+            make.height.equalTo(198)
+            make.width.equalTo(220)
         }
         self.logoView = logoView
     }
@@ -39,16 +48,39 @@ class LoginVC: UIViewController {
     func setupLoginBtn(){
         let loginBtn = UIButton()
         loginBtn.translatesAutoresizingMaskIntoConstraints = false
-        loginBtn.backgroundColor = UIColor.whiteColor()
-        loginBtn.titleLabel?.text = "Log In"
+        loginBtn.setImage(UIImage(named: R.image.gmail.name), forState: .Normal)
+        loginBtn.imageView?.contentMode = .ScaleAspectFit
+        loginBtn.alpha = 0.0
         loginBtn.addTarget(self, action: #selector(LoginVC.tappedLoginBtn(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         view.addSubview(loginBtn)
 
         loginBtn.snp_makeConstraints { (make) in
-            make.centerX.centerY.equalTo(view)
-            make.height.width.equalTo(50)
+            make.top.equalTo(logoView.snp_bottom).inset(70)
+            make.centerX.equalTo(view.snp_centerX)
+            make.width.equalTo(220)
+            make.height.equalTo(70)
         }
         self.loginBtn = loginBtn
+    }
+
+    func logoViewWillMove(){
+        UIView.animateWithDuration(0.5, delay: 0.5,
+                                   options: UIViewAnimationOptions.CurveEaseIn,
+                                   animations: {
+                                    var logoViewFrame = self.logoView.frame
+                                    logoViewFrame.origin.y -= 80
+                                    self.logoView.frame = logoViewFrame
+                                    },
+                                   completion: { _ in
+                                    self.loginBtnWillAppear()
+                                    })
+    }
+
+    func loginBtnWillAppear(){
+        UIView.animateWithDuration(0.8,
+                                   animations: {
+                                    self.loginBtn.alpha = 1.0 },
+                                   completion: nil)
     }
 
     func tappedLoginBtn(sender: UIButton!){
@@ -58,5 +90,5 @@ class LoginVC: UIViewController {
         let startVC = UINavigationController(rootViewController: vc)
         presentViewController(startVC, animated: true, completion: nil)
     }
-
 }
+
