@@ -34,7 +34,6 @@ class LoginVC: UIViewController {
 
     func setupLogoView(){
         let logoView = LogoView()
-        logoView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(logoView)
         logoView.snp_makeConstraints { (make) in
             make.centerY.equalTo(view.snp_centerY)
@@ -47,7 +46,6 @@ class LoginVC: UIViewController {
 
     func setupLoginBtn(){
         let loginBtn = UIButton()
-        loginBtn.translatesAutoresizingMaskIntoConstraints = false
         loginBtn.setImage(UIImage(named: R.image.gmail.name), forState: .Normal)
         loginBtn.imageView?.contentMode = .ScaleAspectFit
         loginBtn.alpha = 0.0
