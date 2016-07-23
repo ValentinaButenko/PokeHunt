@@ -90,8 +90,7 @@ class LoginVC: UIViewController {
             switch (res) {
             case .LoggedIn:
                 let vc = MapVC()
-                let startVC = UINavigationController(rootViewController: vc)
-                self.presentViewController(startVC, animated: true, completion: nil)
+                Bootstrapper.exchangeRoot(viewController: UINavigationController(rootViewController: vc))
             case .Failed:
                 print("failed")
             }
