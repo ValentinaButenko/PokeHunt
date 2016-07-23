@@ -83,16 +83,13 @@ class LoginVC: UIViewController {
     }
 
     func tappedLoginBtn(sender: UIButton!){
-        print("Log In pressed...")
-
         LoginModule.sharedModule.performLoginOnController(self) { res in
-            print("return \(res)")
             switch (res) {
             case .LoggedIn:
                 let vc = MapVC()
                 Bootstrapper.exchangeRoot(viewController: UINavigationController(rootViewController: vc))
             case .Failed:
-                print("failed")
+                
             }
         }
     }
