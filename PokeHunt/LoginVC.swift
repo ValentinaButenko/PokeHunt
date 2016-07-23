@@ -8,6 +8,7 @@
 
 import UIKit
 import SnapKit
+import AppAuth
 
 class LoginVC: UIViewController {
 
@@ -84,9 +85,17 @@ class LoginVC: UIViewController {
     func tappedLoginBtn(sender: UIButton!){
         print("Log In pressed...")
 
-        let vc = MapVC()
-        let startVC = UINavigationController(rootViewController: vc)
-        presentViewController(startVC, animated: true, completion: nil)
+        LoginModule.sharedModule.performLoginOnController(self) { res in
+            print("return \(res)")
+            switch (res) {
+            case .LoggedIn:
+                let vc = MapVC()
+                let startVC = UINavigationController(rootViewController: vc)
+                self.presentViewController(startVC, animated: true, completion: nil)
+            case .Failed:
+                print("failed")
+            }
+        }
     }
 }
 
