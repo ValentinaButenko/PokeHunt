@@ -37,8 +37,7 @@ class LoginVC: UIViewController {
         let logoView = LogoView()
         view.addSubview(logoView)
         logoView.snp_makeConstraints { (make) in
-            make.centerY.equalTo(view.snp_centerY)
-            make.centerX.equalTo(view.snp_centerX)
+            make.center.equalTo(view)
             make.height.equalTo(198)
             make.width.equalTo(220)
         }
@@ -54,7 +53,7 @@ class LoginVC: UIViewController {
         view.addSubview(loginBtn)
 
         loginBtn.snp_makeConstraints { (make) in
-            make.top.equalTo(logoView.snp_bottom).inset(70)
+            make.top.equalTo(logoView.snp_bottom).inset(40)
             make.centerX.equalTo(view.snp_centerX)
             make.width.equalTo(220)
             make.height.equalTo(70)
@@ -63,22 +62,32 @@ class LoginVC: UIViewController {
     }
 
     func logoViewWillMove(){
-        UIView.animateWithDuration(0.5, delay: 0.5,
+        self.logoView.snp_updateConstraints(closure: { (make) in
+            make.centerY.equalTo(self.view).offset(-80)
+        })
+
+        let animation = {
+            self.view.layoutIfNeeded()
+        }
+
+        UIView.animateWithDuration(0.45,
+                                   delay: 0.5,
                                    options: UIViewAnimationOptions.CurveEaseIn,
-                                   animations: {
-                                    var logoViewFrame = self.logoView.frame
-                                    logoViewFrame.origin.y -= 80
-                                    self.logoView.frame = logoViewFrame
-                                    },
-                                   completion: { _ in
-                                    self.loginBtnWillAppear()
-                                    })
+                                   animations: animation,
+                                   completion: { _ in self.loginBtnWillAppear() })
     }
 
     func loginBtnWillAppear(){
-        UIView.animateWithDuration(0.8,
-                                   animations: {
-                                    self.loginBtn.alpha = 1.0 },
+        self.loginBtn.snp_updateConstraints(closure: { (make) in
+            make.top.equalTo(self.logoView.snp_bottom).inset(-10)
+        })
+
+        let animation = {
+            self.loginBtn.alpha = 1.0
+            self.view.layoutIfNeeded()
+        }
+        UIView.animateWithDuration(0.45,
+                                   animations: animation,
                                    completion: nil)
     }
 
@@ -89,7 +98,7 @@ class LoginVC: UIViewController {
                 let vc = MapVC()
                 Bootstrapper.exchangeRoot(viewController: UINavigationController(rootViewController: vc))
             case .Failed:
-                
+                print("failed")
             }
         }
     }
