@@ -1,21 +1,32 @@
 PODS:
+  - Alamofire (3.4.1)
+  - AppAuth (0.3.0)
   - GoogleMaps (1.13.2)
   - R.swift (2.4.0):
     - R.swift.Library (~> 2.2.0)
   - R.swift.Library (2.2.0)
   - SnapKit (0.15.0)
+  - TOWebViewController (2.2.6):
+    - TOWebViewController/Core (= 2.2.6)
+  - TOWebViewController/Core (2.2.6)
 
 DEPENDENCIES:
+  - Alamofire
+  - AppAuth
   - GoogleMaps
   - R.swift
   - SnapKit (~> 0.15.0)
+  - TOWebViewController
 
 SPEC CHECKSUMS:
+  Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
+  AppAuth: b5a91cfbaa742d542e080120893ba80b06ebd1c7
   GoogleMaps: b20a103ff307f58392e603cf142e59d7e30374c1
   R.swift: 0ef9c42dc6c94ac44a3c78a7639c73f855a8e159
   R.swift.Library: 31a487b65381f37a7d203a6f1f935b43c9be35b0
   SnapKit: 4962eed2ee18e48cbd2b2292fffc57efe7235f87
+  TOWebViewController: a29908019f7e0e0f8eccfab8a1ee8dcdf4fc5aac
 
-PODFILE CHECKSUM: a0ffa1928a2c2b33a669e3216d56437cd5c84c02
+PODFILE CHECKSUM: a2a5f3482b223223bc19757665751b261e53b07f
 
 COCOAPODS: 1.0.1
