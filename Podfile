@@ -9,5 +9,6 @@ target 'PokeHunt' do
     pod 'TOWebViewController'
     pod 'AppAuth'
     pod 'Alamofire'
+    pod 'SSKeychain'
 end
 

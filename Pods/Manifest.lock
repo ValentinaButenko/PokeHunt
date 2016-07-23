@@ -6,6 +6,7 @@ PODS:
     - R.swift.Library (~> 2.2.0)
   - R.swift.Library (2.2.0)
   - SnapKit (0.15.0)
+  - SSKeychain (1.4.0)
   - TOWebViewController (2.2.6):
     - TOWebViewController/Core (= 2.2.6)
   - TOWebViewController/Core (2.2.6)
@@ -16,6 +17,7 @@ DEPENDENCIES:
   - GoogleMaps
   - R.swift
   - SnapKit (~> 0.15.0)
+  - SSKeychain
   - TOWebViewController
 
 SPEC CHECKSUMS:
@@ -25,8 +27,9 @@ SPEC CHECKSUMS:
   R.swift: 0ef9c42dc6c94ac44a3c78a7639c73f855a8e159
   R.swift.Library: 31a487b65381f37a7d203a6f1f935b43c9be35b0
   SnapKit: 4962eed2ee18e48cbd2b2292fffc57efe7235f87
+  SSKeychain: c71293fa57216a40ab06c23f4085387583293de4
   TOWebViewController: a29908019f7e0e0f8eccfab8a1ee8dcdf4fc5aac
 
-PODFILE CHECKSUM: a2a5f3482b223223bc19757665751b261e53b07f
+PODFILE CHECKSUM: b4306bb8f347b31fadd14e187443aff105e0a224
 
 COCOAPODS: 1.0.1
