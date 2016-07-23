@@ -8,9 +8,14 @@
 
 import Foundation
 import AppAuth
+import SSKeychain
 
 
-internal class LoginModule {
+private let kServiceName = "com.fantastik.pokehunt.@$UBDS*&%AD"
+private let kAccountName = "auth_state.(T#*HILDJA"
+
+
+internal class LoginModule : NSObject, OIDAuthStateChangeDelegate {
     static let GoogleIssuer = "https://accounts.google.com"
     static let GoogleClientId = "848232511240-73ri3t7plvk96pj4f85uj8otdat2alem.apps.googleusercontent.com"
     static let GoogleRedirectURI = "urn:ietf:wg:oauth:2.0:oob"
@@ -26,8 +31,40 @@ internal class LoginModule {
     private var callback : ((AuthorizationStatus) -> Void)?
     private var googleAuthorization : OIDAuthState?
     private var state : OIDAuthState?
-    private init() {}
+    private override init() {
+        state = LoginModule.tryToRestoreState()
+    }
 
+    // MARK: Store methods
+    private class func tryToRestoreState() -> OIDAuthState? {
+        guard let data = SSKeychain.passwordDataForService(kServiceName, account: kAccountName) else {
+            return nil
+        }
+
+        guard let obj = NSKeyedUnarchiver.unarchiveObjectWithData(data) else {
+            return nil
+        }
+        if obj is OIDAuthState {
+            return obj as? OIDAuthState
+        }
+        return nil
+    }
+
+    private class func tryToSaveState(state: OIDAuthState) -> Bool {
+        let data = NSKeyedArchiver.archivedDataWithRootObject(state)
+        return SSKeychain.setPasswordData(data, forService: kServiceName, account: kAccountName)
+    }
+
+    private class func tryToDeleteState() -> Bool {
+        return SSKeychain.deletePasswordForService(kServiceName, account: kAccountName)
+    }
+
+    // MARK: Authorization
+    internal var isAuthorized : Bool {
+        get { return (state != nil) ? state!.isAuthorized : false }
+    }
+
+    // MARK: Network && handling methods
     internal func performLoginOnController(controller : UIViewController, handler : (AuthorizationStatus) -> Void) {
         callback = handler
         let config = OIDServiceConfiguration(authorizationEndpoint: NSURL(string:"https://accounts.google.com/o/oauth2/auth")!,
@@ -69,7 +106,6 @@ internal class LoginModule {
                 self.handleStateDidReplaced(authState)
 
                 if let callback = self.callback {
-                    print("callback")
                     callback((authState != nil) ? AuthorizationStatus.LoggedIn : AuthorizationStatus.Failed)
                 }
             }
@@ -79,7 +115,19 @@ internal class LoginModule {
         }
     }
 
-    private func handleStateDidReplaced(state : OIDAuthState?) {
-        print("Replaced")
+    // MARK: Handle callback and events
+    private func handleStateDidReplaced(newState : OIDAuthState?) {
+        if let trueState = newState {
+            didChangeState(trueState)
+        }
+        else {
+            LoginModule.tryToDeleteState()
+            state = nil
+        }
+    }
+
+    // MARK: OIDAuthStateChangeDelegate
+    internal func didChangeState(state: OIDAuthState) {
+        LoginModule.tryToSaveState(state)
     }
 }
