@@ -19,11 +19,43 @@
 		12760BB91D4424A200F446FA /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12760BAA1D4424A200F446FA /* LoginVC.swift */; };
 		12760BBA1D4424A200F446FA /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12760BAB1D4424A200F446FA /* MapVC.swift */; };
 		12760BBB1D4424A200F446FA /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12760BAD1D4424A200F446FA /* LogoView.swift */; };
+		12760BC81D44312800F446FA /* PHProtobufModels.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12760BC11D44312800F446FA /* PHProtobufModels.framework */; };
+		12760BC91D44312800F446FA /* PHProtobufModels.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 12760BC11D44312800F446FA /* PHProtobufModels.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		12760BD61D44330200F446FA /* Pokemon.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = 12760BCF1D44330200F446FA /* Pokemon.pbobjc.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		12760BD71D44330200F446FA /* Pokemon.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 12760BD01D44330200F446FA /* Pokemon.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		12760BDA1D44330200F446FA /* PHProtobufModels.h in Headers */ = {isa = PBXBuildFile; fileRef = 12760BD51D44330200F446FA /* PHProtobufModels.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		39A0F50EAE19156C026555D7 /* Pods_PokeHunt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58DD6499E2E6B4CA44BAA4CB /* Pods_PokeHunt.framework */; };
+		AA03E3873659D2DF11D73850 /* Pods_PHProtobufModels.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 076FF728795DAC574D838F61 /* Pods_PHProtobufModels.framework */; };
 		F64A96631D40E8C000A72182 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64A96621D40E8C000A72182 /* Social.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		12760BC61D44312800F446FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6DCD1521D3FB09900FA576E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 12760BC01D44312800F446FA;
+			remoteInfo = PHProtobufModels;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		12760BCD1D44312800F446FA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				12760BC91D44312800F446FA /* PHProtobufModels.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		06ABEE9DF424076F5D53E9E5 /* Pods-PHProtobufModels.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PHProtobufModels.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PHProtobufModels/Pods-PHProtobufModels.debug.xcconfig"; sourceTree = "<group>"; };
+		076FF728795DAC574D838F61 /* Pods_PHProtobufModels.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PHProtobufModels.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		12760B951D4424A200F446FA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		12760B971D4424A200F446FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		12760B981D4424A200F446FA /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
@@ -38,18 +70,34 @@
 		12760BAA1D4424A200F446FA /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		12760BAB1D4424A200F446FA /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		12760BAD1D4424A200F446FA /* LogoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
+		12760BC11D44312800F446FA /* PHProtobufModels.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PHProtobufModels.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		12760BCF1D44330200F446FA /* Pokemon.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pokemon.pbobjc.h; sourceTree = "<group>"; };
+		12760BD01D44330200F446FA /* Pokemon.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pokemon.pbobjc.m; sourceTree = "<group>"; };
+		12760BD21D44330200F446FA /* pokemon.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokemon.proto; sourceTree = "<group>"; };
+		12760BD41D44330200F446FA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12760BD51D44330200F446FA /* PHProtobufModels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHProtobufModels.h; sourceTree = "<group>"; };
 		31CF62A75AD969201AB06A47 /* Pods-PokeHunt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeHunt.release.xcconfig"; path = "Pods/Target Support Files/Pods-PokeHunt/Pods-PokeHunt.release.xcconfig"; sourceTree = "<group>"; };
 		58DD6499E2E6B4CA44BAA4CB /* Pods_PokeHunt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PokeHunt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		624FBAFE049C43F620700E61 /* Pods-PHProtobufModels.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PHProtobufModels.release.xcconfig"; path = "Pods/Target Support Files/Pods-PHProtobufModels/Pods-PHProtobufModels.release.xcconfig"; sourceTree = "<group>"; };
 		701B67ED30CCD092DC53B694 /* Pods-PokeHunt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeHunt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PokeHunt/Pods-PokeHunt.debug.xcconfig"; sourceTree = "<group>"; };
 		F64A96621D40E8C000A72182 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		F6DCD15A1D3FB09900FA576E /* PokeHunt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeHunt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		12760BBD1D44312800F446FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA03E3873659D2DF11D73850 /* Pods_PHProtobufModels.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F6DCD1571D3FB09900FA576E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12760BC81D44312800F446FA /* PHProtobufModels.framework in Frameworks */,
 				F64A96631D40E8C000A72182 /* Social.framework in Frameworks */,
 				39A0F50EAE19156C026555D7 /* Pods_PokeHunt.framework in Frameworks */,
 			);
@@ -165,11 +213,48 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		12760BC21D44312800F446FA /* PHProtobufModels */ = {
+			isa = PBXGroup;
+			children = (
+				12760BCE1D44330200F446FA /* Classes */,
+				12760BD11D44330200F446FA /* Resources */,
+				12760BD31D44330200F446FA /* Supporting Files */,
+			);
+			path = PHProtobufModels;
+			sourceTree = "<group>";
+		};
+		12760BCE1D44330200F446FA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				12760BCF1D44330200F446FA /* Pokemon.pbobjc.h */,
+				12760BD01D44330200F446FA /* Pokemon.pbobjc.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		12760BD11D44330200F446FA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				12760BD21D44330200F446FA /* pokemon.proto */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		12760BD31D44330200F446FA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				12760BD41D44330200F446FA /* Info.plist */,
+				12760BD51D44330200F446FA /* PHProtobufModels.h */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		4DB5BD027634F7D57F2F15B3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				F64A96621D40E8C000A72182 /* Social.framework */,
 				58DD6499E2E6B4CA44BAA4CB /* Pods_PokeHunt.framework */,
+				076FF728795DAC574D838F61 /* Pods_PHProtobufModels.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -179,6 +264,8 @@
 			children = (
 				701B67ED30CCD092DC53B694 /* Pods-PokeHunt.debug.xcconfig */,
 				31CF62A75AD969201AB06A47 /* Pods-PokeHunt.release.xcconfig */,
+				06ABEE9DF424076F5D53E9E5 /* Pods-PHProtobufModels.debug.xcconfig */,
+				624FBAFE049C43F620700E61 /* Pods-PHProtobufModels.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -187,6 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				F6DCD15C1D3FB09900FA576E /* PokeHunt */,
+				12760BC21D44312800F446FA /* PHProtobufModels */,
 				F6DCD15B1D3FB09900FA576E /* Products */,
 				7930856956B0E95939E0942E /* Pods */,
 				4DB5BD027634F7D57F2F15B3 /* Frameworks */,
@@ -197,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				F6DCD15A1D3FB09900FA576E /* PokeHunt.app */,
+				12760BC11D44312800F446FA /* PHProtobufModels.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -213,7 +302,39 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		12760BBE1D44312800F446FA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12760BD61D44330200F446FA /* Pokemon.pbobjc.h in Headers */,
+				12760BDA1D44330200F446FA /* PHProtobufModels.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		12760BC01D44312800F446FA /* PHProtobufModels */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 12760BCC1D44312800F446FA /* Build configuration list for PBXNativeTarget "PHProtobufModels" */;
+			buildPhases = (
+				F87A3FFC5274DFE82DD96668 /* [CP] Check Pods Manifest.lock */,
+				12760BBC1D44312800F446FA /* Sources */,
+				12760BBD1D44312800F446FA /* Frameworks */,
+				12760BBE1D44312800F446FA /* Headers */,
+				12760BBF1D44312800F446FA /* Resources */,
+				64415C0D2326FFD8DAF815F8 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PHProtobufModels;
+			productName = PHProtobufModels;
+			productReference = 12760BC11D44312800F446FA /* PHProtobufModels.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		F6DCD1591D3FB09900FA576E /* PokeHunt */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F6DCD16C1D3FB09900FA576E /* Build configuration list for PBXNativeTarget "PokeHunt" */;
@@ -225,10 +346,12 @@
 				F6DCD1581D3FB09900FA576E /* Resources */,
 				EB6B6CAC185D9D5F20222A3F /* [CP] Embed Pods Frameworks */,
 				16C8A0B5BFD5CC9B12E04F66 /* [CP] Copy Pods Resources */,
+				12760BCD1D44312800F446FA /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				12760BC71D44312800F446FA /* PBXTargetDependency */,
 			);
 			name = PokeHunt;
 			productName = PokeHunt;
@@ -245,6 +368,9 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Fantastik Solution";
 				TargetAttributes = {
+					12760BC01D44312800F446FA = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
 					F6DCD1591D3FB09900FA576E = {
 						CreatedOnToolsVersion = 7.3;
 					};
@@ -264,11 +390,19 @@
 			projectRoot = "";
 			targets = (
 				F6DCD1591D3FB09900FA576E /* PokeHunt */,
+				12760BC01D44312800F446FA /* PHProtobufModels */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		12760BBF1D44312800F446FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F6DCD1581D3FB09900FA576E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -311,6 +445,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		64415C0D2326FFD8DAF815F8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PHProtobufModels/Pods-PHProtobufModels-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		EB6B6CAC185D9D5F20222A3F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -339,9 +488,32 @@
 			shellPath = /bin/sh;
 			shellScript = "\"$PODS_ROOT/R.swift/rswift\" \"$SRCROOT/PokeHunt/Classes/Generated\"";
 		};
+		F87A3FFC5274DFE82DD96668 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		12760BBC1D44312800F446FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12760BD71D44330200F446FA /* Pokemon.pbobjc.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F6DCD1561D3FB09900FA576E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -361,7 +533,55 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		12760BC71D44312800F446FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 12760BC01D44312800F446FA /* PHProtobufModels */;
+			targetProxy = 12760BC61D44312800F446FA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		12760BCA1D44312800F446FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06ABEE9DF424076F5D53E9E5 /* Pods-PHProtobufModels.debug.xcconfig */;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "PHProtobufModels/Supporting Files/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fantastik.PHProtobufModels;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		12760BCB1D44312800F446FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 624FBAFE049C43F620700E61 /* Pods-PHProtobufModels.release.xcconfig */;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "PHProtobufModels/Supporting Files/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fantastik.PHProtobufModels;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		F6DCD16A1D3FB09900FA576E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -474,6 +694,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		12760BCC1D44312800F446FA /* Build configuration list for PBXNativeTarget "PHProtobufModels" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				12760BCA1D44312800F446FA /* Debug */,
+				12760BCB1D44312800F446FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F6DCD1551D3FB09900FA576E /* Build configuration list for PBXProject "PokeHunt" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
