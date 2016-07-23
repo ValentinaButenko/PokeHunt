@@ -2,6 +2,7 @@ PODS:
   - Alamofire (3.4.1)
   - AppAuth (0.3.0)
   - GoogleMaps (1.13.2)
+  - Protobuf (3.0.0-beta-4)
   - R.swift (2.4.0):
     - R.swift.Library (~> 2.2.0)
   - R.swift.Library (2.2.0)
@@ -15,6 +16,7 @@ DEPENDENCIES:
   - Alamofire
   - AppAuth
   - GoogleMaps
+  - Protobuf (= 3.0.0-beta-4)
   - R.swift
   - SnapKit (~> 0.15.0)
   - SSKeychain
@@ -24,12 +26,13 @@ SPEC CHECKSUMS:
   Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
   AppAuth: b5a91cfbaa742d542e080120893ba80b06ebd1c7
   GoogleMaps: b20a103ff307f58392e603cf142e59d7e30374c1
+  Protobuf: ec704f0045f7a30e1686fbb3994f43f689a0021b
   R.swift: 0ef9c42dc6c94ac44a3c78a7639c73f855a8e159
   R.swift.Library: 31a487b65381f37a7d203a6f1f935b43c9be35b0
   SnapKit: 4962eed2ee18e48cbd2b2292fffc57efe7235f87
   SSKeychain: c71293fa57216a40ab06c23f4085387583293de4
   TOWebViewController: a29908019f7e0e0f8eccfab8a1ee8dcdf4fc5aac
 
-PODFILE CHECKSUM: b4306bb8f347b31fadd14e187443aff105e0a224
+PODFILE CHECKSUM: f4d56d9ce0ae2d2faf89a109b25a34bb0e536885
 
 COCOAPODS: 1.0.1

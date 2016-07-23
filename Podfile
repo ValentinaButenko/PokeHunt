@@ -1,4 +1,4 @@
-platform :ios, '8.0'
+platform :ios, '9.0'
 
 use_frameworks!
 
@@ -10,5 +10,10 @@ target 'PokeHunt' do
     pod 'AppAuth'
     pod 'Alamofire'
     pod 'SSKeychain'
+    pod 'Protobuf', '3.0.0-beta-4'
 end
 
+
+target 'PHProtobufModels' do
+    pod 'Protobuf', '3.0.0-beta-4'
+end
