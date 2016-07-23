@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import GoogleMaps
 
 
 internal struct Bootstrapper {
@@ -19,7 +20,27 @@ internal struct Bootstrapper {
     static let instance = Bootstrapper()
     private init() {
         do {
+            GMSServices.provideAPIKey("AIzaSyBuZpNjqeaG65T53YfwDkBBow_fANZ05HA")
             LoginModule.sharedModule
         }
+
+        let vc : UIViewController = (LoginModule.sharedModule.isAuthorized) ?
+            UINavigationController(rootViewController: MapVC()) : LoginVC()
+        if let del = UIApplication.sharedApplication().delegate {
+            del.window!?.rootViewController = vc
+        }
+    }
+
+    internal static func exchangeRoot(viewController controller : UIViewController) {
+        let window = UIApplication.sharedApplication().delegate!.window!!
+        let screenshot = window.rootViewController!.view.snapshotViewAfterScreenUpdates(false)
+        window.rootViewController = controller
+
+        controller.view.addSubview(screenshot)
+        UIView.animateWithDuration(0.125, animations: {
+            screenshot.alpha = 0
+            }, completion: { _ in
+                screenshot.removeFromSuperview()
+        })
     }
 }
