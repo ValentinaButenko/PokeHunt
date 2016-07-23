@@ -64,6 +64,8 @@ internal class LoginModule : NSObject, OIDAuthStateChangeDelegate {
         get { return (state != nil) ? state!.isAuthorized : false }
     }
 
+//    internal var 
+
     // MARK: Network && handling methods
     internal func performLoginOnController(controller : UIViewController, handler : (AuthorizationStatus) -> Void) {
         callback = handler
@@ -129,5 +131,6 @@ internal class LoginModule : NSObject, OIDAuthStateChangeDelegate {
     // MARK: OIDAuthStateChangeDelegate
     internal func didChangeState(state: OIDAuthState) {
         LoginModule.tryToSaveState(state)
+        print(state)
     }
 }
