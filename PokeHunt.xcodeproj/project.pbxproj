@@ -16,6 +16,7 @@
 		F64A966C1D41255000A72182 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64A966B1D41255000A72182 /* LogoView.swift */; };
 		F69A44331D4291A500D56AEA /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F69A44321D4291A500D56AEA /* OpenSans-Semibold.ttf */; };
 		F69A44351D42922B00D56AEA /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F69A44341D42922B00D56AEA /* Settings.storyboard */; };
+		F69A44371D434AC400D56AEA /* SettingsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69A44361D434AC400D56AEA /* SettingsTableVC.swift */; };
 		F6DCD15E1D3FB09900FA576E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DCD15D1D3FB09900FA576E /* AppDelegate.swift */; };
 		F6DCD1601D3FB09900FA576E /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DCD15F1D3FB09900FA576E /* MapVC.swift */; };
 		F6DCD1651D3FB09900FA576E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6DCD1641D3FB09900FA576E /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 		F64A966B1D41255000A72182 /* LogoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 		F69A44321D4291A500D56AEA /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
 		F69A44341D42922B00D56AEA /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		F69A44361D434AC400D56AEA /* SettingsTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableVC.swift; sourceTree = "<group>"; };
 		F6DCD15A1D3FB09900FA576E /* PokeHunt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeHunt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6DCD15D1D3FB09900FA576E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6DCD15F1D3FB09900FA576E /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				F6DCD15D1D3FB09900FA576E /* AppDelegate.swift */,
 				F6DCD15F1D3FB09900FA576E /* MapVC.swift */,
 				F64A96681D411FF100A72182 /* LoginVC.swift */,
+				F69A44361D434AC400D56AEA /* SettingsTableVC.swift */,
 				F6DCD1641D3FB09900FA576E /* Assets.xcassets */,
 				F6DCD1691D3FB09900FA576E /* Info.plist */,
 				F64A96641D40EF7D00A72182 /* LaunchScreen.xib */,
@@ -292,6 +295,7 @@
 				F64A966C1D41255000A72182 /* LogoView.swift in Sources */,
 				F6DCD15E1D3FB09900FA576E /* AppDelegate.swift in Sources */,
 				F64A96611D40C8B800A72182 /* UIView.bgSnapshot.swift in Sources */,
+				F69A44371D434AC400D56AEA /* SettingsTableVC.swift in Sources */,
 				12455FAD1D4003D8005DE4F1 /* R.generated.swift in Sources */,
 				F64A96691D411FF100A72182 /* LoginVC.swift in Sources */,
 			);
