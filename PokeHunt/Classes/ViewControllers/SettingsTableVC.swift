@@ -11,6 +11,14 @@ import SnapKit
 
 class SettingsTableVC: UITableViewController {
 
+    var autorefreshSwitch: UISwitch!
+    var displayPokeSwitch: UISwitch!
+    var displayPokeStopSwitch: UISwitch!
+    var displayJymsSwitch: UISwitch!
+    var stepsArea: UITextField!
+
+    let img = UIImage(named: R.image.bgSwitch.name)
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }

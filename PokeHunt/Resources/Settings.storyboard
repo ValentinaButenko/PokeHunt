@@ -48,14 +48,9 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rW7-f3-bO0">
-                                                    <rect key="frame" x="528" y="14" width="51" height="31"/>
-                                                </switch>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="rW7-f3-bO0" secondAttribute="trailing" constant="15" id="3eR-7V-Jpx"/>
                                                 <constraint firstItem="BvC-wP-Ioi" firstAttribute="centerY" secondItem="kSl-hG-ghi" secondAttribute="centerY" id="E5Y-dw-JIg"/>
-                                                <constraint firstItem="rW7-f3-bO0" firstAttribute="centerY" secondItem="kSl-hG-ghi" secondAttribute="centerY" id="eW4-u9-0KD"/>
                                                 <constraint firstItem="BvC-wP-Ioi" firstAttribute="leading" secondItem="kSl-hG-ghi" secondAttribute="leadingMargin" constant="15" id="uYS-36-9CQ"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -85,15 +80,10 @@
                                                         </mask>
                                                     </variation>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gH4-OV-1mt">
-                                                    <rect key="frame" x="528" y="15" width="51" height="31"/>
-                                                </switch>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="gH4-OV-1mt" secondAttribute="trailing" constant="15" id="7Xf-S4-gYW"/>
                                                 <constraint firstItem="B7Z-ku-HrL" firstAttribute="centerY" secondItem="JVP-W2-GKO" secondAttribute="centerY" id="PnH-ha-BLC"/>
                                                 <constraint firstItem="B7Z-ku-HrL" firstAttribute="leading" secondItem="JVP-W2-GKO" secondAttribute="leadingMargin" constant="15" id="Qfh-0V-Nri"/>
-                                                <constraint firstItem="gH4-OV-1mt" firstAttribute="centerY" secondItem="JVP-W2-GKO" secondAttribute="centerY" id="z21-zd-wHh"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -104,9 +94,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="60.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G3z-Bq-F0q">
-                                                    <rect key="frame" x="528" y="14" width="51" height="31"/>
-                                                </switch>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DISPLAY POKESTOPS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ygG-kk-gSG">
                                                     <rect key="frame" x="23" y="19" width="138" height="21"/>
                                                     <constraints>
@@ -131,10 +118,8 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="G3z-Bq-F0q" secondAttribute="trailing" constant="15" id="2ca-7v-o0u"/>
                                                 <constraint firstItem="ygG-kk-gSG" firstAttribute="centerY" secondItem="N1P-zp-O1b" secondAttribute="centerY" id="MM6-Ii-rHV"/>
                                                 <constraint firstItem="ygG-kk-gSG" firstAttribute="leading" secondItem="N1P-zp-O1b" secondAttribute="leadingMargin" constant="15" id="dHh-ww-XS8"/>
-                                                <constraint firstItem="G3z-Bq-F0q" firstAttribute="centerY" secondItem="N1P-zp-O1b" secondAttribute="centerY" id="qu8-Yv-jPO"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -171,14 +156,9 @@
                                                         </mask>
                                                     </variation>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T0V-Ty-5IO">
-                                                    <rect key="frame" x="528" y="14" width="51" height="31"/>
-                                                </switch>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="T0V-Ty-5IO" firstAttribute="centerY" secondItem="Yic-RJ-skT" secondAttribute="centerY" id="78n-iX-6Ru"/>
                                                 <constraint firstItem="yb6-EB-f3f" firstAttribute="centerY" secondItem="Yic-RJ-skT" secondAttribute="centerY" id="8GR-j1-JQr"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="T0V-Ty-5IO" secondAttribute="trailing" constant="15" id="ZIC-cV-bpA"/>
                                                 <constraint firstItem="yb6-EB-f3f" firstAttribute="leading" secondItem="Yic-RJ-skT" secondAttribute="leadingMargin" constant="15" id="rqt-I5-ZdK"/>
                                             </constraints>
                                         </tableViewCellContentView>
