@@ -4,6 +4,7 @@
 #import "OIDAuthorizationRequest.h"
 #import "OIDAuthorizationResponse.h"
 #import "OIDAuthorizationService.h"
+#import "OIDAuthorizationUICoordinator.h"
 #import "OIDAuthState.h"
 #import "OIDAuthStateChangeDelegate.h"
 #import "OIDAuthStateErrorDelegate.h"
@@ -21,6 +22,9 @@
 #import "OIDTokenResponse.h"
 #import "OIDTokenUtilities.h"
 #import "OIDURLQueryComponent.h"
+#import "OIDAuthorizationService+IOS.h"
+#import "OIDAuthorizationUICoordinatorIOS.h"
+#import "OIDAuthState+IOS.h"
 
 FOUNDATION_EXPORT double AppAuthVersionNumber;
 FOUNDATION_EXPORT const unsigned char AppAuthVersionString[];
