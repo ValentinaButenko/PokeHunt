@@ -193,20 +193,24 @@ class SettingsTableVC: UITableViewController, UITextFieldDelegate{
         let separator = UIView(frame: CGRect(x: 0, y: stepsAreaCell.frame.size.height - 1, width: stepsAreaCell.frame.size.width, height: 1))
         separator.backgroundColor = UIColor(red: (170/255), green: (170/255), blue: (170/255), alpha: 0.8)
         stepsAreaCell.addSubview(separator)
-
-        stepsArea.returnKeyType = .Done
     }
 
     func setupTermsCell(){
         let separator = UIView(frame: CGRect(x: 0, y: termsCell.frame.size.height - 1, width: termsCell.frame.size.width, height: 1))
         separator.backgroundColor = UIColor(red: (170/255), green: (170/255), blue: (170/255), alpha: 0.8)
         termsCell.addSubview(separator)
+
+        termsCell.accessoryType = .DisclosureIndicator
+        termsCell.accessoryView = UIImageView(image: UIImage(named: R.image.disclosure.name))
     }
 
     func setupPrivacyPolicyCell(){
         let separator = UIView(frame: CGRect(x: 0, y: privacyPolicyCell.frame.size.height - 1, width: privacyPolicyCell.frame.size.width, height: 1))
         separator.backgroundColor = UIColor(red: (170/255), green: (170/255), blue: (170/255), alpha: 0.8)
         privacyPolicyCell.addSubview(separator)
+
+        privacyPolicyCell.accessoryType = .DisclosureIndicator
+        privacyPolicyCell.accessoryView = UIImageView(image: UIImage(named: R.image.disclosure.name))
     }
 
     func setupRateUsCell(){
