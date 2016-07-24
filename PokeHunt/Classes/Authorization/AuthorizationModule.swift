@@ -15,7 +15,7 @@ private let kServiceName = "com.fantastik.pokehunt.@$UBDS*&%AD"
 private let kAccountName = "auth_state.(T#*HILDJA"
 
 
-internal class LoginModule : NSObject, OIDAuthStateChangeDelegate {
+internal class LoginModule : NSObject, OIDAuthStateChangeDelegate, OIDAuthStateErrorDelegate {
     static let GoogleIssuer = "https://accounts.google.com"
     static let GoogleClientId = "848232511240-73ri3t7plvk96pj4f85uj8otdat2alem.apps.googleusercontent.com"
     static let GoogleRedirectURI = "urn:ietf:wg:oauth:2.0:oob"
@@ -33,7 +33,12 @@ internal class LoginModule : NSObject, OIDAuthStateChangeDelegate {
     private var googleAuthorization : OIDAuthState?
     private var state : OIDAuthState?
     private override init() {
+        super.init()
         state = LoginModule.tryToRestoreState()
+        if let authState = state {
+            authState.setNeedsTokenRefresh()
+            self.didChangeState(authState)
+        }
     }
 
     // MARK: Store methods
@@ -71,7 +76,7 @@ internal class LoginModule : NSObject, OIDAuthStateChangeDelegate {
             return
         }
 
-        authState.withFreshTokensPerformAction { (accessToken, idToken, err) in
+        authState.withFreshTokensPerformAction({ (accessToken, idToken, err) in
             if let err = err {
                 print(err)
                 completion(nil)
@@ -82,7 +87,7 @@ internal class LoginModule : NSObject, OIDAuthStateChangeDelegate {
                 return
             }
             completion(nil)
-        }
+        }, additionalParams: ["client_secret" : LoginModule.GoogleClientSecret])
     }
 
     // MARK: Network && handling methods
@@ -133,6 +138,7 @@ internal class LoginModule : NSObject, OIDAuthStateChangeDelegate {
     // MARK: Handle callback and events
     private func handleStateDidReplaced(newState : OIDAuthState?) {
         if let trueState = newState {
+            print(trueState)
             didChangeState(trueState)
         }
         else {
@@ -141,8 +147,19 @@ internal class LoginModule : NSObject, OIDAuthStateChangeDelegate {
         }
     }
 
+    @objc func authState(state: OIDAuthState, didEncounterTransientError error: NSError) {
+        print(error)
+    }
+
+    @objc func authState(state: OIDAuthState, didEncounterAuthorizationError error: NSError) {
+        print(error)
+    }
+
     // MARK: OIDAuthStateChangeDelegate
     internal func didChangeState(state: OIDAuthState) {
         LoginModule.tryToSaveState(state)
+        self.state = state
+        self.state!.errorDelegate = self
+        self.state!.stateChangeDelegate = self
     }
 }
