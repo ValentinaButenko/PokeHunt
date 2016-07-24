@@ -1,5 +1,4 @@
 platform :ios, '9.0'
-
 use_frameworks!
 
 target 'PokeHunt' do
@@ -14,6 +13,6 @@ target 'PokeHunt' do
 end
 
 
-target 'PHProtobufModels' do
+target 'POGOProto' do
     pod 'Protobuf', '3.0.0-beta-4'
 end

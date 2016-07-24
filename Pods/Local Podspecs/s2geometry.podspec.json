@@ -1,0 +1,19 @@
+{
+  "name": "s2geometry",
+  "version": "0.0.1",
+  "summary": "Just a lib",
+  "authors": {
+    "Some": "some@google.com"
+  },
+  "license": "Apache License, Version 2.0",
+  "homepage": "https://google.com",
+  "source": {
+    "git": "https://github.com/openid/AppAuth-iOS.git",
+    "tag": "0.0.1"
+  },
+  "source_files": "include/iOS/**/*.{h,m}",
+  "platforms": {
+    "ios": "8.0"
+  },
+  "vendored_libraries": "libs2geometry.a"
+}

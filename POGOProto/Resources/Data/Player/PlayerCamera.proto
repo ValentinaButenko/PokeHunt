@@ -1,0 +1,7 @@
+syntax = "proto3";
+option objc_class_prefix = "POGO";
+package POGOProtos.Data.Player;
+
+message PlayerCamera {
+	bool is_default_camera = 1;
+}

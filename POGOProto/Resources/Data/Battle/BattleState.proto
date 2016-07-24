@@ -1,0 +1,11 @@
+﻿syntax = "proto3";
+option objc_class_prefix = "POGO";
+package POGOProtos.Data.Battle;
+
+enum BattleState {
+	STATE_UNSET = 0;
+	ACTIVE = 1;
+	VICTORY = 2;
+	DEFEATED = 3;
+	TIMED_OUT = 4;
+}

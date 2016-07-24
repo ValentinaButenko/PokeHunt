@@ -1,6 +1,0 @@
-framework module Pods_PHProtobufModels {
-  umbrella header "Pods-PHProtobufModels-umbrella.h"
-
-  export *
-  module * { export * }
-}
