@@ -11,6 +11,8 @@ import SnapKit
 
 class SettingsTableVC: UITableViewController {
 
+    @IBOutlet weak var autorefreshCell: UITableViewCell!
+
     var autorefreshSwitch: UISwitch!
     var displayPokeSwitch: UISwitch!
     var displayPokeStopSwitch: UISwitch!
@@ -21,6 +23,7 @@ class SettingsTableVC: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setup()
     }
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -54,5 +57,27 @@ class SettingsTableVC: UITableViewController {
     override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 37
     }
+
+    func setup(){
+        self.setupAutorefreshSwitch()
+    }
+
+    func setupAutorefreshSwitch(){
+        let autorefreshSwitch = UISwitch()
+
+        autorefreshSwitch.sizeToFit()
+        autorefreshSwitch.onTintColor = UIColor(patternImage: img!)
+        autorefreshSwitch.transform = CGAffineTransformMakeScale(1.27, 1.27)
+        autorefreshSwitch.setOn(true, animated: false)
+
+        autorefreshCell.addSubview(autorefreshSwitch)
+
+        autorefreshSwitch.snp_makeConstraints { (make) in
+            make.top.equalTo(autorefreshCell).inset(15)
+            make.trailing.equalTo(autorefreshCell).inset(28)
+        }
+        self.autorefreshSwitch = autorefreshSwitch
+    }
+
 
    }

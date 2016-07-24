@@ -460,6 +460,9 @@
                             <outlet property="delegate" destination="rPf-51-Je2" id="Wr8-hZ-6DV"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="autorefreshCell" destination="AWL-Fk-zUG" id="aT9-xX-hqO"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UZH-7O-4lz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
