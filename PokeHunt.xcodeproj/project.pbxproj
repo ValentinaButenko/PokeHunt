@@ -59,7 +59,6 @@
 		12760B951D4424A200F446FA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		12760B971D4424A200F446FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		12760B981D4424A200F446FA /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
-		12760B991D4424A200F446FA /* pokemon.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokemon.proto; sourceTree = "<group>"; };
 		12760B9C1D4424A200F446FA /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		12760B9E1D4424A200F446FA /* AuthorizationModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationModule.swift; sourceTree = "<group>"; };
 		12760B9F1D4424A200F446FA /* GoogleAuthorizationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleAuthorizationController.swift; sourceTree = "<group>"; };
@@ -119,7 +118,6 @@
 			children = (
 				12760B971D4424A200F446FA /* Assets.xcassets */,
 				12760B981D4424A200F446FA /* LaunchScreen.xib */,
-				12760B991D4424A200F446FA /* pokemon.proto */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -184,16 +182,8 @@
 			isa = PBXGroup;
 			children = (
 				12760BA71D4424A200F446FA /* NianticlabsService.swift */,
-				12760BA81D4424A200F446FA /* Protobuf */,
 			);
 			path = Services;
-			sourceTree = "<group>";
-		};
-		12760BA81D4424A200F446FA /* Protobuf */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Protobuf;
 			sourceTree = "<group>";
 		};
 		12760BA91D4424A200F446FA /* ViewControllers */ = {

@@ -118,7 +118,7 @@ internal class GoogleAuthorizationController : NSObject, OIDAuthorizationFlowSes
                 OIDAuthorizationResponse(request: self.request,
                                          parameters: [
                                             "client_id" : LoginModule.GoogleClientId,
-                                            "client_secret" : "NCjF1TLi2CcY6t5mt0ZveuL7",
+                                            "client_secret" : LoginModule.GoogleClientSecret,
                                             "code" : token,
                                             "grant_type" : "authorization_code",
                                             "redirect_uri" : LoginModule.GoogleRedirectURI,
@@ -176,5 +176,8 @@ internal class GoogleAuthorizationController : NSObject, OIDAuthorizationFlowSes
 
     internal func resumeAuthorizationFlowWithURL(URL: NSURL) -> Bool {
         return false
+    }
+
+    internal func failAuthorizationFlowWithError(error: NSError) {
     }
 }

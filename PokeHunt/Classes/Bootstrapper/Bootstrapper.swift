@@ -21,7 +21,11 @@ internal struct Bootstrapper {
     private init() {
         do {
             GMSServices.provideAPIKey("AIzaSyBuZpNjqeaG65T53YfwDkBBow_fANZ05HA")
-            LoginModule.sharedModule
+            NianticlabsService.makeShared({ (tokenDelegate) in
+                LoginModule.sharedModule.getUpdatedToken({ (token) in
+                    tokenDelegate(token)
+                })
+            })
         }
 
         let vc : UIViewController = (LoginModule.sharedModule.isAuthorized) ?

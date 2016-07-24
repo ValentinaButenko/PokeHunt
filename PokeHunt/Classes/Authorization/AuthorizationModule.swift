@@ -20,6 +20,7 @@ internal class LoginModule : NSObject, OIDAuthStateChangeDelegate {
     static let GoogleClientId = "848232511240-73ri3t7plvk96pj4f85uj8otdat2alem.apps.googleusercontent.com"
     static let GoogleRedirectURI = "urn:ietf:wg:oauth:2.0:oob"
     static let GoogleRequestScope = "openid email https://www.googleapis.com/auth/userinfo.email"
+    static let GoogleClientSecret = "NCjF1TLi2CcY6t5mt0ZveuL7"
 
     internal enum AuthorizationStatus {
         case LoggedIn
@@ -64,15 +65,34 @@ internal class LoginModule : NSObject, OIDAuthStateChangeDelegate {
         get { return (state != nil) ? state!.isAuthorized : false }
     }
 
-//    internal var 
+    internal func getUpdatedToken(completion: (String?) -> Void) {
+        guard let authState = self.state else {
+            completion(nil)
+            return
+        }
+
+        authState.withFreshTokensPerformAction { (accessToken, idToken, err) in
+            if let err = err {
+                print(err)
+                completion(nil)
+                return
+            }
+            if let accessToken = accessToken {
+                completion(accessToken)
+                return
+            }
+            completion(nil)
+        }
+    }
 
     // MARK: Network && handling methods
     internal func performLoginOnController(controller : UIViewController, handler : (AuthorizationStatus) -> Void) {
         callback = handler
         let config = OIDServiceConfiguration(authorizationEndpoint: NSURL(string:"https://accounts.google.com/o/oauth2/auth")!,
-                                             tokenEndpoint: NSURL(string: "https://accounts.google.com/o/oauth2/token")!)!
+                                             tokenEndpoint: NSURL(string: "https://accounts.google.com/o/oauth2/token")!)
         let req = OIDAuthorizationRequest(configuration: config,
                                           clientId: LoginModule.GoogleClientId,
+                                          clientSecret: LoginModule.GoogleClientSecret,
                                           scope: LoginModule.GoogleRequestScope,
                                           redirectURL: NSURL(string: LoginModule.GoogleRedirectURI)!,
                                           responseType: OIDResponseTypeCode,
@@ -80,8 +100,8 @@ internal class LoginModule : NSObject, OIDAuthStateChangeDelegate {
                                           codeVerifier: nil,
                                           codeChallenge: nil,
                                           codeChallengeMethod: nil,
-                                          additionalParameters: nil)!
-        
+                                          additionalParameters: nil)
+
         OIDAuthState.authStateByPresenting(request: req, onController: controller) {
             (response, error) in
             if let resp = response {
@@ -94,14 +114,7 @@ internal class LoginModule : NSObject, OIDAuthStateChangeDelegate {
     }
 
     private func handleAuthResponse(response: OIDAuthorizationResponse) {
-        var additionalParams = [String : String]()
-        if let params = response.additionalParameters {
-            let toFilter = ["client_id", "redirect_uri", "grant_type"]
-            params.filter({ (key, _) -> Bool in
-                return !toFilter.contains(key)
-            }).map({ (key, value) in additionalParams[key] = value as? String })
-        }
-        let tokenRequest = response.tokenExchangeRequestWithAdditionalParameters(additionalParams)!
+        let tokenRequest = response.tokenExchangeRequest()!
         OIDAuthorizationService.performTokenRequest(tokenRequest) { (tokenResponse, err) in
             if let tokenResponse = tokenResponse {
                 let authState = OIDAuthState(authorizationResponse: response, tokenResponse: tokenResponse)
@@ -131,6 +144,5 @@ internal class LoginModule : NSObject, OIDAuthStateChangeDelegate {
     // MARK: OIDAuthStateChangeDelegate
     internal func didChangeState(state: OIDAuthState) {
         LoginModule.tryToSaveState(state)
-        print(state)
     }
 }
