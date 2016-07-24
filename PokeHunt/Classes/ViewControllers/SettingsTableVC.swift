@@ -9,24 +9,32 @@
 import UIKit
 import SnapKit
 
-class SettingsTableVC: UITableViewController {
+class SettingsTableVC: UITableViewController, UITextFieldDelegate{
 
     @IBOutlet weak var autorefreshCell: UITableViewCell!
     @IBOutlet weak var displayPokemonsCell: UITableViewCell!
     @IBOutlet weak var displayPokestopCell: UITableViewCell!
     @IBOutlet weak var displayJymsCell: UITableViewCell!
+    @IBOutlet weak var stepsAreaCell: UITableViewCell!
+    @IBOutlet weak var termsCell: UITableViewCell!
+    @IBOutlet weak var privacyPolicyCell: UITableViewCell!
+    @IBOutlet weak var rateUsCell: UITableViewCell!
+    @IBOutlet weak var logOutCell: UITableViewCell!
 
     var autorefreshSwitch: UISwitch!
     var displayPokeSwitch: UISwitch!
     var displayPokeStopSwitch: UISwitch!
     var displayJymsSwitch: UISwitch!
-    var stepsArea: UITextField!
+    @IBOutlet weak var stepsArea: UITextField!
 
     let imgOn = UIImage(named: R.image.bgSwitch.name)
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setup()
+
+        let tap = UITapGestureRecognizer(target: self, action: #selector(SettingsTableVC.dismissKeyboard))
+        view.addGestureRecognizer(tap)
     }
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -42,7 +50,7 @@ class SettingsTableVC: UITableViewController {
         let headerText = UILabel()
 
         headerText.text = "Settings"
-        headerText.font = UIFont(name: "OpenSans-Regular", size: 10)
+        headerText.font = UIFont(name: "OpenSans", size: 15)
 
         headerText.textColor = UIColor(red: (124/255), green: (124/255), blue: (124/255), alpha: 1.0)
         headerView.backgroundColor = UIColor(red: (243/255), green: (243/255), blue: (243/255), alpha: 1.0)
@@ -66,6 +74,12 @@ class SettingsTableVC: UITableViewController {
         self.setupDisplayPokemonsCell()
         self.setupDisplayPokestopCell()
         self.setupDisplayJymsCell()
+        self.setupStepsAreaCell()
+        self.setupTermsCell()
+        self.setupPrivacyPolicyCell()
+        self.setupRateUsCell()
+        self.setupLogOutCell()
+        self.addDoneButtonOnKeyboard()
     }
 
     func setupAutorefreshCell(){
@@ -78,6 +92,8 @@ class SettingsTableVC: UITableViewController {
         autorefreshSwitch.layer.cornerRadius = 18.0
         autorefreshSwitch.transform = CGAffineTransformMakeScale(1.27, 1.27)
         autorefreshSwitch.setOn(true, animated: false)
+
+        autorefreshSwitch.addTarget(self, action: #selector(SettingsTableVC.refreshSwitchChangeState(_:)), forControlEvents: .ValueChanged)
 
         let topSeparator = UIView(frame: CGRect(x: 0, y: 0, width: autorefreshCell.frame.size.width, height: 1))
         topSeparator.backgroundColor = UIColor(red: (170/255), green: (170/255), blue: (170/255), alpha: 0.8)
@@ -106,6 +122,8 @@ class SettingsTableVC: UITableViewController {
         displayPokeSwitch.transform = CGAffineTransformMakeScale(1.27, 1.27)
         displayPokeSwitch.setOn(false, animated: false)
 
+        displayPokeSwitch.addTarget(self, action: #selector(SettingsTableVC.showPokeSwitchChangeState(_:)), forControlEvents: .ValueChanged)
+
         let separator = UIView(frame: CGRect(x: 0, y: displayPokemonsCell.frame.size.height - 1, width: displayPokemonsCell.frame.size.width, height: 1))
         separator.backgroundColor = UIColor(red: (170/255), green: (170/255), blue: (170/255), alpha: 0.8)
 
@@ -129,6 +147,8 @@ class SettingsTableVC: UITableViewController {
         displayPokestopSwitch.layer.cornerRadius = 18.0
         displayPokestopSwitch.transform = CGAffineTransformMakeScale(1.27, 1.27)
         displayPokestopSwitch.setOn(true, animated: false)
+
+        displayPokestopSwitch.addTarget(self, action: #selector(SettingsTableVC.showPokestopSwitchChangeState(_:)), forControlEvents: .ValueChanged)
 
         let separator = UIView(frame: CGRect(x: 0, y: displayPokestopCell.frame.size.height - 1, width: displayPokestopCell.frame.size.width, height: 1))
         separator.backgroundColor = UIColor(red: (170/255), green: (170/255), blue: (170/255), alpha: 0.8)
@@ -154,7 +174,13 @@ class SettingsTableVC: UITableViewController {
         displayJymsSwitch.transform = CGAffineTransformMakeScale(1.27, 1.27)
         displayJymsSwitch.setOn(true, animated: false)
 
+        displayJymsSwitch.addTarget(self, action: #selector(SettingsTableVC.showJymsSwitchChangeState(_:)), forControlEvents: .ValueChanged)
+
+        let separator = UIView(frame: CGRect(x: 0, y: displayJymsCell.frame.size.height - 1, width: displayJymsCell.frame.size.width, height: 1))
+        separator.backgroundColor = UIColor(red: (170/255), green: (170/255), blue: (170/255), alpha: 0.8)
+
         displayJymsCell.addSubview(displayJymsSwitch)
+        displayJymsCell.addSubview(separator)
 
         displayJymsSwitch.snp_makeConstraints { (make) in
             make.top.equalTo(displayJymsCell).inset(15)
@@ -162,5 +188,99 @@ class SettingsTableVC: UITableViewController {
         }
         self.displayJymsSwitch = displayJymsSwitch
     }
-   }
+
+    func setupStepsAreaCell(){
+        let separator = UIView(frame: CGRect(x: 0, y: stepsAreaCell.frame.size.height - 1, width: stepsAreaCell.frame.size.width, height: 1))
+        separator.backgroundColor = UIColor(red: (170/255), green: (170/255), blue: (170/255), alpha: 0.8)
+        stepsAreaCell.addSubview(separator)
+
+        stepsArea.returnKeyType = .Done
+    }
+
+    func setupTermsCell(){
+        let separator = UIView(frame: CGRect(x: 0, y: termsCell.frame.size.height - 1, width: termsCell.frame.size.width, height: 1))
+        separator.backgroundColor = UIColor(red: (170/255), green: (170/255), blue: (170/255), alpha: 0.8)
+        termsCell.addSubview(separator)
+    }
+
+    func setupPrivacyPolicyCell(){
+        let separator = UIView(frame: CGRect(x: 0, y: privacyPolicyCell.frame.size.height - 1, width: privacyPolicyCell.frame.size.width, height: 1))
+        separator.backgroundColor = UIColor(red: (170/255), green: (170/255), blue: (170/255), alpha: 0.8)
+        privacyPolicyCell.addSubview(separator)
+    }
+
+    func setupRateUsCell(){
+        let separator = UIView(frame: CGRect(x: 0, y: rateUsCell.frame.size.height - 1, width: rateUsCell.frame.size.width, height: 1))
+        separator.backgroundColor = UIColor(red: (170/255), green: (170/255), blue: (170/255), alpha: 0.8)
+        rateUsCell.addSubview(separator)
+    }
+
+    func setupLogOutCell(){
+        let separator = UIView(frame: CGRect(x: 0, y: logOutCell.frame.size.height - 1, width: logOutCell.frame.size.width, height: 1))
+        separator.backgroundColor = UIColor(red: (170/255), green: (170/255), blue: (170/255), alpha: 0.8)
+        logOutCell.addSubview(separator)
+    }
+
+    func refreshSwitchChangeState(sender: UISwitch){
+        if sender.on{
+            print("Autorefresh on")
+        }
+        else{
+            print("Autorefresh off")
+        }
+    }
+
+    func showPokeSwitchChangeState(sender: UISwitch){
+        if sender.on{
+            print("ShowPoke on")
+        }
+        else{
+            print("ShowPoke off")
+        }
+    }
+
+    func showPokestopSwitchChangeState(sender: UISwitch){
+        if sender.on{
+            print("Show Pokestop on")
+        }
+        else{
+            print("Show Pokestop off")
+        }
+    }
+
+    func showJymsSwitchChangeState(sender: UISwitch){
+        if sender.on{
+            print("Show Jyms on")
+        }
+        else{
+            print("Show Jyms off")
+        }
+    }
+
+    func addDoneButtonOnKeyboard()
+    {
+        let doneToolbar = UIToolbar(frame: CGRectMake(0, 0, 320, 50))
+        doneToolbar.barStyle = UIBarStyle.BlackOpaque
+
+        let flexSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
+        let done = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Done, target: self, action: #selector(SettingsTableVC.doneButtonAction(_:)))
+        done.tintColor = UIColor.whiteColor()
+
+        let items = [flexSpace, done]
+        doneToolbar.items = items
+        doneToolbar.sizeToFit()
+
+        self.stepsArea.inputAccessoryView = doneToolbar
+        self.stepsArea.inputAccessoryView = doneToolbar
+    }
+
+    func doneButtonAction(sender: UIBarButtonItem){
+        print("user tapped done")
+        self.dismissKeyboard()
+    }
+
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
+}
 

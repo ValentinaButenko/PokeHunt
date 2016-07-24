@@ -203,13 +203,13 @@
                                                     </variation>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="30" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yQy-hu-EAk">
-                                                    <rect key="frame" x="529" y="15" width="48" height="30"/>
+                                                    <rect key="frame" x="427" y="15" width="150" height="30"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="48" id="nnt-bB-CBd"/>
+                                                        <constraint firstAttribute="width" constant="150" id="nnt-bB-CBd"/>
                                                         <constraint firstAttribute="height" constant="30" id="tiu-yD-iaA"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="17"/>
-                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="go"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -465,11 +465,17 @@
                         <outlet property="displayJymsCell" destination="OCj-1U-L92" id="GBU-i1-ab4"/>
                         <outlet property="displayPokemonsCell" destination="3s0-rd-ggW" id="eLX-9v-zOa"/>
                         <outlet property="displayPokestopCell" destination="hR1-n4-2xH" id="wGi-RY-TFs"/>
+                        <outlet property="logOutCell" destination="asH-zN-zV9" id="baZ-Cv-SnW"/>
+                        <outlet property="privacyPolicyCell" destination="sB1-CJ-AX5" id="TZa-sk-REe"/>
+                        <outlet property="rateUsCell" destination="SkI-4Y-l5K" id="T18-T8-RCk"/>
+                        <outlet property="stepsArea" destination="yQy-hu-EAk" id="7R3-nN-8QU"/>
+                        <outlet property="stepsAreaCell" destination="fc9-nm-Vpf" id="n4b-9z-uJk"/>
+                        <outlet property="termsCell" destination="wuG-pp-KF1" id="XfI-sm-I4U"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UZH-7O-4lz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="397" y="387"/>
+            <point key="canvasLocation" x="401" y="314"/>
         </scene>
     </scenes>
 </document>
