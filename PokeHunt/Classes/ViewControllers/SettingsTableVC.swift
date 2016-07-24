@@ -13,6 +13,7 @@ class SettingsTableVC: UITableViewController {
 
     @IBOutlet weak var autorefreshCell: UITableViewCell!
     @IBOutlet weak var displayPokemonsCell: UITableViewCell!
+    @IBOutlet weak var displayPokestopCell: UITableViewCell!
 
     var autorefreshSwitch: UISwitch!
     var displayPokeSwitch: UISwitch!
@@ -62,6 +63,7 @@ class SettingsTableVC: UITableViewController {
     func setup(){
         self.setupAutorefreshSwitch()
         self.setupDisplayPokemonsCell()
+        self.setupDisplayPokestopCell()
     }
 
     func setupAutorefreshSwitch(){
@@ -96,6 +98,23 @@ class SettingsTableVC: UITableViewController {
             make.trailing.equalTo(displayPokemonsCell).inset(28)
         }
         self.displayPokeSwitch = displayPokeSwitch
+    }
+
+    func setupDisplayPokestopCell(){
+        let displayPokestopSwitch = UISwitch()
+
+        displayPokestopSwitch.sizeToFit()
+        displayPokestopSwitch.onTintColor = UIColor(patternImage: img!)
+        displayPokestopSwitch.transform = CGAffineTransformMakeScale(1.27, 1.27)
+        displayPokestopSwitch.setOn(false, animated: false)
+
+        displayPokestopCell.addSubview(displayPokestopSwitch)
+
+        displayPokestopSwitch.snp_makeConstraints { (make) in
+            make.top.equalTo(displayPokestopCell).inset(15)
+            make.trailing.equalTo(displayPokestopCell).inset(28)
+        }
+        self.displayPokeStopSwitch = displayPokestopSwitch
     }
 
 

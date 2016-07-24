@@ -463,6 +463,7 @@
                     <connections>
                         <outlet property="autorefreshCell" destination="AWL-Fk-zUG" id="aT9-xX-hqO"/>
                         <outlet property="displayPokemonsCell" destination="3s0-rd-ggW" id="eLX-9v-zOa"/>
+                        <outlet property="displayPokestopCell" destination="hR1-n4-2xH" id="wGi-RY-TFs"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UZH-7O-4lz" userLabel="First Responder" sceneMemberID="firstResponder"/>
