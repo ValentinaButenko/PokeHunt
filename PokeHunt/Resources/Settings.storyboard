@@ -20,10 +20,10 @@
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--Table View Controller-->
+        <!--Settings TableVC-->
         <scene sceneID="MYy-9V-Mkf">
             <objects>
-                <tableViewController storyboardIdentifier="SettingsStrBrd" id="rPf-51-Je2" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SettingsStrBrd" id="rPf-51-Je2" customClass="SettingsTableVC" customModule="PokeHunt" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="ApF-FQ-CoY">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

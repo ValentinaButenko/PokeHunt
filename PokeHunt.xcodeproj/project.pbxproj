@@ -7,41 +7,49 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		12760BAF1D4424A200F446FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12760B971D4424A200F446FA /* Assets.xcassets */; };
-		12760BB01D4424A200F446FA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12760B981D4424A200F446FA /* LaunchScreen.xib */; };
-		12760BB21D4424A200F446FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12760B9C1D4424A200F446FA /* AppDelegate.swift */; };
-		12760BB31D4424A200F446FA /* AuthorizationModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12760B9E1D4424A200F446FA /* AuthorizationModule.swift */; };
-		12760BB41D4424A200F446FA /* GoogleAuthorizationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12760B9F1D4424A200F446FA /* GoogleAuthorizationController.swift */; };
-		12760BB51D4424A200F446FA /* Bootstrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12760BA11D4424A200F446FA /* Bootstrapper.swift */; };
-		12760BB61D4424A200F446FA /* UIView.bgSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12760BA31D4424A200F446FA /* UIView.bgSnapshot.swift */; };
-		12760BB71D4424A200F446FA /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12760BA51D4424A200F446FA /* R.generated.swift */; };
-		12760BB81D4424A200F446FA /* NianticlabsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12760BA71D4424A200F446FA /* NianticlabsService.swift */; };
-		12760BB91D4424A200F446FA /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12760BAA1D4424A200F446FA /* LoginVC.swift */; };
-		12760BBA1D4424A200F446FA /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12760BAB1D4424A200F446FA /* MapVC.swift */; };
-		12760BBB1D4424A200F446FA /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12760BAD1D4424A200F446FA /* LogoView.swift */; };
 		39A0F50EAE19156C026555D7 /* Pods_PokeHunt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58DD6499E2E6B4CA44BAA4CB /* Pods_PokeHunt.framework */; };
 		F64A96631D40E8C000A72182 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64A96621D40E8C000A72182 /* Social.framework */; };
+		F69A44831D44B85800D56AEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69A44691D44B85800D56AEA /* AppDelegate.swift */; };
+		F69A44841D44B85800D56AEA /* AuthorizationModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69A446B1D44B85800D56AEA /* AuthorizationModule.swift */; };
+		F69A44851D44B85800D56AEA /* GoogleAuthorizationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69A446C1D44B85800D56AEA /* GoogleAuthorizationController.swift */; };
+		F69A44861D44B85800D56AEA /* Bootstrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69A446E1D44B85800D56AEA /* Bootstrapper.swift */; };
+		F69A44871D44B85800D56AEA /* UIView.bgSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69A44701D44B85800D56AEA /* UIView.bgSnapshot.swift */; };
+		F69A44881D44B85800D56AEA /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69A44721D44B85800D56AEA /* R.generated.swift */; };
+		F69A44891D44B85800D56AEA /* NianticlabsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69A44741D44B85800D56AEA /* NianticlabsService.swift */; };
+		F69A448A1D44B85800D56AEA /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69A44761D44B85800D56AEA /* LoginVC.swift */; };
+		F69A448B1D44B85800D56AEA /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69A44771D44B85800D56AEA /* MapVC.swift */; };
+		F69A448C1D44B85800D56AEA /* SettingsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69A44781D44B85800D56AEA /* SettingsTableVC.swift */; };
+		F69A448D1D44B85800D56AEA /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69A447A1D44B85800D56AEA /* LogoView.swift */; };
+		F69A448E1D44B85800D56AEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F69A447C1D44B85800D56AEA /* Assets.xcassets */; };
+		F69A448F1D44B85800D56AEA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F69A447D1D44B85800D56AEA /* LaunchScreen.xib */; };
+		F69A44901D44B85800D56AEA /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F69A447E1D44B85800D56AEA /* OpenSans-Semibold.ttf */; };
+		F69A44911D44B85800D56AEA /* pokemon.proto in Resources */ = {isa = PBXBuildFile; fileRef = F69A447F1D44B85800D56AEA /* pokemon.proto */; };
+		F69A44921D44B85800D56AEA /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F69A44801D44B85800D56AEA /* Settings.storyboard */; };
+		F69A44931D44B85800D56AEA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F69A44821D44B85800D56AEA /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		12760B951D4424A200F446FA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		12760B971D4424A200F446FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		12760B981D4424A200F446FA /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
-		12760B991D4424A200F446FA /* pokemon.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokemon.proto; sourceTree = "<group>"; };
-		12760B9C1D4424A200F446FA /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		12760B9E1D4424A200F446FA /* AuthorizationModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationModule.swift; sourceTree = "<group>"; };
-		12760B9F1D4424A200F446FA /* GoogleAuthorizationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleAuthorizationController.swift; sourceTree = "<group>"; };
-		12760BA11D4424A200F446FA /* Bootstrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bootstrapper.swift; sourceTree = "<group>"; };
-		12760BA31D4424A200F446FA /* UIView.bgSnapshot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.bgSnapshot.swift; sourceTree = "<group>"; };
-		12760BA51D4424A200F446FA /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
-		12760BA71D4424A200F446FA /* NianticlabsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NianticlabsService.swift; sourceTree = "<group>"; };
-		12760BAA1D4424A200F446FA /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
-		12760BAB1D4424A200F446FA /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
-		12760BAD1D4424A200F446FA /* LogoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 		31CF62A75AD969201AB06A47 /* Pods-PokeHunt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeHunt.release.xcconfig"; path = "Pods/Target Support Files/Pods-PokeHunt/Pods-PokeHunt.release.xcconfig"; sourceTree = "<group>"; };
 		58DD6499E2E6B4CA44BAA4CB /* Pods_PokeHunt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PokeHunt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		701B67ED30CCD092DC53B694 /* Pods-PokeHunt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeHunt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PokeHunt/Pods-PokeHunt.debug.xcconfig"; sourceTree = "<group>"; };
 		F64A96621D40E8C000A72182 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		F69A44691D44B85800D56AEA /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F69A446B1D44B85800D56AEA /* AuthorizationModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationModule.swift; sourceTree = "<group>"; };
+		F69A446C1D44B85800D56AEA /* GoogleAuthorizationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleAuthorizationController.swift; sourceTree = "<group>"; };
+		F69A446E1D44B85800D56AEA /* Bootstrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bootstrapper.swift; sourceTree = "<group>"; };
+		F69A44701D44B85800D56AEA /* UIView.bgSnapshot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.bgSnapshot.swift; sourceTree = "<group>"; };
+		F69A44721D44B85800D56AEA /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		F69A44741D44B85800D56AEA /* NianticlabsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NianticlabsService.swift; sourceTree = "<group>"; };
+		F69A44761D44B85800D56AEA /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		F69A44771D44B85800D56AEA /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
+		F69A44781D44B85800D56AEA /* SettingsTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableVC.swift; sourceTree = "<group>"; };
+		F69A447A1D44B85800D56AEA /* LogoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
+		F69A447C1D44B85800D56AEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F69A447D1D44B85800D56AEA /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		F69A447E1D44B85800D56AEA /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
+		F69A447F1D44B85800D56AEA /* pokemon.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokemon.proto; sourceTree = "<group>"; };
+		F69A44801D44B85800D56AEA /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		F69A44821D44B85800D56AEA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6DCD15A1D3FB09900FA576E /* PokeHunt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeHunt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -58,113 +66,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		12760B941D4424A200F446FA /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				12760B951D4424A200F446FA /* Info.plist */,
-			);
-			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		12760B961D4424A200F446FA /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				12760B971D4424A200F446FA /* Assets.xcassets */,
-				12760B981D4424A200F446FA /* LaunchScreen.xib */,
-				12760B991D4424A200F446FA /* pokemon.proto */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		12760B9A1D4424A200F446FA /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				12760B9B1D4424A200F446FA /* AppDelegate */,
-				12760B9D1D4424A200F446FA /* Authorization */,
-				12760BA01D4424A200F446FA /* Bootstrapper */,
-				12760BA21D4424A200F446FA /* Extensions */,
-				12760BA41D4424A200F446FA /* Generated */,
-				12760BA61D4424A200F446FA /* Services */,
-				12760BA91D4424A200F446FA /* ViewControllers */,
-				12760BAC1D4424A200F446FA /* Views */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		12760B9B1D4424A200F446FA /* AppDelegate */ = {
-			isa = PBXGroup;
-			children = (
-				12760B9C1D4424A200F446FA /* AppDelegate.swift */,
-			);
-			path = AppDelegate;
-			sourceTree = "<group>";
-		};
-		12760B9D1D4424A200F446FA /* Authorization */ = {
-			isa = PBXGroup;
-			children = (
-				12760B9E1D4424A200F446FA /* AuthorizationModule.swift */,
-				12760B9F1D4424A200F446FA /* GoogleAuthorizationController.swift */,
-			);
-			path = Authorization;
-			sourceTree = "<group>";
-		};
-		12760BA01D4424A200F446FA /* Bootstrapper */ = {
-			isa = PBXGroup;
-			children = (
-				12760BA11D4424A200F446FA /* Bootstrapper.swift */,
-			);
-			path = Bootstrapper;
-			sourceTree = "<group>";
-		};
-		12760BA21D4424A200F446FA /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				12760BA31D4424A200F446FA /* UIView.bgSnapshot.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		12760BA41D4424A200F446FA /* Generated */ = {
-			isa = PBXGroup;
-			children = (
-				12760BA51D4424A200F446FA /* R.generated.swift */,
-			);
-			path = Generated;
-			sourceTree = "<group>";
-		};
-		12760BA61D4424A200F446FA /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				12760BA71D4424A200F446FA /* NianticlabsService.swift */,
-				12760BA81D4424A200F446FA /* Protobuf */,
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
-		12760BA81D4424A200F446FA /* Protobuf */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Protobuf;
-			sourceTree = "<group>";
-		};
-		12760BA91D4424A200F446FA /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				12760BAA1D4424A200F446FA /* LoginVC.swift */,
-				12760BAB1D4424A200F446FA /* MapVC.swift */,
-			);
-			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		12760BAC1D4424A200F446FA /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				12760BAD1D4424A200F446FA /* LogoView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		4DB5BD027634F7D57F2F15B3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +82,108 @@
 				31CF62A75AD969201AB06A47 /* Pods-PokeHunt.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		F69A44671D44B85800D56AEA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F69A44681D44B85800D56AEA /* AppDelegate */,
+				F69A446A1D44B85800D56AEA /* Authorization */,
+				F69A446D1D44B85800D56AEA /* Bootstrapper */,
+				F69A446F1D44B85800D56AEA /* Extensions */,
+				F69A44711D44B85800D56AEA /* Generated */,
+				F69A44731D44B85800D56AEA /* Services */,
+				F69A44751D44B85800D56AEA /* ViewControllers */,
+				F69A44791D44B85800D56AEA /* Views */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		F69A44681D44B85800D56AEA /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				F69A44691D44B85800D56AEA /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		F69A446A1D44B85800D56AEA /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				F69A446B1D44B85800D56AEA /* AuthorizationModule.swift */,
+				F69A446C1D44B85800D56AEA /* GoogleAuthorizationController.swift */,
+			);
+			path = Authorization;
+			sourceTree = "<group>";
+		};
+		F69A446D1D44B85800D56AEA /* Bootstrapper */ = {
+			isa = PBXGroup;
+			children = (
+				F69A446E1D44B85800D56AEA /* Bootstrapper.swift */,
+			);
+			path = Bootstrapper;
+			sourceTree = "<group>";
+		};
+		F69A446F1D44B85800D56AEA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F69A44701D44B85800D56AEA /* UIView.bgSnapshot.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F69A44711D44B85800D56AEA /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				F69A44721D44B85800D56AEA /* R.generated.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		F69A44731D44B85800D56AEA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F69A44741D44B85800D56AEA /* NianticlabsService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F69A44751D44B85800D56AEA /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F69A44761D44B85800D56AEA /* LoginVC.swift */,
+				F69A44771D44B85800D56AEA /* MapVC.swift */,
+				F69A44781D44B85800D56AEA /* SettingsTableVC.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F69A44791D44B85800D56AEA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F69A447A1D44B85800D56AEA /* LogoView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F69A447B1D44B85800D56AEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F69A447C1D44B85800D56AEA /* Assets.xcassets */,
+				F69A447D1D44B85800D56AEA /* LaunchScreen.xib */,
+				F69A447E1D44B85800D56AEA /* OpenSans-Semibold.ttf */,
+				F69A447F1D44B85800D56AEA /* pokemon.proto */,
+				F69A44801D44B85800D56AEA /* Settings.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F69A44811D44B85800D56AEA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F69A44821D44B85800D56AEA /* Info.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		F6DCD1511D3FB09900FA576E = {
@@ -204,9 +207,9 @@
 		F6DCD15C1D3FB09900FA576E /* PokeHunt */ = {
 			isa = PBXGroup;
 			children = (
-				12760B941D4424A200F446FA /* Supporting Files */,
-				12760B961D4424A200F446FA /* Resources */,
-				12760B9A1D4424A200F446FA /* Classes */,
+				F69A44671D44B85800D56AEA /* Classes */,
+				F69A447B1D44B85800D56AEA /* Resources */,
+				F69A44811D44B85800D56AEA /* Supporting Files */,
 			);
 			path = PokeHunt;
 			sourceTree = "<group>";
@@ -273,8 +276,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12760BAF1D4424A200F446FA /* Assets.xcassets in Resources */,
-				12760BB01D4424A200F446FA /* LaunchScreen.xib in Resources */,
+				F69A44911D44B85800D56AEA /* pokemon.proto in Resources */,
+				F69A44901D44B85800D56AEA /* OpenSans-Semibold.ttf in Resources */,
+				F69A44931D44B85800D56AEA /* Info.plist in Resources */,
+				F69A448F1D44B85800D56AEA /* LaunchScreen.xib in Resources */,
+				F69A448E1D44B85800D56AEA /* Assets.xcassets in Resources */,
+				F69A44921D44B85800D56AEA /* Settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,16 +353,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12760BB61D4424A200F446FA /* UIView.bgSnapshot.swift in Sources */,
-				12760BB41D4424A200F446FA /* GoogleAuthorizationController.swift in Sources */,
-				12760BB91D4424A200F446FA /* LoginVC.swift in Sources */,
-				12760BB21D4424A200F446FA /* AppDelegate.swift in Sources */,
-				12760BB51D4424A200F446FA /* Bootstrapper.swift in Sources */,
-				12760BBB1D4424A200F446FA /* LogoView.swift in Sources */,
-				12760BB31D4424A200F446FA /* AuthorizationModule.swift in Sources */,
-				12760BB81D4424A200F446FA /* NianticlabsService.swift in Sources */,
-				12760BBA1D4424A200F446FA /* MapVC.swift in Sources */,
-				12760BB71D4424A200F446FA /* R.generated.swift in Sources */,
+				F69A44871D44B85800D56AEA /* UIView.bgSnapshot.swift in Sources */,
+				F69A44851D44B85800D56AEA /* GoogleAuthorizationController.swift in Sources */,
+				F69A448D1D44B85800D56AEA /* LogoView.swift in Sources */,
+				F69A448A1D44B85800D56AEA /* LoginVC.swift in Sources */,
+				F69A44831D44B85800D56AEA /* AppDelegate.swift in Sources */,
+				F69A44861D44B85800D56AEA /* Bootstrapper.swift in Sources */,
+				F69A44841D44B85800D56AEA /* AuthorizationModule.swift in Sources */,
+				F69A448C1D44B85800D56AEA /* SettingsTableVC.swift in Sources */,
+				F69A44891D44B85800D56AEA /* NianticlabsService.swift in Sources */,
+				F69A448B1D44B85800D56AEA /* MapVC.swift in Sources */,
+				F69A44881D44B85800D56AEA /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
