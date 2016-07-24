@@ -462,6 +462,7 @@
                     </tableView>
                     <connections>
                         <outlet property="autorefreshCell" destination="AWL-Fk-zUG" id="aT9-xX-hqO"/>
+                        <outlet property="displayJymsCell" destination="OCj-1U-L92" id="GBU-i1-ab4"/>
                         <outlet property="displayPokemonsCell" destination="3s0-rd-ggW" id="eLX-9v-zOa"/>
                         <outlet property="displayPokestopCell" destination="hR1-n4-2xH" id="wGi-RY-TFs"/>
                     </connections>
