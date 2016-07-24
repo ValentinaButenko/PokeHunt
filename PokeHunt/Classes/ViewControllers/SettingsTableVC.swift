@@ -62,23 +62,31 @@ class SettingsTableVC: UITableViewController {
     }
 
     func setup(){
-        self.setupAutorefreshSwitch()
+        self.setupAutorefreshCell()
         self.setupDisplayPokemonsCell()
         self.setupDisplayPokestopCell()
         self.setupDisplayJymsCell()
     }
 
-    func setupAutorefreshSwitch(){
+    func setupAutorefreshCell(){
         let autorefreshSwitch = UISwitch()
 
         autorefreshSwitch.sizeToFit()
         autorefreshSwitch.onTintColor = UIColor(patternImage: imgOn!)
-        autorefreshSwitch.backgroundColor = UIColor(red: (167/255), green: (167/255), blue: (167/255), alpha: (167/255))
+        autorefreshSwitch.backgroundColor = UIColor(red: (167/255), green: (167/255), blue: (167/255), alpha: 1.0)
+        autorefreshSwitch.tintColor = UIColor(red: (167/255), green: (167/255), blue: (167/255), alpha: 1.0)
         autorefreshSwitch.layer.cornerRadius = 18.0
         autorefreshSwitch.transform = CGAffineTransformMakeScale(1.27, 1.27)
         autorefreshSwitch.setOn(true, animated: false)
 
+        let topSeparator = UIView(frame: CGRect(x: 0, y: 0, width: autorefreshCell.frame.size.width, height: 1))
+        topSeparator.backgroundColor = UIColor(red: (170/255), green: (170/255), blue: (170/255), alpha: 0.8)
+        let separator = UIView(frame: CGRect(x: 0, y: autorefreshCell.frame.size.height - 1, width: autorefreshCell.frame.size.width, height: 1))
+        separator.backgroundColor = UIColor(red: (170/255), green: (170/255), blue: (170/255), alpha: 0.8)
+
         autorefreshCell.addSubview(autorefreshSwitch)
+        autorefreshCell.addSubview(topSeparator)
+        autorefreshCell.addSubview(separator)
 
         autorefreshSwitch.snp_makeConstraints { (make) in
             make.top.equalTo(autorefreshCell).inset(15)
@@ -92,12 +100,17 @@ class SettingsTableVC: UITableViewController {
 
         displayPokeSwitch.sizeToFit()
         displayPokeSwitch.onTintColor = UIColor(patternImage: imgOn!)
-        displayPokeSwitch.backgroundColor = UIColor(red: (167/255), green: (167/255), blue: (167/255), alpha: (167/255))
+        displayPokeSwitch.backgroundColor = UIColor(red: (167/255), green: (167/255), blue: (167/255), alpha: 1.0)
+        displayPokeSwitch.tintColor = UIColor(red: (167/255), green: (167/255), blue: (167/255), alpha: 1.0)
         displayPokeSwitch.layer.cornerRadius = 18.0
         displayPokeSwitch.transform = CGAffineTransformMakeScale(1.27, 1.27)
         displayPokeSwitch.setOn(false, animated: false)
 
+        let separator = UIView(frame: CGRect(x: 0, y: displayPokemonsCell.frame.size.height - 1, width: displayPokemonsCell.frame.size.width, height: 1))
+        separator.backgroundColor = UIColor(red: (170/255), green: (170/255), blue: (170/255), alpha: 0.8)
+
         displayPokemonsCell.addSubview(displayPokeSwitch)
+        displayPokemonsCell.addSubview(separator)
 
         displayPokeSwitch.snp_makeConstraints { (make) in
             make.top.equalTo(displayPokemonsCell).inset(15)
@@ -111,12 +124,17 @@ class SettingsTableVC: UITableViewController {
 
         displayPokestopSwitch.sizeToFit()
         displayPokestopSwitch.onTintColor = UIColor(patternImage: imgOn!)
-        displayPokestopSwitch.backgroundColor = UIColor(red: (167/255), green: (167/255), blue: (167/255), alpha: (167/255))
+        displayPokestopSwitch.backgroundColor = UIColor(red: (167/255), green: (167/255), blue: (167/255), alpha: 1.0)
+        displayPokestopSwitch.tintColor = UIColor(red: (167/255), green: (167/255), blue: (167/255), alpha: 1.0)
         displayPokestopSwitch.layer.cornerRadius = 18.0
         displayPokestopSwitch.transform = CGAffineTransformMakeScale(1.27, 1.27)
         displayPokestopSwitch.setOn(true, animated: false)
 
+        let separator = UIView(frame: CGRect(x: 0, y: displayPokestopCell.frame.size.height - 1, width: displayPokestopCell.frame.size.width, height: 1))
+        separator.backgroundColor = UIColor(red: (170/255), green: (170/255), blue: (170/255), alpha: 0.8)
+
         displayPokestopCell.addSubview(displayPokestopSwitch)
+        displayPokestopCell.addSubview(separator)
 
         displayPokestopSwitch.snp_makeConstraints { (make) in
             make.top.equalTo(displayPokestopCell).inset(15)
@@ -130,7 +148,8 @@ class SettingsTableVC: UITableViewController {
 
         displayJymsSwitch.sizeToFit()
         displayJymsSwitch.onTintColor = UIColor(patternImage: imgOn!)
-        displayJymsSwitch.backgroundColor = UIColor(red: (167/255), green: (167/255), blue: (167/255), alpha: (167/255))
+        displayJymsSwitch.backgroundColor = UIColor(red: (167/255), green: (167/255), blue: (167/255), alpha: 1.0)
+        displayJymsSwitch.tintColor = UIColor(red: (167/255), green: (167/255), blue: (167/255), alpha: 1.0)
         displayJymsSwitch.layer.cornerRadius = 18.0
         displayJymsSwitch.transform = CGAffineTransformMakeScale(1.27, 1.27)
         displayJymsSwitch.setOn(true, animated: false)
