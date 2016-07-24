@@ -24,31 +24,31 @@
 
 CF_EXTERN_C_BEGIN
 
-@class RequestEnvelop_AuthInfo;
-@class RequestEnvelop_AuthInfo_JWT;
-@class RequestEnvelop_Requests;
-@class RequestEnvelop_Unknown6;
-@class RequestEnvelop_Unknown6_Unknown2;
-@class ResponseEnvelop_ClientMapCell;
-@class ResponseEnvelop_ClientSpawnPointProto;
-@class ResponseEnvelop_FortLureInfoProto;
-@class ResponseEnvelop_MapPokemonProto;
-@class ResponseEnvelop_NearbyPokemonProto;
-@class ResponseEnvelop_PokemonFortProto;
-@class ResponseEnvelop_PokemonSummaryFortProto;
-@class ResponseEnvelop_Profile;
-@class ResponseEnvelop_Profile_AvatarDetails;
-@class ResponseEnvelop_Profile_Currency;
-@class ResponseEnvelop_Profile_DailyBonus;
-@class ResponseEnvelop_Unknown6;
-@class ResponseEnvelop_Unknown6_Unknown2;
-@class ResponseEnvelop_WildPokemonProto;
-@class ResponseEnvelop_WildPokemonProto_Pokemon;
-@class UnknownAuth;
+@class PHProtoRequestEnvelop_AuthInfo;
+@class PHProtoRequestEnvelop_AuthInfo_JWT;
+@class PHProtoRequestEnvelop_Requests;
+@class PHProtoRequestEnvelop_Unknown6;
+@class PHProtoRequestEnvelop_Unknown6_Unknown2;
+@class PHProtoResponseEnvelop_ClientMapCell;
+@class PHProtoResponseEnvelop_ClientSpawnPointProto;
+@class PHProtoResponseEnvelop_FortLureInfoProto;
+@class PHProtoResponseEnvelop_MapPokemonProto;
+@class PHProtoResponseEnvelop_NearbyPokemonProto;
+@class PHProtoResponseEnvelop_PokemonFortProto;
+@class PHProtoResponseEnvelop_PokemonSummaryFortProto;
+@class PHProtoResponseEnvelop_Profile;
+@class PHProtoResponseEnvelop_Profile_AvatarDetails;
+@class PHProtoResponseEnvelop_Profile_Currency;
+@class PHProtoResponseEnvelop_Profile_DailyBonus;
+@class PHProtoResponseEnvelop_Unknown6;
+@class PHProtoResponseEnvelop_Unknown6_Unknown2;
+@class PHProtoResponseEnvelop_WildPokemonProto;
+@class PHProtoResponseEnvelop_WildPokemonProto_Pokemon;
+@class PHProtoUnknownAuth;
 
 NS_ASSUME_NONNULL_BEGIN
 
-#pragma mark - PokemonRoot
+#pragma mark - PHProtoPokemonRoot
 
 /// Exposes the extension registry for this file.
 ///
@@ -58,25 +58,25 @@ NS_ASSUME_NONNULL_BEGIN
 /// @endcode
 /// which is a @c GPBExtensionRegistry that includes all the extensions defined by
 /// this file and all files that it depends on.
-@interface PokemonRoot : GPBRootObject
+@interface PHProtoPokemonRoot : GPBRootObject
 @end
 
-#pragma mark - RequestEnvelop
+#pragma mark - PHProtoRequestEnvelop
 
-typedef GPB_ENUM(RequestEnvelop_FieldNumber) {
-  RequestEnvelop_FieldNumber_Unknown1 = 1,
-  RequestEnvelop_FieldNumber_RpcId = 3,
-  RequestEnvelop_FieldNumber_RequestsArray = 4,
-  RequestEnvelop_FieldNumber_Unknown6 = 6,
-  RequestEnvelop_FieldNumber_Latitude = 7,
-  RequestEnvelop_FieldNumber_Longitude = 8,
-  RequestEnvelop_FieldNumber_Altitude = 9,
-  RequestEnvelop_FieldNumber_Auth = 10,
-  RequestEnvelop_FieldNumber_Unknown11 = 11,
-  RequestEnvelop_FieldNumber_Unknown12 = 12,
+typedef GPB_ENUM(PHProtoRequestEnvelop_FieldNumber) {
+  PHProtoRequestEnvelop_FieldNumber_Unknown1 = 1,
+  PHProtoRequestEnvelop_FieldNumber_RpcId = 3,
+  PHProtoRequestEnvelop_FieldNumber_RequestsArray = 4,
+  PHProtoRequestEnvelop_FieldNumber_Unknown6 = 6,
+  PHProtoRequestEnvelop_FieldNumber_Latitude = 7,
+  PHProtoRequestEnvelop_FieldNumber_Longitude = 8,
+  PHProtoRequestEnvelop_FieldNumber_Altitude = 9,
+  PHProtoRequestEnvelop_FieldNumber_Auth = 10,
+  PHProtoRequestEnvelop_FieldNumber_Unknown11 = 11,
+  PHProtoRequestEnvelop_FieldNumber_Unknown12 = 12,
 };
 
-@interface RequestEnvelop : GPBMessage
+@interface PHProtoRequestEnvelop : GPBMessage
 
 @property(nonatomic, readwrite) int32_t unknown1;
 
@@ -84,11 +84,11 @@ typedef GPB_ENUM(RequestEnvelop_FieldNumber) {
 @property(nonatomic, readwrite) int64_t rpcId;
 
 @property(nonatomic, readwrite) BOOL hasRpcId;
-@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<RequestEnvelop_Requests*> *requestsArray;
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<PHProtoRequestEnvelop_Requests*> *requestsArray;
 /// The number of items in @c requestsArray without causing the array to be created.
 @property(nonatomic, readonly) NSUInteger requestsArray_Count;
 
-@property(nonatomic, readwrite, strong, null_resettable) RequestEnvelop_Unknown6 *unknown6;
+@property(nonatomic, readwrite, strong, null_resettable) PHProtoRequestEnvelop_Unknown6 *unknown6;
 /// Test to see if @c unknown6 has been set.
 @property(nonatomic, readwrite) BOOL hasUnknown6;
 
@@ -101,11 +101,11 @@ typedef GPB_ENUM(RequestEnvelop_FieldNumber) {
 @property(nonatomic, readwrite) uint64_t altitude;
 
 @property(nonatomic, readwrite) BOOL hasAltitude;
-@property(nonatomic, readwrite, strong, null_resettable) RequestEnvelop_AuthInfo *auth;
+@property(nonatomic, readwrite, strong, null_resettable) PHProtoRequestEnvelop_AuthInfo *auth;
 /// Test to see if @c auth has been set.
 @property(nonatomic, readwrite) BOOL hasAuth;
 
-@property(nonatomic, readwrite, strong, null_resettable) UnknownAuth *unknown11;
+@property(nonatomic, readwrite, strong, null_resettable) PHProtoUnknownAuth *unknown11;
 /// Test to see if @c unknown11 has been set.
 @property(nonatomic, readwrite) BOOL hasUnknown11;
 
@@ -114,14 +114,14 @@ typedef GPB_ENUM(RequestEnvelop_FieldNumber) {
 @property(nonatomic, readwrite) BOOL hasUnknown12;
 @end
 
-#pragma mark - RequestEnvelop_Requests
+#pragma mark - PHProtoRequestEnvelop_Requests
 
-typedef GPB_ENUM(RequestEnvelop_Requests_FieldNumber) {
-  RequestEnvelop_Requests_FieldNumber_Type = 1,
-  RequestEnvelop_Requests_FieldNumber_Message = 2,
+typedef GPB_ENUM(PHProtoRequestEnvelop_Requests_FieldNumber) {
+  PHProtoRequestEnvelop_Requests_FieldNumber_Type = 1,
+  PHProtoRequestEnvelop_Requests_FieldNumber_Message = 2,
 };
 
-@interface RequestEnvelop_Requests : GPBMessage
+@interface PHProtoRequestEnvelop_Requests : GPBMessage
 
 @property(nonatomic, readwrite) int32_t type;
 
@@ -132,13 +132,13 @@ typedef GPB_ENUM(RequestEnvelop_Requests_FieldNumber) {
 
 @end
 
-#pragma mark - RequestEnvelop_MessageSingleString
+#pragma mark - PHProtoRequestEnvelop_MessageSingleString
 
-typedef GPB_ENUM(RequestEnvelop_MessageSingleString_FieldNumber) {
-  RequestEnvelop_MessageSingleString_FieldNumber_Bytes = 1,
+typedef GPB_ENUM(PHProtoRequestEnvelop_MessageSingleString_FieldNumber) {
+  PHProtoRequestEnvelop_MessageSingleString_FieldNumber_Bytes = 1,
 };
 
-@interface RequestEnvelop_MessageSingleString : GPBMessage
+@interface PHProtoRequestEnvelop_MessageSingleString : GPBMessage
 
 @property(nonatomic, readwrite, copy, null_resettable) NSData *bytes;
 /// Test to see if @c bytes has been set.
@@ -146,27 +146,27 @@ typedef GPB_ENUM(RequestEnvelop_MessageSingleString_FieldNumber) {
 
 @end
 
-#pragma mark - RequestEnvelop_MessageSingleInt
+#pragma mark - PHProtoRequestEnvelop_MessageSingleInt
 
-typedef GPB_ENUM(RequestEnvelop_MessageSingleInt_FieldNumber) {
-  RequestEnvelop_MessageSingleInt_FieldNumber_F1 = 1,
+typedef GPB_ENUM(PHProtoRequestEnvelop_MessageSingleInt_FieldNumber) {
+  PHProtoRequestEnvelop_MessageSingleInt_FieldNumber_F1 = 1,
 };
 
-@interface RequestEnvelop_MessageSingleInt : GPBMessage
+@interface PHProtoRequestEnvelop_MessageSingleInt : GPBMessage
 
 @property(nonatomic, readwrite) int64_t f1;
 
 @property(nonatomic, readwrite) BOOL hasF1;
 @end
 
-#pragma mark - RequestEnvelop_MessageTwoInts
+#pragma mark - PHProtoRequestEnvelop_MessageTwoInts
 
-typedef GPB_ENUM(RequestEnvelop_MessageTwoInts_FieldNumber) {
-  RequestEnvelop_MessageTwoInts_FieldNumber_F1 = 1,
-  RequestEnvelop_MessageTwoInts_FieldNumber_F5 = 5,
+typedef GPB_ENUM(PHProtoRequestEnvelop_MessageTwoInts_FieldNumber) {
+  PHProtoRequestEnvelop_MessageTwoInts_FieldNumber_F1 = 1,
+  PHProtoRequestEnvelop_MessageTwoInts_FieldNumber_F5 = 5,
 };
 
-@interface RequestEnvelop_MessageTwoInts : GPBMessage
+@interface PHProtoRequestEnvelop_MessageTwoInts : GPBMessage
 
 @property(nonatomic, readwrite) int64_t f1;
 
@@ -176,16 +176,16 @@ typedef GPB_ENUM(RequestEnvelop_MessageTwoInts_FieldNumber) {
 @property(nonatomic, readwrite) BOOL hasF5;
 @end
 
-#pragma mark - RequestEnvelop_MessageQuad
+#pragma mark - PHProtoRequestEnvelop_MessageQuad
 
-typedef GPB_ENUM(RequestEnvelop_MessageQuad_FieldNumber) {
-  RequestEnvelop_MessageQuad_FieldNumber_F1 = 1,
-  RequestEnvelop_MessageQuad_FieldNumber_F2 = 2,
-  RequestEnvelop_MessageQuad_FieldNumber_Lat = 3,
-  RequestEnvelop_MessageQuad_FieldNumber_Long_p = 4,
+typedef GPB_ENUM(PHProtoRequestEnvelop_MessageQuad_FieldNumber) {
+  PHProtoRequestEnvelop_MessageQuad_FieldNumber_F1 = 1,
+  PHProtoRequestEnvelop_MessageQuad_FieldNumber_F2 = 2,
+  PHProtoRequestEnvelop_MessageQuad_FieldNumber_Lat = 3,
+  PHProtoRequestEnvelop_MessageQuad_FieldNumber_Long_p = 4,
 };
 
-@interface RequestEnvelop_MessageQuad : GPBMessage
+@interface PHProtoRequestEnvelop_MessageQuad : GPBMessage
 
 @property(nonatomic, readwrite, copy, null_resettable) NSData *f1;
 /// Test to see if @c f1 has been set.
@@ -203,13 +203,13 @@ typedef GPB_ENUM(RequestEnvelop_MessageQuad_FieldNumber) {
 @property(nonatomic, readwrite) BOOL hasLong_p;
 @end
 
-#pragma mark - RequestEnvelop_Wat
+#pragma mark - PHProtoRequestEnvelop_Wat
 
-typedef GPB_ENUM(RequestEnvelop_Wat_FieldNumber) {
-  RequestEnvelop_Wat_FieldNumber_LolsArray = 134217728,
+typedef GPB_ENUM(PHProtoRequestEnvelop_Wat_FieldNumber) {
+  PHProtoRequestEnvelop_Wat_FieldNumber_LolsArray = 134217728,
 };
 
-@interface RequestEnvelop_Wat : GPBMessage
+@interface PHProtoRequestEnvelop_Wat : GPBMessage
 
 @property(nonatomic, readwrite, strong, null_resettable) GPBInt64Array *lolsArray;
 /// The number of items in @c lolsArray without causing the array to be created.
@@ -217,16 +217,16 @@ typedef GPB_ENUM(RequestEnvelop_Wat_FieldNumber) {
 
 @end
 
-#pragma mark - RequestEnvelop_Unknown3
+#pragma mark - PHProtoRequestEnvelop_Unknown3
 
-typedef GPB_ENUM(RequestEnvelop_Unknown3_FieldNumber) {
-  RequestEnvelop_Unknown3_FieldNumber_Unknown4 = 1,
-  RequestEnvelop_Unknown3_FieldNumber_Unknown2 = 2,
-  RequestEnvelop_Unknown3_FieldNumber_Lat = 3,
-  RequestEnvelop_Unknown3_FieldNumber_Long_p = 4,
+typedef GPB_ENUM(PHProtoRequestEnvelop_Unknown3_FieldNumber) {
+  PHProtoRequestEnvelop_Unknown3_FieldNumber_Unknown4 = 1,
+  PHProtoRequestEnvelop_Unknown3_FieldNumber_Unknown2 = 2,
+  PHProtoRequestEnvelop_Unknown3_FieldNumber_Lat = 3,
+  PHProtoRequestEnvelop_Unknown3_FieldNumber_Long_p = 4,
 };
 
-@interface RequestEnvelop_Unknown3 : GPBMessage
+@interface PHProtoRequestEnvelop_Unknown3 : GPBMessage
 
 @property(nonatomic, readwrite, copy, null_resettable) NSData *unknown4;
 /// Test to see if @c unknown4 has been set.
@@ -244,31 +244,31 @@ typedef GPB_ENUM(RequestEnvelop_Unknown3_FieldNumber) {
 @property(nonatomic, readwrite) BOOL hasLong_p;
 @end
 
-#pragma mark - RequestEnvelop_Unknown6
+#pragma mark - PHProtoRequestEnvelop_Unknown6
 
-typedef GPB_ENUM(RequestEnvelop_Unknown6_FieldNumber) {
-  RequestEnvelop_Unknown6_FieldNumber_Unknown1 = 1,
-  RequestEnvelop_Unknown6_FieldNumber_Unknown2 = 2,
+typedef GPB_ENUM(PHProtoRequestEnvelop_Unknown6_FieldNumber) {
+  PHProtoRequestEnvelop_Unknown6_FieldNumber_Unknown1 = 1,
+  PHProtoRequestEnvelop_Unknown6_FieldNumber_Unknown2 = 2,
 };
 
-@interface RequestEnvelop_Unknown6 : GPBMessage
+@interface PHProtoRequestEnvelop_Unknown6 : GPBMessage
 
 @property(nonatomic, readwrite) int32_t unknown1;
 
 @property(nonatomic, readwrite) BOOL hasUnknown1;
-@property(nonatomic, readwrite, strong, null_resettable) RequestEnvelop_Unknown6_Unknown2 *unknown2;
+@property(nonatomic, readwrite, strong, null_resettable) PHProtoRequestEnvelop_Unknown6_Unknown2 *unknown2;
 /// Test to see if @c unknown2 has been set.
 @property(nonatomic, readwrite) BOOL hasUnknown2;
 
 @end
 
-#pragma mark - RequestEnvelop_Unknown6_Unknown2
+#pragma mark - PHProtoRequestEnvelop_Unknown6_Unknown2
 
-typedef GPB_ENUM(RequestEnvelop_Unknown6_Unknown2_FieldNumber) {
-  RequestEnvelop_Unknown6_Unknown2_FieldNumber_Unknown1 = 1,
+typedef GPB_ENUM(PHProtoRequestEnvelop_Unknown6_Unknown2_FieldNumber) {
+  PHProtoRequestEnvelop_Unknown6_Unknown2_FieldNumber_Unknown1 = 1,
 };
 
-@interface RequestEnvelop_Unknown6_Unknown2 : GPBMessage
+@interface PHProtoRequestEnvelop_Unknown6_Unknown2 : GPBMessage
 
 @property(nonatomic, readwrite, copy, null_resettable) NSData *unknown1;
 /// Test to see if @c unknown1 has been set.
@@ -276,33 +276,33 @@ typedef GPB_ENUM(RequestEnvelop_Unknown6_Unknown2_FieldNumber) {
 
 @end
 
-#pragma mark - RequestEnvelop_AuthInfo
+#pragma mark - PHProtoRequestEnvelop_AuthInfo
 
-typedef GPB_ENUM(RequestEnvelop_AuthInfo_FieldNumber) {
-  RequestEnvelop_AuthInfo_FieldNumber_Provider = 1,
-  RequestEnvelop_AuthInfo_FieldNumber_Token = 2,
+typedef GPB_ENUM(PHProtoRequestEnvelop_AuthInfo_FieldNumber) {
+  PHProtoRequestEnvelop_AuthInfo_FieldNumber_Provider = 1,
+  PHProtoRequestEnvelop_AuthInfo_FieldNumber_Token = 2,
 };
 
-@interface RequestEnvelop_AuthInfo : GPBMessage
+@interface PHProtoRequestEnvelop_AuthInfo : GPBMessage
 
 @property(nonatomic, readwrite, copy, null_resettable) NSString *provider;
 /// Test to see if @c provider has been set.
 @property(nonatomic, readwrite) BOOL hasProvider;
 
-@property(nonatomic, readwrite, strong, null_resettable) RequestEnvelop_AuthInfo_JWT *token;
+@property(nonatomic, readwrite, strong, null_resettable) PHProtoRequestEnvelop_AuthInfo_JWT *token;
 /// Test to see if @c token has been set.
 @property(nonatomic, readwrite) BOOL hasToken;
 
 @end
 
-#pragma mark - RequestEnvelop_AuthInfo_JWT
+#pragma mark - PHProtoRequestEnvelop_AuthInfo_JWT
 
-typedef GPB_ENUM(RequestEnvelop_AuthInfo_JWT_FieldNumber) {
-  RequestEnvelop_AuthInfo_JWT_FieldNumber_Contents = 1,
-  RequestEnvelop_AuthInfo_JWT_FieldNumber_Unknown13 = 2,
+typedef GPB_ENUM(PHProtoRequestEnvelop_AuthInfo_JWT_FieldNumber) {
+  PHProtoRequestEnvelop_AuthInfo_JWT_FieldNumber_Contents = 1,
+  PHProtoRequestEnvelop_AuthInfo_JWT_FieldNumber_Unknown13 = 2,
 };
 
-@interface RequestEnvelop_AuthInfo_JWT : GPBMessage
+@interface PHProtoRequestEnvelop_AuthInfo_JWT : GPBMessage
 
 @property(nonatomic, readwrite, copy, null_resettable) NSString *contents;
 /// Test to see if @c contents has been set.
@@ -313,15 +313,15 @@ typedef GPB_ENUM(RequestEnvelop_AuthInfo_JWT_FieldNumber) {
 @property(nonatomic, readwrite) BOOL hasUnknown13;
 @end
 
-#pragma mark - UnknownAuth
+#pragma mark - PHProtoUnknownAuth
 
-typedef GPB_ENUM(UnknownAuth_FieldNumber) {
-  UnknownAuth_FieldNumber_Unknown71 = 1,
-  UnknownAuth_FieldNumber_Unknown72 = 2,
-  UnknownAuth_FieldNumber_Unknown73 = 3,
+typedef GPB_ENUM(PHProtoUnknownAuth_FieldNumber) {
+  PHProtoUnknownAuth_FieldNumber_Unknown71 = 1,
+  PHProtoUnknownAuth_FieldNumber_Unknown72 = 2,
+  PHProtoUnknownAuth_FieldNumber_Unknown73 = 3,
 };
 
-@interface UnknownAuth : GPBMessage
+@interface PHProtoUnknownAuth : GPBMessage
 
 @property(nonatomic, readwrite, copy, null_resettable) NSData *unknown71;
 /// Test to see if @c unknown71 has been set.
@@ -336,18 +336,18 @@ typedef GPB_ENUM(UnknownAuth_FieldNumber) {
 
 @end
 
-#pragma mark - ResponseEnvelop
+#pragma mark - PHProtoResponseEnvelop
 
-typedef GPB_ENUM(ResponseEnvelop_FieldNumber) {
-  ResponseEnvelop_FieldNumber_Unknown1 = 1,
-  ResponseEnvelop_FieldNumber_Unknown2 = 2,
-  ResponseEnvelop_FieldNumber_ApiURL = 3,
-  ResponseEnvelop_FieldNumber_Unknown6 = 6,
-  ResponseEnvelop_FieldNumber_Unknown7 = 7,
-  ResponseEnvelop_FieldNumber_PayloadArray = 100,
+typedef GPB_ENUM(PHProtoResponseEnvelop_FieldNumber) {
+  PHProtoResponseEnvelop_FieldNumber_Unknown1 = 1,
+  PHProtoResponseEnvelop_FieldNumber_Unknown2 = 2,
+  PHProtoResponseEnvelop_FieldNumber_ApiURL = 3,
+  PHProtoResponseEnvelop_FieldNumber_Unknown6 = 6,
+  PHProtoResponseEnvelop_FieldNumber_Unknown7 = 7,
+  PHProtoResponseEnvelop_FieldNumber_PayloadArray = 100,
 };
 
-@interface ResponseEnvelop : GPBMessage
+@interface PHProtoResponseEnvelop : GPBMessage
 
 @property(nonatomic, readwrite) int32_t unknown1;
 
@@ -359,11 +359,11 @@ typedef GPB_ENUM(ResponseEnvelop_FieldNumber) {
 /// Test to see if @c apiURL has been set.
 @property(nonatomic, readwrite) BOOL hasApiURL;
 
-@property(nonatomic, readwrite, strong, null_resettable) ResponseEnvelop_Unknown6 *unknown6;
+@property(nonatomic, readwrite, strong, null_resettable) PHProtoResponseEnvelop_Unknown6 *unknown6;
 /// Test to see if @c unknown6 has been set.
 @property(nonatomic, readwrite) BOOL hasUnknown6;
 
-@property(nonatomic, readwrite, strong, null_resettable) UnknownAuth *unknown7;
+@property(nonatomic, readwrite, strong, null_resettable) PHProtoUnknownAuth *unknown7;
 /// Test to see if @c unknown7 has been set.
 @property(nonatomic, readwrite) BOOL hasUnknown7;
 
@@ -373,31 +373,31 @@ typedef GPB_ENUM(ResponseEnvelop_FieldNumber) {
 
 @end
 
-#pragma mark - ResponseEnvelop_Unknown6
+#pragma mark - PHProtoResponseEnvelop_Unknown6
 
-typedef GPB_ENUM(ResponseEnvelop_Unknown6_FieldNumber) {
-  ResponseEnvelop_Unknown6_FieldNumber_Unknown1 = 1,
-  ResponseEnvelop_Unknown6_FieldNumber_Unknown2 = 2,
+typedef GPB_ENUM(PHProtoResponseEnvelop_Unknown6_FieldNumber) {
+  PHProtoResponseEnvelop_Unknown6_FieldNumber_Unknown1 = 1,
+  PHProtoResponseEnvelop_Unknown6_FieldNumber_Unknown2 = 2,
 };
 
-@interface ResponseEnvelop_Unknown6 : GPBMessage
+@interface PHProtoResponseEnvelop_Unknown6 : GPBMessage
 
 @property(nonatomic, readwrite) int32_t unknown1;
 
 @property(nonatomic, readwrite) BOOL hasUnknown1;
-@property(nonatomic, readwrite, strong, null_resettable) ResponseEnvelop_Unknown6_Unknown2 *unknown2;
+@property(nonatomic, readwrite, strong, null_resettable) PHProtoResponseEnvelop_Unknown6_Unknown2 *unknown2;
 /// Test to see if @c unknown2 has been set.
 @property(nonatomic, readwrite) BOOL hasUnknown2;
 
 @end
 
-#pragma mark - ResponseEnvelop_Unknown6_Unknown2
+#pragma mark - PHProtoResponseEnvelop_Unknown6_Unknown2
 
-typedef GPB_ENUM(ResponseEnvelop_Unknown6_Unknown2_FieldNumber) {
-  ResponseEnvelop_Unknown6_Unknown2_FieldNumber_Unknown1 = 1,
+typedef GPB_ENUM(PHProtoResponseEnvelop_Unknown6_Unknown2_FieldNumber) {
+  PHProtoResponseEnvelop_Unknown6_Unknown2_FieldNumber_Unknown1 = 1,
 };
 
-@interface ResponseEnvelop_Unknown6_Unknown2 : GPBMessage
+@interface PHProtoResponseEnvelop_Unknown6_Unknown2 : GPBMessage
 
 @property(nonatomic, readwrite, copy, null_resettable) NSData *unknown1;
 /// Test to see if @c unknown1 has been set.
@@ -405,36 +405,36 @@ typedef GPB_ENUM(ResponseEnvelop_Unknown6_Unknown2_FieldNumber) {
 
 @end
 
-#pragma mark - ResponseEnvelop_HeartbeatPayload
+#pragma mark - PHProtoResponseEnvelop_HeartbeatPayload
 
-typedef GPB_ENUM(ResponseEnvelop_HeartbeatPayload_FieldNumber) {
-  ResponseEnvelop_HeartbeatPayload_FieldNumber_CellsArray = 1,
+typedef GPB_ENUM(PHProtoResponseEnvelop_HeartbeatPayload_FieldNumber) {
+  PHProtoResponseEnvelop_HeartbeatPayload_FieldNumber_CellsArray = 1,
 };
 
-@interface ResponseEnvelop_HeartbeatPayload : GPBMessage
+@interface PHProtoResponseEnvelop_HeartbeatPayload : GPBMessage
 
-@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ResponseEnvelop_ClientMapCell*> *cellsArray;
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<PHProtoResponseEnvelop_ClientMapCell*> *cellsArray;
 /// The number of items in @c cellsArray without causing the array to be created.
 @property(nonatomic, readonly) NSUInteger cellsArray_Count;
 
 @end
 
-#pragma mark - ResponseEnvelop_ClientMapCell
+#pragma mark - PHProtoResponseEnvelop_ClientMapCell
 
-typedef GPB_ENUM(ResponseEnvelop_ClientMapCell_FieldNumber) {
-  ResponseEnvelop_ClientMapCell_FieldNumber_S2CellId = 1,
-  ResponseEnvelop_ClientMapCell_FieldNumber_AsOfTimeMs = 2,
-  ResponseEnvelop_ClientMapCell_FieldNumber_FortArray = 3,
-  ResponseEnvelop_ClientMapCell_FieldNumber_SpawnPointArray = 4,
-  ResponseEnvelop_ClientMapCell_FieldNumber_WildPokemonArray = 5,
-  ResponseEnvelop_ClientMapCell_FieldNumber_IsTruncatedList = 7,
-  ResponseEnvelop_ClientMapCell_FieldNumber_FortSummaryArray = 8,
-  ResponseEnvelop_ClientMapCell_FieldNumber_DecimatedSpawnPointArray = 9,
-  ResponseEnvelop_ClientMapCell_FieldNumber_MapPokemonArray = 10,
-  ResponseEnvelop_ClientMapCell_FieldNumber_NearbyPokemonArray = 11,
+typedef GPB_ENUM(PHProtoResponseEnvelop_ClientMapCell_FieldNumber) {
+  PHProtoResponseEnvelop_ClientMapCell_FieldNumber_S2CellId = 1,
+  PHProtoResponseEnvelop_ClientMapCell_FieldNumber_AsOfTimeMs = 2,
+  PHProtoResponseEnvelop_ClientMapCell_FieldNumber_FortArray = 3,
+  PHProtoResponseEnvelop_ClientMapCell_FieldNumber_SpawnPointArray = 4,
+  PHProtoResponseEnvelop_ClientMapCell_FieldNumber_WildPokemonArray = 5,
+  PHProtoResponseEnvelop_ClientMapCell_FieldNumber_IsTruncatedList = 7,
+  PHProtoResponseEnvelop_ClientMapCell_FieldNumber_FortSummaryArray = 8,
+  PHProtoResponseEnvelop_ClientMapCell_FieldNumber_DecimatedSpawnPointArray = 9,
+  PHProtoResponseEnvelop_ClientMapCell_FieldNumber_MapPokemonArray = 10,
+  PHProtoResponseEnvelop_ClientMapCell_FieldNumber_NearbyPokemonArray = 11,
 };
 
-@interface ResponseEnvelop_ClientMapCell : GPBMessage
+@interface PHProtoResponseEnvelop_ClientMapCell : GPBMessage
 
 @property(nonatomic, readwrite) uint64_t s2CellId;
 
@@ -442,15 +442,15 @@ typedef GPB_ENUM(ResponseEnvelop_ClientMapCell_FieldNumber) {
 @property(nonatomic, readwrite) int64_t asOfTimeMs;
 
 @property(nonatomic, readwrite) BOOL hasAsOfTimeMs;
-@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ResponseEnvelop_PokemonFortProto*> *fortArray;
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<PHProtoResponseEnvelop_PokemonFortProto*> *fortArray;
 /// The number of items in @c fortArray without causing the array to be created.
 @property(nonatomic, readonly) NSUInteger fortArray_Count;
 
-@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ResponseEnvelop_ClientSpawnPointProto*> *spawnPointArray;
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<PHProtoResponseEnvelop_ClientSpawnPointProto*> *spawnPointArray;
 /// The number of items in @c spawnPointArray without causing the array to be created.
 @property(nonatomic, readonly) NSUInteger spawnPointArray_Count;
 
-@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ResponseEnvelop_WildPokemonProto*> *wildPokemonArray;
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<PHProtoResponseEnvelop_WildPokemonProto*> *wildPokemonArray;
 /// The number of items in @c wildPokemonArray without causing the array to be created.
 @property(nonatomic, readonly) NSUInteger wildPokemonArray_Count;
 
@@ -458,33 +458,33 @@ typedef GPB_ENUM(ResponseEnvelop_ClientMapCell_FieldNumber) {
 @property(nonatomic, readwrite) BOOL isTruncatedList;
 
 @property(nonatomic, readwrite) BOOL hasIsTruncatedList;
-@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ResponseEnvelop_PokemonSummaryFortProto*> *fortSummaryArray;
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<PHProtoResponseEnvelop_PokemonSummaryFortProto*> *fortSummaryArray;
 /// The number of items in @c fortSummaryArray without causing the array to be created.
 @property(nonatomic, readonly) NSUInteger fortSummaryArray_Count;
 
-@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ResponseEnvelop_ClientSpawnPointProto*> *decimatedSpawnPointArray;
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<PHProtoResponseEnvelop_ClientSpawnPointProto*> *decimatedSpawnPointArray;
 /// The number of items in @c decimatedSpawnPointArray without causing the array to be created.
 @property(nonatomic, readonly) NSUInteger decimatedSpawnPointArray_Count;
 
-@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ResponseEnvelop_MapPokemonProto*> *mapPokemonArray;
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<PHProtoResponseEnvelop_MapPokemonProto*> *mapPokemonArray;
 /// The number of items in @c mapPokemonArray without causing the array to be created.
 @property(nonatomic, readonly) NSUInteger mapPokemonArray_Count;
 
-@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ResponseEnvelop_NearbyPokemonProto*> *nearbyPokemonArray;
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<PHProtoResponseEnvelop_NearbyPokemonProto*> *nearbyPokemonArray;
 /// The number of items in @c nearbyPokemonArray without causing the array to be created.
 @property(nonatomic, readonly) NSUInteger nearbyPokemonArray_Count;
 
 @end
 
-#pragma mark - ResponseEnvelop_WildPokemon
+#pragma mark - PHProtoResponseEnvelop_WildPokemon
 
-typedef GPB_ENUM(ResponseEnvelop_WildPokemon_FieldNumber) {
-  ResponseEnvelop_WildPokemon_FieldNumber_UniqueId = 1,
-  ResponseEnvelop_WildPokemon_FieldNumber_PokemonId = 2,
-  ResponseEnvelop_WildPokemon_FieldNumber_PokemonArray = 11,
+typedef GPB_ENUM(PHProtoResponseEnvelop_WildPokemon_FieldNumber) {
+  PHProtoResponseEnvelop_WildPokemon_FieldNumber_UniqueId = 1,
+  PHProtoResponseEnvelop_WildPokemon_FieldNumber_PokemonId = 2,
+  PHProtoResponseEnvelop_WildPokemon_FieldNumber_PokemonArray = 11,
 };
 
-@interface ResponseEnvelop_WildPokemon : GPBMessage
+@interface PHProtoResponseEnvelop_WildPokemon : GPBMessage
 
 @property(nonatomic, readwrite, copy, null_resettable) NSString *uniqueId;
 /// Test to see if @c uniqueId has been set.
@@ -498,24 +498,24 @@ typedef GPB_ENUM(ResponseEnvelop_WildPokemon_FieldNumber) {
 /// float four = 4;
 /// int32 five = 5;
 /// unknown six = 6;
-@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ResponseEnvelop_NearbyPokemonProto*> *pokemonArray;
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<PHProtoResponseEnvelop_NearbyPokemonProto*> *pokemonArray;
 /// The number of items in @c pokemonArray without causing the array to be created.
 @property(nonatomic, readonly) NSUInteger pokemonArray_Count;
 
 @end
 
-#pragma mark - ResponseEnvelop_MapPokemonProto
+#pragma mark - PHProtoResponseEnvelop_MapPokemonProto
 
-typedef GPB_ENUM(ResponseEnvelop_MapPokemonProto_FieldNumber) {
-  ResponseEnvelop_MapPokemonProto_FieldNumber_SpawnpointId = 1,
-  ResponseEnvelop_MapPokemonProto_FieldNumber_EncounterId = 2,
-  ResponseEnvelop_MapPokemonProto_FieldNumber_PokedexTypeId = 3,
-  ResponseEnvelop_MapPokemonProto_FieldNumber_ExpirationTimeMs = 4,
-  ResponseEnvelop_MapPokemonProto_FieldNumber_Latitude = 5,
-  ResponseEnvelop_MapPokemonProto_FieldNumber_Longitude = 6,
+typedef GPB_ENUM(PHProtoResponseEnvelop_MapPokemonProto_FieldNumber) {
+  PHProtoResponseEnvelop_MapPokemonProto_FieldNumber_SpawnpointId = 1,
+  PHProtoResponseEnvelop_MapPokemonProto_FieldNumber_EncounterId = 2,
+  PHProtoResponseEnvelop_MapPokemonProto_FieldNumber_PokedexTypeId = 3,
+  PHProtoResponseEnvelop_MapPokemonProto_FieldNumber_ExpirationTimeMs = 4,
+  PHProtoResponseEnvelop_MapPokemonProto_FieldNumber_Latitude = 5,
+  PHProtoResponseEnvelop_MapPokemonProto_FieldNumber_Longitude = 6,
 };
 
-@interface ResponseEnvelop_MapPokemonProto : GPBMessage
+@interface PHProtoResponseEnvelop_MapPokemonProto : GPBMessage
 
 @property(nonatomic, readwrite, copy, null_resettable) NSString *spawnpointId;
 /// Test to see if @c spawnpointId has been set.
@@ -538,28 +538,28 @@ typedef GPB_ENUM(ResponseEnvelop_MapPokemonProto_FieldNumber) {
 @property(nonatomic, readwrite) BOOL hasLongitude;
 @end
 
-#pragma mark - ResponseEnvelop_PokemonFortProto
+#pragma mark - PHProtoResponseEnvelop_PokemonFortProto
 
-typedef GPB_ENUM(ResponseEnvelop_PokemonFortProto_FieldNumber) {
-  ResponseEnvelop_PokemonFortProto_FieldNumber_FortId = 1,
-  ResponseEnvelop_PokemonFortProto_FieldNumber_LastModifiedMs = 2,
-  ResponseEnvelop_PokemonFortProto_FieldNumber_Latitude = 3,
-  ResponseEnvelop_PokemonFortProto_FieldNumber_Longitude = 4,
-  ResponseEnvelop_PokemonFortProto_FieldNumber_Team = 5,
-  ResponseEnvelop_PokemonFortProto_FieldNumber_GuardPokemonId = 6,
-  ResponseEnvelop_PokemonFortProto_FieldNumber_GuardPokemonLevel = 7,
-  ResponseEnvelop_PokemonFortProto_FieldNumber_Enabled = 8,
-  ResponseEnvelop_PokemonFortProto_FieldNumber_FortType = 9,
-  ResponseEnvelop_PokemonFortProto_FieldNumber_GymPoints = 10,
-  ResponseEnvelop_PokemonFortProto_FieldNumber_IsInBattle = 11,
-  ResponseEnvelop_PokemonFortProto_FieldNumber_ActivePortModifier = 12,
-  ResponseEnvelop_PokemonFortProto_FieldNumber_LureInfo = 13,
-  ResponseEnvelop_PokemonFortProto_FieldNumber_CooldownCompleteMs = 14,
-  ResponseEnvelop_PokemonFortProto_FieldNumber_Sponsor = 15,
-  ResponseEnvelop_PokemonFortProto_FieldNumber_RenderingType = 16,
+typedef GPB_ENUM(PHProtoResponseEnvelop_PokemonFortProto_FieldNumber) {
+  PHProtoResponseEnvelop_PokemonFortProto_FieldNumber_FortId = 1,
+  PHProtoResponseEnvelop_PokemonFortProto_FieldNumber_LastModifiedMs = 2,
+  PHProtoResponseEnvelop_PokemonFortProto_FieldNumber_Latitude = 3,
+  PHProtoResponseEnvelop_PokemonFortProto_FieldNumber_Longitude = 4,
+  PHProtoResponseEnvelop_PokemonFortProto_FieldNumber_Team = 5,
+  PHProtoResponseEnvelop_PokemonFortProto_FieldNumber_GuardPokemonId = 6,
+  PHProtoResponseEnvelop_PokemonFortProto_FieldNumber_GuardPokemonLevel = 7,
+  PHProtoResponseEnvelop_PokemonFortProto_FieldNumber_Enabled = 8,
+  PHProtoResponseEnvelop_PokemonFortProto_FieldNumber_FortType = 9,
+  PHProtoResponseEnvelop_PokemonFortProto_FieldNumber_GymPoints = 10,
+  PHProtoResponseEnvelop_PokemonFortProto_FieldNumber_IsInBattle = 11,
+  PHProtoResponseEnvelop_PokemonFortProto_FieldNumber_ActivePortModifier = 12,
+  PHProtoResponseEnvelop_PokemonFortProto_FieldNumber_LureInfo = 13,
+  PHProtoResponseEnvelop_PokemonFortProto_FieldNumber_CooldownCompleteMs = 14,
+  PHProtoResponseEnvelop_PokemonFortProto_FieldNumber_Sponsor = 15,
+  PHProtoResponseEnvelop_PokemonFortProto_FieldNumber_RenderingType = 16,
 };
 
-@interface ResponseEnvelop_PokemonFortProto : GPBMessage
+@interface PHProtoResponseEnvelop_PokemonFortProto : GPBMessage
 
 @property(nonatomic, readwrite, copy, null_resettable) NSString *fortId;
 /// Test to see if @c fortId has been set.
@@ -601,7 +601,7 @@ typedef GPB_ENUM(ResponseEnvelop_PokemonFortProto_FieldNumber) {
 /// Test to see if @c activePortModifier has been set.
 @property(nonatomic, readwrite) BOOL hasActivePortModifier;
 
-@property(nonatomic, readwrite, strong, null_resettable) ResponseEnvelop_FortLureInfoProto *lureInfo;
+@property(nonatomic, readwrite, strong, null_resettable) PHProtoResponseEnvelop_FortLureInfoProto *lureInfo;
 /// Test to see if @c lureInfo has been set.
 @property(nonatomic, readwrite) BOOL hasLureInfo;
 
@@ -618,17 +618,17 @@ typedef GPB_ENUM(ResponseEnvelop_PokemonFortProto_FieldNumber) {
 @property(nonatomic, readwrite) BOOL hasRenderingType;
 @end
 
-#pragma mark - ResponseEnvelop_FortLureInfoProto
+#pragma mark - PHProtoResponseEnvelop_FortLureInfoProto
 
-typedef GPB_ENUM(ResponseEnvelop_FortLureInfoProto_FieldNumber) {
-  ResponseEnvelop_FortLureInfoProto_FieldNumber_FortId = 1,
-  ResponseEnvelop_FortLureInfoProto_FieldNumber_Unknown2 = 2,
-  ResponseEnvelop_FortLureInfoProto_FieldNumber_ActivePokemonId = 3,
-  ResponseEnvelop_FortLureInfoProto_FieldNumber_LureExpiresTimestampMs = 4,
-  ResponseEnvelop_FortLureInfoProto_FieldNumber_DeployerPlayerCodename = 5,
+typedef GPB_ENUM(PHProtoResponseEnvelop_FortLureInfoProto_FieldNumber) {
+  PHProtoResponseEnvelop_FortLureInfoProto_FieldNumber_FortId = 1,
+  PHProtoResponseEnvelop_FortLureInfoProto_FieldNumber_Unknown2 = 2,
+  PHProtoResponseEnvelop_FortLureInfoProto_FieldNumber_ActivePokemonId = 3,
+  PHProtoResponseEnvelop_FortLureInfoProto_FieldNumber_LureExpiresTimestampMs = 4,
+  PHProtoResponseEnvelop_FortLureInfoProto_FieldNumber_DeployerPlayerCodename = 5,
 };
 
-@interface ResponseEnvelop_FortLureInfoProto : GPBMessage
+@interface PHProtoResponseEnvelop_FortLureInfoProto : GPBMessage
 
 @property(nonatomic, readwrite, copy, null_resettable) NSString *fortId;
 /// Test to see if @c fortId has been set.
@@ -649,16 +649,16 @@ typedef GPB_ENUM(ResponseEnvelop_FortLureInfoProto_FieldNumber) {
 
 @end
 
-#pragma mark - ResponseEnvelop_PokemonSummaryFortProto
+#pragma mark - PHProtoResponseEnvelop_PokemonSummaryFortProto
 
-typedef GPB_ENUM(ResponseEnvelop_PokemonSummaryFortProto_FieldNumber) {
-  ResponseEnvelop_PokemonSummaryFortProto_FieldNumber_FortSummaryId = 1,
-  ResponseEnvelop_PokemonSummaryFortProto_FieldNumber_LastModifiedMs = 2,
-  ResponseEnvelop_PokemonSummaryFortProto_FieldNumber_Latitude = 3,
-  ResponseEnvelop_PokemonSummaryFortProto_FieldNumber_Longitude = 4,
+typedef GPB_ENUM(PHProtoResponseEnvelop_PokemonSummaryFortProto_FieldNumber) {
+  PHProtoResponseEnvelop_PokemonSummaryFortProto_FieldNumber_FortSummaryId = 1,
+  PHProtoResponseEnvelop_PokemonSummaryFortProto_FieldNumber_LastModifiedMs = 2,
+  PHProtoResponseEnvelop_PokemonSummaryFortProto_FieldNumber_Latitude = 3,
+  PHProtoResponseEnvelop_PokemonSummaryFortProto_FieldNumber_Longitude = 4,
 };
 
-@interface ResponseEnvelop_PokemonSummaryFortProto : GPBMessage
+@interface PHProtoResponseEnvelop_PokemonSummaryFortProto : GPBMessage
 
 @property(nonatomic, readwrite, copy, null_resettable) NSString *fortSummaryId;
 /// Test to see if @c fortSummaryId has been set.
@@ -675,14 +675,14 @@ typedef GPB_ENUM(ResponseEnvelop_PokemonSummaryFortProto_FieldNumber) {
 @property(nonatomic, readwrite) BOOL hasLongitude;
 @end
 
-#pragma mark - ResponseEnvelop_ClientSpawnPointProto
+#pragma mark - PHProtoResponseEnvelop_ClientSpawnPointProto
 
-typedef GPB_ENUM(ResponseEnvelop_ClientSpawnPointProto_FieldNumber) {
-  ResponseEnvelop_ClientSpawnPointProto_FieldNumber_Latitude = 2,
-  ResponseEnvelop_ClientSpawnPointProto_FieldNumber_Longitude = 3,
+typedef GPB_ENUM(PHProtoResponseEnvelop_ClientSpawnPointProto_FieldNumber) {
+  PHProtoResponseEnvelop_ClientSpawnPointProto_FieldNumber_Latitude = 2,
+  PHProtoResponseEnvelop_ClientSpawnPointProto_FieldNumber_Longitude = 3,
 };
 
-@interface ResponseEnvelop_ClientSpawnPointProto : GPBMessage
+@interface PHProtoResponseEnvelop_ClientSpawnPointProto : GPBMessage
 
 @property(nonatomic, readwrite) double latitude;
 
@@ -692,19 +692,19 @@ typedef GPB_ENUM(ResponseEnvelop_ClientSpawnPointProto_FieldNumber) {
 @property(nonatomic, readwrite) BOOL hasLongitude;
 @end
 
-#pragma mark - ResponseEnvelop_WildPokemonProto
+#pragma mark - PHProtoResponseEnvelop_WildPokemonProto
 
-typedef GPB_ENUM(ResponseEnvelop_WildPokemonProto_FieldNumber) {
-  ResponseEnvelop_WildPokemonProto_FieldNumber_EncounterId = 1,
-  ResponseEnvelop_WildPokemonProto_FieldNumber_LastModifiedMs = 2,
-  ResponseEnvelop_WildPokemonProto_FieldNumber_Latitude = 3,
-  ResponseEnvelop_WildPokemonProto_FieldNumber_Longitude = 4,
-  ResponseEnvelop_WildPokemonProto_FieldNumber_SpawnPointId = 5,
-  ResponseEnvelop_WildPokemonProto_FieldNumber_Pokemon = 7,
-  ResponseEnvelop_WildPokemonProto_FieldNumber_TimeTillHiddenMs = 11,
+typedef GPB_ENUM(PHProtoResponseEnvelop_WildPokemonProto_FieldNumber) {
+  PHProtoResponseEnvelop_WildPokemonProto_FieldNumber_EncounterId = 1,
+  PHProtoResponseEnvelop_WildPokemonProto_FieldNumber_LastModifiedMs = 2,
+  PHProtoResponseEnvelop_WildPokemonProto_FieldNumber_Latitude = 3,
+  PHProtoResponseEnvelop_WildPokemonProto_FieldNumber_Longitude = 4,
+  PHProtoResponseEnvelop_WildPokemonProto_FieldNumber_SpawnPointId = 5,
+  PHProtoResponseEnvelop_WildPokemonProto_FieldNumber_Pokemon = 7,
+  PHProtoResponseEnvelop_WildPokemonProto_FieldNumber_TimeTillHiddenMs = 11,
 };
 
-@interface ResponseEnvelop_WildPokemonProto : GPBMessage
+@interface PHProtoResponseEnvelop_WildPokemonProto : GPBMessage
 
 @property(nonatomic, readwrite) uint64_t encounterId;
 
@@ -722,7 +722,7 @@ typedef GPB_ENUM(ResponseEnvelop_WildPokemonProto_FieldNumber) {
 /// Test to see if @c spawnPointId has been set.
 @property(nonatomic, readwrite) BOOL hasSpawnPointId;
 
-@property(nonatomic, readwrite, strong, null_resettable) ResponseEnvelop_WildPokemonProto_Pokemon *pokemon;
+@property(nonatomic, readwrite, strong, null_resettable) PHProtoResponseEnvelop_WildPokemonProto_Pokemon *pokemon;
 /// Test to see if @c pokemon has been set.
 @property(nonatomic, readwrite) BOOL hasPokemon;
 
@@ -731,14 +731,14 @@ typedef GPB_ENUM(ResponseEnvelop_WildPokemonProto_FieldNumber) {
 @property(nonatomic, readwrite) BOOL hasTimeTillHiddenMs;
 @end
 
-#pragma mark - ResponseEnvelop_WildPokemonProto_Pokemon
+#pragma mark - PHProtoResponseEnvelop_WildPokemonProto_Pokemon
 
-typedef GPB_ENUM(ResponseEnvelop_WildPokemonProto_Pokemon_FieldNumber) {
-  ResponseEnvelop_WildPokemonProto_Pokemon_FieldNumber_Id_p = 1,
-  ResponseEnvelop_WildPokemonProto_Pokemon_FieldNumber_PokemonId = 2,
+typedef GPB_ENUM(PHProtoResponseEnvelop_WildPokemonProto_Pokemon_FieldNumber) {
+  PHProtoResponseEnvelop_WildPokemonProto_Pokemon_FieldNumber_Id_p = 1,
+  PHProtoResponseEnvelop_WildPokemonProto_Pokemon_FieldNumber_PokemonId = 2,
 };
 
-@interface ResponseEnvelop_WildPokemonProto_Pokemon : GPBMessage
+@interface PHProtoResponseEnvelop_WildPokemonProto_Pokemon : GPBMessage
 
 @property(nonatomic, readwrite) uint64_t id_p;
 
@@ -748,15 +748,15 @@ typedef GPB_ENUM(ResponseEnvelop_WildPokemonProto_Pokemon_FieldNumber) {
 @property(nonatomic, readwrite) BOOL hasPokemonId;
 @end
 
-#pragma mark - ResponseEnvelop_NearbyPokemonProto
+#pragma mark - PHProtoResponseEnvelop_NearbyPokemonProto
 
-typedef GPB_ENUM(ResponseEnvelop_NearbyPokemonProto_FieldNumber) {
-  ResponseEnvelop_NearbyPokemonProto_FieldNumber_PokedexNumber = 1,
-  ResponseEnvelop_NearbyPokemonProto_FieldNumber_DistanceMeters = 2,
-  ResponseEnvelop_NearbyPokemonProto_FieldNumber_EncounterId = 3,
+typedef GPB_ENUM(PHProtoResponseEnvelop_NearbyPokemonProto_FieldNumber) {
+  PHProtoResponseEnvelop_NearbyPokemonProto_FieldNumber_PokedexNumber = 1,
+  PHProtoResponseEnvelop_NearbyPokemonProto_FieldNumber_DistanceMeters = 2,
+  PHProtoResponseEnvelop_NearbyPokemonProto_FieldNumber_EncounterId = 3,
 };
 
-@interface ResponseEnvelop_NearbyPokemonProto : GPBMessage
+@interface PHProtoResponseEnvelop_NearbyPokemonProto : GPBMessage
 
 @property(nonatomic, readwrite) int32_t pokedexNumber;
 
@@ -769,41 +769,41 @@ typedef GPB_ENUM(ResponseEnvelop_NearbyPokemonProto_FieldNumber) {
 @property(nonatomic, readwrite) BOOL hasEncounterId;
 @end
 
-#pragma mark - ResponseEnvelop_ProfilePayload
+#pragma mark - PHProtoResponseEnvelop_ProfilePayload
 
-typedef GPB_ENUM(ResponseEnvelop_ProfilePayload_FieldNumber) {
-  ResponseEnvelop_ProfilePayload_FieldNumber_Unknown1 = 1,
-  ResponseEnvelop_ProfilePayload_FieldNumber_Profile = 2,
+typedef GPB_ENUM(PHProtoResponseEnvelop_ProfilePayload_FieldNumber) {
+  PHProtoResponseEnvelop_ProfilePayload_FieldNumber_Unknown1 = 1,
+  PHProtoResponseEnvelop_ProfilePayload_FieldNumber_Profile = 2,
 };
 
-@interface ResponseEnvelop_ProfilePayload : GPBMessage
+@interface PHProtoResponseEnvelop_ProfilePayload : GPBMessage
 
 @property(nonatomic, readwrite) int32_t unknown1;
 
 @property(nonatomic, readwrite) BOOL hasUnknown1;
-@property(nonatomic, readwrite, strong, null_resettable) ResponseEnvelop_Profile *profile;
+@property(nonatomic, readwrite, strong, null_resettable) PHProtoResponseEnvelop_Profile *profile;
 /// Test to see if @c profile has been set.
 @property(nonatomic, readwrite) BOOL hasProfile;
 
 @end
 
-#pragma mark - ResponseEnvelop_Profile
+#pragma mark - PHProtoResponseEnvelop_Profile
 
-typedef GPB_ENUM(ResponseEnvelop_Profile_FieldNumber) {
-  ResponseEnvelop_Profile_FieldNumber_CreationTime = 1,
-  ResponseEnvelop_Profile_FieldNumber_Username = 2,
-  ResponseEnvelop_Profile_FieldNumber_Team = 5,
-  ResponseEnvelop_Profile_FieldNumber_Tutorial = 7,
-  ResponseEnvelop_Profile_FieldNumber_Avatar = 8,
-  ResponseEnvelop_Profile_FieldNumber_PokeStorage = 9,
-  ResponseEnvelop_Profile_FieldNumber_ItemStorage = 10,
-  ResponseEnvelop_Profile_FieldNumber_DailyBonus = 11,
-  ResponseEnvelop_Profile_FieldNumber_Unknown12 = 12,
-  ResponseEnvelop_Profile_FieldNumber_Unknown13 = 13,
-  ResponseEnvelop_Profile_FieldNumber_CurrencyArray = 14,
+typedef GPB_ENUM(PHProtoResponseEnvelop_Profile_FieldNumber) {
+  PHProtoResponseEnvelop_Profile_FieldNumber_CreationTime = 1,
+  PHProtoResponseEnvelop_Profile_FieldNumber_Username = 2,
+  PHProtoResponseEnvelop_Profile_FieldNumber_Team = 5,
+  PHProtoResponseEnvelop_Profile_FieldNumber_Tutorial = 7,
+  PHProtoResponseEnvelop_Profile_FieldNumber_Avatar = 8,
+  PHProtoResponseEnvelop_Profile_FieldNumber_PokeStorage = 9,
+  PHProtoResponseEnvelop_Profile_FieldNumber_ItemStorage = 10,
+  PHProtoResponseEnvelop_Profile_FieldNumber_DailyBonus = 11,
+  PHProtoResponseEnvelop_Profile_FieldNumber_Unknown12 = 12,
+  PHProtoResponseEnvelop_Profile_FieldNumber_Unknown13 = 13,
+  PHProtoResponseEnvelop_Profile_FieldNumber_CurrencyArray = 14,
 };
 
-@interface ResponseEnvelop_Profile : GPBMessage
+@interface PHProtoResponseEnvelop_Profile : GPBMessage
 
 @property(nonatomic, readwrite) int64_t creationTime;
 
@@ -819,7 +819,7 @@ typedef GPB_ENUM(ResponseEnvelop_Profile_FieldNumber) {
 /// Test to see if @c tutorial has been set.
 @property(nonatomic, readwrite) BOOL hasTutorial;
 
-@property(nonatomic, readwrite, strong, null_resettable) ResponseEnvelop_Profile_AvatarDetails *avatar;
+@property(nonatomic, readwrite, strong, null_resettable) PHProtoResponseEnvelop_Profile_AvatarDetails *avatar;
 /// Test to see if @c avatar has been set.
 @property(nonatomic, readwrite) BOOL hasAvatar;
 
@@ -829,7 +829,7 @@ typedef GPB_ENUM(ResponseEnvelop_Profile_FieldNumber) {
 @property(nonatomic, readwrite) int32_t itemStorage;
 
 @property(nonatomic, readwrite) BOOL hasItemStorage;
-@property(nonatomic, readwrite, strong, null_resettable) ResponseEnvelop_Profile_DailyBonus *dailyBonus;
+@property(nonatomic, readwrite, strong, null_resettable) PHProtoResponseEnvelop_Profile_DailyBonus *dailyBonus;
 /// Test to see if @c dailyBonus has been set.
 @property(nonatomic, readwrite) BOOL hasDailyBonus;
 
@@ -841,22 +841,22 @@ typedef GPB_ENUM(ResponseEnvelop_Profile_FieldNumber) {
 /// Test to see if @c unknown13 has been set.
 @property(nonatomic, readwrite) BOOL hasUnknown13;
 
-@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<ResponseEnvelop_Profile_Currency*> *currencyArray;
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<PHProtoResponseEnvelop_Profile_Currency*> *currencyArray;
 /// The number of items in @c currencyArray without causing the array to be created.
 @property(nonatomic, readonly) NSUInteger currencyArray_Count;
 
 @end
 
-#pragma mark - ResponseEnvelop_Profile_AvatarDetails
+#pragma mark - PHProtoResponseEnvelop_Profile_AvatarDetails
 
-typedef GPB_ENUM(ResponseEnvelop_Profile_AvatarDetails_FieldNumber) {
-  ResponseEnvelop_Profile_AvatarDetails_FieldNumber_Unknown2 = 2,
-  ResponseEnvelop_Profile_AvatarDetails_FieldNumber_Unknown3 = 3,
-  ResponseEnvelop_Profile_AvatarDetails_FieldNumber_Unknown9 = 9,
-  ResponseEnvelop_Profile_AvatarDetails_FieldNumber_Unknown10 = 10,
+typedef GPB_ENUM(PHProtoResponseEnvelop_Profile_AvatarDetails_FieldNumber) {
+  PHProtoResponseEnvelop_Profile_AvatarDetails_FieldNumber_Unknown2 = 2,
+  PHProtoResponseEnvelop_Profile_AvatarDetails_FieldNumber_Unknown3 = 3,
+  PHProtoResponseEnvelop_Profile_AvatarDetails_FieldNumber_Unknown9 = 9,
+  PHProtoResponseEnvelop_Profile_AvatarDetails_FieldNumber_Unknown10 = 10,
 };
 
-@interface ResponseEnvelop_Profile_AvatarDetails : GPBMessage
+@interface PHProtoResponseEnvelop_Profile_AvatarDetails : GPBMessage
 
 @property(nonatomic, readwrite) int32_t unknown2;
 
@@ -872,14 +872,14 @@ typedef GPB_ENUM(ResponseEnvelop_Profile_AvatarDetails_FieldNumber) {
 @property(nonatomic, readwrite) BOOL hasUnknown10;
 @end
 
-#pragma mark - ResponseEnvelop_Profile_DailyBonus
+#pragma mark - PHProtoResponseEnvelop_Profile_DailyBonus
 
-typedef GPB_ENUM(ResponseEnvelop_Profile_DailyBonus_FieldNumber) {
-  ResponseEnvelop_Profile_DailyBonus_FieldNumber_NextCollectTimestampMs = 1,
-  ResponseEnvelop_Profile_DailyBonus_FieldNumber_NextDefenderBonusCollectTimestampMs = 2,
+typedef GPB_ENUM(PHProtoResponseEnvelop_Profile_DailyBonus_FieldNumber) {
+  PHProtoResponseEnvelop_Profile_DailyBonus_FieldNumber_NextCollectTimestampMs = 1,
+  PHProtoResponseEnvelop_Profile_DailyBonus_FieldNumber_NextDefenderBonusCollectTimestampMs = 2,
 };
 
-@interface ResponseEnvelop_Profile_DailyBonus : GPBMessage
+@interface PHProtoResponseEnvelop_Profile_DailyBonus : GPBMessage
 
 @property(nonatomic, readwrite) int64_t nextCollectTimestampMs;
 
@@ -889,14 +889,14 @@ typedef GPB_ENUM(ResponseEnvelop_Profile_DailyBonus_FieldNumber) {
 @property(nonatomic, readwrite) BOOL hasNextDefenderBonusCollectTimestampMs;
 @end
 
-#pragma mark - ResponseEnvelop_Profile_Currency
+#pragma mark - PHProtoResponseEnvelop_Profile_Currency
 
-typedef GPB_ENUM(ResponseEnvelop_Profile_Currency_FieldNumber) {
-  ResponseEnvelop_Profile_Currency_FieldNumber_Type = 1,
-  ResponseEnvelop_Profile_Currency_FieldNumber_Amount = 2,
+typedef GPB_ENUM(PHProtoResponseEnvelop_Profile_Currency_FieldNumber) {
+  PHProtoResponseEnvelop_Profile_Currency_FieldNumber_Type = 1,
+  PHProtoResponseEnvelop_Profile_Currency_FieldNumber_Amount = 2,
 };
 
-@interface ResponseEnvelop_Profile_Currency : GPBMessage
+@interface PHProtoResponseEnvelop_Profile_Currency : GPBMessage
 
 @property(nonatomic, readwrite, copy, null_resettable) NSString *type;
 /// Test to see if @c type has been set.

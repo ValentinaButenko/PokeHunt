@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "Pokemon.pbobjc.h"
+
 //! Project version number for PHProtobufModels.
 FOUNDATION_EXPORT double PHProtobufModelsVersionNumber;
 

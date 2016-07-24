@@ -19,15 +19,15 @@
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
 
-#pragma mark - PokemonRoot
+#pragma mark - PHProtoPokemonRoot
 
-@implementation PokemonRoot
+@implementation PHProtoPokemonRoot
 
 @end
 
-#pragma mark - PokemonRoot_FileDescriptor
+#pragma mark - PHProtoPokemonRoot_FileDescriptor
 
-static GPBFileDescriptor *PokemonRoot_FileDescriptor(void) {
+static GPBFileDescriptor *PHProtoPokemonRoot_FileDescriptor(void) {
   // This is called by +initialize so there is no need to worry
   // about thread safety of the singleton.
   static GPBFileDescriptor *descriptor = NULL;
@@ -39,9 +39,9 @@ static GPBFileDescriptor *PokemonRoot_FileDescriptor(void) {
   return descriptor;
 }
 
-#pragma mark - RequestEnvelop
+#pragma mark - PHProtoRequestEnvelop
 
-@implementation RequestEnvelop
+@implementation PHProtoRequestEnvelop
 
 @dynamic hasUnknown1, unknown1;
 @dynamic hasRpcId, rpcId;
@@ -54,19 +54,19 @@ static GPBFileDescriptor *PokemonRoot_FileDescriptor(void) {
 @dynamic hasUnknown11, unknown11;
 @dynamic hasUnknown12, unknown12;
 
-typedef struct RequestEnvelop__storage_ {
+typedef struct PHProtoRequestEnvelop__storage_ {
   uint32_t _has_storage_[1];
   int32_t unknown1;
   NSMutableArray *requestsArray;
-  RequestEnvelop_Unknown6 *unknown6;
-  RequestEnvelop_AuthInfo *auth;
-  UnknownAuth *unknown11;
+  PHProtoRequestEnvelop_Unknown6 *unknown6;
+  PHProtoRequestEnvelop_AuthInfo *auth;
+  PHProtoUnknownAuth *unknown11;
   int64_t rpcId;
   uint64_t latitude;
   uint64_t longitude;
   uint64_t altitude;
   int64_t unknown12;
-} RequestEnvelop__storage_;
+} PHProtoRequestEnvelop__storage_;
 
 // This method is threadsafe because it is initially called
 // in +initialize for each subclass.
@@ -77,101 +77,101 @@ typedef struct RequestEnvelop__storage_ {
       {
         .name = "unknown1",
         .dataTypeSpecific.className = NULL,
-        .number = RequestEnvelop_FieldNumber_Unknown1,
+        .number = PHProtoRequestEnvelop_FieldNumber_Unknown1,
         .hasIndex = 0,
-        .offset = (uint32_t)offsetof(RequestEnvelop__storage_, unknown1),
+        .offset = (uint32_t)offsetof(PHProtoRequestEnvelop__storage_, unknown1),
         .flags = GPBFieldRequired,
         .dataType = GPBDataTypeInt32,
       },
       {
         .name = "rpcId",
         .dataTypeSpecific.className = NULL,
-        .number = RequestEnvelop_FieldNumber_RpcId,
+        .number = PHProtoRequestEnvelop_FieldNumber_RpcId,
         .hasIndex = 1,
-        .offset = (uint32_t)offsetof(RequestEnvelop__storage_, rpcId),
+        .offset = (uint32_t)offsetof(PHProtoRequestEnvelop__storage_, rpcId),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeInt64,
       },
       {
         .name = "requestsArray",
-        .dataTypeSpecific.className = GPBStringifySymbol(RequestEnvelop_Requests),
-        .number = RequestEnvelop_FieldNumber_RequestsArray,
+        .dataTypeSpecific.className = GPBStringifySymbol(PHProtoRequestEnvelop_Requests),
+        .number = PHProtoRequestEnvelop_FieldNumber_RequestsArray,
         .hasIndex = GPBNoHasBit,
-        .offset = (uint32_t)offsetof(RequestEnvelop__storage_, requestsArray),
+        .offset = (uint32_t)offsetof(PHProtoRequestEnvelop__storage_, requestsArray),
         .flags = GPBFieldRepeated,
         .dataType = GPBDataTypeMessage,
       },
       {
         .name = "unknown6",
-        .dataTypeSpecific.className = GPBStringifySymbol(RequestEnvelop_Unknown6),
-        .number = RequestEnvelop_FieldNumber_Unknown6,
+        .dataTypeSpecific.className = GPBStringifySymbol(PHProtoRequestEnvelop_Unknown6),
+        .number = PHProtoRequestEnvelop_FieldNumber_Unknown6,
         .hasIndex = 2,
-        .offset = (uint32_t)offsetof(RequestEnvelop__storage_, unknown6),
+        .offset = (uint32_t)offsetof(PHProtoRequestEnvelop__storage_, unknown6),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
       },
       {
         .name = "latitude",
         .dataTypeSpecific.className = NULL,
-        .number = RequestEnvelop_FieldNumber_Latitude,
+        .number = PHProtoRequestEnvelop_FieldNumber_Latitude,
         .hasIndex = 3,
-        .offset = (uint32_t)offsetof(RequestEnvelop__storage_, latitude),
+        .offset = (uint32_t)offsetof(PHProtoRequestEnvelop__storage_, latitude),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeFixed64,
       },
       {
         .name = "longitude",
         .dataTypeSpecific.className = NULL,
-        .number = RequestEnvelop_FieldNumber_Longitude,
+        .number = PHProtoRequestEnvelop_FieldNumber_Longitude,
         .hasIndex = 4,
-        .offset = (uint32_t)offsetof(RequestEnvelop__storage_, longitude),
+        .offset = (uint32_t)offsetof(PHProtoRequestEnvelop__storage_, longitude),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeFixed64,
       },
       {
         .name = "altitude",
         .dataTypeSpecific.className = NULL,
-        .number = RequestEnvelop_FieldNumber_Altitude,
+        .number = PHProtoRequestEnvelop_FieldNumber_Altitude,
         .hasIndex = 5,
-        .offset = (uint32_t)offsetof(RequestEnvelop__storage_, altitude),
+        .offset = (uint32_t)offsetof(PHProtoRequestEnvelop__storage_, altitude),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeFixed64,
       },
       {
         .name = "auth",
-        .dataTypeSpecific.className = GPBStringifySymbol(RequestEnvelop_AuthInfo),
-        .number = RequestEnvelop_FieldNumber_Auth,
+        .dataTypeSpecific.className = GPBStringifySymbol(PHProtoRequestEnvelop_AuthInfo),
+        .number = PHProtoRequestEnvelop_FieldNumber_Auth,
         .hasIndex = 6,
-        .offset = (uint32_t)offsetof(RequestEnvelop__storage_, auth),
+        .offset = (uint32_t)offsetof(PHProtoRequestEnvelop__storage_, auth),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
       },
       {
         .name = "unknown11",
-        .dataTypeSpecific.className = GPBStringifySymbol(UnknownAuth),
-        .number = RequestEnvelop_FieldNumber_Unknown11,
+        .dataTypeSpecific.className = GPBStringifySymbol(PHProtoUnknownAuth),
+        .number = PHProtoRequestEnvelop_FieldNumber_Unknown11,
         .hasIndex = 7,
-        .offset = (uint32_t)offsetof(RequestEnvelop__storage_, unknown11),
+        .offset = (uint32_t)offsetof(PHProtoRequestEnvelop__storage_, unknown11),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
       },
       {
         .name = "unknown12",
         .dataTypeSpecific.className = NULL,
-        .number = RequestEnvelop_FieldNumber_Unknown12,
+        .number = PHProtoRequestEnvelop_FieldNumber_Unknown12,
         .hasIndex = 8,
-        .offset = (uint32_t)offsetof(RequestEnvelop__storage_, unknown12),
+        .offset = (uint32_t)offsetof(PHProtoRequestEnvelop__storage_, unknown12),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeInt64,
       },
     };
     GPBDescriptor *localDescriptor =
-        [GPBDescriptor allocDescriptorForClass:[RequestEnvelop class]
-                                     rootClass:[PokemonRoot class]
-                                          file:PokemonRoot_FileDescriptor()
+        [GPBDescriptor allocDescriptorForClass:[PHProtoRequestEnvelop class]
+                                     rootClass:[PHProtoPokemonRoot class]
+                                          file:PHProtoPokemonRoot_FileDescriptor()
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
-                                   storageSize:sizeof(RequestEnvelop__storage_)
+                                   storageSize:sizeof(PHProtoRequestEnvelop__storage_)
                                          flags:0];
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
@@ -181,18 +181,18 @@ typedef struct RequestEnvelop__storage_ {
 
 @end
 
-#pragma mark - RequestEnvelop_Requests
+#pragma mark - PHProtoRequestEnvelop_Requests
 
-@implementation RequestEnvelop_Requests
+@implementation PHProtoRequestEnvelop_Requests
 
 @dynamic hasType, type;
 @dynamic hasMessage, message;
 
-typedef struct RequestEnvelop_Requests__storage_ {
+typedef struct PHProtoRequestEnvelop_Requests__storage_ {
   uint32_t _has_storage_[1];
   int32_t type;
   NSData *message;
-} RequestEnvelop_Requests__storage_;
+} PHProtoRequestEnvelop_Requests__storage_;
 
 // This method is threadsafe because it is initially called
 // in +initialize for each subclass.
@@ -203,29 +203,29 @@ typedef struct RequestEnvelop_Requests__storage_ {
       {
         .name = "type",
         .dataTypeSpecific.className = NULL,
-        .number = RequestEnvelop_Requests_FieldNumber_Type,
+        .number = PHProtoRequestEnvelop_Requests_FieldNumber_Type,
         .hasIndex = 0,
-        .offset = (uint32_t)offsetof(RequestEnvelop_Requests__storage_, type),
+        .offset = (uint32_t)offsetof(PHProtoRequestEnvelop_Requests__storage_, type),
         .flags = GPBFieldRequired,
         .dataType = GPBDataTypeInt32,
       },
       {
         .name = "message",
         .dataTypeSpecific.className = NULL,
-        .number = RequestEnvelop_Requests_FieldNumber_Message,
+        .number = PHProtoRequestEnvelop_Requests_FieldNumber_Message,
         .hasIndex = 1,
-        .offset = (uint32_t)offsetof(RequestEnvelop_Requests__storage_, message),
+        .offset = (uint32_t)offsetof(PHProtoRequestEnvelop_Requests__storage_, message),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBytes,
       },
     };
     GPBDescriptor *localDescriptor =
-        [GPBDescriptor allocDescriptorForClass:[RequestEnvelop_Requests class]
-                                     rootClass:[PokemonRoot class]
-                                          file:PokemonRoot_FileDescriptor()
+        [GPBDescriptor allocDescriptorForClass:[PHProtoRequestEnvelop_Requests class]
+                                     rootClass:[PHProtoPokemonRoot class]
+                                          file:PHProtoPokemonRoot_FileDescriptor()
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
-                                   storageSize:sizeof(RequestEnvelop_Requests__storage_)
+                                   storageSize:sizeof(PHProtoRequestEnvelop_Requests__storage_)
                                          flags:0];
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
@@ -235,16 +235,16 @@ typedef struct RequestEnvelop_Requests__storage_ {
 
 @end
 
-#pragma mark - RequestEnvelop_MessageSingleString
+#pragma mark - PHProtoRequestEnvelop_MessageSingleString
 
-@implementation RequestEnvelop_MessageSingleString
+@implementation PHProtoRequestEnvelop_MessageSingleString
 
 @dynamic hasBytes, bytes;
 
-typedef struct RequestEnvelop_MessageSingleString__storage_ {
+typedef struct PHProtoRequestEnvelop_MessageSingleString__storage_ {
   uint32_t _has_storage_[1];
   NSData *bytes;
-} RequestEnvelop_MessageSingleString__storage_;
+} PHProtoRequestEnvelop_MessageSingleString__storage_;
 
 // This method is threadsafe because it is initially called
 // in +initialize for each subclass.
@@ -255,20 +255,20 @@ typedef struct RequestEnvelop_MessageSingleString__storage_ {
       {
         .name = "bytes",
         .dataTypeSpecific.className = NULL,
-        .number = RequestEnvelop_MessageSingleString_FieldNumber_Bytes,
+        .number = PHProtoRequestEnvelop_MessageSingleString_FieldNumber_Bytes,
         .hasIndex = 0,
-        .offset = (uint32_t)offsetof(RequestEnvelop_MessageSingleString__storage_, bytes),
+        .offset = (uint32_t)offsetof(PHProtoRequestEnvelop_MessageSingleString__storage_, bytes),
         .flags = GPBFieldRequired,
         .dataType = GPBDataTypeBytes,
       },
     };
     GPBDescriptor *localDescriptor =
-        [GPBDescriptor allocDescriptorForClass:[RequestEnvelop_MessageSingleString class]
-                                     rootClass:[PokemonRoot class]
-                                          file:PokemonRoot_FileDescriptor()
+        [GPBDescriptor allocDescriptorForClass:[PHProtoRequestEnvelop_MessageSingleString class]
+                                     rootClass:[PHProtoPokemonRoot class]
+                                          file:PHProtoPokemonRoot_FileDescriptor()
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
-                                   storageSize:sizeof(RequestEnvelop_MessageSingleString__storage_)
+                                   storageSize:sizeof(PHProtoRequestEnvelop_MessageSingleString__storage_)
                                          flags:0];
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
@@ -278,16 +278,16 @@ typedef struct RequestEnvelop_MessageSingleString__storage_ {
 
 @end
 
-#pragma mark - RequestEnvelop_MessageSingleInt
+#pragma mark - PHProtoRequestEnvelop_MessageSingleInt
 
-@implementation RequestEnvelop_MessageSingleInt
+@implementation PHProtoRequestEnvelop_MessageSingleInt
 
 @dynamic hasF1, f1;
 
-typedef struct RequestEnvelop_MessageSingleInt__storage_ {
+typedef struct PHProtoRequestEnvelop_MessageSingleInt__storage_ {
   uint32_t _has_storage_[1];
   int64_t f1;
-} RequestEnvelop_MessageSingleInt__storage_;
+} PHProtoRequestEnvelop_MessageSingleInt__storage_;
 
 // This method is threadsafe because it is initially called
 // in +initialize for each subclass.
@@ -298,20 +298,20 @@ typedef struct RequestEnvelop_MessageSingleInt__storage_ {
       {
         .name = "f1",
         .dataTypeSpecific.className = NULL,
-        .number = RequestEnvelop_MessageSingleInt_FieldNumber_F1,
+        .number = PHProtoRequestEnvelop_MessageSingleInt_FieldNumber_F1,
         .hasIndex = 0,
-        .offset = (uint32_t)offsetof(RequestEnvelop_MessageSingleInt__storage_, f1),
+        .offset = (uint32_t)offsetof(PHProtoRequestEnvelop_MessageSingleInt__storage_, f1),
         .flags = GPBFieldRequired,
         .dataType = GPBDataTypeInt64,
       },
     };
     GPBDescriptor *localDescriptor =
-        [GPBDescriptor allocDescriptorForClass:[RequestEnvelop_MessageSingleInt class]
-                                     rootClass:[PokemonRoot class]
-                                          file:PokemonRoot_FileDescriptor()
+        [GPBDescriptor allocDescriptorForClass:[PHProtoRequestEnvelop_MessageSingleInt class]
+                                     rootClass:[PHProtoPokemonRoot class]
+                                          file:PHProtoPokemonRoot_FileDescriptor()
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
-                                   storageSize:sizeof(RequestEnvelop_MessageSingleInt__storage_)
+                                   storageSize:sizeof(PHProtoRequestEnvelop_MessageSingleInt__storage_)
                                          flags:0];
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
@@ -321,18 +321,18 @@ typedef struct RequestEnvelop_MessageSingleInt__storage_ {
 
 @end
 
-#pragma mark - RequestEnvelop_MessageTwoInts
+#pragma mark - PHProtoRequestEnvelop_MessageTwoInts
 
-@implementation RequestEnvelop_MessageTwoInts
+@implementation PHProtoRequestEnvelop_MessageTwoInts
 
 @dynamic hasF1, f1;
 @dynamic hasF5, f5;
 
-typedef struct RequestEnvelop_MessageTwoInts__storage_ {
+typedef struct PHProtoRequestEnvelop_MessageTwoInts__storage_ {
   uint32_t _has_storage_[1];
   int64_t f1;
   int64_t f5;
-} RequestEnvelop_MessageTwoInts__storage_;
+} PHProtoRequestEnvelop_MessageTwoInts__storage_;
 
 // This method is threadsafe because it is initially called
 // in +initialize for each subclass.
@@ -343,29 +343,29 @@ typedef struct RequestEnvelop_MessageTwoInts__storage_ {
       {
         .name = "f1",
         .dataTypeSpecific.className = NULL,
-        .number = RequestEnvelop_MessageTwoInts_FieldNumber_F1,
+        .number = PHProtoRequestEnvelop_MessageTwoInts_FieldNumber_F1,
         .hasIndex = 0,
-        .offset = (uint32_t)offsetof(RequestEnvelop_MessageTwoInts__storage_, f1),
+        .offset = (uint32_t)offsetof(PHProtoRequestEnvelop_MessageTwoInts__storage_, f1),
         .flags = GPBFieldRequired,
         .dataType = GPBDataTypeInt64,
       },
       {
         .name = "f5",
         .dataTypeSpecific.className = NULL,
-        .number = RequestEnvelop_MessageTwoInts_FieldNumber_F5,
+        .number = PHProtoRequestEnvelop_MessageTwoInts_FieldNumber_F5,
         .hasIndex = 1,
-        .offset = (uint32_t)offsetof(RequestEnvelop_MessageTwoInts__storage_, f5),
+        .offset = (uint32_t)offsetof(PHProtoRequestEnvelop_MessageTwoInts__storage_, f5),
         .flags = GPBFieldRequired,
         .dataType = GPBDataTypeInt64,
       },
     };
     GPBDescriptor *localDescriptor =
-        [GPBDescriptor allocDescriptorForClass:[RequestEnvelop_MessageTwoInts class]
-                                     rootClass:[PokemonRoot class]
-                                          file:PokemonRoot_FileDescriptor()
+        [GPBDescriptor allocDescriptorForClass:[PHProtoRequestEnvelop_MessageTwoInts class]
+                                     rootClass:[PHProtoPokemonRoot class]
+                                          file:PHProtoPokemonRoot_FileDescriptor()
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
-                                   storageSize:sizeof(RequestEnvelop_MessageTwoInts__storage_)
+                                   storageSize:sizeof(PHProtoRequestEnvelop_MessageTwoInts__storage_)
                                          flags:0];
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
@@ -375,22 +375,22 @@ typedef struct RequestEnvelop_MessageTwoInts__storage_ {
 
 @end
 
-#pragma mark - RequestEnvelop_MessageQuad
+#pragma mark - PHProtoRequestEnvelop_MessageQuad
 
-@implementation RequestEnvelop_MessageQuad
+@implementation PHProtoRequestEnvelop_MessageQuad
 
 @dynamic hasF1, f1;
 @dynamic hasF2, f2;
 @dynamic hasLat, lat;
 @dynamic hasLong_p, long_p;
 
-typedef struct RequestEnvelop_MessageQuad__storage_ {
+typedef struct PHProtoRequestEnvelop_MessageQuad__storage_ {
   uint32_t _has_storage_[1];
   NSData *f1;
   NSData *f2;
   uint64_t lat;
   uint64_t long_p;
-} RequestEnvelop_MessageQuad__storage_;
+} PHProtoRequestEnvelop_MessageQuad__storage_;
 
 // This method is threadsafe because it is initially called
 // in +initialize for each subclass.
@@ -401,47 +401,47 @@ typedef struct RequestEnvelop_MessageQuad__storage_ {
       {
         .name = "f1",
         .dataTypeSpecific.className = NULL,
-        .number = RequestEnvelop_MessageQuad_FieldNumber_F1,
+        .number = PHProtoRequestEnvelop_MessageQuad_FieldNumber_F1,
         .hasIndex = 0,
-        .offset = (uint32_t)offsetof(RequestEnvelop_MessageQuad__storage_, f1),
+        .offset = (uint32_t)offsetof(PHProtoRequestEnvelop_MessageQuad__storage_, f1),
         .flags = GPBFieldRequired,
         .dataType = GPBDataTypeBytes,
       },
       {
         .name = "f2",
         .dataTypeSpecific.className = NULL,
-        .number = RequestEnvelop_MessageQuad_FieldNumber_F2,
+        .number = PHProtoRequestEnvelop_MessageQuad_FieldNumber_F2,
         .hasIndex = 1,
-        .offset = (uint32_t)offsetof(RequestEnvelop_MessageQuad__storage_, f2),
+        .offset = (uint32_t)offsetof(PHProtoRequestEnvelop_MessageQuad__storage_, f2),
         .flags = GPBFieldRequired,
         .dataType = GPBDataTypeBytes,
       },
       {
         .name = "lat",
         .dataTypeSpecific.className = NULL,
-        .number = RequestEnvelop_MessageQuad_FieldNumber_Lat,
+        .number = PHProtoRequestEnvelop_MessageQuad_FieldNumber_Lat,
         .hasIndex = 2,
-        .offset = (uint32_t)offsetof(RequestEnvelop_MessageQuad__storage_, lat),
+        .offset = (uint32_t)offsetof(PHProtoRequestEnvelop_MessageQuad__storage_, lat),
         .flags = GPBFieldRequired,
         .dataType = GPBDataTypeFixed64,
       },
       {
         .name = "long_p",
         .dataTypeSpecific.className = NULL,
-        .number = RequestEnvelop_MessageQuad_FieldNumber_Long_p,
+        .number = PHProtoRequestEnvelop_MessageQuad_FieldNumber_Long_p,
         .hasIndex = 3,
-        .offset = (uint32_t)offsetof(RequestEnvelop_MessageQuad__storage_, long_p),
+        .offset = (uint32_t)offsetof(PHProtoRequestEnvelop_MessageQuad__storage_, long_p),
         .flags = GPBFieldRequired,
         .dataType = GPBDataTypeFixed64,
       },
     };
     GPBDescriptor *localDescriptor =
-        [GPBDescriptor allocDescriptorForClass:[RequestEnvelop_MessageQuad class]
-                                     rootClass:[PokemonRoot class]
-                                          file:PokemonRoot_FileDescriptor()
+        [GPBDescriptor allocDescriptorForClass:[PHProtoRequestEnvelop_MessageQuad class]
+                                     rootClass:[PHProtoPokemonRoot class]
+                                          file:PHProtoPokemonRoot_FileDescriptor()
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
-                                   storageSize:sizeof(RequestEnvelop_MessageQuad__storage_)
+                                   storageSize:sizeof(PHProtoRequestEnvelop_MessageQuad__storage_)
                                          flags:0];
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
@@ -451,16 +451,16 @@ typedef struct RequestEnvelop_MessageQuad__storage_ {
 
 @end
 
-#pragma mark - RequestEnvelop_Wat
+#pragma mark - PHProtoRequestEnvelop_Wat
 
-@implementation RequestEnvelop_Wat
+@implementation PHProtoRequestEnvelop_Wat
 
 @dynamic lolsArray, lolsArray_Count;
 
-typedef struct RequestEnvelop_Wat__storage_ {
+typedef struct PHProtoRequestEnvelop_Wat__storage_ {
   uint32_t _has_storage_[1];
   GPBInt64Array *lolsArray;
-} RequestEnvelop_Wat__storage_;
+} PHProtoRequestEnvelop_Wat__storage_;
 
 // This method is threadsafe because it is initially called
 // in +initialize for each subclass.
@@ -471,20 +471,20 @@ typedef struct RequestEnvelop_Wat__storage_ {
       {
         .name = "lolsArray",
         .dataTypeSpecific.className = NULL,
-        .number = RequestEnvelop_Wat_FieldNumber_LolsArray,
+        .number = PHProtoRequestEnvelop_Wat_FieldNumber_LolsArray,
         .hasIndex = GPBNoHasBit,
-        .offset = (uint32_t)offsetof(RequestEnvelop_Wat__storage_, lolsArray),
+        .offset = (uint32_t)offsetof(PHProtoRequestEnvelop_Wat__storage_, lolsArray),
         .flags = GPBFieldRepeated,
         .dataType = GPBDataTypeInt64,
       },
     };
     GPBDescriptor *localDescriptor =
-        [GPBDescriptor allocDescriptorForClass:[RequestEnvelop_Wat class]
-                                     rootClass:[PokemonRoot class]
-                                          file:PokemonRoot_FileDescriptor()
+        [GPBDescriptor allocDescriptorForClass:[PHProtoRequestEnvelop_Wat class]
+                                     rootClass:[PHProtoPokemonRoot class]
+                                          file:PHProtoPokemonRoot_FileDescriptor()
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
-                                   storageSize:sizeof(RequestEnvelop_Wat__storage_)
+                                   storageSize:sizeof(PHProtoRequestEnvelop_Wat__storage_)
                                          flags:0];
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
@@ -494,22 +494,22 @@ typedef struct RequestEnvelop_Wat__storage_ {
 
 @end
 
-#pragma mark - RequestEnvelop_Unknown3
+#pragma mark - PHProtoRequestEnvelop_Unknown3
 
-@implementation RequestEnvelop_Unknown3
+@implementation PHProtoRequestEnvelop_Unknown3
 
 @dynamic hasUnknown4, unknown4;
 @dynamic hasUnknown2, unknown2;
 @dynamic hasLat, lat;
 @dynamic hasLong_p, long_p;
 
-typedef struct RequestEnvelop_Unknown3__storage_ {
+typedef struct PHProtoRequestEnvelop_Unknown3__storage_ {
   uint32_t _has_storage_[1];
   NSData *unknown4;
   NSData *unknown2;
   uint64_t lat;
   uint64_t long_p;
-} RequestEnvelop_Unknown3__storage_;
+} PHProtoRequestEnvelop_Unknown3__storage_;
 
 // This method is threadsafe because it is initially called
 // in +initialize for each subclass.
@@ -520,47 +520,47 @@ typedef struct RequestEnvelop_Unknown3__storage_ {
       {
         .name = "unknown4",
         .dataTypeSpecific.className = NULL,
-        .number = RequestEnvelop_Unknown3_FieldNumber_Unknown4,
+        .number = PHProtoRequestEnvelop_Unknown3_FieldNumber_Unknown4,
         .hasIndex = 0,
-        .offset = (uint32_t)offsetof(RequestEnvelop_Unknown3__storage_, unknown4),
+        .offset = (uint32_t)offsetof(PHProtoRequestEnvelop_Unknown3__storage_, unknown4),
         .flags = GPBFieldRequired,
         .dataType = GPBDataTypeBytes,
       },
       {
         .name = "unknown2",
         .dataTypeSpecific.className = NULL,
-        .number = RequestEnvelop_Unknown3_FieldNumber_Unknown2,
+        .number = PHProtoRequestEnvelop_Unknown3_FieldNumber_Unknown2,
         .hasIndex = 1,
-        .offset = (uint32_t)offsetof(RequestEnvelop_Unknown3__storage_, unknown2),
+        .offset = (uint32_t)offsetof(PHProtoRequestEnvelop_Unknown3__storage_, unknown2),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBytes,
       },
       {
         .name = "lat",
         .dataTypeSpecific.className = NULL,
-        .number = RequestEnvelop_Unknown3_FieldNumber_Lat,
+        .number = PHProtoRequestEnvelop_Unknown3_FieldNumber_Lat,
         .hasIndex = 2,
-        .offset = (uint32_t)offsetof(RequestEnvelop_Unknown3__storage_, lat),
+        .offset = (uint32_t)offsetof(PHProtoRequestEnvelop_Unknown3__storage_, lat),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeFixed64,
       },
       {
         .name = "long_p",
         .dataTypeSpecific.className = NULL,
-        .number = RequestEnvelop_Unknown3_FieldNumber_Long_p,
+        .number = PHProtoRequestEnvelop_Unknown3_FieldNumber_Long_p,
         .hasIndex = 3,
-        .offset = (uint32_t)offsetof(RequestEnvelop_Unknown3__storage_, long_p),
+        .offset = (uint32_t)offsetof(PHProtoRequestEnvelop_Unknown3__storage_, long_p),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeFixed64,
       },
     };
     GPBDescriptor *localDescriptor =
-        [GPBDescriptor allocDescriptorForClass:[RequestEnvelop_Unknown3 class]
-                                     rootClass:[PokemonRoot class]
-                                          file:PokemonRoot_FileDescriptor()
+        [GPBDescriptor allocDescriptorForClass:[PHProtoRequestEnvelop_Unknown3 class]
+                                     rootClass:[PHProtoPokemonRoot class]
+                                          file:PHProtoPokemonRoot_FileDescriptor()
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
-                                   storageSize:sizeof(RequestEnvelop_Unknown3__storage_)
+                                   storageSize:sizeof(PHProtoRequestEnvelop_Unknown3__storage_)
                                          flags:0];
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
@@ -570,18 +570,18 @@ typedef struct RequestEnvelop_Unknown3__storage_ {
 
 @end
 
-#pragma mark - RequestEnvelop_Unknown6
+#pragma mark - PHProtoRequestEnvelop_Unknown6
 
-@implementation RequestEnvelop_Unknown6
+@implementation PHProtoRequestEnvelop_Unknown6
 
 @dynamic hasUnknown1, unknown1;
 @dynamic hasUnknown2, unknown2;
 
-typedef struct RequestEnvelop_Unknown6__storage_ {
+typedef struct PHProtoRequestEnvelop_Unknown6__storage_ {
   uint32_t _has_storage_[1];
   int32_t unknown1;
-  RequestEnvelop_Unknown6_Unknown2 *unknown2;
-} RequestEnvelop_Unknown6__storage_;
+  PHProtoRequestEnvelop_Unknown6_Unknown2 *unknown2;
+} PHProtoRequestEnvelop_Unknown6__storage_;
 
 // This method is threadsafe because it is initially called
 // in +initialize for each subclass.
@@ -592,29 +592,29 @@ typedef struct RequestEnvelop_Unknown6__storage_ {
       {
         .name = "unknown1",
         .dataTypeSpecific.className = NULL,
-        .number = RequestEnvelop_Unknown6_FieldNumber_Unknown1,
+        .number = PHProtoRequestEnvelop_Unknown6_FieldNumber_Unknown1,
         .hasIndex = 0,
-        .offset = (uint32_t)offsetof(RequestEnvelop_Unknown6__storage_, unknown1),
+        .offset = (uint32_t)offsetof(PHProtoRequestEnvelop_Unknown6__storage_, unknown1),
         .flags = GPBFieldRequired,
         .dataType = GPBDataTypeInt32,
       },
       {
         .name = "unknown2",
-        .dataTypeSpecific.className = GPBStringifySymbol(RequestEnvelop_Unknown6_Unknown2),
-        .number = RequestEnvelop_Unknown6_FieldNumber_Unknown2,
+        .dataTypeSpecific.className = GPBStringifySymbol(PHProtoRequestEnvelop_Unknown6_Unknown2),
+        .number = PHProtoRequestEnvelop_Unknown6_FieldNumber_Unknown2,
         .hasIndex = 1,
-        .offset = (uint32_t)offsetof(RequestEnvelop_Unknown6__storage_, unknown2),
+        .offset = (uint32_t)offsetof(PHProtoRequestEnvelop_Unknown6__storage_, unknown2),
         .flags = GPBFieldRequired,
         .dataType = GPBDataTypeMessage,
       },
     };
     GPBDescriptor *localDescriptor =
-        [GPBDescriptor allocDescriptorForClass:[RequestEnvelop_Unknown6 class]
-                                     rootClass:[PokemonRoot class]
-                                          file:PokemonRoot_FileDescriptor()
+        [GPBDescriptor allocDescriptorForClass:[PHProtoRequestEnvelop_Unknown6 class]
+                                     rootClass:[PHProtoPokemonRoot class]
+                                          file:PHProtoPokemonRoot_FileDescriptor()
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
-                                   storageSize:sizeof(RequestEnvelop_Unknown6__storage_)
+                                   storageSize:sizeof(PHProtoRequestEnvelop_Unknown6__storage_)
                                          flags:0];
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
@@ -624,16 +624,16 @@ typedef struct RequestEnvelop_Unknown6__storage_ {
 
 @end
 
-#pragma mark - RequestEnvelop_Unknown6_Unknown2
+#pragma mark - PHProtoRequestEnvelop_Unknown6_Unknown2
 
-@implementation RequestEnvelop_Unknown6_Unknown2
+@implementation PHProtoRequestEnvelop_Unknown6_Unknown2
 
 @dynamic hasUnknown1, unknown1;
 
-typedef struct RequestEnvelop_Unknown6_Unknown2__storage_ {
+typedef struct PHProtoRequestEnvelop_Unknown6_Unknown2__storage_ {
   uint32_t _has_storage_[1];
   NSData *unknown1;
-} RequestEnvelop_Unknown6_Unknown2__storage_;
+} PHProtoRequestEnvelop_Unknown6_Unknown2__storage_;
 
 // This method is threadsafe because it is initially called
 // in +initialize for each subclass.
@@ -644,20 +644,20 @@ typedef struct RequestEnvelop_Unknown6_Unknown2__storage_ {
       {
         .name = "unknown1",
         .dataTypeSpecific.className = NULL,
-        .number = RequestEnvelop_Unknown6_Unknown2_FieldNumber_Unknown1,
+        .number = PHProtoRequestEnvelop_Unknown6_Unknown2_FieldNumber_Unknown1,
         .hasIndex = 0,
-        .offset = (uint32_t)offsetof(RequestEnvelop_Unknown6_Unknown2__storage_, unknown1),
+        .offset = (uint32_t)offsetof(PHProtoRequestEnvelop_Unknown6_Unknown2__storage_, unknown1),
         .flags = GPBFieldRequired,
         .dataType = GPBDataTypeBytes,
       },
     };
     GPBDescriptor *localDescriptor =
-        [GPBDescriptor allocDescriptorForClass:[RequestEnvelop_Unknown6_Unknown2 class]
-                                     rootClass:[PokemonRoot class]
-                                          file:PokemonRoot_FileDescriptor()
+        [GPBDescriptor allocDescriptorForClass:[PHProtoRequestEnvelop_Unknown6_Unknown2 class]
+                                     rootClass:[PHProtoPokemonRoot class]
+                                          file:PHProtoPokemonRoot_FileDescriptor()
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
-                                   storageSize:sizeof(RequestEnvelop_Unknown6_Unknown2__storage_)
+                                   storageSize:sizeof(PHProtoRequestEnvelop_Unknown6_Unknown2__storage_)
                                          flags:0];
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
@@ -667,18 +667,18 @@ typedef struct RequestEnvelop_Unknown6_Unknown2__storage_ {
 
 @end
 
-#pragma mark - RequestEnvelop_AuthInfo
+#pragma mark - PHProtoRequestEnvelop_AuthInfo
 
-@implementation RequestEnvelop_AuthInfo
+@implementation PHProtoRequestEnvelop_AuthInfo
 
 @dynamic hasProvider, provider;
 @dynamic hasToken, token;
 
-typedef struct RequestEnvelop_AuthInfo__storage_ {
+typedef struct PHProtoRequestEnvelop_AuthInfo__storage_ {
   uint32_t _has_storage_[1];
   NSString *provider;
-  RequestEnvelop_AuthInfo_JWT *token;
-} RequestEnvelop_AuthInfo__storage_;
+  PHProtoRequestEnvelop_AuthInfo_JWT *token;
+} PHProtoRequestEnvelop_AuthInfo__storage_;
 
 // This method is threadsafe because it is initially called
 // in +initialize for each subclass.
@@ -689,29 +689,29 @@ typedef struct RequestEnvelop_AuthInfo__storage_ {
       {
         .name = "provider",
         .dataTypeSpecific.className = NULL,
-        .number = RequestEnvelop_AuthInfo_FieldNumber_Provider,
+        .number = PHProtoRequestEnvelop_AuthInfo_FieldNumber_Provider,
         .hasIndex = 0,
-        .offset = (uint32_t)offsetof(RequestEnvelop_AuthInfo__storage_, provider),
+        .offset = (uint32_t)offsetof(PHProtoRequestEnvelop_AuthInfo__storage_, provider),
         .flags = GPBFieldRequired,
         .dataType = GPBDataTypeString,
       },
       {
         .name = "token",
-        .dataTypeSpecific.className = GPBStringifySymbol(RequestEnvelop_AuthInfo_JWT),
-        .number = RequestEnvelop_AuthInfo_FieldNumber_Token,
+        .dataTypeSpecific.className = GPBStringifySymbol(PHProtoRequestEnvelop_AuthInfo_JWT),
+        .number = PHProtoRequestEnvelop_AuthInfo_FieldNumber_Token,
         .hasIndex = 1,
-        .offset = (uint32_t)offsetof(RequestEnvelop_AuthInfo__storage_, token),
+        .offset = (uint32_t)offsetof(PHProtoRequestEnvelop_AuthInfo__storage_, token),
         .flags = GPBFieldRequired,
         .dataType = GPBDataTypeMessage,
       },
     };
     GPBDescriptor *localDescriptor =
-        [GPBDescriptor allocDescriptorForClass:[RequestEnvelop_AuthInfo class]
-                                     rootClass:[PokemonRoot class]
-                                          file:PokemonRoot_FileDescriptor()
+        [GPBDescriptor allocDescriptorForClass:[PHProtoRequestEnvelop_AuthInfo class]
+                                     rootClass:[PHProtoPokemonRoot class]
+                                          file:PHProtoPokemonRoot_FileDescriptor()
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
-                                   storageSize:sizeof(RequestEnvelop_AuthInfo__storage_)
+                                   storageSize:sizeof(PHProtoRequestEnvelop_AuthInfo__storage_)
                                          flags:0];
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
@@ -721,18 +721,18 @@ typedef struct RequestEnvelop_AuthInfo__storage_ {
 
 @end
 
-#pragma mark - RequestEnvelop_AuthInfo_JWT
+#pragma mark - PHProtoRequestEnvelop_AuthInfo_JWT
 
-@implementation RequestEnvelop_AuthInfo_JWT
+@implementation PHProtoRequestEnvelop_AuthInfo_JWT
 
 @dynamic hasContents, contents;
 @dynamic hasUnknown13, unknown13;
 
-typedef struct RequestEnvelop_AuthInfo_JWT__storage_ {
+typedef struct PHProtoRequestEnvelop_AuthInfo_JWT__storage_ {
   uint32_t _has_storage_[1];
   int32_t unknown13;
   NSString *contents;
-} RequestEnvelop_AuthInfo_JWT__storage_;
+} PHProtoRequestEnvelop_AuthInfo_JWT__storage_;
 
 // This method is threadsafe because it is initially called
 // in +initialize for each subclass.
@@ -743,29 +743,29 @@ typedef struct RequestEnvelop_AuthInfo_JWT__storage_ {
       {
         .name = "contents",
         .dataTypeSpecific.className = NULL,
-        .number = RequestEnvelop_AuthInfo_JWT_FieldNumber_Contents,
+        .number = PHProtoRequestEnvelop_AuthInfo_JWT_FieldNumber_Contents,
         .hasIndex = 0,
-        .offset = (uint32_t)offsetof(RequestEnvelop_AuthInfo_JWT__storage_, contents),
+        .offset = (uint32_t)offsetof(PHProtoRequestEnvelop_AuthInfo_JWT__storage_, contents),
         .flags = GPBFieldRequired,
         .dataType = GPBDataTypeString,
       },
       {
         .name = "unknown13",
         .dataTypeSpecific.className = NULL,
-        .number = RequestEnvelop_AuthInfo_JWT_FieldNumber_Unknown13,
+        .number = PHProtoRequestEnvelop_AuthInfo_JWT_FieldNumber_Unknown13,
         .hasIndex = 1,
-        .offset = (uint32_t)offsetof(RequestEnvelop_AuthInfo_JWT__storage_, unknown13),
+        .offset = (uint32_t)offsetof(PHProtoRequestEnvelop_AuthInfo_JWT__storage_, unknown13),
         .flags = GPBFieldRequired,
         .dataType = GPBDataTypeInt32,
       },
     };
     GPBDescriptor *localDescriptor =
-        [GPBDescriptor allocDescriptorForClass:[RequestEnvelop_AuthInfo_JWT class]
-                                     rootClass:[PokemonRoot class]
-                                          file:PokemonRoot_FileDescriptor()
+        [GPBDescriptor allocDescriptorForClass:[PHProtoRequestEnvelop_AuthInfo_JWT class]
+                                     rootClass:[PHProtoPokemonRoot class]
+                                          file:PHProtoPokemonRoot_FileDescriptor()
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
-                                   storageSize:sizeof(RequestEnvelop_AuthInfo_JWT__storage_)
+                                   storageSize:sizeof(PHProtoRequestEnvelop_AuthInfo_JWT__storage_)
                                          flags:0];
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
@@ -775,20 +775,20 @@ typedef struct RequestEnvelop_AuthInfo_JWT__storage_ {
 
 @end
 
-#pragma mark - UnknownAuth
+#pragma mark - PHProtoUnknownAuth
 
-@implementation UnknownAuth
+@implementation PHProtoUnknownAuth
 
 @dynamic hasUnknown71, unknown71;
 @dynamic hasUnknown72, unknown72;
 @dynamic hasUnknown73, unknown73;
 
-typedef struct UnknownAuth__storage_ {
+typedef struct PHProtoUnknownAuth__storage_ {
   uint32_t _has_storage_[1];
   NSData *unknown71;
   NSData *unknown73;
   int64_t unknown72;
-} UnknownAuth__storage_;
+} PHProtoUnknownAuth__storage_;
 
 // This method is threadsafe because it is initially called
 // in +initialize for each subclass.
@@ -799,38 +799,38 @@ typedef struct UnknownAuth__storage_ {
       {
         .name = "unknown71",
         .dataTypeSpecific.className = NULL,
-        .number = UnknownAuth_FieldNumber_Unknown71,
+        .number = PHProtoUnknownAuth_FieldNumber_Unknown71,
         .hasIndex = 0,
-        .offset = (uint32_t)offsetof(UnknownAuth__storage_, unknown71),
+        .offset = (uint32_t)offsetof(PHProtoUnknownAuth__storage_, unknown71),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBytes,
       },
       {
         .name = "unknown72",
         .dataTypeSpecific.className = NULL,
-        .number = UnknownAuth_FieldNumber_Unknown72,
+        .number = PHProtoUnknownAuth_FieldNumber_Unknown72,
         .hasIndex = 1,
-        .offset = (uint32_t)offsetof(UnknownAuth__storage_, unknown72),
+        .offset = (uint32_t)offsetof(PHProtoUnknownAuth__storage_, unknown72),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeInt64,
       },
       {
         .name = "unknown73",
         .dataTypeSpecific.className = NULL,
-        .number = UnknownAuth_FieldNumber_Unknown73,
+        .number = PHProtoUnknownAuth_FieldNumber_Unknown73,
         .hasIndex = 2,
-        .offset = (uint32_t)offsetof(UnknownAuth__storage_, unknown73),
+        .offset = (uint32_t)offsetof(PHProtoUnknownAuth__storage_, unknown73),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBytes,
       },
     };
     GPBDescriptor *localDescriptor =
-        [GPBDescriptor allocDescriptorForClass:[UnknownAuth class]
-                                     rootClass:[PokemonRoot class]
-                                          file:PokemonRoot_FileDescriptor()
+        [GPBDescriptor allocDescriptorForClass:[PHProtoUnknownAuth class]
+                                     rootClass:[PHProtoPokemonRoot class]
+                                          file:PHProtoPokemonRoot_FileDescriptor()
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
-                                   storageSize:sizeof(UnknownAuth__storage_)
+                                   storageSize:sizeof(PHProtoUnknownAuth__storage_)
                                          flags:0];
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
@@ -840,9 +840,9 @@ typedef struct UnknownAuth__storage_ {
 
 @end
 
-#pragma mark - ResponseEnvelop
+#pragma mark - PHProtoResponseEnvelop
 
-@implementation ResponseEnvelop
+@implementation PHProtoResponseEnvelop
 
 @dynamic hasUnknown1, unknown1;
 @dynamic hasUnknown2, unknown2;
@@ -851,15 +851,15 @@ typedef struct UnknownAuth__storage_ {
 @dynamic hasUnknown7, unknown7;
 @dynamic payloadArray, payloadArray_Count;
 
-typedef struct ResponseEnvelop__storage_ {
+typedef struct PHProtoResponseEnvelop__storage_ {
   uint32_t _has_storage_[1];
   int32_t unknown1;
   NSString *apiURL;
-  ResponseEnvelop_Unknown6 *unknown6;
-  UnknownAuth *unknown7;
+  PHProtoResponseEnvelop_Unknown6 *unknown6;
+  PHProtoUnknownAuth *unknown7;
   NSMutableArray *payloadArray;
   int64_t unknown2;
-} ResponseEnvelop__storage_;
+} PHProtoResponseEnvelop__storage_;
 
 // This method is threadsafe because it is initially called
 // in +initialize for each subclass.
@@ -870,65 +870,65 @@ typedef struct ResponseEnvelop__storage_ {
       {
         .name = "unknown1",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_FieldNumber_Unknown1,
+        .number = PHProtoResponseEnvelop_FieldNumber_Unknown1,
         .hasIndex = 0,
-        .offset = (uint32_t)offsetof(ResponseEnvelop__storage_, unknown1),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop__storage_, unknown1),
         .flags = GPBFieldRequired,
         .dataType = GPBDataTypeInt32,
       },
       {
         .name = "unknown2",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_FieldNumber_Unknown2,
+        .number = PHProtoResponseEnvelop_FieldNumber_Unknown2,
         .hasIndex = 1,
-        .offset = (uint32_t)offsetof(ResponseEnvelop__storage_, unknown2),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop__storage_, unknown2),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeInt64,
       },
       {
         .name = "apiURL",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_FieldNumber_ApiURL,
+        .number = PHProtoResponseEnvelop_FieldNumber_ApiURL,
         .hasIndex = 2,
-        .offset = (uint32_t)offsetof(ResponseEnvelop__storage_, apiURL),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop__storage_, apiURL),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeString,
       },
       {
         .name = "unknown6",
-        .dataTypeSpecific.className = GPBStringifySymbol(ResponseEnvelop_Unknown6),
-        .number = ResponseEnvelop_FieldNumber_Unknown6,
+        .dataTypeSpecific.className = GPBStringifySymbol(PHProtoResponseEnvelop_Unknown6),
+        .number = PHProtoResponseEnvelop_FieldNumber_Unknown6,
         .hasIndex = 3,
-        .offset = (uint32_t)offsetof(ResponseEnvelop__storage_, unknown6),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop__storage_, unknown6),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
       },
       {
         .name = "unknown7",
-        .dataTypeSpecific.className = GPBStringifySymbol(UnknownAuth),
-        .number = ResponseEnvelop_FieldNumber_Unknown7,
+        .dataTypeSpecific.className = GPBStringifySymbol(PHProtoUnknownAuth),
+        .number = PHProtoResponseEnvelop_FieldNumber_Unknown7,
         .hasIndex = 4,
-        .offset = (uint32_t)offsetof(ResponseEnvelop__storage_, unknown7),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop__storage_, unknown7),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
       },
       {
         .name = "payloadArray",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_FieldNumber_PayloadArray,
+        .number = PHProtoResponseEnvelop_FieldNumber_PayloadArray,
         .hasIndex = GPBNoHasBit,
-        .offset = (uint32_t)offsetof(ResponseEnvelop__storage_, payloadArray),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop__storage_, payloadArray),
         .flags = GPBFieldRepeated,
         .dataType = GPBDataTypeBytes,
       },
     };
     GPBDescriptor *localDescriptor =
-        [GPBDescriptor allocDescriptorForClass:[ResponseEnvelop class]
-                                     rootClass:[PokemonRoot class]
-                                          file:PokemonRoot_FileDescriptor()
+        [GPBDescriptor allocDescriptorForClass:[PHProtoResponseEnvelop class]
+                                     rootClass:[PHProtoPokemonRoot class]
+                                          file:PHProtoPokemonRoot_FileDescriptor()
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
-                                   storageSize:sizeof(ResponseEnvelop__storage_)
+                                   storageSize:sizeof(PHProtoResponseEnvelop__storage_)
                                          flags:0];
 #if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     static const char *extraTextFormatInfo =
@@ -943,18 +943,18 @@ typedef struct ResponseEnvelop__storage_ {
 
 @end
 
-#pragma mark - ResponseEnvelop_Unknown6
+#pragma mark - PHProtoResponseEnvelop_Unknown6
 
-@implementation ResponseEnvelop_Unknown6
+@implementation PHProtoResponseEnvelop_Unknown6
 
 @dynamic hasUnknown1, unknown1;
 @dynamic hasUnknown2, unknown2;
 
-typedef struct ResponseEnvelop_Unknown6__storage_ {
+typedef struct PHProtoResponseEnvelop_Unknown6__storage_ {
   uint32_t _has_storage_[1];
   int32_t unknown1;
-  ResponseEnvelop_Unknown6_Unknown2 *unknown2;
-} ResponseEnvelop_Unknown6__storage_;
+  PHProtoResponseEnvelop_Unknown6_Unknown2 *unknown2;
+} PHProtoResponseEnvelop_Unknown6__storage_;
 
 // This method is threadsafe because it is initially called
 // in +initialize for each subclass.
@@ -965,29 +965,29 @@ typedef struct ResponseEnvelop_Unknown6__storage_ {
       {
         .name = "unknown1",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_Unknown6_FieldNumber_Unknown1,
+        .number = PHProtoResponseEnvelop_Unknown6_FieldNumber_Unknown1,
         .hasIndex = 0,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_Unknown6__storage_, unknown1),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_Unknown6__storage_, unknown1),
         .flags = GPBFieldRequired,
         .dataType = GPBDataTypeInt32,
       },
       {
         .name = "unknown2",
-        .dataTypeSpecific.className = GPBStringifySymbol(ResponseEnvelop_Unknown6_Unknown2),
-        .number = ResponseEnvelop_Unknown6_FieldNumber_Unknown2,
+        .dataTypeSpecific.className = GPBStringifySymbol(PHProtoResponseEnvelop_Unknown6_Unknown2),
+        .number = PHProtoResponseEnvelop_Unknown6_FieldNumber_Unknown2,
         .hasIndex = 1,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_Unknown6__storage_, unknown2),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_Unknown6__storage_, unknown2),
         .flags = GPBFieldRequired,
         .dataType = GPBDataTypeMessage,
       },
     };
     GPBDescriptor *localDescriptor =
-        [GPBDescriptor allocDescriptorForClass:[ResponseEnvelop_Unknown6 class]
-                                     rootClass:[PokemonRoot class]
-                                          file:PokemonRoot_FileDescriptor()
+        [GPBDescriptor allocDescriptorForClass:[PHProtoResponseEnvelop_Unknown6 class]
+                                     rootClass:[PHProtoPokemonRoot class]
+                                          file:PHProtoPokemonRoot_FileDescriptor()
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
-                                   storageSize:sizeof(ResponseEnvelop_Unknown6__storage_)
+                                   storageSize:sizeof(PHProtoResponseEnvelop_Unknown6__storage_)
                                          flags:0];
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
@@ -997,16 +997,16 @@ typedef struct ResponseEnvelop_Unknown6__storage_ {
 
 @end
 
-#pragma mark - ResponseEnvelop_Unknown6_Unknown2
+#pragma mark - PHProtoResponseEnvelop_Unknown6_Unknown2
 
-@implementation ResponseEnvelop_Unknown6_Unknown2
+@implementation PHProtoResponseEnvelop_Unknown6_Unknown2
 
 @dynamic hasUnknown1, unknown1;
 
-typedef struct ResponseEnvelop_Unknown6_Unknown2__storage_ {
+typedef struct PHProtoResponseEnvelop_Unknown6_Unknown2__storage_ {
   uint32_t _has_storage_[1];
   NSData *unknown1;
-} ResponseEnvelop_Unknown6_Unknown2__storage_;
+} PHProtoResponseEnvelop_Unknown6_Unknown2__storage_;
 
 // This method is threadsafe because it is initially called
 // in +initialize for each subclass.
@@ -1017,20 +1017,20 @@ typedef struct ResponseEnvelop_Unknown6_Unknown2__storage_ {
       {
         .name = "unknown1",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_Unknown6_Unknown2_FieldNumber_Unknown1,
+        .number = PHProtoResponseEnvelop_Unknown6_Unknown2_FieldNumber_Unknown1,
         .hasIndex = 0,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_Unknown6_Unknown2__storage_, unknown1),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_Unknown6_Unknown2__storage_, unknown1),
         .flags = GPBFieldRequired,
         .dataType = GPBDataTypeBytes,
       },
     };
     GPBDescriptor *localDescriptor =
-        [GPBDescriptor allocDescriptorForClass:[ResponseEnvelop_Unknown6_Unknown2 class]
-                                     rootClass:[PokemonRoot class]
-                                          file:PokemonRoot_FileDescriptor()
+        [GPBDescriptor allocDescriptorForClass:[PHProtoResponseEnvelop_Unknown6_Unknown2 class]
+                                     rootClass:[PHProtoPokemonRoot class]
+                                          file:PHProtoPokemonRoot_FileDescriptor()
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
-                                   storageSize:sizeof(ResponseEnvelop_Unknown6_Unknown2__storage_)
+                                   storageSize:sizeof(PHProtoResponseEnvelop_Unknown6_Unknown2__storage_)
                                          flags:0];
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
@@ -1040,16 +1040,16 @@ typedef struct ResponseEnvelop_Unknown6_Unknown2__storage_ {
 
 @end
 
-#pragma mark - ResponseEnvelop_HeartbeatPayload
+#pragma mark - PHProtoResponseEnvelop_HeartbeatPayload
 
-@implementation ResponseEnvelop_HeartbeatPayload
+@implementation PHProtoResponseEnvelop_HeartbeatPayload
 
 @dynamic cellsArray, cellsArray_Count;
 
-typedef struct ResponseEnvelop_HeartbeatPayload__storage_ {
+typedef struct PHProtoResponseEnvelop_HeartbeatPayload__storage_ {
   uint32_t _has_storage_[1];
   NSMutableArray *cellsArray;
-} ResponseEnvelop_HeartbeatPayload__storage_;
+} PHProtoResponseEnvelop_HeartbeatPayload__storage_;
 
 // This method is threadsafe because it is initially called
 // in +initialize for each subclass.
@@ -1059,21 +1059,21 @@ typedef struct ResponseEnvelop_HeartbeatPayload__storage_ {
     static GPBMessageFieldDescription fields[] = {
       {
         .name = "cellsArray",
-        .dataTypeSpecific.className = GPBStringifySymbol(ResponseEnvelop_ClientMapCell),
-        .number = ResponseEnvelop_HeartbeatPayload_FieldNumber_CellsArray,
+        .dataTypeSpecific.className = GPBStringifySymbol(PHProtoResponseEnvelop_ClientMapCell),
+        .number = PHProtoResponseEnvelop_HeartbeatPayload_FieldNumber_CellsArray,
         .hasIndex = GPBNoHasBit,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_HeartbeatPayload__storage_, cellsArray),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_HeartbeatPayload__storage_, cellsArray),
         .flags = GPBFieldRepeated,
         .dataType = GPBDataTypeMessage,
       },
     };
     GPBDescriptor *localDescriptor =
-        [GPBDescriptor allocDescriptorForClass:[ResponseEnvelop_HeartbeatPayload class]
-                                     rootClass:[PokemonRoot class]
-                                          file:PokemonRoot_FileDescriptor()
+        [GPBDescriptor allocDescriptorForClass:[PHProtoResponseEnvelop_HeartbeatPayload class]
+                                     rootClass:[PHProtoPokemonRoot class]
+                                          file:PHProtoPokemonRoot_FileDescriptor()
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
-                                   storageSize:sizeof(ResponseEnvelop_HeartbeatPayload__storage_)
+                                   storageSize:sizeof(PHProtoResponseEnvelop_HeartbeatPayload__storage_)
                                          flags:0];
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
@@ -1083,9 +1083,9 @@ typedef struct ResponseEnvelop_HeartbeatPayload__storage_ {
 
 @end
 
-#pragma mark - ResponseEnvelop_ClientMapCell
+#pragma mark - PHProtoResponseEnvelop_ClientMapCell
 
-@implementation ResponseEnvelop_ClientMapCell
+@implementation PHProtoResponseEnvelop_ClientMapCell
 
 @dynamic hasS2CellId, s2CellId;
 @dynamic hasAsOfTimeMs, asOfTimeMs;
@@ -1098,7 +1098,7 @@ typedef struct ResponseEnvelop_HeartbeatPayload__storage_ {
 @dynamic mapPokemonArray, mapPokemonArray_Count;
 @dynamic nearbyPokemonArray, nearbyPokemonArray_Count;
 
-typedef struct ResponseEnvelop_ClientMapCell__storage_ {
+typedef struct PHProtoResponseEnvelop_ClientMapCell__storage_ {
   uint32_t _has_storage_[1];
   NSMutableArray *fortArray;
   NSMutableArray *spawnPointArray;
@@ -1109,7 +1109,7 @@ typedef struct ResponseEnvelop_ClientMapCell__storage_ {
   NSMutableArray *nearbyPokemonArray;
   uint64_t s2CellId;
   int64_t asOfTimeMs;
-} ResponseEnvelop_ClientMapCell__storage_;
+} PHProtoResponseEnvelop_ClientMapCell__storage_;
 
 // This method is threadsafe because it is initially called
 // in +initialize for each subclass.
@@ -1120,52 +1120,52 @@ typedef struct ResponseEnvelop_ClientMapCell__storage_ {
       {
         .name = "s2CellId",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_ClientMapCell_FieldNumber_S2CellId,
+        .number = PHProtoResponseEnvelop_ClientMapCell_FieldNumber_S2CellId,
         .hasIndex = 0,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_ClientMapCell__storage_, s2CellId),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_ClientMapCell__storage_, s2CellId),
         .flags = GPBFieldRequired | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeUInt64,
       },
       {
         .name = "asOfTimeMs",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_ClientMapCell_FieldNumber_AsOfTimeMs,
+        .number = PHProtoResponseEnvelop_ClientMapCell_FieldNumber_AsOfTimeMs,
         .hasIndex = 1,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_ClientMapCell__storage_, asOfTimeMs),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_ClientMapCell__storage_, asOfTimeMs),
         .flags = GPBFieldRequired | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeInt64,
       },
       {
         .name = "fortArray",
-        .dataTypeSpecific.className = GPBStringifySymbol(ResponseEnvelop_PokemonFortProto),
-        .number = ResponseEnvelop_ClientMapCell_FieldNumber_FortArray,
+        .dataTypeSpecific.className = GPBStringifySymbol(PHProtoResponseEnvelop_PokemonFortProto),
+        .number = PHProtoResponseEnvelop_ClientMapCell_FieldNumber_FortArray,
         .hasIndex = GPBNoHasBit,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_ClientMapCell__storage_, fortArray),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_ClientMapCell__storage_, fortArray),
         .flags = GPBFieldRepeated | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeMessage,
       },
       {
         .name = "spawnPointArray",
-        .dataTypeSpecific.className = GPBStringifySymbol(ResponseEnvelop_ClientSpawnPointProto),
-        .number = ResponseEnvelop_ClientMapCell_FieldNumber_SpawnPointArray,
+        .dataTypeSpecific.className = GPBStringifySymbol(PHProtoResponseEnvelop_ClientSpawnPointProto),
+        .number = PHProtoResponseEnvelop_ClientMapCell_FieldNumber_SpawnPointArray,
         .hasIndex = GPBNoHasBit,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_ClientMapCell__storage_, spawnPointArray),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_ClientMapCell__storage_, spawnPointArray),
         .flags = GPBFieldRepeated | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeMessage,
       },
       {
         .name = "wildPokemonArray",
-        .dataTypeSpecific.className = GPBStringifySymbol(ResponseEnvelop_WildPokemonProto),
-        .number = ResponseEnvelop_ClientMapCell_FieldNumber_WildPokemonArray,
+        .dataTypeSpecific.className = GPBStringifySymbol(PHProtoResponseEnvelop_WildPokemonProto),
+        .number = PHProtoResponseEnvelop_ClientMapCell_FieldNumber_WildPokemonArray,
         .hasIndex = GPBNoHasBit,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_ClientMapCell__storage_, wildPokemonArray),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_ClientMapCell__storage_, wildPokemonArray),
         .flags = GPBFieldRepeated | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeMessage,
       },
       {
         .name = "isTruncatedList",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_ClientMapCell_FieldNumber_IsTruncatedList,
+        .number = PHProtoResponseEnvelop_ClientMapCell_FieldNumber_IsTruncatedList,
         .hasIndex = 2,
         .offset = 3,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
@@ -1173,48 +1173,48 @@ typedef struct ResponseEnvelop_ClientMapCell__storage_ {
       },
       {
         .name = "fortSummaryArray",
-        .dataTypeSpecific.className = GPBStringifySymbol(ResponseEnvelop_PokemonSummaryFortProto),
-        .number = ResponseEnvelop_ClientMapCell_FieldNumber_FortSummaryArray,
+        .dataTypeSpecific.className = GPBStringifySymbol(PHProtoResponseEnvelop_PokemonSummaryFortProto),
+        .number = PHProtoResponseEnvelop_ClientMapCell_FieldNumber_FortSummaryArray,
         .hasIndex = GPBNoHasBit,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_ClientMapCell__storage_, fortSummaryArray),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_ClientMapCell__storage_, fortSummaryArray),
         .flags = GPBFieldRepeated | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeMessage,
       },
       {
         .name = "decimatedSpawnPointArray",
-        .dataTypeSpecific.className = GPBStringifySymbol(ResponseEnvelop_ClientSpawnPointProto),
-        .number = ResponseEnvelop_ClientMapCell_FieldNumber_DecimatedSpawnPointArray,
+        .dataTypeSpecific.className = GPBStringifySymbol(PHProtoResponseEnvelop_ClientSpawnPointProto),
+        .number = PHProtoResponseEnvelop_ClientMapCell_FieldNumber_DecimatedSpawnPointArray,
         .hasIndex = GPBNoHasBit,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_ClientMapCell__storage_, decimatedSpawnPointArray),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_ClientMapCell__storage_, decimatedSpawnPointArray),
         .flags = GPBFieldRepeated | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeMessage,
       },
       {
         .name = "mapPokemonArray",
-        .dataTypeSpecific.className = GPBStringifySymbol(ResponseEnvelop_MapPokemonProto),
-        .number = ResponseEnvelop_ClientMapCell_FieldNumber_MapPokemonArray,
+        .dataTypeSpecific.className = GPBStringifySymbol(PHProtoResponseEnvelop_MapPokemonProto),
+        .number = PHProtoResponseEnvelop_ClientMapCell_FieldNumber_MapPokemonArray,
         .hasIndex = GPBNoHasBit,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_ClientMapCell__storage_, mapPokemonArray),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_ClientMapCell__storage_, mapPokemonArray),
         .flags = GPBFieldRepeated | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeMessage,
       },
       {
         .name = "nearbyPokemonArray",
-        .dataTypeSpecific.className = GPBStringifySymbol(ResponseEnvelop_NearbyPokemonProto),
-        .number = ResponseEnvelop_ClientMapCell_FieldNumber_NearbyPokemonArray,
+        .dataTypeSpecific.className = GPBStringifySymbol(PHProtoResponseEnvelop_NearbyPokemonProto),
+        .number = PHProtoResponseEnvelop_ClientMapCell_FieldNumber_NearbyPokemonArray,
         .hasIndex = GPBNoHasBit,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_ClientMapCell__storage_, nearbyPokemonArray),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_ClientMapCell__storage_, nearbyPokemonArray),
         .flags = GPBFieldRepeated | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeMessage,
       },
     };
     GPBDescriptor *localDescriptor =
-        [GPBDescriptor allocDescriptorForClass:[ResponseEnvelop_ClientMapCell class]
-                                     rootClass:[PokemonRoot class]
-                                          file:PokemonRoot_FileDescriptor()
+        [GPBDescriptor allocDescriptorForClass:[PHProtoResponseEnvelop_ClientMapCell class]
+                                     rootClass:[PHProtoPokemonRoot class]
+                                          file:PHProtoPokemonRoot_FileDescriptor()
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
-                                   storageSize:sizeof(ResponseEnvelop_ClientMapCell__storage_)
+                                   storageSize:sizeof(PHProtoResponseEnvelop_ClientMapCell__storage_)
                                          flags:0];
 #if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     static const char *extraTextFormatInfo =
@@ -1231,20 +1231,20 @@ typedef struct ResponseEnvelop_ClientMapCell__storage_ {
 
 @end
 
-#pragma mark - ResponseEnvelop_WildPokemon
+#pragma mark - PHProtoResponseEnvelop_WildPokemon
 
-@implementation ResponseEnvelop_WildPokemon
+@implementation PHProtoResponseEnvelop_WildPokemon
 
 @dynamic hasUniqueId, uniqueId;
 @dynamic hasPokemonId, pokemonId;
 @dynamic pokemonArray, pokemonArray_Count;
 
-typedef struct ResponseEnvelop_WildPokemon__storage_ {
+typedef struct PHProtoResponseEnvelop_WildPokemon__storage_ {
   uint32_t _has_storage_[1];
   NSString *uniqueId;
   NSString *pokemonId;
   NSMutableArray *pokemonArray;
-} ResponseEnvelop_WildPokemon__storage_;
+} PHProtoResponseEnvelop_WildPokemon__storage_;
 
 // This method is threadsafe because it is initially called
 // in +initialize for each subclass.
@@ -1255,38 +1255,38 @@ typedef struct ResponseEnvelop_WildPokemon__storage_ {
       {
         .name = "uniqueId",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_WildPokemon_FieldNumber_UniqueId,
+        .number = PHProtoResponseEnvelop_WildPokemon_FieldNumber_UniqueId,
         .hasIndex = 0,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_WildPokemon__storage_, uniqueId),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_WildPokemon__storage_, uniqueId),
         .flags = GPBFieldRequired | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeString,
       },
       {
         .name = "pokemonId",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_WildPokemon_FieldNumber_PokemonId,
+        .number = PHProtoResponseEnvelop_WildPokemon_FieldNumber_PokemonId,
         .hasIndex = 1,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_WildPokemon__storage_, pokemonId),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_WildPokemon__storage_, pokemonId),
         .flags = GPBFieldRequired | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeString,
       },
       {
         .name = "pokemonArray",
-        .dataTypeSpecific.className = GPBStringifySymbol(ResponseEnvelop_NearbyPokemonProto),
-        .number = ResponseEnvelop_WildPokemon_FieldNumber_PokemonArray,
+        .dataTypeSpecific.className = GPBStringifySymbol(PHProtoResponseEnvelop_NearbyPokemonProto),
+        .number = PHProtoResponseEnvelop_WildPokemon_FieldNumber_PokemonArray,
         .hasIndex = GPBNoHasBit,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_WildPokemon__storage_, pokemonArray),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_WildPokemon__storage_, pokemonArray),
         .flags = GPBFieldRepeated,
         .dataType = GPBDataTypeMessage,
       },
     };
     GPBDescriptor *localDescriptor =
-        [GPBDescriptor allocDescriptorForClass:[ResponseEnvelop_WildPokemon class]
-                                     rootClass:[PokemonRoot class]
-                                          file:PokemonRoot_FileDescriptor()
+        [GPBDescriptor allocDescriptorForClass:[PHProtoResponseEnvelop_WildPokemon class]
+                                     rootClass:[PHProtoPokemonRoot class]
+                                          file:PHProtoPokemonRoot_FileDescriptor()
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
-                                   storageSize:sizeof(ResponseEnvelop_WildPokemon__storage_)
+                                   storageSize:sizeof(PHProtoResponseEnvelop_WildPokemon__storage_)
                                          flags:0];
 #if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     static const char *extraTextFormatInfo =
@@ -1301,9 +1301,9 @@ typedef struct ResponseEnvelop_WildPokemon__storage_ {
 
 @end
 
-#pragma mark - ResponseEnvelop_MapPokemonProto
+#pragma mark - PHProtoResponseEnvelop_MapPokemonProto
 
-@implementation ResponseEnvelop_MapPokemonProto
+@implementation PHProtoResponseEnvelop_MapPokemonProto
 
 @dynamic hasSpawnpointId, spawnpointId;
 @dynamic hasEncounterId, encounterId;
@@ -1312,7 +1312,7 @@ typedef struct ResponseEnvelop_WildPokemon__storage_ {
 @dynamic hasLatitude, latitude;
 @dynamic hasLongitude, longitude;
 
-typedef struct ResponseEnvelop_MapPokemonProto__storage_ {
+typedef struct PHProtoResponseEnvelop_MapPokemonProto__storage_ {
   uint32_t _has_storage_[1];
   int32_t pokedexTypeId;
   NSString *spawnpointId;
@@ -1320,7 +1320,7 @@ typedef struct ResponseEnvelop_MapPokemonProto__storage_ {
   int64_t expirationTimeMs;
   double latitude;
   double longitude;
-} ResponseEnvelop_MapPokemonProto__storage_;
+} PHProtoResponseEnvelop_MapPokemonProto__storage_;
 
 // This method is threadsafe because it is initially called
 // in +initialize for each subclass.
@@ -1331,65 +1331,65 @@ typedef struct ResponseEnvelop_MapPokemonProto__storage_ {
       {
         .name = "spawnpointId",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_MapPokemonProto_FieldNumber_SpawnpointId,
+        .number = PHProtoResponseEnvelop_MapPokemonProto_FieldNumber_SpawnpointId,
         .hasIndex = 0,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_MapPokemonProto__storage_, spawnpointId),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_MapPokemonProto__storage_, spawnpointId),
         .flags = GPBFieldRequired | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeString,
       },
       {
         .name = "encounterId",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_MapPokemonProto_FieldNumber_EncounterId,
+        .number = PHProtoResponseEnvelop_MapPokemonProto_FieldNumber_EncounterId,
         .hasIndex = 1,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_MapPokemonProto__storage_, encounterId),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_MapPokemonProto__storage_, encounterId),
         .flags = GPBFieldRequired | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeUInt64,
       },
       {
         .name = "pokedexTypeId",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_MapPokemonProto_FieldNumber_PokedexTypeId,
+        .number = PHProtoResponseEnvelop_MapPokemonProto_FieldNumber_PokedexTypeId,
         .hasIndex = 2,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_MapPokemonProto__storage_, pokedexTypeId),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_MapPokemonProto__storage_, pokedexTypeId),
         .flags = GPBFieldRequired | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeInt32,
       },
       {
         .name = "expirationTimeMs",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_MapPokemonProto_FieldNumber_ExpirationTimeMs,
+        .number = PHProtoResponseEnvelop_MapPokemonProto_FieldNumber_ExpirationTimeMs,
         .hasIndex = 3,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_MapPokemonProto__storage_, expirationTimeMs),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_MapPokemonProto__storage_, expirationTimeMs),
         .flags = GPBFieldRequired | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeInt64,
       },
       {
         .name = "latitude",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_MapPokemonProto_FieldNumber_Latitude,
+        .number = PHProtoResponseEnvelop_MapPokemonProto_FieldNumber_Latitude,
         .hasIndex = 4,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_MapPokemonProto__storage_, latitude),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_MapPokemonProto__storage_, latitude),
         .flags = GPBFieldRequired | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeDouble,
       },
       {
         .name = "longitude",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_MapPokemonProto_FieldNumber_Longitude,
+        .number = PHProtoResponseEnvelop_MapPokemonProto_FieldNumber_Longitude,
         .hasIndex = 5,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_MapPokemonProto__storage_, longitude),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_MapPokemonProto__storage_, longitude),
         .flags = GPBFieldRequired | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeDouble,
       },
     };
     GPBDescriptor *localDescriptor =
-        [GPBDescriptor allocDescriptorForClass:[ResponseEnvelop_MapPokemonProto class]
-                                     rootClass:[PokemonRoot class]
-                                          file:PokemonRoot_FileDescriptor()
+        [GPBDescriptor allocDescriptorForClass:[PHProtoResponseEnvelop_MapPokemonProto class]
+                                     rootClass:[PHProtoPokemonRoot class]
+                                          file:PHProtoPokemonRoot_FileDescriptor()
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
-                                   storageSize:sizeof(ResponseEnvelop_MapPokemonProto__storage_)
+                                   storageSize:sizeof(PHProtoResponseEnvelop_MapPokemonProto__storage_)
                                          flags:0];
 #if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     static const char *extraTextFormatInfo =
@@ -1404,9 +1404,9 @@ typedef struct ResponseEnvelop_MapPokemonProto__storage_ {
 
 @end
 
-#pragma mark - ResponseEnvelop_PokemonFortProto
+#pragma mark - PHProtoResponseEnvelop_PokemonFortProto
 
-@implementation ResponseEnvelop_PokemonFortProto
+@implementation PHProtoResponseEnvelop_PokemonFortProto
 
 @dynamic hasFortId, fortId;
 @dynamic hasLastModifiedMs, lastModifiedMs;
@@ -1425,7 +1425,7 @@ typedef struct ResponseEnvelop_MapPokemonProto__storage_ {
 @dynamic hasSponsor, sponsor;
 @dynamic hasRenderingType, renderingType;
 
-typedef struct ResponseEnvelop_PokemonFortProto__storage_ {
+typedef struct PHProtoResponseEnvelop_PokemonFortProto__storage_ {
   uint32_t _has_storage_[1];
   int32_t team;
   int32_t guardPokemonId;
@@ -1435,13 +1435,13 @@ typedef struct ResponseEnvelop_PokemonFortProto__storage_ {
   int32_t renderingType;
   NSString *fortId;
   NSData *activePortModifier;
-  ResponseEnvelop_FortLureInfoProto *lureInfo;
+  PHProtoResponseEnvelop_FortLureInfoProto *lureInfo;
   int64_t lastModifiedMs;
   double latitude;
   double longitude;
   int64_t gymPoints;
   int64_t cooldownCompleteMs;
-} ResponseEnvelop_PokemonFortProto__storage_;
+} PHProtoResponseEnvelop_PokemonFortProto__storage_;
 
 // This method is threadsafe because it is initially called
 // in +initialize for each subclass.
@@ -1452,70 +1452,70 @@ typedef struct ResponseEnvelop_PokemonFortProto__storage_ {
       {
         .name = "fortId",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_PokemonFortProto_FieldNumber_FortId,
+        .number = PHProtoResponseEnvelop_PokemonFortProto_FieldNumber_FortId,
         .hasIndex = 0,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_PokemonFortProto__storage_, fortId),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_PokemonFortProto__storage_, fortId),
         .flags = GPBFieldRequired | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeString,
       },
       {
         .name = "lastModifiedMs",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_PokemonFortProto_FieldNumber_LastModifiedMs,
+        .number = PHProtoResponseEnvelop_PokemonFortProto_FieldNumber_LastModifiedMs,
         .hasIndex = 1,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_PokemonFortProto__storage_, lastModifiedMs),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_PokemonFortProto__storage_, lastModifiedMs),
         .flags = GPBFieldRequired | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeInt64,
       },
       {
         .name = "latitude",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_PokemonFortProto_FieldNumber_Latitude,
+        .number = PHProtoResponseEnvelop_PokemonFortProto_FieldNumber_Latitude,
         .hasIndex = 2,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_PokemonFortProto__storage_, latitude),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_PokemonFortProto__storage_, latitude),
         .flags = GPBFieldRequired | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeDouble,
       },
       {
         .name = "longitude",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_PokemonFortProto_FieldNumber_Longitude,
+        .number = PHProtoResponseEnvelop_PokemonFortProto_FieldNumber_Longitude,
         .hasIndex = 3,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_PokemonFortProto__storage_, longitude),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_PokemonFortProto__storage_, longitude),
         .flags = GPBFieldRequired | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeDouble,
       },
       {
         .name = "team",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_PokemonFortProto_FieldNumber_Team,
+        .number = PHProtoResponseEnvelop_PokemonFortProto_FieldNumber_Team,
         .hasIndex = 4,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_PokemonFortProto__storage_, team),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_PokemonFortProto__storage_, team),
         .flags = GPBFieldRequired | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeInt32,
       },
       {
         .name = "guardPokemonId",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_PokemonFortProto_FieldNumber_GuardPokemonId,
+        .number = PHProtoResponseEnvelop_PokemonFortProto_FieldNumber_GuardPokemonId,
         .hasIndex = 5,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_PokemonFortProto__storage_, guardPokemonId),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_PokemonFortProto__storage_, guardPokemonId),
         .flags = GPBFieldRequired | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeInt32,
       },
       {
         .name = "guardPokemonLevel",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_PokemonFortProto_FieldNumber_GuardPokemonLevel,
+        .number = PHProtoResponseEnvelop_PokemonFortProto_FieldNumber_GuardPokemonLevel,
         .hasIndex = 6,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_PokemonFortProto__storage_, guardPokemonLevel),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_PokemonFortProto__storage_, guardPokemonLevel),
         .flags = GPBFieldRequired | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeInt32,
       },
       {
         .name = "enabled",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_PokemonFortProto_FieldNumber_Enabled,
+        .number = PHProtoResponseEnvelop_PokemonFortProto_FieldNumber_Enabled,
         .hasIndex = 7,
         .offset = 8,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldRequired | GPBFieldTextFormatNameCustom,
@@ -1524,25 +1524,25 @@ typedef struct ResponseEnvelop_PokemonFortProto__storage_ {
       {
         .name = "fortType",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_PokemonFortProto_FieldNumber_FortType,
+        .number = PHProtoResponseEnvelop_PokemonFortProto_FieldNumber_FortType,
         .hasIndex = 9,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_PokemonFortProto__storage_, fortType),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_PokemonFortProto__storage_, fortType),
         .flags = GPBFieldRequired | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeInt32,
       },
       {
         .name = "gymPoints",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_PokemonFortProto_FieldNumber_GymPoints,
+        .number = PHProtoResponseEnvelop_PokemonFortProto_FieldNumber_GymPoints,
         .hasIndex = 10,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_PokemonFortProto__storage_, gymPoints),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_PokemonFortProto__storage_, gymPoints),
         .flags = GPBFieldRequired | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeInt64,
       },
       {
         .name = "isInBattle",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_PokemonFortProto_FieldNumber_IsInBattle,
+        .number = PHProtoResponseEnvelop_PokemonFortProto_FieldNumber_IsInBattle,
         .hasIndex = 11,
         .offset = 12,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldRequired | GPBFieldTextFormatNameCustom,
@@ -1551,56 +1551,56 @@ typedef struct ResponseEnvelop_PokemonFortProto__storage_ {
       {
         .name = "activePortModifier",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_PokemonFortProto_FieldNumber_ActivePortModifier,
+        .number = PHProtoResponseEnvelop_PokemonFortProto_FieldNumber_ActivePortModifier,
         .hasIndex = 13,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_PokemonFortProto__storage_, activePortModifier),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_PokemonFortProto__storage_, activePortModifier),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeBytes,
       },
       {
         .name = "lureInfo",
-        .dataTypeSpecific.className = GPBStringifySymbol(ResponseEnvelop_FortLureInfoProto),
-        .number = ResponseEnvelop_PokemonFortProto_FieldNumber_LureInfo,
+        .dataTypeSpecific.className = GPBStringifySymbol(PHProtoResponseEnvelop_FortLureInfoProto),
+        .number = PHProtoResponseEnvelop_PokemonFortProto_FieldNumber_LureInfo,
         .hasIndex = 14,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_PokemonFortProto__storage_, lureInfo),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_PokemonFortProto__storage_, lureInfo),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeMessage,
       },
       {
         .name = "cooldownCompleteMs",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_PokemonFortProto_FieldNumber_CooldownCompleteMs,
+        .number = PHProtoResponseEnvelop_PokemonFortProto_FieldNumber_CooldownCompleteMs,
         .hasIndex = 15,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_PokemonFortProto__storage_, cooldownCompleteMs),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_PokemonFortProto__storage_, cooldownCompleteMs),
         .flags = GPBFieldRequired | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeInt64,
       },
       {
         .name = "sponsor",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_PokemonFortProto_FieldNumber_Sponsor,
+        .number = PHProtoResponseEnvelop_PokemonFortProto_FieldNumber_Sponsor,
         .hasIndex = 16,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_PokemonFortProto__storage_, sponsor),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_PokemonFortProto__storage_, sponsor),
         .flags = GPBFieldRequired | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeInt32,
       },
       {
         .name = "renderingType",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_PokemonFortProto_FieldNumber_RenderingType,
+        .number = PHProtoResponseEnvelop_PokemonFortProto_FieldNumber_RenderingType,
         .hasIndex = 17,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_PokemonFortProto__storage_, renderingType),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_PokemonFortProto__storage_, renderingType),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeInt32,
       },
     };
     GPBDescriptor *localDescriptor =
-        [GPBDescriptor allocDescriptorForClass:[ResponseEnvelop_PokemonFortProto class]
-                                     rootClass:[PokemonRoot class]
-                                          file:PokemonRoot_FileDescriptor()
+        [GPBDescriptor allocDescriptorForClass:[PHProtoResponseEnvelop_PokemonFortProto class]
+                                     rootClass:[PHProtoPokemonRoot class]
+                                          file:PHProtoPokemonRoot_FileDescriptor()
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
-                                   storageSize:sizeof(ResponseEnvelop_PokemonFortProto__storage_)
+                                   storageSize:sizeof(PHProtoResponseEnvelop_PokemonFortProto__storage_)
                                          flags:0];
 #if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     static const char *extraTextFormatInfo =
@@ -1616,9 +1616,9 @@ typedef struct ResponseEnvelop_PokemonFortProto__storage_ {
 
 @end
 
-#pragma mark - ResponseEnvelop_FortLureInfoProto
+#pragma mark - PHProtoResponseEnvelop_FortLureInfoProto
 
-@implementation ResponseEnvelop_FortLureInfoProto
+@implementation PHProtoResponseEnvelop_FortLureInfoProto
 
 @dynamic hasFortId, fortId;
 @dynamic hasUnknown2, unknown2;
@@ -1626,14 +1626,14 @@ typedef struct ResponseEnvelop_PokemonFortProto__storage_ {
 @dynamic hasLureExpiresTimestampMs, lureExpiresTimestampMs;
 @dynamic hasDeployerPlayerCodename, deployerPlayerCodename;
 
-typedef struct ResponseEnvelop_FortLureInfoProto__storage_ {
+typedef struct PHProtoResponseEnvelop_FortLureInfoProto__storage_ {
   uint32_t _has_storage_[1];
   int32_t activePokemonId;
   NSString *fortId;
   NSString *deployerPlayerCodename;
   double unknown2;
   int64_t lureExpiresTimestampMs;
-} ResponseEnvelop_FortLureInfoProto__storage_;
+} PHProtoResponseEnvelop_FortLureInfoProto__storage_;
 
 // This method is threadsafe because it is initially called
 // in +initialize for each subclass.
@@ -1644,56 +1644,56 @@ typedef struct ResponseEnvelop_FortLureInfoProto__storage_ {
       {
         .name = "fortId",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_FortLureInfoProto_FieldNumber_FortId,
+        .number = PHProtoResponseEnvelop_FortLureInfoProto_FieldNumber_FortId,
         .hasIndex = 0,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_FortLureInfoProto__storage_, fortId),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_FortLureInfoProto__storage_, fortId),
         .flags = GPBFieldRequired | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeString,
       },
       {
         .name = "unknown2",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_FortLureInfoProto_FieldNumber_Unknown2,
+        .number = PHProtoResponseEnvelop_FortLureInfoProto_FieldNumber_Unknown2,
         .hasIndex = 1,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_FortLureInfoProto__storage_, unknown2),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_FortLureInfoProto__storage_, unknown2),
         .flags = GPBFieldRequired,
         .dataType = GPBDataTypeDouble,
       },
       {
         .name = "activePokemonId",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_FortLureInfoProto_FieldNumber_ActivePokemonId,
+        .number = PHProtoResponseEnvelop_FortLureInfoProto_FieldNumber_ActivePokemonId,
         .hasIndex = 2,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_FortLureInfoProto__storage_, activePokemonId),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_FortLureInfoProto__storage_, activePokemonId),
         .flags = GPBFieldRequired | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeInt32,
       },
       {
         .name = "lureExpiresTimestampMs",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_FortLureInfoProto_FieldNumber_LureExpiresTimestampMs,
+        .number = PHProtoResponseEnvelop_FortLureInfoProto_FieldNumber_LureExpiresTimestampMs,
         .hasIndex = 3,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_FortLureInfoProto__storage_, lureExpiresTimestampMs),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_FortLureInfoProto__storage_, lureExpiresTimestampMs),
         .flags = GPBFieldRequired | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeInt64,
       },
       {
         .name = "deployerPlayerCodename",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_FortLureInfoProto_FieldNumber_DeployerPlayerCodename,
+        .number = PHProtoResponseEnvelop_FortLureInfoProto_FieldNumber_DeployerPlayerCodename,
         .hasIndex = 4,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_FortLureInfoProto__storage_, deployerPlayerCodename),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_FortLureInfoProto__storage_, deployerPlayerCodename),
         .flags = GPBFieldRequired | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeString,
       },
     };
     GPBDescriptor *localDescriptor =
-        [GPBDescriptor allocDescriptorForClass:[ResponseEnvelop_FortLureInfoProto class]
-                                     rootClass:[PokemonRoot class]
-                                          file:PokemonRoot_FileDescriptor()
+        [GPBDescriptor allocDescriptorForClass:[PHProtoResponseEnvelop_FortLureInfoProto class]
+                                     rootClass:[PHProtoPokemonRoot class]
+                                          file:PHProtoPokemonRoot_FileDescriptor()
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
-                                   storageSize:sizeof(ResponseEnvelop_FortLureInfoProto__storage_)
+                                   storageSize:sizeof(PHProtoResponseEnvelop_FortLureInfoProto__storage_)
                                          flags:0];
 #if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     static const char *extraTextFormatInfo =
@@ -1708,22 +1708,22 @@ typedef struct ResponseEnvelop_FortLureInfoProto__storage_ {
 
 @end
 
-#pragma mark - ResponseEnvelop_PokemonSummaryFortProto
+#pragma mark - PHProtoResponseEnvelop_PokemonSummaryFortProto
 
-@implementation ResponseEnvelop_PokemonSummaryFortProto
+@implementation PHProtoResponseEnvelop_PokemonSummaryFortProto
 
 @dynamic hasFortSummaryId, fortSummaryId;
 @dynamic hasLastModifiedMs, lastModifiedMs;
 @dynamic hasLatitude, latitude;
 @dynamic hasLongitude, longitude;
 
-typedef struct ResponseEnvelop_PokemonSummaryFortProto__storage_ {
+typedef struct PHProtoResponseEnvelop_PokemonSummaryFortProto__storage_ {
   uint32_t _has_storage_[1];
   NSString *fortSummaryId;
   int64_t lastModifiedMs;
   double latitude;
   double longitude;
-} ResponseEnvelop_PokemonSummaryFortProto__storage_;
+} PHProtoResponseEnvelop_PokemonSummaryFortProto__storage_;
 
 // This method is threadsafe because it is initially called
 // in +initialize for each subclass.
@@ -1734,47 +1734,47 @@ typedef struct ResponseEnvelop_PokemonSummaryFortProto__storage_ {
       {
         .name = "fortSummaryId",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_PokemonSummaryFortProto_FieldNumber_FortSummaryId,
+        .number = PHProtoResponseEnvelop_PokemonSummaryFortProto_FieldNumber_FortSummaryId,
         .hasIndex = 0,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_PokemonSummaryFortProto__storage_, fortSummaryId),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_PokemonSummaryFortProto__storage_, fortSummaryId),
         .flags = GPBFieldRequired | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeString,
       },
       {
         .name = "lastModifiedMs",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_PokemonSummaryFortProto_FieldNumber_LastModifiedMs,
+        .number = PHProtoResponseEnvelop_PokemonSummaryFortProto_FieldNumber_LastModifiedMs,
         .hasIndex = 1,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_PokemonSummaryFortProto__storage_, lastModifiedMs),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_PokemonSummaryFortProto__storage_, lastModifiedMs),
         .flags = GPBFieldRequired | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeInt64,
       },
       {
         .name = "latitude",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_PokemonSummaryFortProto_FieldNumber_Latitude,
+        .number = PHProtoResponseEnvelop_PokemonSummaryFortProto_FieldNumber_Latitude,
         .hasIndex = 2,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_PokemonSummaryFortProto__storage_, latitude),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_PokemonSummaryFortProto__storage_, latitude),
         .flags = GPBFieldRequired | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeDouble,
       },
       {
         .name = "longitude",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_PokemonSummaryFortProto_FieldNumber_Longitude,
+        .number = PHProtoResponseEnvelop_PokemonSummaryFortProto_FieldNumber_Longitude,
         .hasIndex = 3,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_PokemonSummaryFortProto__storage_, longitude),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_PokemonSummaryFortProto__storage_, longitude),
         .flags = GPBFieldRequired | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeDouble,
       },
     };
     GPBDescriptor *localDescriptor =
-        [GPBDescriptor allocDescriptorForClass:[ResponseEnvelop_PokemonSummaryFortProto class]
-                                     rootClass:[PokemonRoot class]
-                                          file:PokemonRoot_FileDescriptor()
+        [GPBDescriptor allocDescriptorForClass:[PHProtoResponseEnvelop_PokemonSummaryFortProto class]
+                                     rootClass:[PHProtoPokemonRoot class]
+                                          file:PHProtoPokemonRoot_FileDescriptor()
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
-                                   storageSize:sizeof(ResponseEnvelop_PokemonSummaryFortProto__storage_)
+                                   storageSize:sizeof(PHProtoResponseEnvelop_PokemonSummaryFortProto__storage_)
                                          flags:0];
 #if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     static const char *extraTextFormatInfo =
@@ -1789,18 +1789,18 @@ typedef struct ResponseEnvelop_PokemonSummaryFortProto__storage_ {
 
 @end
 
-#pragma mark - ResponseEnvelop_ClientSpawnPointProto
+#pragma mark - PHProtoResponseEnvelop_ClientSpawnPointProto
 
-@implementation ResponseEnvelop_ClientSpawnPointProto
+@implementation PHProtoResponseEnvelop_ClientSpawnPointProto
 
 @dynamic hasLatitude, latitude;
 @dynamic hasLongitude, longitude;
 
-typedef struct ResponseEnvelop_ClientSpawnPointProto__storage_ {
+typedef struct PHProtoResponseEnvelop_ClientSpawnPointProto__storage_ {
   uint32_t _has_storage_[1];
   double latitude;
   double longitude;
-} ResponseEnvelop_ClientSpawnPointProto__storage_;
+} PHProtoResponseEnvelop_ClientSpawnPointProto__storage_;
 
 // This method is threadsafe because it is initially called
 // in +initialize for each subclass.
@@ -1811,29 +1811,29 @@ typedef struct ResponseEnvelop_ClientSpawnPointProto__storage_ {
       {
         .name = "latitude",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_ClientSpawnPointProto_FieldNumber_Latitude,
+        .number = PHProtoResponseEnvelop_ClientSpawnPointProto_FieldNumber_Latitude,
         .hasIndex = 0,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_ClientSpawnPointProto__storage_, latitude),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_ClientSpawnPointProto__storage_, latitude),
         .flags = GPBFieldRequired | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeDouble,
       },
       {
         .name = "longitude",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_ClientSpawnPointProto_FieldNumber_Longitude,
+        .number = PHProtoResponseEnvelop_ClientSpawnPointProto_FieldNumber_Longitude,
         .hasIndex = 1,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_ClientSpawnPointProto__storage_, longitude),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_ClientSpawnPointProto__storage_, longitude),
         .flags = GPBFieldRequired | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeDouble,
       },
     };
     GPBDescriptor *localDescriptor =
-        [GPBDescriptor allocDescriptorForClass:[ResponseEnvelop_ClientSpawnPointProto class]
-                                     rootClass:[PokemonRoot class]
-                                          file:PokemonRoot_FileDescriptor()
+        [GPBDescriptor allocDescriptorForClass:[PHProtoResponseEnvelop_ClientSpawnPointProto class]
+                                     rootClass:[PHProtoPokemonRoot class]
+                                          file:PHProtoPokemonRoot_FileDescriptor()
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
-                                   storageSize:sizeof(ResponseEnvelop_ClientSpawnPointProto__storage_)
+                                   storageSize:sizeof(PHProtoResponseEnvelop_ClientSpawnPointProto__storage_)
                                          flags:0];
 #if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     static const char *extraTextFormatInfo =
@@ -1848,9 +1848,9 @@ typedef struct ResponseEnvelop_ClientSpawnPointProto__storage_ {
 
 @end
 
-#pragma mark - ResponseEnvelop_WildPokemonProto
+#pragma mark - PHProtoResponseEnvelop_WildPokemonProto
 
-@implementation ResponseEnvelop_WildPokemonProto
+@implementation PHProtoResponseEnvelop_WildPokemonProto
 
 @dynamic hasEncounterId, encounterId;
 @dynamic hasLastModifiedMs, lastModifiedMs;
@@ -1860,16 +1860,16 @@ typedef struct ResponseEnvelop_ClientSpawnPointProto__storage_ {
 @dynamic hasPokemon, pokemon;
 @dynamic hasTimeTillHiddenMs, timeTillHiddenMs;
 
-typedef struct ResponseEnvelop_WildPokemonProto__storage_ {
+typedef struct PHProtoResponseEnvelop_WildPokemonProto__storage_ {
   uint32_t _has_storage_[1];
   int32_t timeTillHiddenMs;
   NSString *spawnPointId;
-  ResponseEnvelop_WildPokemonProto_Pokemon *pokemon;
+  PHProtoResponseEnvelop_WildPokemonProto_Pokemon *pokemon;
   uint64_t encounterId;
   int64_t lastModifiedMs;
   double latitude;
   double longitude;
-} ResponseEnvelop_WildPokemonProto__storage_;
+} PHProtoResponseEnvelop_WildPokemonProto__storage_;
 
 // This method is threadsafe because it is initially called
 // in +initialize for each subclass.
@@ -1880,74 +1880,74 @@ typedef struct ResponseEnvelop_WildPokemonProto__storage_ {
       {
         .name = "encounterId",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_WildPokemonProto_FieldNumber_EncounterId,
+        .number = PHProtoResponseEnvelop_WildPokemonProto_FieldNumber_EncounterId,
         .hasIndex = 0,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_WildPokemonProto__storage_, encounterId),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_WildPokemonProto__storage_, encounterId),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeUInt64,
       },
       {
         .name = "lastModifiedMs",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_WildPokemonProto_FieldNumber_LastModifiedMs,
+        .number = PHProtoResponseEnvelop_WildPokemonProto_FieldNumber_LastModifiedMs,
         .hasIndex = 1,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_WildPokemonProto__storage_, lastModifiedMs),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_WildPokemonProto__storage_, lastModifiedMs),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeInt64,
       },
       {
         .name = "latitude",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_WildPokemonProto_FieldNumber_Latitude,
+        .number = PHProtoResponseEnvelop_WildPokemonProto_FieldNumber_Latitude,
         .hasIndex = 2,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_WildPokemonProto__storage_, latitude),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_WildPokemonProto__storage_, latitude),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeDouble,
       },
       {
         .name = "longitude",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_WildPokemonProto_FieldNumber_Longitude,
+        .number = PHProtoResponseEnvelop_WildPokemonProto_FieldNumber_Longitude,
         .hasIndex = 3,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_WildPokemonProto__storage_, longitude),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_WildPokemonProto__storage_, longitude),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeDouble,
       },
       {
         .name = "spawnPointId",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_WildPokemonProto_FieldNumber_SpawnPointId,
+        .number = PHProtoResponseEnvelop_WildPokemonProto_FieldNumber_SpawnPointId,
         .hasIndex = 4,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_WildPokemonProto__storage_, spawnPointId),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_WildPokemonProto__storage_, spawnPointId),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeString,
       },
       {
         .name = "pokemon",
-        .dataTypeSpecific.className = GPBStringifySymbol(ResponseEnvelop_WildPokemonProto_Pokemon),
-        .number = ResponseEnvelop_WildPokemonProto_FieldNumber_Pokemon,
+        .dataTypeSpecific.className = GPBStringifySymbol(PHProtoResponseEnvelop_WildPokemonProto_Pokemon),
+        .number = PHProtoResponseEnvelop_WildPokemonProto_FieldNumber_Pokemon,
         .hasIndex = 5,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_WildPokemonProto__storage_, pokemon),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_WildPokemonProto__storage_, pokemon),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
       },
       {
         .name = "timeTillHiddenMs",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_WildPokemonProto_FieldNumber_TimeTillHiddenMs,
+        .number = PHProtoResponseEnvelop_WildPokemonProto_FieldNumber_TimeTillHiddenMs,
         .hasIndex = 6,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_WildPokemonProto__storage_, timeTillHiddenMs),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_WildPokemonProto__storage_, timeTillHiddenMs),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeInt32,
       },
     };
     GPBDescriptor *localDescriptor =
-        [GPBDescriptor allocDescriptorForClass:[ResponseEnvelop_WildPokemonProto class]
-                                     rootClass:[PokemonRoot class]
-                                          file:PokemonRoot_FileDescriptor()
+        [GPBDescriptor allocDescriptorForClass:[PHProtoResponseEnvelop_WildPokemonProto class]
+                                     rootClass:[PHProtoPokemonRoot class]
+                                          file:PHProtoPokemonRoot_FileDescriptor()
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
-                                   storageSize:sizeof(ResponseEnvelop_WildPokemonProto__storage_)
+                                   storageSize:sizeof(PHProtoResponseEnvelop_WildPokemonProto__storage_)
                                          flags:0];
 #if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     static const char *extraTextFormatInfo =
@@ -1962,18 +1962,18 @@ typedef struct ResponseEnvelop_WildPokemonProto__storage_ {
 
 @end
 
-#pragma mark - ResponseEnvelop_WildPokemonProto_Pokemon
+#pragma mark - PHProtoResponseEnvelop_WildPokemonProto_Pokemon
 
-@implementation ResponseEnvelop_WildPokemonProto_Pokemon
+@implementation PHProtoResponseEnvelop_WildPokemonProto_Pokemon
 
 @dynamic hasId_p, id_p;
 @dynamic hasPokemonId, pokemonId;
 
-typedef struct ResponseEnvelop_WildPokemonProto_Pokemon__storage_ {
+typedef struct PHProtoResponseEnvelop_WildPokemonProto_Pokemon__storage_ {
   uint32_t _has_storage_[1];
   int32_t pokemonId;
   uint64_t id_p;
-} ResponseEnvelop_WildPokemonProto_Pokemon__storage_;
+} PHProtoResponseEnvelop_WildPokemonProto_Pokemon__storage_;
 
 // This method is threadsafe because it is initially called
 // in +initialize for each subclass.
@@ -1984,29 +1984,29 @@ typedef struct ResponseEnvelop_WildPokemonProto_Pokemon__storage_ {
       {
         .name = "id_p",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_WildPokemonProto_Pokemon_FieldNumber_Id_p,
+        .number = PHProtoResponseEnvelop_WildPokemonProto_Pokemon_FieldNumber_Id_p,
         .hasIndex = 0,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_WildPokemonProto_Pokemon__storage_, id_p),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_WildPokemonProto_Pokemon__storage_, id_p),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeUInt64,
       },
       {
         .name = "pokemonId",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_WildPokemonProto_Pokemon_FieldNumber_PokemonId,
+        .number = PHProtoResponseEnvelop_WildPokemonProto_Pokemon_FieldNumber_PokemonId,
         .hasIndex = 1,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_WildPokemonProto_Pokemon__storage_, pokemonId),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_WildPokemonProto_Pokemon__storage_, pokemonId),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeInt32,
       },
     };
     GPBDescriptor *localDescriptor =
-        [GPBDescriptor allocDescriptorForClass:[ResponseEnvelop_WildPokemonProto_Pokemon class]
-                                     rootClass:[PokemonRoot class]
-                                          file:PokemonRoot_FileDescriptor()
+        [GPBDescriptor allocDescriptorForClass:[PHProtoResponseEnvelop_WildPokemonProto_Pokemon class]
+                                     rootClass:[PHProtoPokemonRoot class]
+                                          file:PHProtoPokemonRoot_FileDescriptor()
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
-                                   storageSize:sizeof(ResponseEnvelop_WildPokemonProto_Pokemon__storage_)
+                                   storageSize:sizeof(PHProtoResponseEnvelop_WildPokemonProto_Pokemon__storage_)
                                          flags:0];
 #if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     static const char *extraTextFormatInfo =
@@ -2021,20 +2021,20 @@ typedef struct ResponseEnvelop_WildPokemonProto_Pokemon__storage_ {
 
 @end
 
-#pragma mark - ResponseEnvelop_NearbyPokemonProto
+#pragma mark - PHProtoResponseEnvelop_NearbyPokemonProto
 
-@implementation ResponseEnvelop_NearbyPokemonProto
+@implementation PHProtoResponseEnvelop_NearbyPokemonProto
 
 @dynamic hasPokedexNumber, pokedexNumber;
 @dynamic hasDistanceMeters, distanceMeters;
 @dynamic hasEncounterId, encounterId;
 
-typedef struct ResponseEnvelop_NearbyPokemonProto__storage_ {
+typedef struct PHProtoResponseEnvelop_NearbyPokemonProto__storage_ {
   uint32_t _has_storage_[1];
   int32_t pokedexNumber;
   float distanceMeters;
   uint64_t encounterId;
-} ResponseEnvelop_NearbyPokemonProto__storage_;
+} PHProtoResponseEnvelop_NearbyPokemonProto__storage_;
 
 // This method is threadsafe because it is initially called
 // in +initialize for each subclass.
@@ -2045,38 +2045,38 @@ typedef struct ResponseEnvelop_NearbyPokemonProto__storage_ {
       {
         .name = "pokedexNumber",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_NearbyPokemonProto_FieldNumber_PokedexNumber,
+        .number = PHProtoResponseEnvelop_NearbyPokemonProto_FieldNumber_PokedexNumber,
         .hasIndex = 0,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_NearbyPokemonProto__storage_, pokedexNumber),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_NearbyPokemonProto__storage_, pokedexNumber),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeInt32,
       },
       {
         .name = "distanceMeters",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_NearbyPokemonProto_FieldNumber_DistanceMeters,
+        .number = PHProtoResponseEnvelop_NearbyPokemonProto_FieldNumber_DistanceMeters,
         .hasIndex = 1,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_NearbyPokemonProto__storage_, distanceMeters),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_NearbyPokemonProto__storage_, distanceMeters),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeFloat,
       },
       {
         .name = "encounterId",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_NearbyPokemonProto_FieldNumber_EncounterId,
+        .number = PHProtoResponseEnvelop_NearbyPokemonProto_FieldNumber_EncounterId,
         .hasIndex = 2,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_NearbyPokemonProto__storage_, encounterId),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_NearbyPokemonProto__storage_, encounterId),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeUInt64,
       },
     };
     GPBDescriptor *localDescriptor =
-        [GPBDescriptor allocDescriptorForClass:[ResponseEnvelop_NearbyPokemonProto class]
-                                     rootClass:[PokemonRoot class]
-                                          file:PokemonRoot_FileDescriptor()
+        [GPBDescriptor allocDescriptorForClass:[PHProtoResponseEnvelop_NearbyPokemonProto class]
+                                     rootClass:[PHProtoPokemonRoot class]
+                                          file:PHProtoPokemonRoot_FileDescriptor()
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
-                                   storageSize:sizeof(ResponseEnvelop_NearbyPokemonProto__storage_)
+                                   storageSize:sizeof(PHProtoResponseEnvelop_NearbyPokemonProto__storage_)
                                          flags:0];
 #if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     static const char *extraTextFormatInfo =
@@ -2091,18 +2091,18 @@ typedef struct ResponseEnvelop_NearbyPokemonProto__storage_ {
 
 @end
 
-#pragma mark - ResponseEnvelop_ProfilePayload
+#pragma mark - PHProtoResponseEnvelop_ProfilePayload
 
-@implementation ResponseEnvelop_ProfilePayload
+@implementation PHProtoResponseEnvelop_ProfilePayload
 
 @dynamic hasUnknown1, unknown1;
 @dynamic hasProfile, profile;
 
-typedef struct ResponseEnvelop_ProfilePayload__storage_ {
+typedef struct PHProtoResponseEnvelop_ProfilePayload__storage_ {
   uint32_t _has_storage_[1];
   int32_t unknown1;
-  ResponseEnvelop_Profile *profile;
-} ResponseEnvelop_ProfilePayload__storage_;
+  PHProtoResponseEnvelop_Profile *profile;
+} PHProtoResponseEnvelop_ProfilePayload__storage_;
 
 // This method is threadsafe because it is initially called
 // in +initialize for each subclass.
@@ -2113,29 +2113,29 @@ typedef struct ResponseEnvelop_ProfilePayload__storage_ {
       {
         .name = "unknown1",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_ProfilePayload_FieldNumber_Unknown1,
+        .number = PHProtoResponseEnvelop_ProfilePayload_FieldNumber_Unknown1,
         .hasIndex = 0,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_ProfilePayload__storage_, unknown1),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_ProfilePayload__storage_, unknown1),
         .flags = GPBFieldRequired,
         .dataType = GPBDataTypeInt32,
       },
       {
         .name = "profile",
-        .dataTypeSpecific.className = GPBStringifySymbol(ResponseEnvelop_Profile),
-        .number = ResponseEnvelop_ProfilePayload_FieldNumber_Profile,
+        .dataTypeSpecific.className = GPBStringifySymbol(PHProtoResponseEnvelop_Profile),
+        .number = PHProtoResponseEnvelop_ProfilePayload_FieldNumber_Profile,
         .hasIndex = 1,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_ProfilePayload__storage_, profile),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_ProfilePayload__storage_, profile),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
       },
     };
     GPBDescriptor *localDescriptor =
-        [GPBDescriptor allocDescriptorForClass:[ResponseEnvelop_ProfilePayload class]
-                                     rootClass:[PokemonRoot class]
-                                          file:PokemonRoot_FileDescriptor()
+        [GPBDescriptor allocDescriptorForClass:[PHProtoResponseEnvelop_ProfilePayload class]
+                                     rootClass:[PHProtoPokemonRoot class]
+                                          file:PHProtoPokemonRoot_FileDescriptor()
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
-                                   storageSize:sizeof(ResponseEnvelop_ProfilePayload__storage_)
+                                   storageSize:sizeof(PHProtoResponseEnvelop_ProfilePayload__storage_)
                                          flags:0];
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
@@ -2145,9 +2145,9 @@ typedef struct ResponseEnvelop_ProfilePayload__storage_ {
 
 @end
 
-#pragma mark - ResponseEnvelop_Profile
+#pragma mark - PHProtoResponseEnvelop_Profile
 
-@implementation ResponseEnvelop_Profile
+@implementation PHProtoResponseEnvelop_Profile
 
 @dynamic hasCreationTime, creationTime;
 @dynamic hasUsername, username;
@@ -2161,20 +2161,20 @@ typedef struct ResponseEnvelop_ProfilePayload__storage_ {
 @dynamic hasUnknown13, unknown13;
 @dynamic currencyArray, currencyArray_Count;
 
-typedef struct ResponseEnvelop_Profile__storage_ {
+typedef struct PHProtoResponseEnvelop_Profile__storage_ {
   uint32_t _has_storage_[1];
   int32_t team;
   int32_t pokeStorage;
   int32_t itemStorage;
   NSString *username;
   NSData *tutorial;
-  ResponseEnvelop_Profile_AvatarDetails *avatar;
-  ResponseEnvelop_Profile_DailyBonus *dailyBonus;
+  PHProtoResponseEnvelop_Profile_AvatarDetails *avatar;
+  PHProtoResponseEnvelop_Profile_DailyBonus *dailyBonus;
   NSData *unknown12;
   NSData *unknown13;
   NSMutableArray *currencyArray;
   int64_t creationTime;
-} ResponseEnvelop_Profile__storage_;
+} PHProtoResponseEnvelop_Profile__storage_;
 
 // This method is threadsafe because it is initially called
 // in +initialize for each subclass.
@@ -2185,110 +2185,110 @@ typedef struct ResponseEnvelop_Profile__storage_ {
       {
         .name = "creationTime",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_Profile_FieldNumber_CreationTime,
+        .number = PHProtoResponseEnvelop_Profile_FieldNumber_CreationTime,
         .hasIndex = 0,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_Profile__storage_, creationTime),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_Profile__storage_, creationTime),
         .flags = GPBFieldRequired,
         .dataType = GPBDataTypeInt64,
       },
       {
         .name = "username",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_Profile_FieldNumber_Username,
+        .number = PHProtoResponseEnvelop_Profile_FieldNumber_Username,
         .hasIndex = 1,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_Profile__storage_, username),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_Profile__storage_, username),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeString,
       },
       {
         .name = "team",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_Profile_FieldNumber_Team,
+        .number = PHProtoResponseEnvelop_Profile_FieldNumber_Team,
         .hasIndex = 2,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_Profile__storage_, team),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_Profile__storage_, team),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeInt32,
       },
       {
         .name = "tutorial",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_Profile_FieldNumber_Tutorial,
+        .number = PHProtoResponseEnvelop_Profile_FieldNumber_Tutorial,
         .hasIndex = 3,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_Profile__storage_, tutorial),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_Profile__storage_, tutorial),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBytes,
       },
       {
         .name = "avatar",
-        .dataTypeSpecific.className = GPBStringifySymbol(ResponseEnvelop_Profile_AvatarDetails),
-        .number = ResponseEnvelop_Profile_FieldNumber_Avatar,
+        .dataTypeSpecific.className = GPBStringifySymbol(PHProtoResponseEnvelop_Profile_AvatarDetails),
+        .number = PHProtoResponseEnvelop_Profile_FieldNumber_Avatar,
         .hasIndex = 4,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_Profile__storage_, avatar),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_Profile__storage_, avatar),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
       },
       {
         .name = "pokeStorage",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_Profile_FieldNumber_PokeStorage,
+        .number = PHProtoResponseEnvelop_Profile_FieldNumber_PokeStorage,
         .hasIndex = 5,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_Profile__storage_, pokeStorage),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_Profile__storage_, pokeStorage),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeInt32,
       },
       {
         .name = "itemStorage",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_Profile_FieldNumber_ItemStorage,
+        .number = PHProtoResponseEnvelop_Profile_FieldNumber_ItemStorage,
         .hasIndex = 6,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_Profile__storage_, itemStorage),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_Profile__storage_, itemStorage),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeInt32,
       },
       {
         .name = "dailyBonus",
-        .dataTypeSpecific.className = GPBStringifySymbol(ResponseEnvelop_Profile_DailyBonus),
-        .number = ResponseEnvelop_Profile_FieldNumber_DailyBonus,
+        .dataTypeSpecific.className = GPBStringifySymbol(PHProtoResponseEnvelop_Profile_DailyBonus),
+        .number = PHProtoResponseEnvelop_Profile_FieldNumber_DailyBonus,
         .hasIndex = 7,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_Profile__storage_, dailyBonus),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_Profile__storage_, dailyBonus),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
       },
       {
         .name = "unknown12",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_Profile_FieldNumber_Unknown12,
+        .number = PHProtoResponseEnvelop_Profile_FieldNumber_Unknown12,
         .hasIndex = 8,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_Profile__storage_, unknown12),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_Profile__storage_, unknown12),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBytes,
       },
       {
         .name = "unknown13",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_Profile_FieldNumber_Unknown13,
+        .number = PHProtoResponseEnvelop_Profile_FieldNumber_Unknown13,
         .hasIndex = 9,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_Profile__storage_, unknown13),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_Profile__storage_, unknown13),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeBytes,
       },
       {
         .name = "currencyArray",
-        .dataTypeSpecific.className = GPBStringifySymbol(ResponseEnvelop_Profile_Currency),
-        .number = ResponseEnvelop_Profile_FieldNumber_CurrencyArray,
+        .dataTypeSpecific.className = GPBStringifySymbol(PHProtoResponseEnvelop_Profile_Currency),
+        .number = PHProtoResponseEnvelop_Profile_FieldNumber_CurrencyArray,
         .hasIndex = GPBNoHasBit,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_Profile__storage_, currencyArray),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_Profile__storage_, currencyArray),
         .flags = GPBFieldRepeated,
         .dataType = GPBDataTypeMessage,
       },
     };
     GPBDescriptor *localDescriptor =
-        [GPBDescriptor allocDescriptorForClass:[ResponseEnvelop_Profile class]
-                                     rootClass:[PokemonRoot class]
-                                          file:PokemonRoot_FileDescriptor()
+        [GPBDescriptor allocDescriptorForClass:[PHProtoResponseEnvelop_Profile class]
+                                     rootClass:[PHProtoPokemonRoot class]
+                                          file:PHProtoPokemonRoot_FileDescriptor()
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
-                                   storageSize:sizeof(ResponseEnvelop_Profile__storage_)
+                                   storageSize:sizeof(PHProtoResponseEnvelop_Profile__storage_)
                                          flags:0];
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
@@ -2298,22 +2298,22 @@ typedef struct ResponseEnvelop_Profile__storage_ {
 
 @end
 
-#pragma mark - ResponseEnvelop_Profile_AvatarDetails
+#pragma mark - PHProtoResponseEnvelop_Profile_AvatarDetails
 
-@implementation ResponseEnvelop_Profile_AvatarDetails
+@implementation PHProtoResponseEnvelop_Profile_AvatarDetails
 
 @dynamic hasUnknown2, unknown2;
 @dynamic hasUnknown3, unknown3;
 @dynamic hasUnknown9, unknown9;
 @dynamic hasUnknown10, unknown10;
 
-typedef struct ResponseEnvelop_Profile_AvatarDetails__storage_ {
+typedef struct PHProtoResponseEnvelop_Profile_AvatarDetails__storage_ {
   uint32_t _has_storage_[1];
   int32_t unknown2;
   int32_t unknown3;
   int32_t unknown9;
   int32_t unknown10;
-} ResponseEnvelop_Profile_AvatarDetails__storage_;
+} PHProtoResponseEnvelop_Profile_AvatarDetails__storage_;
 
 // This method is threadsafe because it is initially called
 // in +initialize for each subclass.
@@ -2324,47 +2324,47 @@ typedef struct ResponseEnvelop_Profile_AvatarDetails__storage_ {
       {
         .name = "unknown2",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_Profile_AvatarDetails_FieldNumber_Unknown2,
+        .number = PHProtoResponseEnvelop_Profile_AvatarDetails_FieldNumber_Unknown2,
         .hasIndex = 0,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_Profile_AvatarDetails__storage_, unknown2),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_Profile_AvatarDetails__storage_, unknown2),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeInt32,
       },
       {
         .name = "unknown3",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_Profile_AvatarDetails_FieldNumber_Unknown3,
+        .number = PHProtoResponseEnvelop_Profile_AvatarDetails_FieldNumber_Unknown3,
         .hasIndex = 1,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_Profile_AvatarDetails__storage_, unknown3),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_Profile_AvatarDetails__storage_, unknown3),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeInt32,
       },
       {
         .name = "unknown9",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_Profile_AvatarDetails_FieldNumber_Unknown9,
+        .number = PHProtoResponseEnvelop_Profile_AvatarDetails_FieldNumber_Unknown9,
         .hasIndex = 2,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_Profile_AvatarDetails__storage_, unknown9),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_Profile_AvatarDetails__storage_, unknown9),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeInt32,
       },
       {
         .name = "unknown10",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_Profile_AvatarDetails_FieldNumber_Unknown10,
+        .number = PHProtoResponseEnvelop_Profile_AvatarDetails_FieldNumber_Unknown10,
         .hasIndex = 3,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_Profile_AvatarDetails__storage_, unknown10),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_Profile_AvatarDetails__storage_, unknown10),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeInt32,
       },
     };
     GPBDescriptor *localDescriptor =
-        [GPBDescriptor allocDescriptorForClass:[ResponseEnvelop_Profile_AvatarDetails class]
-                                     rootClass:[PokemonRoot class]
-                                          file:PokemonRoot_FileDescriptor()
+        [GPBDescriptor allocDescriptorForClass:[PHProtoResponseEnvelop_Profile_AvatarDetails class]
+                                     rootClass:[PHProtoPokemonRoot class]
+                                          file:PHProtoPokemonRoot_FileDescriptor()
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
-                                   storageSize:sizeof(ResponseEnvelop_Profile_AvatarDetails__storage_)
+                                   storageSize:sizeof(PHProtoResponseEnvelop_Profile_AvatarDetails__storage_)
                                          flags:0];
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
@@ -2374,18 +2374,18 @@ typedef struct ResponseEnvelop_Profile_AvatarDetails__storage_ {
 
 @end
 
-#pragma mark - ResponseEnvelop_Profile_DailyBonus
+#pragma mark - PHProtoResponseEnvelop_Profile_DailyBonus
 
-@implementation ResponseEnvelop_Profile_DailyBonus
+@implementation PHProtoResponseEnvelop_Profile_DailyBonus
 
 @dynamic hasNextCollectTimestampMs, nextCollectTimestampMs;
 @dynamic hasNextDefenderBonusCollectTimestampMs, nextDefenderBonusCollectTimestampMs;
 
-typedef struct ResponseEnvelop_Profile_DailyBonus__storage_ {
+typedef struct PHProtoResponseEnvelop_Profile_DailyBonus__storage_ {
   uint32_t _has_storage_[1];
   int64_t nextCollectTimestampMs;
   int64_t nextDefenderBonusCollectTimestampMs;
-} ResponseEnvelop_Profile_DailyBonus__storage_;
+} PHProtoResponseEnvelop_Profile_DailyBonus__storage_;
 
 // This method is threadsafe because it is initially called
 // in +initialize for each subclass.
@@ -2396,29 +2396,29 @@ typedef struct ResponseEnvelop_Profile_DailyBonus__storage_ {
       {
         .name = "nextCollectTimestampMs",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_Profile_DailyBonus_FieldNumber_NextCollectTimestampMs,
+        .number = PHProtoResponseEnvelop_Profile_DailyBonus_FieldNumber_NextCollectTimestampMs,
         .hasIndex = 0,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_Profile_DailyBonus__storage_, nextCollectTimestampMs),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_Profile_DailyBonus__storage_, nextCollectTimestampMs),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeInt64,
       },
       {
         .name = "nextDefenderBonusCollectTimestampMs",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_Profile_DailyBonus_FieldNumber_NextDefenderBonusCollectTimestampMs,
+        .number = PHProtoResponseEnvelop_Profile_DailyBonus_FieldNumber_NextDefenderBonusCollectTimestampMs,
         .hasIndex = 1,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_Profile_DailyBonus__storage_, nextDefenderBonusCollectTimestampMs),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_Profile_DailyBonus__storage_, nextDefenderBonusCollectTimestampMs),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeInt64,
       },
     };
     GPBDescriptor *localDescriptor =
-        [GPBDescriptor allocDescriptorForClass:[ResponseEnvelop_Profile_DailyBonus class]
-                                     rootClass:[PokemonRoot class]
-                                          file:PokemonRoot_FileDescriptor()
+        [GPBDescriptor allocDescriptorForClass:[PHProtoResponseEnvelop_Profile_DailyBonus class]
+                                     rootClass:[PHProtoPokemonRoot class]
+                                          file:PHProtoPokemonRoot_FileDescriptor()
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
-                                   storageSize:sizeof(ResponseEnvelop_Profile_DailyBonus__storage_)
+                                   storageSize:sizeof(PHProtoResponseEnvelop_Profile_DailyBonus__storage_)
                                          flags:0];
 #if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     static const char *extraTextFormatInfo =
@@ -2433,18 +2433,18 @@ typedef struct ResponseEnvelop_Profile_DailyBonus__storage_ {
 
 @end
 
-#pragma mark - ResponseEnvelop_Profile_Currency
+#pragma mark - PHProtoResponseEnvelop_Profile_Currency
 
-@implementation ResponseEnvelop_Profile_Currency
+@implementation PHProtoResponseEnvelop_Profile_Currency
 
 @dynamic hasType, type;
 @dynamic hasAmount, amount;
 
-typedef struct ResponseEnvelop_Profile_Currency__storage_ {
+typedef struct PHProtoResponseEnvelop_Profile_Currency__storage_ {
   uint32_t _has_storage_[1];
   int32_t amount;
   NSString *type;
-} ResponseEnvelop_Profile_Currency__storage_;
+} PHProtoResponseEnvelop_Profile_Currency__storage_;
 
 // This method is threadsafe because it is initially called
 // in +initialize for each subclass.
@@ -2455,29 +2455,29 @@ typedef struct ResponseEnvelop_Profile_Currency__storage_ {
       {
         .name = "type",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_Profile_Currency_FieldNumber_Type,
+        .number = PHProtoResponseEnvelop_Profile_Currency_FieldNumber_Type,
         .hasIndex = 0,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_Profile_Currency__storage_, type),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_Profile_Currency__storage_, type),
         .flags = GPBFieldRequired,
         .dataType = GPBDataTypeString,
       },
       {
         .name = "amount",
         .dataTypeSpecific.className = NULL,
-        .number = ResponseEnvelop_Profile_Currency_FieldNumber_Amount,
+        .number = PHProtoResponseEnvelop_Profile_Currency_FieldNumber_Amount,
         .hasIndex = 1,
-        .offset = (uint32_t)offsetof(ResponseEnvelop_Profile_Currency__storage_, amount),
+        .offset = (uint32_t)offsetof(PHProtoResponseEnvelop_Profile_Currency__storage_, amount),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeInt32,
       },
     };
     GPBDescriptor *localDescriptor =
-        [GPBDescriptor allocDescriptorForClass:[ResponseEnvelop_Profile_Currency class]
-                                     rootClass:[PokemonRoot class]
-                                          file:PokemonRoot_FileDescriptor()
+        [GPBDescriptor allocDescriptorForClass:[PHProtoResponseEnvelop_Profile_Currency class]
+                                     rootClass:[PHProtoPokemonRoot class]
+                                          file:PHProtoPokemonRoot_FileDescriptor()
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
-                                   storageSize:sizeof(ResponseEnvelop_Profile_Currency__storage_)
+                                   storageSize:sizeof(PHProtoResponseEnvelop_Profile_Currency__storage_)
                                          flags:0];
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
