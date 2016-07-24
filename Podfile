@@ -7,7 +7,7 @@ target 'PokeHunt' do
 	pod 'GoogleMaps'
 	pod 'R.swift'
     pod 'TOWebViewController'
-    pod 'AppAuth'
+    pod 'AppAuth', :path => 'LocalPods/AppAuth/'
     pod 'Alamofire'
     pod 'SSKeychain'
     pod 'Protobuf', '3.0.0-beta-4'
