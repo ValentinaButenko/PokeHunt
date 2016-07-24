@@ -12,6 +12,7 @@ import SnapKit
 class SettingsTableVC: UITableViewController {
 
     @IBOutlet weak var autorefreshCell: UITableViewCell!
+    @IBOutlet weak var displayPokemonsCell: UITableViewCell!
 
     var autorefreshSwitch: UISwitch!
     var displayPokeSwitch: UISwitch!
@@ -39,7 +40,7 @@ class SettingsTableVC: UITableViewController {
         let headerText = UILabel()
 
         headerText.text = "Settings"
-        headerText.font = UIFont(name: "OpenSans-Semibold", size: 14)
+        headerText.font = UIFont(name: "OpenSans-Regular", size: 10)
 
         headerText.textColor = UIColor(red: (124/255), green: (124/255), blue: (124/255), alpha: 1.0)
         headerView.backgroundColor = UIColor(red: (243/255), green: (243/255), blue: (243/255), alpha: 1.0)
@@ -60,6 +61,7 @@ class SettingsTableVC: UITableViewController {
 
     func setup(){
         self.setupAutorefreshSwitch()
+        self.setupDisplayPokemonsCell()
     }
 
     func setupAutorefreshSwitch(){
@@ -77,6 +79,23 @@ class SettingsTableVC: UITableViewController {
             make.trailing.equalTo(autorefreshCell).inset(28)
         }
         self.autorefreshSwitch = autorefreshSwitch
+    }
+
+    func setupDisplayPokemonsCell(){
+        let displayPokeSwitch = UISwitch()
+
+        displayPokeSwitch.sizeToFit()
+        displayPokeSwitch.onTintColor = UIColor(patternImage: img!)
+        displayPokeSwitch.transform = CGAffineTransformMakeScale(1.27, 1.27)
+        displayPokeSwitch.setOn(true, animated: false)
+
+        displayPokemonsCell.addSubview(displayPokeSwitch)
+
+        displayPokeSwitch.snp_makeConstraints { (make) in
+            make.top.equalTo(displayPokemonsCell).inset(15)
+            make.trailing.equalTo(displayPokemonsCell).inset(28)
+        }
+        self.displayPokeSwitch = displayPokeSwitch
     }
 
 
