@@ -8,7 +8,7 @@
 
 import Foundation
 import Alamofire
-import PHProtobufModels
+import POGOProto
 import Protobuf
 
 
@@ -37,56 +37,60 @@ final class NianticlabsService {
         let config = NSURLSessionConfiguration.defaultSessionConfiguration()
         config.HTTPAdditionalHeaders = Manager.defaultHTTPHeaders
         config.HTTPAdditionalHeaders!["User-Agent"] = "Niantic App"
+        
         self.manager = Manager(configuration: config)
     }
+    private var session : POGOResponseEnvelope? = nil
+    // MARK: internal methods
 
-    func getApiEndpoint(handler: (PHProtoResponseEnvelop?, NSError?) -> Void) {
+    internal func getAllStops(handler: ([Any]?, NSError?) -> Void) {
+        
+    }
+
+    // MARK: private methods
+    private func getLocalSession(handler: (POGOResponseEnvelope?, NSError?) -> Void) {
+        if let session = session {
+            handler(session, nil)
+            return;
+        }
+
         tokenGetter { (str) in
             guard let token = str else {
                 print("things went badly")
                 return
             }
 
-            let subRequest = PHProtoRequestEnvelop_Requests()
-            subRequest.type = 2
+            let req = NianticlabsDataGenerator.loginRequest(token)
+            let repeatBlock = {
+                let time = dispatch_time(DISPATCH_TIME_NOW, Int64(3 * NSEC_PER_SEC))
+                dispatch_after(time, dispatch_get_main_queue(), {
+                    self.getLocalSession(handler)
+                })
+            }
 
-            let request = PHProtoRequestEnvelop()
-            request.unknown1 = 1
-            request.rpcId = 8145806132888207460
-            request.requestsArray.addObject(subRequest)
-
-            // get it from real values
-            request.latitude = 4632237663676957151
-            request.longitude = 4630312617481759938
-            request.altitude = 0
-            //
-
-            request.unknown12 = 989
-
-            let authToken = PHProtoRequestEnvelop_AuthInfo_JWT()
-            authToken.contents = token
-            authToken.unknown13 = 59
-
-            let auth = PHProtoRequestEnvelop_AuthInfo()
-            auth.provider = "google"
-            auth.token = authToken
-
-            request.auth = auth
-
-            self.manager.request(.POST, kNianticlabsAPIURL, parameters: nil, encoding: .Custom({ (convertible, _) in
+            self.manager.request(.POST, kNianticlabsAPIURL, parameters: [:], encoding: .Custom({ (convertible, _) in
                 let mutableRequest = convertible.URLRequest.copy() as! NSMutableURLRequest
-                mutableRequest.HTTPBody = request.data()
-                mutableRequest.setValue("Niantic App", forHTTPHeaderField: "User-Agent")
+                mutableRequest.HTTPBody = req.data()
                 return (mutableRequest, nil)
             })).responseData { (resp) in
                 switch (resp.result) {
                 case .Failure(let err):
                     print(err)
-                    handler(nil, err)
+                    repeatBlock()
                 case .Success(let val):
-                    let respEnvelope = try! PHProtoResponseEnvelop(data: val)
-                    print(respEnvelope)
-                    handler(respEnvelope, nil)
+                    do {
+                        let respEnvelope = try POGOResponseEnvelope(data: val)
+                        if let url = respEnvelope.apiURL {
+                            if (url.containsString("plfe")) {
+                                self.session = respEnvelope
+                                handler(respEnvelope, nil)
+                                return
+                            }
+                        }
+                        repeatBlock()
+                    } catch {
+                        repeatBlock()
+                    }
                 }
             }.resume()
         }

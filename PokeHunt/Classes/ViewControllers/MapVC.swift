@@ -28,6 +28,9 @@ class MapVC: UIViewController {
         self.setupMap()
         self.setupSearchButton()
         self.setupPayButton()
+//        NianticlabsService.mainService.;{ (resp, err) in
+//            
+//        }
     }
 
     func setupNavigationController(){

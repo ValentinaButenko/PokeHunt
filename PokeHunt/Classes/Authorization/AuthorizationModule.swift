@@ -82,8 +82,8 @@ internal class LoginModule : NSObject, OIDAuthStateChangeDelegate, OIDAuthStateE
                 completion(nil)
                 return
             }
-            if let accessToken = accessToken {
-                completion(accessToken)
+            if let token = idToken {
+                completion(token)
                 return
             }
             completion(nil)
