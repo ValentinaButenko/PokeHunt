@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import GoogleMaps
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,14 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-
-        // need to set keyes properly
-        GMSServices.provideAPIKey("AIzaSyBuZpNjqeaG65T53YfwDkBBow_fANZ05HA")
-
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        let vc = LoginVC()
 
-        window!.rootViewController = vc
+        Bootstrapper.bootstrap()
+
         window!.makeKeyAndVisible()
         return true
     }
