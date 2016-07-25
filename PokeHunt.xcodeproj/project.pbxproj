@@ -7,11 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		12700D751D46CB3E002AFB90 /* libs2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 12700D721D46CB3E002AFB90 /* libs2.a */; };
-		12700D761D46CB3E002AFB90 /* libs2cellid.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 12700D731D46CB3E002AFB90 /* libs2cellid.a */; };
-		12700D771D46CB3E002AFB90 /* libs2util.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 12700D741D46CB3E002AFB90 /* libs2util.a */; };
-		12700D781D46CB52002AFB90 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 127616E01D45379600F446FA /* libc++.tbd */; };
-		12700D7B1D46D7C5002AFB90 /* libpthread.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 12700D791D46D4BA002AFB90 /* libpthread.tbd */; };
+		12700EA91D46DE95002AFB90 /* S2SphereAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12700EA21D46DE95002AFB90 /* S2SphereAdapter.framework */; };
+		12700EAA1D46DE95002AFB90 /* S2SphereAdapter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 12700EA21D46DE95002AFB90 /* S2SphereAdapter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		12700EB21D46DEB1002AFB90 /* S2SphereAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700EB01D46DEB1002AFB90 /* S2SphereAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		12760BAF1D4424A200F446FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12760B971D4424A200F446FA /* Assets.xcassets */; };
 		12760BB01D4424A200F446FA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12760B981D4424A200F446FA /* LaunchScreen.xib */; };
 		12760BB21D4424A200F446FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12760B9C1D4424A200F446FA /* AppDelegate.swift */; };
@@ -471,88 +469,25 @@
 		127616D31D450A7A00F446FA /* TypeEffectiveSettings.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = 127615191D450A7800F446FA /* TypeEffectiveSettings.pbobjc.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		127616D41D450A7A00F446FA /* TypeEffectiveSettings.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 1276151A1D450A7800F446FA /* TypeEffectiveSettings.pbobjc.m */; };
 		127616D61D450E0700F446FA /* POGOProto_umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 127616D51D450DB300F446FA /* POGOProto_umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		127617C91D4568CD00F446FA /* S2Sphere.h in Headers */ = {isa = PBXBuildFile; fileRef = 127617C81D4568CD00F446FA /* S2Sphere.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		127617CD1D4568CD00F446FA /* S2Sphere.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 127617C61D4568CD00F446FA /* S2Sphere.framework */; };
-		127617CE1D4568CD00F446FA /* S2Sphere.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 127617C61D4568CD00F446FA /* S2Sphere.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		127618151D45691300F446FA /* basictypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 127617D31D45691300F446FA /* basictypes.h */; };
-		127618161D45691300F446FA /* casts.h in Headers */ = {isa = PBXBuildFile; fileRef = 127617D41D45691300F446FA /* casts.h */; };
-		127618171D45691300F446FA /* commandlineflags.h in Headers */ = {isa = PBXBuildFile; fileRef = 127617D51D45691300F446FA /* commandlineflags.h */; };
-		127618181D45691300F446FA /* int128.h in Headers */ = {isa = PBXBuildFile; fileRef = 127617D61D45691300F446FA /* int128.h */; };
-		127618191D45691300F446FA /* integral_types.h in Headers */ = {isa = PBXBuildFile; fileRef = 127617D71D45691300F446FA /* integral_types.h */; };
-		1276181A1D45691300F446FA /* logging.h in Headers */ = {isa = PBXBuildFile; fileRef = 127617D81D45691300F446FA /* logging.h */; };
-		1276181B1D45691300F446FA /* macros.h in Headers */ = {isa = PBXBuildFile; fileRef = 127617D91D45691300F446FA /* macros.h */; };
-		1276181C1D45691300F446FA /* port.h in Headers */ = {isa = PBXBuildFile; fileRef = 127617DA1D45691300F446FA /* port.h */; };
-		1276181D1D45691400F446FA /* scoped_ptr.h in Headers */ = {isa = PBXBuildFile; fileRef = 127617DB1D45691300F446FA /* scoped_ptr.h */; };
-		1276181E1D45691400F446FA /* stl_decl.h in Headers */ = {isa = PBXBuildFile; fileRef = 127617DC1D45691300F446FA /* stl_decl.h */; };
-		1276181F1D45691400F446FA /* stl_decl_msvc.h in Headers */ = {isa = PBXBuildFile; fileRef = 127617DD1D45691300F446FA /* stl_decl_msvc.h */; };
-		127618201D45691400F446FA /* stl_decl_osx.h in Headers */ = {isa = PBXBuildFile; fileRef = 127617DE1D45691300F446FA /* stl_decl_osx.h */; };
-		127618211D45691400F446FA /* stringprintf.h in Headers */ = {isa = PBXBuildFile; fileRef = 127617DF1D45691300F446FA /* stringprintf.h */; };
-		127618221D45691400F446FA /* strtoint.h in Headers */ = {isa = PBXBuildFile; fileRef = 127617E01D45691300F446FA /* strtoint.h */; };
-		127618231D45691400F446FA /* template_util.h in Headers */ = {isa = PBXBuildFile; fileRef = 127617E11D45691300F446FA /* template_util.h */; };
-		127618241D45691400F446FA /* type_traits.h in Headers */ = {isa = PBXBuildFile; fileRef = 127617E21D45691300F446FA /* type_traits.h */; };
-		127618281D45691400F446FA /* r1interval.h in Headers */ = {isa = PBXBuildFile; fileRef = 127617E61D45691300F446FA /* r1interval.h */; };
-		127618291D45691400F446FA /* s1angle.h in Headers */ = {isa = PBXBuildFile; fileRef = 127617E71D45691300F446FA /* s1angle.h */; };
-		1276182A1D45691400F446FA /* s1interval.h in Headers */ = {isa = PBXBuildFile; fileRef = 127617E81D45691300F446FA /* s1interval.h */; };
-		1276182B1D45691400F446FA /* s2.h in Headers */ = {isa = PBXBuildFile; fileRef = 127617E91D45691300F446FA /* s2.h */; };
-		1276182C1D45691400F446FA /* s2cap.h in Headers */ = {isa = PBXBuildFile; fileRef = 127617EA1D45691300F446FA /* s2cap.h */; };
-		1276182D1D45691400F446FA /* s2cell.h in Headers */ = {isa = PBXBuildFile; fileRef = 127617EB1D45691300F446FA /* s2cell.h */; };
-		1276182E1D45691400F446FA /* s2cellid.h in Headers */ = {isa = PBXBuildFile; fileRef = 127617EC1D45691300F446FA /* s2cellid.h */; };
-		1276182F1D45691400F446FA /* s2cellunion.h in Headers */ = {isa = PBXBuildFile; fileRef = 127617ED1D45691300F446FA /* s2cellunion.h */; };
-		127618301D45691400F446FA /* s2edgeindex.h in Headers */ = {isa = PBXBuildFile; fileRef = 127617EE1D45691300F446FA /* s2edgeindex.h */; };
-		127618311D45691400F446FA /* s2edgeutil.h in Headers */ = {isa = PBXBuildFile; fileRef = 127617EF1D45691300F446FA /* s2edgeutil.h */; };
-		127618321D45691400F446FA /* s2latlng.h in Headers */ = {isa = PBXBuildFile; fileRef = 127617F01D45691300F446FA /* s2latlng.h */; };
-		127618331D45691400F446FA /* s2latlngrect.h in Headers */ = {isa = PBXBuildFile; fileRef = 127617F11D45691300F446FA /* s2latlngrect.h */; };
-		127618341D45691400F446FA /* s2loop.h in Headers */ = {isa = PBXBuildFile; fileRef = 127617F21D45691300F446FA /* s2loop.h */; };
-		127618351D45691400F446FA /* s2pointregion.h in Headers */ = {isa = PBXBuildFile; fileRef = 127617F31D45691300F446FA /* s2pointregion.h */; };
-		127618361D45691400F446FA /* s2polygon.h in Headers */ = {isa = PBXBuildFile; fileRef = 127617F41D45691300F446FA /* s2polygon.h */; };
-		127618371D45691400F446FA /* s2polygonbuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 127617F51D45691300F446FA /* s2polygonbuilder.h */; };
-		127618381D45691400F446FA /* s2polyline.h in Headers */ = {isa = PBXBuildFile; fileRef = 127617F61D45691300F446FA /* s2polyline.h */; };
-		127618391D45691400F446FA /* s2r2rect.h in Headers */ = {isa = PBXBuildFile; fileRef = 127617F71D45691300F446FA /* s2r2rect.h */; };
-		1276183A1D45691400F446FA /* s2region.h in Headers */ = {isa = PBXBuildFile; fileRef = 127617F81D45691300F446FA /* s2region.h */; };
-		1276183B1D45691400F446FA /* s2regioncoverer.h in Headers */ = {isa = PBXBuildFile; fileRef = 127617F91D45691300F446FA /* s2regioncoverer.h */; };
-		1276183C1D45691400F446FA /* s2regionintersection.h in Headers */ = {isa = PBXBuildFile; fileRef = 127617FA1D45691300F446FA /* s2regionintersection.h */; };
-		1276183D1D45691400F446FA /* s2regionunion.h in Headers */ = {isa = PBXBuildFile; fileRef = 127617FB1D45691300F446FA /* s2regionunion.h */; };
-		1276183E1D45691400F446FA /* ascii_ctype.h in Headers */ = {isa = PBXBuildFile; fileRef = 127617FD1D45691300F446FA /* ascii_ctype.h */; };
-		1276183F1D45691400F446FA /* split.h in Headers */ = {isa = PBXBuildFile; fileRef = 127617FE1D45691300F446FA /* split.h */; };
-		127618401D45691400F446FA /* stringprintf.h in Headers */ = {isa = PBXBuildFile; fileRef = 127617FF1D45691300F446FA /* stringprintf.h */; };
-		127618411D45691400F446FA /* strutil.h in Headers */ = {isa = PBXBuildFile; fileRef = 127618001D45691300F446FA /* strutil.h */; };
-		127618421D45691400F446FA /* coder.h in Headers */ = {isa = PBXBuildFile; fileRef = 127618031D45691300F446FA /* coder.h */; };
-		127618431D45691400F446FA /* varint.h in Headers */ = {isa = PBXBuildFile; fileRef = 127618041D45691300F446FA /* varint.h */; };
-		127618441D45691400F446FA /* endian.h in Headers */ = {isa = PBXBuildFile; fileRef = 127618061D45691300F446FA /* endian.h */; };
-		127618451D45691400F446FA /* hash.h in Headers */ = {isa = PBXBuildFile; fileRef = 127618081D45691300F446FA /* hash.h */; };
-		127618461D45691400F446FA /* hash_jenkins_lookup2.h in Headers */ = {isa = PBXBuildFile; fileRef = 127618091D45691300F446FA /* hash_jenkins_lookup2.h */; };
-		127618471D45691400F446FA /* mathlimits.h in Headers */ = {isa = PBXBuildFile; fileRef = 1276180B1D45691300F446FA /* mathlimits.h */; };
-		127618481D45691400F446FA /* mathutil.h in Headers */ = {isa = PBXBuildFile; fileRef = 1276180C1D45691300F446FA /* mathutil.h */; };
-		127618491D45691400F446FA /* matrix3x3-inl.h in Headers */ = {isa = PBXBuildFile; fileRef = 1276180D1D45691300F446FA /* matrix3x3-inl.h */; };
-		1276184A1D45691400F446FA /* matrix3x3.h in Headers */ = {isa = PBXBuildFile; fileRef = 1276180E1D45691300F446FA /* matrix3x3.h */; };
-		1276184B1D45691400F446FA /* vector2-inl.h in Headers */ = {isa = PBXBuildFile; fileRef = 1276180F1D45691300F446FA /* vector2-inl.h */; };
-		1276184C1D45691400F446FA /* vector2.h in Headers */ = {isa = PBXBuildFile; fileRef = 127618101D45691300F446FA /* vector2.h */; };
-		1276184D1D45691400F446FA /* vector3-inl.h in Headers */ = {isa = PBXBuildFile; fileRef = 127618111D45691300F446FA /* vector3-inl.h */; };
-		1276184E1D45691400F446FA /* vector3.h in Headers */ = {isa = PBXBuildFile; fileRef = 127618121D45691300F446FA /* vector3.h */; };
-		1276184F1D45691400F446FA /* vector4-inl.h in Headers */ = {isa = PBXBuildFile; fileRef = 127618131D45691300F446FA /* vector4-inl.h */; };
-		127618501D45691400F446FA /* vector4.h in Headers */ = {isa = PBXBuildFile; fileRef = 127618141D45691300F446FA /* vector4.h */; };
-		127618521D45693B00F446FA /* S2SphereFactory.mm in Sources */ = {isa = PBXBuildFile; fileRef = 127618511D45693B00F446FA /* S2SphereFactory.mm */; };
-		127618541D456EBE00F446FA /* S2SphereFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 127618531D45696900F446FA /* S2SphereFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		14720401B9DF9E770BDABD69 /* Pods_S2Sphere.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE36EC42E0C3E7D9665FDE5C /* Pods_S2Sphere.framework */; };
 		39A0F50EAE19156C026555D7 /* Pods_PokeHunt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58DD6499E2E6B4CA44BAA4CB /* Pods_PokeHunt.framework */; };
 		BB8605387F2A7B4E86193BE2 /* Pods_POGOProto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7F36E17C694A1331B5CC162 /* Pods_POGOProto.framework */; };
 		F64A96631D40E8C000A72182 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64A96621D40E8C000A72182 /* Social.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		12700EA71D46DE95002AFB90 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6DCD1521D3FB09900FA576E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 12700EA11D46DE95002AFB90;
+			remoteInfo = S2SphereAdapter;
+		};
 		12760C091D45091F00F446FA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F6DCD1521D3FB09900FA576E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 12760C031D45091F00F446FA;
 			remoteInfo = POGOProto;
-		};
-		127617CB1D4568CD00F446FA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F6DCD1521D3FB09900FA576E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 127617C51D4568CD00F446FA;
-			remoteInfo = S2Sphere;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -563,7 +498,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				127617CE1D4568CD00F446FA /* S2Sphere.framework in Embed Frameworks */,
+				12700EAA1D46DE95002AFB90 /* S2SphereAdapter.framework in Embed Frameworks */,
 				12760C0C1D45091F00F446FA /* POGOProto.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -572,12 +507,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		075DE4CD2381DC00A95CB0B3 /* Pods-S2Sphere.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-S2Sphere.debug.xcconfig"; path = "Pods/Target Support Files/Pods-S2Sphere/Pods-S2Sphere.debug.xcconfig"; sourceTree = "<group>"; };
 		076FF728795DAC574D838F61 /* Pods_PHProtobufModels.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PHProtobufModels.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		12700D721D46CB3E002AFB90 /* libs2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libs2.a; sourceTree = "<group>"; };
-		12700D731D46CB3E002AFB90 /* libs2cellid.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libs2cellid.a; sourceTree = "<group>"; };
-		12700D741D46CB3E002AFB90 /* libs2util.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libs2util.a; sourceTree = "<group>"; };
 		12700D791D46D4BA002AFB90 /* libpthread.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libpthread.tbd; path = usr/lib/libpthread.tbd; sourceTree = SDKROOT; };
+		12700EA21D46DE95002AFB90 /* S2SphereAdapter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = S2SphereAdapter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		12700EAF1D46DEB1002AFB90 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12700EB01D46DEB1002AFB90 /* S2SphereAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = S2SphereAdapter.h; sourceTree = "<group>"; };
 		12760B951D4424A200F446FA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		12760B971D4424A200F446FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		12760B981D4424A200F446FA /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
@@ -1264,70 +1198,7 @@
 		127616D51D450DB300F446FA /* POGOProto_umbrella.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = POGOProto_umbrella.h; sourceTree = "<group>"; };
 		127616DE1D45375E00F446FA /* libc++abi.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++abi.tbd"; path = "usr/lib/libc++abi.tbd"; sourceTree = SDKROOT; };
 		127616E01D45379600F446FA /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		127617C61D4568CD00F446FA /* S2Sphere.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = S2Sphere.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		127617C81D4568CD00F446FA /* S2Sphere.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = S2Sphere.h; sourceTree = "<group>"; };
-		127617CA1D4568CD00F446FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		127617D31D45691300F446FA /* basictypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = basictypes.h; sourceTree = "<group>"; };
-		127617D41D45691300F446FA /* casts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = casts.h; sourceTree = "<group>"; };
-		127617D51D45691300F446FA /* commandlineflags.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = commandlineflags.h; sourceTree = "<group>"; };
-		127617D61D45691300F446FA /* int128.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = int128.h; sourceTree = "<group>"; };
-		127617D71D45691300F446FA /* integral_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = integral_types.h; sourceTree = "<group>"; };
-		127617D81D45691300F446FA /* logging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = logging.h; sourceTree = "<group>"; };
-		127617D91D45691300F446FA /* macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = macros.h; sourceTree = "<group>"; };
-		127617DA1D45691300F446FA /* port.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = port.h; sourceTree = "<group>"; };
-		127617DB1D45691300F446FA /* scoped_ptr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scoped_ptr.h; sourceTree = "<group>"; };
-		127617DC1D45691300F446FA /* stl_decl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stl_decl.h; sourceTree = "<group>"; };
-		127617DD1D45691300F446FA /* stl_decl_msvc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stl_decl_msvc.h; sourceTree = "<group>"; };
-		127617DE1D45691300F446FA /* stl_decl_osx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stl_decl_osx.h; sourceTree = "<group>"; };
-		127617DF1D45691300F446FA /* stringprintf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stringprintf.h; sourceTree = "<group>"; };
-		127617E01D45691300F446FA /* strtoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = strtoint.h; sourceTree = "<group>"; };
-		127617E11D45691300F446FA /* template_util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = template_util.h; sourceTree = "<group>"; };
-		127617E21D45691300F446FA /* type_traits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = type_traits.h; sourceTree = "<group>"; };
-		127617E61D45691300F446FA /* r1interval.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = r1interval.h; sourceTree = "<group>"; };
-		127617E71D45691300F446FA /* s1angle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s1angle.h; sourceTree = "<group>"; };
-		127617E81D45691300F446FA /* s1interval.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s1interval.h; sourceTree = "<group>"; };
-		127617E91D45691300F446FA /* s2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s2.h; sourceTree = "<group>"; };
-		127617EA1D45691300F446FA /* s2cap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s2cap.h; sourceTree = "<group>"; };
-		127617EB1D45691300F446FA /* s2cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s2cell.h; sourceTree = "<group>"; };
-		127617EC1D45691300F446FA /* s2cellid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s2cellid.h; sourceTree = "<group>"; };
-		127617ED1D45691300F446FA /* s2cellunion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s2cellunion.h; sourceTree = "<group>"; };
-		127617EE1D45691300F446FA /* s2edgeindex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s2edgeindex.h; sourceTree = "<group>"; };
-		127617EF1D45691300F446FA /* s2edgeutil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s2edgeutil.h; sourceTree = "<group>"; };
-		127617F01D45691300F446FA /* s2latlng.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s2latlng.h; sourceTree = "<group>"; };
-		127617F11D45691300F446FA /* s2latlngrect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s2latlngrect.h; sourceTree = "<group>"; };
-		127617F21D45691300F446FA /* s2loop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s2loop.h; sourceTree = "<group>"; };
-		127617F31D45691300F446FA /* s2pointregion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s2pointregion.h; sourceTree = "<group>"; };
-		127617F41D45691300F446FA /* s2polygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s2polygon.h; sourceTree = "<group>"; };
-		127617F51D45691300F446FA /* s2polygonbuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s2polygonbuilder.h; sourceTree = "<group>"; };
-		127617F61D45691300F446FA /* s2polyline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s2polyline.h; sourceTree = "<group>"; };
-		127617F71D45691300F446FA /* s2r2rect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s2r2rect.h; sourceTree = "<group>"; };
-		127617F81D45691300F446FA /* s2region.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s2region.h; sourceTree = "<group>"; };
-		127617F91D45691300F446FA /* s2regioncoverer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s2regioncoverer.h; sourceTree = "<group>"; };
-		127617FA1D45691300F446FA /* s2regionintersection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s2regionintersection.h; sourceTree = "<group>"; };
-		127617FB1D45691300F446FA /* s2regionunion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s2regionunion.h; sourceTree = "<group>"; };
-		127617FD1D45691300F446FA /* ascii_ctype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ascii_ctype.h; sourceTree = "<group>"; };
-		127617FE1D45691300F446FA /* split.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = split.h; sourceTree = "<group>"; };
-		127617FF1D45691300F446FA /* stringprintf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stringprintf.h; sourceTree = "<group>"; };
-		127618001D45691300F446FA /* strutil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = strutil.h; sourceTree = "<group>"; };
-		127618031D45691300F446FA /* coder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = coder.h; sourceTree = "<group>"; };
-		127618041D45691300F446FA /* varint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = varint.h; sourceTree = "<group>"; };
-		127618061D45691300F446FA /* endian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = endian.h; sourceTree = "<group>"; };
-		127618081D45691300F446FA /* hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hash.h; sourceTree = "<group>"; };
-		127618091D45691300F446FA /* hash_jenkins_lookup2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hash_jenkins_lookup2.h; sourceTree = "<group>"; };
-		1276180B1D45691300F446FA /* mathlimits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mathlimits.h; sourceTree = "<group>"; };
-		1276180C1D45691300F446FA /* mathutil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mathutil.h; sourceTree = "<group>"; };
-		1276180D1D45691300F446FA /* matrix3x3-inl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "matrix3x3-inl.h"; sourceTree = "<group>"; };
-		1276180E1D45691300F446FA /* matrix3x3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = matrix3x3.h; sourceTree = "<group>"; };
-		1276180F1D45691300F446FA /* vector2-inl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "vector2-inl.h"; sourceTree = "<group>"; };
-		127618101D45691300F446FA /* vector2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vector2.h; sourceTree = "<group>"; };
-		127618111D45691300F446FA /* vector3-inl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "vector3-inl.h"; sourceTree = "<group>"; };
-		127618121D45691300F446FA /* vector3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vector3.h; sourceTree = "<group>"; };
-		127618131D45691300F446FA /* vector4-inl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "vector4-inl.h"; sourceTree = "<group>"; };
-		127618141D45691300F446FA /* vector4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vector4.h; sourceTree = "<group>"; };
-		127618511D45693B00F446FA /* S2SphereFactory.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = S2SphereFactory.mm; sourceTree = "<group>"; };
-		127618531D45696900F446FA /* S2SphereFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = S2SphereFactory.h; sourceTree = "<group>"; };
 		31CF62A75AD969201AB06A47 /* Pods-PokeHunt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeHunt.release.xcconfig"; path = "Pods/Target Support Files/Pods-PokeHunt/Pods-PokeHunt.release.xcconfig"; sourceTree = "<group>"; };
-		36F697CC7813E6605B464E7B /* Pods-S2Sphere.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-S2Sphere.release.xcconfig"; path = "Pods/Target Support Files/Pods-S2Sphere/Pods-S2Sphere.release.xcconfig"; sourceTree = "<group>"; };
 		58DD6499E2E6B4CA44BAA4CB /* Pods_PokeHunt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PokeHunt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		701B67ED30CCD092DC53B694 /* Pods-PokeHunt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeHunt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PokeHunt/Pods-PokeHunt.debug.xcconfig"; sourceTree = "<group>"; };
 		BBE8A56A51BCC041D12316A5 /* Pods-POGOProto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-POGOProto.release.xcconfig"; path = "Pods/Target Support Files/Pods-POGOProto/Pods-POGOProto.release.xcconfig"; sourceTree = "<group>"; };
@@ -1339,24 +1210,18 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		12700E9E1D46DE95002AFB90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		12760C001D45091F00F446FA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				BB8605387F2A7B4E86193BE2 /* Pods_POGOProto.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		127617C21D4568CD00F446FA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				12700D7B1D46D7C5002AFB90 /* libpthread.tbd in Frameworks */,
-				12700D781D46CB52002AFB90 /* libc++.tbd in Frameworks */,
-				12700D751D46CB3E002AFB90 /* libs2.a in Frameworks */,
-				12700D761D46CB3E002AFB90 /* libs2cellid.a in Frameworks */,
-				12700D771D46CB3E002AFB90 /* libs2util.a in Frameworks */,
-				14720401B9DF9E770BDABD69 /* Pods_S2Sphere.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1366,7 +1231,7 @@
 			files = (
 				12760C0B1D45091F00F446FA /* POGOProto.framework in Frameworks */,
 				F64A96631D40E8C000A72182 /* Social.framework in Frameworks */,
-				127617CD1D4568CD00F446FA /* S2Sphere.framework in Frameworks */,
+				12700EA91D46DE95002AFB90 /* S2SphereAdapter.framework in Frameworks */,
 				39A0F50EAE19156C026555D7 /* Pods_PokeHunt.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1374,6 +1239,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		12700EA31D46DE95002AFB90 /* S2SphereAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				12700EAE1D46DEB1002AFB90 /* Supporting Files */,
+			);
+			path = S2SphereAdapter;
+			sourceTree = "<group>";
+		};
+		12700EAE1D46DEB1002AFB90 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				12700EAF1D46DEB1002AFB90 /* Info.plist */,
+				12700EB01D46DEB1002AFB90 /* S2SphereAdapter.h */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		12760B941D4424A200F446FA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -2509,133 +2391,6 @@
 			path = Pokemon;
 			sourceTree = "<group>";
 		};
-		127617C71D4568CD00F446FA /* S2Sphere */ = {
-			isa = PBXGroup;
-			children = (
-				12700D721D46CB3E002AFB90 /* libs2.a */,
-				12700D731D46CB3E002AFB90 /* libs2cellid.a */,
-				12700D741D46CB3E002AFB90 /* libs2util.a */,
-				127617D21D45691300F446FA /* base */,
-				127617E61D45691300F446FA /* r1interval.h */,
-				127617E71D45691300F446FA /* s1angle.h */,
-				127617E81D45691300F446FA /* s1interval.h */,
-				127617E91D45691300F446FA /* s2.h */,
-				127617EA1D45691300F446FA /* s2cap.h */,
-				127617EB1D45691300F446FA /* s2cell.h */,
-				127617EC1D45691300F446FA /* s2cellid.h */,
-				127617ED1D45691300F446FA /* s2cellunion.h */,
-				127617EE1D45691300F446FA /* s2edgeindex.h */,
-				127617EF1D45691300F446FA /* s2edgeutil.h */,
-				127617F01D45691300F446FA /* s2latlng.h */,
-				127617F11D45691300F446FA /* s2latlngrect.h */,
-				127617F21D45691300F446FA /* s2loop.h */,
-				127617F31D45691300F446FA /* s2pointregion.h */,
-				127617F41D45691300F446FA /* s2polygon.h */,
-				127617F51D45691300F446FA /* s2polygonbuilder.h */,
-				127617F61D45691300F446FA /* s2polyline.h */,
-				127617F71D45691300F446FA /* s2r2rect.h */,
-				127617F81D45691300F446FA /* s2region.h */,
-				127617F91D45691300F446FA /* s2regioncoverer.h */,
-				127617FA1D45691300F446FA /* s2regionintersection.h */,
-				127617FB1D45691300F446FA /* s2regionunion.h */,
-				127617FC1D45691300F446FA /* strings */,
-				127618011D45691300F446FA /* util */,
-				127617C81D4568CD00F446FA /* S2Sphere.h */,
-				127618531D45696900F446FA /* S2SphereFactory.h */,
-				127617CA1D4568CD00F446FA /* Info.plist */,
-				127618511D45693B00F446FA /* S2SphereFactory.mm */,
-			);
-			path = S2Sphere;
-			sourceTree = "<group>";
-		};
-		127617D21D45691300F446FA /* base */ = {
-			isa = PBXGroup;
-			children = (
-				127617D31D45691300F446FA /* basictypes.h */,
-				127617D41D45691300F446FA /* casts.h */,
-				127617D51D45691300F446FA /* commandlineflags.h */,
-				127617D61D45691300F446FA /* int128.h */,
-				127617D71D45691300F446FA /* integral_types.h */,
-				127617D81D45691300F446FA /* logging.h */,
-				127617D91D45691300F446FA /* macros.h */,
-				127617DA1D45691300F446FA /* port.h */,
-				127617DB1D45691300F446FA /* scoped_ptr.h */,
-				127617DC1D45691300F446FA /* stl_decl.h */,
-				127617DD1D45691300F446FA /* stl_decl_msvc.h */,
-				127617DE1D45691300F446FA /* stl_decl_osx.h */,
-				127617DF1D45691300F446FA /* stringprintf.h */,
-				127617E01D45691300F446FA /* strtoint.h */,
-				127617E11D45691300F446FA /* template_util.h */,
-				127617E21D45691300F446FA /* type_traits.h */,
-			);
-			path = base;
-			sourceTree = "<group>";
-		};
-		127617FC1D45691300F446FA /* strings */ = {
-			isa = PBXGroup;
-			children = (
-				127617FD1D45691300F446FA /* ascii_ctype.h */,
-				127617FE1D45691300F446FA /* split.h */,
-				127617FF1D45691300F446FA /* stringprintf.h */,
-				127618001D45691300F446FA /* strutil.h */,
-			);
-			path = strings;
-			sourceTree = "<group>";
-		};
-		127618011D45691300F446FA /* util */ = {
-			isa = PBXGroup;
-			children = (
-				127618021D45691300F446FA /* coding */,
-				127618051D45691300F446FA /* endian */,
-				127618071D45691300F446FA /* hash */,
-				1276180A1D45691300F446FA /* math */,
-			);
-			path = util;
-			sourceTree = "<group>";
-		};
-		127618021D45691300F446FA /* coding */ = {
-			isa = PBXGroup;
-			children = (
-				127618031D45691300F446FA /* coder.h */,
-				127618041D45691300F446FA /* varint.h */,
-			);
-			path = coding;
-			sourceTree = "<group>";
-		};
-		127618051D45691300F446FA /* endian */ = {
-			isa = PBXGroup;
-			children = (
-				127618061D45691300F446FA /* endian.h */,
-			);
-			path = endian;
-			sourceTree = "<group>";
-		};
-		127618071D45691300F446FA /* hash */ = {
-			isa = PBXGroup;
-			children = (
-				127618081D45691300F446FA /* hash.h */,
-				127618091D45691300F446FA /* hash_jenkins_lookup2.h */,
-			);
-			path = hash;
-			sourceTree = "<group>";
-		};
-		1276180A1D45691300F446FA /* math */ = {
-			isa = PBXGroup;
-			children = (
-				1276180B1D45691300F446FA /* mathlimits.h */,
-				1276180C1D45691300F446FA /* mathutil.h */,
-				1276180D1D45691300F446FA /* matrix3x3-inl.h */,
-				1276180E1D45691300F446FA /* matrix3x3.h */,
-				1276180F1D45691300F446FA /* vector2-inl.h */,
-				127618101D45691300F446FA /* vector2.h */,
-				127618111D45691300F446FA /* vector3-inl.h */,
-				127618121D45691300F446FA /* vector3.h */,
-				127618131D45691300F446FA /* vector4-inl.h */,
-				127618141D45691300F446FA /* vector4.h */,
-			);
-			path = math;
-			sourceTree = "<group>";
-		};
 		4DB5BD027634F7D57F2F15B3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -2658,8 +2413,6 @@
 				31CF62A75AD969201AB06A47 /* Pods-PokeHunt.release.xcconfig */,
 				CF5492EA19E73916733032D7 /* Pods-POGOProto.debug.xcconfig */,
 				BBE8A56A51BCC041D12316A5 /* Pods-POGOProto.release.xcconfig */,
-				075DE4CD2381DC00A95CB0B3 /* Pods-S2Sphere.debug.xcconfig */,
-				36F697CC7813E6605B464E7B /* Pods-S2Sphere.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -2669,7 +2422,7 @@
 			children = (
 				F6DCD15C1D3FB09900FA576E /* PokeHunt */,
 				12760C051D45091F00F446FA /* POGOProto */,
-				127617C71D4568CD00F446FA /* S2Sphere */,
+				12700EA31D46DE95002AFB90 /* S2SphereAdapter */,
 				F6DCD15B1D3FB09900FA576E /* Products */,
 				7930856956B0E95939E0942E /* Pods */,
 				4DB5BD027634F7D57F2F15B3 /* Frameworks */,
@@ -2681,7 +2434,7 @@
 			children = (
 				F6DCD15A1D3FB09900FA576E /* PokeHunt.app */,
 				12760C041D45091F00F446FA /* POGOProto.framework */,
-				127617C61D4568CD00F446FA /* S2Sphere.framework */,
+				12700EA21D46DE95002AFB90 /* S2SphereAdapter.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -2699,6 +2452,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		12700E9F1D46DE95002AFB90 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12700EB21D46DEB1002AFB90 /* S2SphereAdapter.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		12760C011D45091F00F446FA /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -2929,75 +2690,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		127617C31D4568CD00F446FA /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				127618481D45691400F446FA /* mathutil.h in Headers */,
-				127618211D45691400F446FA /* stringprintf.h in Headers */,
-				1276182B1D45691400F446FA /* s2.h in Headers */,
-				127618491D45691400F446FA /* matrix3x3-inl.h in Headers */,
-				127618421D45691400F446FA /* coder.h in Headers */,
-				1276184B1D45691400F446FA /* vector2-inl.h in Headers */,
-				1276181A1D45691300F446FA /* logging.h in Headers */,
-				127618291D45691400F446FA /* s1angle.h in Headers */,
-				127618441D45691400F446FA /* endian.h in Headers */,
-				1276184A1D45691400F446FA /* matrix3x3.h in Headers */,
-				1276183D1D45691400F446FA /* s2regionunion.h in Headers */,
-				1276181D1D45691400F446FA /* scoped_ptr.h in Headers */,
-				127618541D456EBE00F446FA /* S2SphereFactory.h in Headers */,
-				127618331D45691400F446FA /* s2latlngrect.h in Headers */,
-				127618221D45691400F446FA /* strtoint.h in Headers */,
-				127618311D45691400F446FA /* s2edgeutil.h in Headers */,
-				1276184F1D45691400F446FA /* vector4-inl.h in Headers */,
-				127618191D45691300F446FA /* integral_types.h in Headers */,
-				127618381D45691400F446FA /* s2polyline.h in Headers */,
-				127618171D45691300F446FA /* commandlineflags.h in Headers */,
-				1276182C1D45691400F446FA /* s2cap.h in Headers */,
-				1276181B1D45691300F446FA /* macros.h in Headers */,
-				127618411D45691400F446FA /* strutil.h in Headers */,
-				127618401D45691400F446FA /* stringprintf.h in Headers */,
-				1276182F1D45691400F446FA /* s2cellunion.h in Headers */,
-				127618431D45691400F446FA /* varint.h in Headers */,
-				127618161D45691300F446FA /* casts.h in Headers */,
-				1276183B1D45691400F446FA /* s2regioncoverer.h in Headers */,
-				127618361D45691400F446FA /* s2polygon.h in Headers */,
-				127618281D45691400F446FA /* r1interval.h in Headers */,
-				1276183A1D45691400F446FA /* s2region.h in Headers */,
-				127617C91D4568CD00F446FA /* S2Sphere.h in Headers */,
-				127618241D45691400F446FA /* type_traits.h in Headers */,
-				127618451D45691400F446FA /* hash.h in Headers */,
-				127618341D45691400F446FA /* s2loop.h in Headers */,
-				1276181F1D45691400F446FA /* stl_decl_msvc.h in Headers */,
-				1276183E1D45691400F446FA /* ascii_ctype.h in Headers */,
-				127618181D45691300F446FA /* int128.h in Headers */,
-				1276181E1D45691400F446FA /* stl_decl.h in Headers */,
-				127618201D45691400F446FA /* stl_decl_osx.h in Headers */,
-				1276183C1D45691400F446FA /* s2regionintersection.h in Headers */,
-				127618301D45691400F446FA /* s2edgeindex.h in Headers */,
-				1276184C1D45691400F446FA /* vector2.h in Headers */,
-				127618501D45691400F446FA /* vector4.h in Headers */,
-				1276183F1D45691400F446FA /* split.h in Headers */,
-				1276182E1D45691400F446FA /* s2cellid.h in Headers */,
-				1276182D1D45691400F446FA /* s2cell.h in Headers */,
-				127618321D45691400F446FA /* s2latlng.h in Headers */,
-				127618391D45691400F446FA /* s2r2rect.h in Headers */,
-				1276181C1D45691300F446FA /* port.h in Headers */,
-				127618351D45691400F446FA /* s2pointregion.h in Headers */,
-				127618231D45691400F446FA /* template_util.h in Headers */,
-				127618461D45691400F446FA /* hash_jenkins_lookup2.h in Headers */,
-				127618371D45691400F446FA /* s2polygonbuilder.h in Headers */,
-				127618151D45691300F446FA /* basictypes.h in Headers */,
-				1276182A1D45691400F446FA /* s1interval.h in Headers */,
-				1276184E1D45691400F446FA /* vector3.h in Headers */,
-				1276184D1D45691400F446FA /* vector3-inl.h in Headers */,
-				127618471D45691400F446FA /* mathlimits.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		12700EA11D46DE95002AFB90 /* S2SphereAdapter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 12700EAB1D46DE96002AFB90 /* Build configuration list for PBXNativeTarget "S2SphereAdapter" */;
+			buildPhases = (
+				12700E9D1D46DE95002AFB90 /* Sources */,
+				12700E9E1D46DE95002AFB90 /* Frameworks */,
+				12700E9F1D46DE95002AFB90 /* Headers */,
+				12700EA01D46DE95002AFB90 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = S2SphereAdapter;
+			productName = S2SphereAdapter;
+			productReference = 12700EA21D46DE95002AFB90 /* S2SphereAdapter.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		12760C031D45091F00F446FA /* POGOProto */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 12760C0D1D45091F00F446FA /* Build configuration list for PBXNativeTarget "POGOProto" */;
@@ -3018,26 +2731,6 @@
 			productReference = 12760C041D45091F00F446FA /* POGOProto.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		127617C51D4568CD00F446FA /* S2Sphere */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 127617CF1D4568CE00F446FA /* Build configuration list for PBXNativeTarget "S2Sphere" */;
-			buildPhases = (
-				56E20420ACDA743ABA7809D8 /* [CP] Check Pods Manifest.lock */,
-				127617C11D4568CD00F446FA /* Sources */,
-				127617C21D4568CD00F446FA /* Frameworks */,
-				127617C31D4568CD00F446FA /* Headers */,
-				127617C41D4568CD00F446FA /* Resources */,
-				1A3DD34C3AA798468FBF761E /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = S2Sphere;
-			productName = S2Sphere;
-			productReference = 127617C61D4568CD00F446FA /* S2Sphere.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		F6DCD1591D3FB09900FA576E /* PokeHunt */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F6DCD16C1D3FB09900FA576E /* Build configuration list for PBXNativeTarget "PokeHunt" */;
@@ -3055,7 +2748,7 @@
 			);
 			dependencies = (
 				12760C0A1D45091F00F446FA /* PBXTargetDependency */,
-				127617CC1D4568CD00F446FA /* PBXTargetDependency */,
+				12700EA81D46DE95002AFB90 /* PBXTargetDependency */,
 			);
 			name = PokeHunt;
 			productName = PokeHunt;
@@ -3072,10 +2765,10 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Fantastik Solution";
 				TargetAttributes = {
-					12760C031D45091F00F446FA = {
+					12700EA11D46DE95002AFB90 = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
-					127617C51D4568CD00F446FA = {
+					12760C031D45091F00F446FA = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
 					F6DCD1591D3FB09900FA576E = {
@@ -3098,20 +2791,20 @@
 			targets = (
 				F6DCD1591D3FB09900FA576E /* PokeHunt */,
 				12760C031D45091F00F446FA /* POGOProto */,
-				127617C51D4568CD00F446FA /* S2Sphere */,
+				12700EA11D46DE95002AFB90 /* S2SphereAdapter */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		12760C021D45091F00F446FA /* Resources */ = {
+		12700EA01D46DE95002AFB90 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		127617C41D4568CD00F446FA /* Resources */ = {
+		12760C021D45091F00F446FA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -3175,21 +2868,6 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		1A3DD34C3AA798468FBF761E /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-S2Sphere/Pods-S2Sphere-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		2325AF0318541773E62F2A86 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -3203,21 +2881,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-POGOProto/Pods-POGOProto-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		56E20420ACDA743ABA7809D8 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		EB6B6CAC185D9D5F20222A3F /* [CP] Embed Pods Frameworks */ = {
@@ -3251,6 +2914,13 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		12700E9D1D46DE95002AFB90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		12760BFF1D45091F00F446FA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -3479,14 +3149,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		127617C11D4568CD00F446FA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				127618521D45693B00F446FA /* S2SphereFactory.mm in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		F6DCD1561D3FB09900FA576E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -3508,19 +3170,57 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		12700EA81D46DE95002AFB90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 12700EA11D46DE95002AFB90 /* S2SphereAdapter */;
+			targetProxy = 12700EA71D46DE95002AFB90 /* PBXContainerItemProxy */;
+		};
 		12760C0A1D45091F00F446FA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 12760C031D45091F00F446FA /* POGOProto */;
 			targetProxy = 12760C091D45091F00F446FA /* PBXContainerItemProxy */;
 		};
-		127617CC1D4568CD00F446FA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 127617C51D4568CD00F446FA /* S2Sphere */;
-			targetProxy = 127617CB1D4568CD00F446FA /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		12700EAC1D46DE96002AFB90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = S2SphereAdapter/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fantastik.S2SphereAdapter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		12700EAD1D46DE96002AFB90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = S2SphereAdapter/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fantastik.S2SphereAdapter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		12760C0E1D45091F00F446FA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CF5492EA19E73916733032D7 /* Pods-POGOProto.debug.xcconfig */;
@@ -3560,56 +3260,6 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fantastik.POGOProto;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		127617D01D4568CE00F446FA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 075DE4CD2381DC00A95CB0B3 /* Pods-S2Sphere.debug.xcconfig */;
-			buildSettings = {
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				HEADER_SEARCH_PATHS = "$PROJECT_DIR/**";
-				INFOPLIST_FILE = S2Sphere/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/S2Sphere",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.fantastik.S2Sphere;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		127617D11D4568CE00F446FA /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 36F697CC7813E6605B464E7B /* Pods-S2Sphere.release.xcconfig */;
-			buildSettings = {
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				HEADER_SEARCH_PATHS = "$PROJECT_DIR/**";
-				INFOPLIST_FILE = S2Sphere/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/S2Sphere",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.fantastik.S2Sphere;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -3739,20 +3389,19 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		12700EAB1D46DE96002AFB90 /* Build configuration list for PBXNativeTarget "S2SphereAdapter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				12700EAC1D46DE96002AFB90 /* Debug */,
+				12700EAD1D46DE96002AFB90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		12760C0D1D45091F00F446FA /* Build configuration list for PBXNativeTarget "POGOProto" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				12760C0E1D45091F00F446FA /* Debug */,
 				12760C0F1D45091F00F446FA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		127617CF1D4568CE00F446FA /* Build configuration list for PBXNativeTarget "S2Sphere" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				127617D01D4568CE00F446FA /* Debug */,
-				127617D11D4568CE00F446FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
