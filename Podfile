@@ -12,6 +12,10 @@ target 'PokeHunt' do
     pod 'Protobuf', '3.0.0-beta-4'
 end
 
+target 'S2Sphere' do
+    pod 'OpenSSL', '1.0.208'
+end
+
 
 target 'POGOProto' do
     pod 'Protobuf', '3.0.0-beta-4'
