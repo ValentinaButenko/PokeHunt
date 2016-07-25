@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12700D751D46CB3E002AFB90 /* libs2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 12700D721D46CB3E002AFB90 /* libs2.a */; };
+		12700D761D46CB3E002AFB90 /* libs2cellid.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 12700D731D46CB3E002AFB90 /* libs2cellid.a */; };
+		12700D771D46CB3E002AFB90 /* libs2util.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 12700D741D46CB3E002AFB90 /* libs2util.a */; };
+		12700D781D46CB52002AFB90 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 127616E01D45379600F446FA /* libc++.tbd */; };
+		12700D7B1D46D7C5002AFB90 /* libpthread.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 12700D791D46D4BA002AFB90 /* libpthread.tbd */; };
 		12760BAF1D4424A200F446FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12760B971D4424A200F446FA /* Assets.xcassets */; };
 		12760BB01D4424A200F446FA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12760B981D4424A200F446FA /* LaunchScreen.xib */; };
 		12760BB21D4424A200F446FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12760B9C1D4424A200F446FA /* AppDelegate.swift */; };
@@ -485,9 +490,6 @@
 		127618221D45691400F446FA /* strtoint.h in Headers */ = {isa = PBXBuildFile; fileRef = 127617E01D45691300F446FA /* strtoint.h */; };
 		127618231D45691400F446FA /* template_util.h in Headers */ = {isa = PBXBuildFile; fileRef = 127617E11D45691300F446FA /* template_util.h */; };
 		127618241D45691400F446FA /* type_traits.h in Headers */ = {isa = PBXBuildFile; fileRef = 127617E21D45691300F446FA /* type_traits.h */; };
-		127618251D45691400F446FA /* libs2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 127617E31D45691300F446FA /* libs2.dylib */; };
-		127618261D45691400F446FA /* libs2cellid.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 127617E41D45691300F446FA /* libs2cellid.dylib */; };
-		127618271D45691400F446FA /* libs2util.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 127617E51D45691300F446FA /* libs2util.dylib */; };
 		127618281D45691400F446FA /* r1interval.h in Headers */ = {isa = PBXBuildFile; fileRef = 127617E61D45691300F446FA /* r1interval.h */; };
 		127618291D45691400F446FA /* s1angle.h in Headers */ = {isa = PBXBuildFile; fileRef = 127617E71D45691300F446FA /* s1angle.h */; };
 		1276182A1D45691400F446FA /* s1interval.h in Headers */ = {isa = PBXBuildFile; fileRef = 127617E81D45691300F446FA /* s1interval.h */; };
@@ -531,6 +533,7 @@
 		127618501D45691400F446FA /* vector4.h in Headers */ = {isa = PBXBuildFile; fileRef = 127618141D45691300F446FA /* vector4.h */; };
 		127618521D45693B00F446FA /* S2SphereFactory.mm in Sources */ = {isa = PBXBuildFile; fileRef = 127618511D45693B00F446FA /* S2SphereFactory.mm */; };
 		127618541D456EBE00F446FA /* S2SphereFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 127618531D45696900F446FA /* S2SphereFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		14720401B9DF9E770BDABD69 /* Pods_S2Sphere.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE36EC42E0C3E7D9665FDE5C /* Pods_S2Sphere.framework */; };
 		39A0F50EAE19156C026555D7 /* Pods_PokeHunt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58DD6499E2E6B4CA44BAA4CB /* Pods_PokeHunt.framework */; };
 		BB8605387F2A7B4E86193BE2 /* Pods_POGOProto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7F36E17C694A1331B5CC162 /* Pods_POGOProto.framework */; };
 		F64A96631D40E8C000A72182 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64A96621D40E8C000A72182 /* Social.framework */; };
@@ -569,7 +572,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		075DE4CD2381DC00A95CB0B3 /* Pods-S2Sphere.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-S2Sphere.debug.xcconfig"; path = "Pods/Target Support Files/Pods-S2Sphere/Pods-S2Sphere.debug.xcconfig"; sourceTree = "<group>"; };
 		076FF728795DAC574D838F61 /* Pods_PHProtobufModels.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PHProtobufModels.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		12700D721D46CB3E002AFB90 /* libs2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libs2.a; sourceTree = "<group>"; };
+		12700D731D46CB3E002AFB90 /* libs2cellid.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libs2cellid.a; sourceTree = "<group>"; };
+		12700D741D46CB3E002AFB90 /* libs2util.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libs2util.a; sourceTree = "<group>"; };
+		12700D791D46D4BA002AFB90 /* libpthread.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libpthread.tbd; path = usr/lib/libpthread.tbd; sourceTree = SDKROOT; };
 		12760B951D4424A200F446FA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		12760B971D4424A200F446FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		12760B981D4424A200F446FA /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
@@ -1275,9 +1283,6 @@
 		127617E01D45691300F446FA /* strtoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = strtoint.h; sourceTree = "<group>"; };
 		127617E11D45691300F446FA /* template_util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = template_util.h; sourceTree = "<group>"; };
 		127617E21D45691300F446FA /* type_traits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = type_traits.h; sourceTree = "<group>"; };
-		127617E31D45691300F446FA /* libs2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libs2.dylib; sourceTree = "<group>"; };
-		127617E41D45691300F446FA /* libs2cellid.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libs2cellid.dylib; sourceTree = "<group>"; };
-		127617E51D45691300F446FA /* libs2util.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libs2util.dylib; sourceTree = "<group>"; };
 		127617E61D45691300F446FA /* r1interval.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = r1interval.h; sourceTree = "<group>"; };
 		127617E71D45691300F446FA /* s1angle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s1angle.h; sourceTree = "<group>"; };
 		127617E81D45691300F446FA /* s1interval.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s1interval.h; sourceTree = "<group>"; };
@@ -1322,11 +1327,13 @@
 		127618511D45693B00F446FA /* S2SphereFactory.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = S2SphereFactory.mm; sourceTree = "<group>"; };
 		127618531D45696900F446FA /* S2SphereFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = S2SphereFactory.h; sourceTree = "<group>"; };
 		31CF62A75AD969201AB06A47 /* Pods-PokeHunt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeHunt.release.xcconfig"; path = "Pods/Target Support Files/Pods-PokeHunt/Pods-PokeHunt.release.xcconfig"; sourceTree = "<group>"; };
+		36F697CC7813E6605B464E7B /* Pods-S2Sphere.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-S2Sphere.release.xcconfig"; path = "Pods/Target Support Files/Pods-S2Sphere/Pods-S2Sphere.release.xcconfig"; sourceTree = "<group>"; };
 		58DD6499E2E6B4CA44BAA4CB /* Pods_PokeHunt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PokeHunt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		701B67ED30CCD092DC53B694 /* Pods-PokeHunt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeHunt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PokeHunt/Pods-PokeHunt.debug.xcconfig"; sourceTree = "<group>"; };
 		BBE8A56A51BCC041D12316A5 /* Pods-POGOProto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-POGOProto.release.xcconfig"; path = "Pods/Target Support Files/Pods-POGOProto/Pods-POGOProto.release.xcconfig"; sourceTree = "<group>"; };
 		CF5492EA19E73916733032D7 /* Pods-POGOProto.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-POGOProto.debug.xcconfig"; path = "Pods/Target Support Files/Pods-POGOProto/Pods-POGOProto.debug.xcconfig"; sourceTree = "<group>"; };
 		D7F36E17C694A1331B5CC162 /* Pods_POGOProto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_POGOProto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE36EC42E0C3E7D9665FDE5C /* Pods_S2Sphere.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_S2Sphere.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F64A96621D40E8C000A72182 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		F6DCD15A1D3FB09900FA576E /* PokeHunt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeHunt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -1344,9 +1351,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				127618271D45691400F446FA /* libs2util.dylib in Frameworks */,
-				127618261D45691400F446FA /* libs2cellid.dylib in Frameworks */,
-				127618251D45691400F446FA /* libs2.dylib in Frameworks */,
+				12700D7B1D46D7C5002AFB90 /* libpthread.tbd in Frameworks */,
+				12700D781D46CB52002AFB90 /* libc++.tbd in Frameworks */,
+				12700D751D46CB3E002AFB90 /* libs2.a in Frameworks */,
+				12700D761D46CB3E002AFB90 /* libs2cellid.a in Frameworks */,
+				12700D771D46CB3E002AFB90 /* libs2util.a in Frameworks */,
+				14720401B9DF9E770BDABD69 /* Pods_S2Sphere.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2502,10 +2512,10 @@
 		127617C71D4568CD00F446FA /* S2Sphere */ = {
 			isa = PBXGroup;
 			children = (
+				12700D721D46CB3E002AFB90 /* libs2.a */,
+				12700D731D46CB3E002AFB90 /* libs2cellid.a */,
+				12700D741D46CB3E002AFB90 /* libs2util.a */,
 				127617D21D45691300F446FA /* base */,
-				127617E31D45691300F446FA /* libs2.dylib */,
-				127617E41D45691300F446FA /* libs2cellid.dylib */,
-				127617E51D45691300F446FA /* libs2util.dylib */,
 				127617E61D45691300F446FA /* r1interval.h */,
 				127617E71D45691300F446FA /* s1angle.h */,
 				127617E81D45691300F446FA /* s1interval.h */,
@@ -2629,12 +2639,14 @@
 		4DB5BD027634F7D57F2F15B3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				12700D791D46D4BA002AFB90 /* libpthread.tbd */,
 				127616E01D45379600F446FA /* libc++.tbd */,
 				127616DE1D45375E00F446FA /* libc++abi.tbd */,
 				F64A96621D40E8C000A72182 /* Social.framework */,
 				58DD6499E2E6B4CA44BAA4CB /* Pods_PokeHunt.framework */,
 				076FF728795DAC574D838F61 /* Pods_PHProtobufModels.framework */,
 				D7F36E17C694A1331B5CC162 /* Pods_POGOProto.framework */,
+				DE36EC42E0C3E7D9665FDE5C /* Pods_S2Sphere.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -2646,6 +2658,8 @@
 				31CF62A75AD969201AB06A47 /* Pods-PokeHunt.release.xcconfig */,
 				CF5492EA19E73916733032D7 /* Pods-POGOProto.debug.xcconfig */,
 				BBE8A56A51BCC041D12316A5 /* Pods-POGOProto.release.xcconfig */,
+				075DE4CD2381DC00A95CB0B3 /* Pods-S2Sphere.debug.xcconfig */,
+				36F697CC7813E6605B464E7B /* Pods-S2Sphere.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -3008,10 +3022,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 127617CF1D4568CE00F446FA /* Build configuration list for PBXNativeTarget "S2Sphere" */;
 			buildPhases = (
+				56E20420ACDA743ABA7809D8 /* [CP] Check Pods Manifest.lock */,
 				127617C11D4568CD00F446FA /* Sources */,
 				127617C21D4568CD00F446FA /* Frameworks */,
 				127617C31D4568CD00F446FA /* Headers */,
 				127617C41D4568CD00F446FA /* Resources */,
+				1A3DD34C3AA798468FBF761E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -3159,6 +3175,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		1A3DD34C3AA798468FBF761E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-S2Sphere/Pods-S2Sphere-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		2325AF0318541773E62F2A86 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -3172,6 +3203,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-POGOProto/Pods-POGOProto-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		56E20420ACDA743ABA7809D8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		EB6B6CAC185D9D5F20222A3F /* [CP] Embed Pods Frameworks */ = {
@@ -3523,6 +3569,7 @@
 		};
 		127617D01D4568CE00F446FA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 075DE4CD2381DC00A95CB0B3 /* Pods-S2Sphere.debug.xcconfig */;
 			buildSettings = {
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -3547,6 +3594,7 @@
 		};
 		127617D11D4568CE00F446FA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36F697CC7813E6605B464E7B /* Pods-S2Sphere.release.xcconfig */;
 			buildSettings = {
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -3664,6 +3712,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/PokeHunt/3rdParty/s2-geometry",
+					"$(PROJECT_DIR)/PokeHunt",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.fantastik.PokeHunt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -3680,6 +3729,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/PokeHunt/3rdParty/s2-geometry",
+					"$(PROJECT_DIR)/PokeHunt",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.fantastik.PokeHunt;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreLocation
 import Alamofire
 import POGOProto
 import Protobuf
@@ -43,12 +44,26 @@ final class NianticlabsService {
     private var session : POGOResponseEnvelope? = nil
     // MARK: internal methods
 
-    internal func getAllStops(handler: ([Any]?, NSError?) -> Void) {
-        
+    internal func getAllStops(handler: ([POGOGetMapObjectsResponse]?, NSError?) -> Void) {
+        let coord = CLLocationCoordinate2D(latitude: 50.4313132, longitude: 30.4935952)
+        let r = NianticlabsDataGenerator.stopsRequest(session!, loc: coord)
+        self.manager.request(.POST, kNianticlabsAPIURL, parameters: [:], encoding: .Custom({ (convertible, _) in
+            let mutableRequest = convertible.URLRequest.copy() as! NSMutableURLRequest
+            mutableRequest.HTTPBody = r.data()
+            return (mutableRequest, nil)
+        })).responseData { (resp) in
+            switch (resp.result) {
+            case .Failure(let err):
+                print(err)
+            case .Success(let val):
+                let resp = try! POGOGetMapObjectsResponse(data: val)
+                print(resp)
+            }
+            }.resume()
     }
 
     // MARK: private methods
-    private func getLocalSession(handler: (POGOResponseEnvelope?, NSError?) -> Void) {
+    internal func getLocalSession(handler: (POGOResponseEnvelope?, NSError?) -> Void) {
         if let session = session {
             handler(session, nil)
             return;
@@ -84,6 +99,10 @@ final class NianticlabsService {
                             if (url.containsString("plfe")) {
                                 self.session = respEnvelope
                                 handler(respEnvelope, nil)
+                                self.getAllStops({ (res, err) in
+                                    print(resp)
+                                    print(err)
+                                })
                                 return
                             }
                         }

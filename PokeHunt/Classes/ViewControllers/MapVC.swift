@@ -28,9 +28,9 @@ class MapVC: UIViewController {
         self.setupMap()
         self.setupSearchButton()
         self.setupPayButton()
-//        NianticlabsService.mainService.;{ (resp, err) in
-//            
-//        }
+        NianticlabsService.mainService.getLocalSession { (_, _) in
+            
+        }
     }
 
     func setupNavigationController(){

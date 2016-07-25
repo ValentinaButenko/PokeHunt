@@ -10,3 +10,5 @@
 #import "ResponseEnvelope.pbobjc.h"
 #import "Request.pbobjc.h"
 #import "GetMapObjectsMessage.pbobjc.h"
+#import "AuthTicket.pbobjc.h"
+#import "GetMapObjectsResponse.pbobjc.h"

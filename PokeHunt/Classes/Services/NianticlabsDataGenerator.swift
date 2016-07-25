@@ -36,26 +36,33 @@ final class NianticlabsDataGenerator {
         return r
     }
 
-    class func stopsRequest(session : POGOResponseEnvelope) -> POGORequestEnvelope {
+    class func stopsRequest(session : POGOResponseEnvelope,
+                            loc: CLLocationCoordinate2D) -> POGORequestEnvelope {
         let r  = POGORequestEnvelope()
+
+        r.latitude = loc.latitude
+        r.longitude = loc.longitude
+
+        r.authTicket = session.authTicket
+        r.requestsArray.addObject(getMapObjectRequest(loc))
 
         return r
     }
 
     // MARK: private
-    internal func getMapObjectRequest(loc: CLLocation) -> POGORequest {
+    private class func getMapObjectRequest(loc: CLLocationCoordinate2D) -> POGORequest {
         let r = POGORequest()
         SetPOGORequest_RequestType_RawValue(r, RequestType.GetMapObjects.rawValue)
 
         let mapObj = POGOGetMapObjectsMessage()
-        let cells = S2SphereFactory.cellsForLat(loc.coordinate.latitude, lon: loc.coordinate.longitude)
+        let cells = S2SphereFactory.cellsForLat(loc.latitude, lon: loc.longitude)
         for (_, e) in cells.enumerate() {
             mapObj.cellIdArray.addValue(e.unsignedLongLongValue)
             mapObj.sinceTimestampMsArray.addValue(0)
         }
 
-        mapObj.latitude = loc.coordinate.latitude
-        mapObj.longitude = loc.coordinate.longitude
+        mapObj.latitude = loc.latitude
+        mapObj.longitude = loc.longitude
 
         r.requestMessage = mapObj.data()
 
