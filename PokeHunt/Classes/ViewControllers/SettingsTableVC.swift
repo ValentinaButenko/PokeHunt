@@ -88,7 +88,8 @@ class SettingsTableVC: UITableViewController, UITextFieldDelegate{
             let vc = AboutUsVC()
             self.navigationController?.pushViewController(vc, animated: true)
         case "privacyPolicy":
-            print("privacyPolicyTapped")
+            let vc = PrivacyPolicyVC()
+            self.navigationController?.pushViewController(vc, animated: true)
         case "rateUs":
             print("rateUs tapped")
         case "logOut":
