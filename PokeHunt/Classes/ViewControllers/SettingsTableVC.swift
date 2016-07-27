@@ -16,8 +16,6 @@ class SettingsTableVC: UITableViewController, UITextFieldDelegate{
     @IBOutlet weak var displayPokestopCell: UITableViewCell!
     @IBOutlet weak var displayJymsCell: UITableViewCell!
     @IBOutlet weak var stepsAreaCell: UITableViewCell!
-//    @IBOutlet weak var termsCell: UITableViewCell!
-//    @IBOutlet weak var privacyPolicyCell: UITableViewCell!
     @IBOutlet weak var rateUsCell: UITableViewCell!
     @IBOutlet weak var logOutCell: UITableViewCell!
     @IBOutlet weak var aboutUsCell: UITableViewCell!
@@ -35,8 +33,13 @@ class SettingsTableVC: UITableViewController, UITextFieldDelegate{
         super.viewDidLoad()
         self.setup()
 
+        tableView.delegate = self
+        tableView.dataSource = self
+
         let tap = UITapGestureRecognizer(target: self, action: #selector(SettingsTableVC.dismissKeyboard))
+
         view.addGestureRecognizer(tap)
+        tap.cancelsTouchesInView = false
     }
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -202,7 +205,7 @@ class SettingsTableVC: UITableViewController, UITextFieldDelegate{
         separator.backgroundColor = UIColor(red: (170/255), green: (170/255), blue: (170/255), alpha: 0.8)
         privacyPolicyCell.addSubview(separator)
         
-        privacyPolicyCell.accessoryType = .DisclosureIndicator
+        privacyPolicyCell.accessoryType = .DetailDisclosureButton
         privacyPolicyCell.accessoryView = UIImageView(image: UIImage(named: R.image.disclosure.name))
     }
 
@@ -211,7 +214,7 @@ class SettingsTableVC: UITableViewController, UITextFieldDelegate{
         separator.backgroundColor = UIColor(red: (170/255), green: (170/255), blue: (170/255), alpha: 0.8)
         aboutUsCell.addSubview(separator)
 
-        aboutUsCell.accessoryType = .DisclosureIndicator
+        aboutUsCell.accessoryType = .DetailDisclosureButton
         aboutUsCell.accessoryView = UIImageView(image: UIImage(named: R.image.disclosure.name))
     }
 
@@ -287,6 +290,28 @@ class SettingsTableVC: UITableViewController, UITextFieldDelegate{
 
     func dismissKeyboard() {
         view.endEditing(true)
+    }
+
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+
+        let cell = self.tableView.cellForRowAtIndexPath(indexPath)
+
+        guard let identifier = cell?.reuseIdentifier else{
+           return print(NSError.description())
+        }
+
+        switch (identifier) {
+        case "aboutUs":
+            print("aboutUs tapped")
+        case "privacyPolicy":
+            print("privacyPolicyTapped")
+        case "rateUs":
+            print("rateUs tapped")
+        case "logOut":
+            print("logOut tapped")
+        default:
+            print("Nothing Happens")
+        }
     }
 }
 
