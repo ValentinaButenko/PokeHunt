@@ -16,10 +16,12 @@ class SettingsTableVC: UITableViewController, UITextFieldDelegate{
     @IBOutlet weak var displayPokestopCell: UITableViewCell!
     @IBOutlet weak var displayJymsCell: UITableViewCell!
     @IBOutlet weak var stepsAreaCell: UITableViewCell!
-    @IBOutlet weak var termsCell: UITableViewCell!
-    @IBOutlet weak var privacyPolicyCell: UITableViewCell!
+//    @IBOutlet weak var termsCell: UITableViewCell!
+//    @IBOutlet weak var privacyPolicyCell: UITableViewCell!
     @IBOutlet weak var rateUsCell: UITableViewCell!
     @IBOutlet weak var logOutCell: UITableViewCell!
+    @IBOutlet weak var aboutUsCell: UITableViewCell!
+    @IBOutlet weak var privacyPolicyCell: UITableViewCell!
 
     var autorefreshSwitch: UISwitch!
     var displayPokeSwitch: UISwitch!
@@ -75,8 +77,8 @@ class SettingsTableVC: UITableViewController, UITextFieldDelegate{
         self.setupDisplayPokestopCell()
         self.setupDisplayJymsCell()
         self.setupStepsAreaCell()
-        self.setupTermsCell()
         self.setupPrivacyPolicyCell()
+        self.setupAboutUsCell()
         self.setupRateUsCell()
         self.setupLogOutCell()
         self.addDoneButtonOnKeyboard()
@@ -195,22 +197,22 @@ class SettingsTableVC: UITableViewController, UITextFieldDelegate{
         stepsAreaCell.addSubview(separator)
     }
 
-    func setupTermsCell(){
-        let separator = UIView(frame: CGRect(x: 0, y: termsCell.frame.size.height - 1, width: termsCell.frame.size.width, height: 1))
-        separator.backgroundColor = UIColor(red: (170/255), green: (170/255), blue: (170/255), alpha: 0.8)
-        termsCell.addSubview(separator)
-
-        termsCell.accessoryType = .DisclosureIndicator
-        termsCell.accessoryView = UIImageView(image: UIImage(named: R.image.disclosure.name))
-    }
-
     func setupPrivacyPolicyCell(){
         let separator = UIView(frame: CGRect(x: 0, y: privacyPolicyCell.frame.size.height - 1, width: privacyPolicyCell.frame.size.width, height: 1))
         separator.backgroundColor = UIColor(red: (170/255), green: (170/255), blue: (170/255), alpha: 0.8)
         privacyPolicyCell.addSubview(separator)
-
+        
         privacyPolicyCell.accessoryType = .DisclosureIndicator
         privacyPolicyCell.accessoryView = UIImageView(image: UIImage(named: R.image.disclosure.name))
+    }
+
+    func setupAboutUsCell(){
+        let separator = UIView(frame: CGRect(x: 0, y: aboutUsCell.frame.size.height - 1, width: aboutUsCell.frame.size.width, height: 1))
+        separator.backgroundColor = UIColor(red: (170/255), green: (170/255), blue: (170/255), alpha: 0.8)
+        aboutUsCell.addSubview(separator)
+
+        aboutUsCell.accessoryType = .DisclosureIndicator
+        aboutUsCell.accessoryView = UIImageView(image: UIImage(named: R.image.disclosure.name))
     }
 
     func setupRateUsCell(){
