@@ -27,6 +27,8 @@
 		F69A44921D44B85800D56AEA /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F69A44801D44B85800D56AEA /* Settings.storyboard */; };
 		F69A44931D44B85800D56AEA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F69A44821D44B85800D56AEA /* Info.plist */; };
 		F69A44991D44F20A00D56AEA /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F69A44981D44F20A00D56AEA /* OpenSans-Regular.ttf */; };
+		F69A449B1D48C02200D56AEA /* AboutUsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69A449A1D48C02200D56AEA /* AboutUsVC.swift */; };
+		F69A449D1D48D0F900D56AEA /* aboutUs.txt in Resources */ = {isa = PBXBuildFile; fileRef = F69A449C1D48D0F900D56AEA /* aboutUs.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		F69A44801D44B85800D56AEA /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		F69A44821D44B85800D56AEA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F69A44981D44F20A00D56AEA /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		F69A449A1D48C02200D56AEA /* AboutUsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUsVC.swift; sourceTree = "<group>"; };
+		F69A449C1D48D0F900D56AEA /* aboutUs.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = aboutUs.txt; sourceTree = "<group>"; };
 		F6DCD15A1D3FB09900FA576E /* PokeHunt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeHunt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -156,6 +160,7 @@
 				F69A44761D44B85800D56AEA /* LoginVC.swift */,
 				F69A44771D44B85800D56AEA /* MapVC.swift */,
 				F69A44781D44B85800D56AEA /* SettingsTableVC.swift */,
+				F69A449A1D48C02200D56AEA /* AboutUsVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -171,6 +176,7 @@
 		F69A447B1D44B85800D56AEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F69A449C1D48D0F900D56AEA /* aboutUs.txt */,
 				F69A44981D44F20A00D56AEA /* OpenSans-Regular.ttf */,
 				F69A447C1D44B85800D56AEA /* Assets.xcassets */,
 				F69A447D1D44B85800D56AEA /* LaunchScreen.xib */,
@@ -283,6 +289,7 @@
 				F69A44901D44B85800D56AEA /* OpenSans-Semibold.ttf in Resources */,
 				F69A44931D44B85800D56AEA /* Info.plist in Resources */,
 				F69A44991D44F20A00D56AEA /* OpenSans-Regular.ttf in Resources */,
+				F69A449D1D48D0F900D56AEA /* aboutUs.txt in Resources */,
 				F69A448F1D44B85800D56AEA /* LaunchScreen.xib in Resources */,
 				F69A448E1D44B85800D56AEA /* Assets.xcassets in Resources */,
 				F69A44921D44B85800D56AEA /* Settings.storyboard in Resources */,
@@ -367,6 +374,7 @@
 				F69A448C1D44B85800D56AEA /* SettingsTableVC.swift in Sources */,
 				F69A44891D44B85800D56AEA /* NianticlabsService.swift in Sources */,
 				F69A448B1D44B85800D56AEA /* MapVC.swift in Sources */,
+				F69A449B1D48C02200D56AEA /* AboutUsVC.swift in Sources */,
 				F69A44881D44B85800D56AEA /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

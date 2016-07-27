@@ -74,6 +74,30 @@ class SettingsTableVC: UITableViewController, UITextFieldDelegate{
         return 36
     }
 
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+
+        let cell = self.tableView.cellForRowAtIndexPath(indexPath)
+
+        guard let identifier = cell?.reuseIdentifier else{
+            return print(NSError.description())
+        }
+
+        switch (identifier) {
+        case "aboutUs":
+            print("aboutUs tapped")
+            let vc = AboutUsVC()
+            self.navigationController?.pushViewController(vc, animated: true)
+        case "privacyPolicy":
+            print("privacyPolicyTapped")
+        case "rateUs":
+            print("rateUs tapped")
+        case "logOut":
+            print("logOut tapped")
+        default:
+            print("Nothing Happens")
+        }
+    }
+
     func setup(){
         self.setupAutorefreshCell()
         self.setupDisplayPokemonsCell()
@@ -292,26 +316,6 @@ class SettingsTableVC: UITableViewController, UITextFieldDelegate{
         view.endEditing(true)
     }
 
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
 
-        let cell = self.tableView.cellForRowAtIndexPath(indexPath)
-
-        guard let identifier = cell?.reuseIdentifier else{
-           return print(NSError.description())
-        }
-
-        switch (identifier) {
-        case "aboutUs":
-            print("aboutUs tapped")
-        case "privacyPolicy":
-            print("privacyPolicyTapped")
-        case "rateUs":
-            print("rateUs tapped")
-        case "logOut":
-            print("logOut tapped")
-        default:
-            print("Nothing Happens")
-        }
-    }
 }
 
