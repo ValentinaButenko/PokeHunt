@@ -14,6 +14,7 @@ class LoginVC: UIViewController {
 
     var logoView: LogoView!
     var loginBtn: UIButton!
+    var warningLbl: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +32,7 @@ class LoginVC: UIViewController {
     func setup(){
         self.setupLogoView()
         self.setupLoginBtn()
+        self.setupWarningLbl()
     }
 
     func setupLogoView(){
@@ -61,6 +63,25 @@ class LoginVC: UIViewController {
         self.loginBtn = loginBtn
     }
 
+    func setupWarningLbl(){
+        let warningLbl = UILabel()
+        warningLbl.text = "Please do not use your main PokeGo account for this app!"
+        warningLbl.textAlignment = .Center
+        warningLbl.textColor = UIColor(red: 136/255, green: 149/255, blue: 168/255, alpha: 1.0)
+        warningLbl.font = UIFont(name: "OpenSans", size: 12)
+        warningLbl.numberOfLines = 2
+        warningLbl.alpha = 0.0
+
+        view.addSubview(warningLbl)
+
+        warningLbl.snp_makeConstraints { (make) in
+            make.top.equalTo(loginBtn.snp_bottom).inset(-5)
+            make.width.equalTo(220)
+            make.centerX.equalTo(view.snp_centerX)
+        }
+        self.warningLbl = warningLbl
+    }
+
     func logoViewWillMove(){
         self.logoView.snp_updateConstraints(closure: { (make) in
             make.centerY.equalTo(self.view).offset(-80)
@@ -87,6 +108,16 @@ class LoginVC: UIViewController {
             self.view.layoutIfNeeded()
         }
         UIView.animateWithDuration(0.45,
+                                   animations: animation,
+                                   completion: {_ in self.warningLblWillAppear()})
+    }
+
+    func warningLblWillAppear(){
+        let animation = {
+            self.warningLbl.alpha = 1.0
+            self.view.layoutIfNeeded()
+        }
+        UIView.animateWithDuration(0.5,
                                    animations: animation,
                                    completion: nil)
     }
