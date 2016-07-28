@@ -10,6 +10,7 @@ import UIKit
 import SnapKit
 import GoogleMaps
 import Social
+import Flurry_iOS_SDK
 
 class MapVC: UIViewController {
     var mapView: GMSMapView!
@@ -93,14 +94,17 @@ class MapVC: UIViewController {
     }
 
     func searchPokemon(sender: UIButton){
+        Flurry.logEvent("User tap pokemon search")
         print("Searching...")
     }
 
     func removeAds(sender: UIButton){
+        Flurry.logEvent("User tap share Btn")
         print("I'll give U all my money honey!")
     }
 
     func shapshotBg(sender: UIButton){
+        Flurry.logEvent("User tap share Btn")
         guard let snpShot = self.view?.pb_takeSnapshot() else{
             return
         }
@@ -109,6 +113,7 @@ class MapVC: UIViewController {
     }
 
     func selectedSettings(sender: UIButton){
+        Flurry.logEvent("User select settings")
         let storyboard = UIStoryboard(name: "Settings", bundle: nil)
         let vc = storyboard.instantiateViewControllerWithIdentifier("SettingsStrBrd")
         self.navigationController!.pushViewController(vc, animated: true)

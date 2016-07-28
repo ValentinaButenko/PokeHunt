@@ -9,6 +9,7 @@
 import UIKit
 import SnapKit
 import AppAuth
+import Flurry_iOS_SDK
 
 class LoginVC: UIViewController {
 
@@ -19,6 +20,7 @@ class LoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setup()
+        Flurry.logPageView()
 
         view.backgroundColor = UIColor.whiteColor()
     }
@@ -123,6 +125,7 @@ class LoginVC: UIViewController {
     }
 
     func tappedLoginBtn(sender: UIButton!){
+        Flurry.logEvent("User LogIn")
         LoginModule.sharedModule.performLoginOnController(self) { res in
             switch (res) {
             case .LoggedIn:

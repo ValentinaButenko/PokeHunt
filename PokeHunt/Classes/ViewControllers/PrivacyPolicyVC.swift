@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Flurry_iOS_SDK
 
 class PrivacyPolicyVC: UIViewController, UITextViewDelegate {
     var header: UIView!
@@ -18,6 +19,10 @@ class PrivacyPolicyVC: UIViewController, UITextViewDelegate {
         self.setup()
     }
 
+    override func viewDidAppear(animated: Bool) {
+        Flurry.logPageView()
+    }
+    
     func setup(){
         self.setupHeader()
         self.setupTextView()

@@ -8,6 +8,7 @@
 
 import UIKit
 import SnapKit
+import Flurry_iOS_SDK
 
 class SettingsTableVC: UITableViewController, UITextFieldDelegate{
 
@@ -256,6 +257,7 @@ class SettingsTableVC: UITableViewController, UITextFieldDelegate{
     }
 
     func refreshSwitchChangeState(sender: UISwitch){
+        Flurry.logEvent("User change refresh state")
         if sender.on{
             print("Autorefresh on")
         }
@@ -265,6 +267,7 @@ class SettingsTableVC: UITableViewController, UITextFieldDelegate{
     }
 
     func showPokeSwitchChangeState(sender: UISwitch){
+        Flurry.logEvent("User change showPoke state")
         if sender.on{
             print("ShowPoke on")
         }
@@ -274,6 +277,7 @@ class SettingsTableVC: UITableViewController, UITextFieldDelegate{
     }
 
     func showPokestopSwitchChangeState(sender: UISwitch){
+        Flurry.logEvent("User change show pokestop state")
         if sender.on{
             print("Show Pokestop on")
         }
@@ -283,6 +287,7 @@ class SettingsTableVC: UITableViewController, UITextFieldDelegate{
     }
 
     func showJymsSwitchChangeState(sender: UISwitch){
+        Flurry.logEvent("User change show jym state")
         if sender.on{
             print("Show Jyms on")
         }
