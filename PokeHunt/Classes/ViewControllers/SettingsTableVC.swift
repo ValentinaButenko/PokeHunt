@@ -9,6 +9,7 @@
 import UIKit
 import SnapKit
 import FirebaseAnalytics
+import iRate
 
 class SettingsTableVC: UITableViewController, UITextFieldDelegate{
 
@@ -92,7 +93,7 @@ class SettingsTableVC: UITableViewController, UITextFieldDelegate{
             let vc = PrivacyPolicyVC()
             self.navigationController?.pushViewController(vc, animated: true)
         case "rateUs":
-            print("rateUs tapped")
+            iRate.sharedInstance().openRatingsPageInAppStore()
         case "logOut":
             print("logOut tapped")
         default:

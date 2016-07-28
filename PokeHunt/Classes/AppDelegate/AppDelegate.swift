@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseAnalytics
 import HockeySDK
+import iRate
 
 
 @UIApplicationMain
@@ -28,6 +29,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Bootstrapper.bootstrap()
         window!.makeKeyAndVisible()
         return true
+    }
+
+    override class func initialize() -> Void{
+        iRate.sharedInstance().daysUntilPrompt = 3
+        iRate.sharedInstance().usesUntilPrompt = 5
+        iRate.sharedInstance().remindPeriod = 5
+
+        iRate.sharedInstance().messageTitle = "Rate our App"
+        iRate.sharedInstance().message = "If you enjoy using PokeHunt App, please take a moment to rate us on the App Store. Thanks for your support!"
+
+        iRate.sharedInstance().promptForNewVersionIfUserRated = true
     }
 
     func applicationWillResignActive(application: UIApplication) {
