@@ -45,7 +45,7 @@ final class NianticlabsService {
     private var apiUrl : String? = nil
     // MARK: internal methods
 
-    internal func getAllStops(handler: ([POGOGetMapObjectsResponse]?, NSError?) -> Void) {
+    internal func getAllStops(handler: (POGOGetMapObjectsResponse?, NSError?) -> Void) {
         let coord = CLLocationCoordinate2D(latitude: 50.028222399999997, longitude: 36.349946500000001)
         let r = NianticlabsDataGenerator.stopsRequest(session!, loc: coord)
         self.manager.request(.POST, apiUrl!, parameters: [:], encoding: .Custom({ (convertible, _) in
@@ -56,10 +56,11 @@ final class NianticlabsService {
             switch (resp.result) {
             case .Failure(let err):
                 print(err)
+                handler(nil, err)
             case .Success(let val):
                 let resp = try! POGOResponseEnvelope(data: val)
                 let mapObjs = try! POGOGetMapObjectsResponse(data: resp.returnsArray[0] as! NSData)
-                print(mapObjs)
+                handler(mapObjs, nil)
             }
         }.resume()
     }
