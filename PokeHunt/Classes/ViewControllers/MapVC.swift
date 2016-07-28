@@ -28,8 +28,10 @@ class MapVC: UIViewController {
         self.setupMap()
         self.setupSearchButton()
         self.setupPayButton()
-        NianticlabsService.mainService.getLocalSession { (_, _) in
-            
+        NianticlabsService.mainService.getLocalSession { _ in
+            NianticlabsService.mainService.getAllStops({ (mapObj, err) in
+                
+            })
         }
     }
 

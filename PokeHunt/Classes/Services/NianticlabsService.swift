@@ -103,9 +103,6 @@ final class NianticlabsService {
                                 self.session = respEnvelope
                                 self.apiUrl = "https://" + url + "/rpc"
                                 handler(respEnvelope, nil)
-                                self.getAllStops({ (res, err) in
-                                    print(err)
-                                })
                                 return
                             }
                         }
