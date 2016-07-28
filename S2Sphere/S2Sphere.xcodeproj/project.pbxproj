@@ -7,56 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		12700E081D46D94F002AFB90 /* basictypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700DCF1D46D94F002AFB90 /* basictypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		12700E091D46D94F002AFB90 /* casts.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700DD01D46D94F002AFB90 /* casts.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		12700E0A1D46D94F002AFB90 /* commandlineflags.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700DD11D46D94F002AFB90 /* commandlineflags.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		12700E0B1D46D94F002AFB90 /* int128.cc in Sources */ = {isa = PBXBuildFile; fileRef = 12700DD21D46D94F002AFB90 /* int128.cc */; };
-		12700E0C1D46D94F002AFB90 /* int128.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700DD31D46D94F002AFB90 /* int128.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		12700E0D1D46D94F002AFB90 /* integral_types.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700DD41D46D94F002AFB90 /* integral_types.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		12700E0E1D46D94F002AFB90 /* logging.cc in Sources */ = {isa = PBXBuildFile; fileRef = 12700DD51D46D94F002AFB90 /* logging.cc */; };
-		12700E0F1D46D94F002AFB90 /* logging.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700DD61D46D94F002AFB90 /* logging.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		12700E101D46D94F002AFB90 /* macros.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700DD71D46D94F002AFB90 /* macros.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		12700E111D46D94F002AFB90 /* port.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700DD81D46D94F002AFB90 /* port.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		12700E121D46D94F002AFB90 /* scoped_ptr.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700DD91D46D94F002AFB90 /* scoped_ptr.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		12700E131D46D94F002AFB90 /* stl_decl.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700DDA1D46D94F002AFB90 /* stl_decl.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		12700E141D46D950002AFB90 /* stl_decl_msvc.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700DDB1D46D94F002AFB90 /* stl_decl_msvc.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		12700E151D46D950002AFB90 /* stl_decl_osx.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700DDC1D46D94F002AFB90 /* stl_decl_osx.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		12700E161D46D950002AFB90 /* stringprintf.cc in Sources */ = {isa = PBXBuildFile; fileRef = 12700DDD1D46D94F002AFB90 /* stringprintf.cc */; };
-		12700E171D46D950002AFB90 /* stringprintf.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700DDE1D46D94F002AFB90 /* stringprintf.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		12700E181D46D950002AFB90 /* strtoint.cc in Sources */ = {isa = PBXBuildFile; fileRef = 12700DDF1D46D94F002AFB90 /* strtoint.cc */; };
-		12700E191D46D950002AFB90 /* strtoint.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700DE01D46D94F002AFB90 /* strtoint.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		12700E1A1D46D950002AFB90 /* template_util.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700DE11D46D94F002AFB90 /* template_util.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		12700E1B1D46D950002AFB90 /* type_traits.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700DE21D46D94F002AFB90 /* type_traits.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		12700E1C1D46D950002AFB90 /* ascii_ctype.cc in Sources */ = {isa = PBXBuildFile; fileRef = 12700DE41D46D94F002AFB90 /* ascii_ctype.cc */; };
-		12700E1D1D46D950002AFB90 /* ascii_ctype.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700DE51D46D94F002AFB90 /* ascii_ctype.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		12700E1E1D46D950002AFB90 /* split.cc in Sources */ = {isa = PBXBuildFile; fileRef = 12700DE61D46D94F002AFB90 /* split.cc */; };
-		12700E1F1D46D950002AFB90 /* split.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700DE71D46D94F002AFB90 /* split.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		12700E201D46D950002AFB90 /* stringprintf.cc in Sources */ = {isa = PBXBuildFile; fileRef = 12700DE81D46D94F002AFB90 /* stringprintf.cc */; };
-		12700E211D46D950002AFB90 /* stringprintf.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700DE91D46D94F002AFB90 /* stringprintf.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		12700E221D46D950002AFB90 /* strutil.cc in Sources */ = {isa = PBXBuildFile; fileRef = 12700DEA1D46D94F002AFB90 /* strutil.cc */; };
-		12700E231D46D950002AFB90 /* strutil.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700DEB1D46D94F002AFB90 /* strutil.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		12700E241D46D950002AFB90 /* coder.cc in Sources */ = {isa = PBXBuildFile; fileRef = 12700DEE1D46D94F002AFB90 /* coder.cc */; };
-		12700E251D46D950002AFB90 /* coder.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700DEF1D46D94F002AFB90 /* coder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		12700E261D46D950002AFB90 /* varint.cc in Sources */ = {isa = PBXBuildFile; fileRef = 12700DF01D46D94F002AFB90 /* varint.cc */; };
-		12700E271D46D950002AFB90 /* varint.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700DF11D46D94F002AFB90 /* varint.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		12700E281D46D950002AFB90 /* endian.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700DF31D46D94F002AFB90 /* endian.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		12700E291D46D950002AFB90 /* hash.cc in Sources */ = {isa = PBXBuildFile; fileRef = 12700DF51D46D94F002AFB90 /* hash.cc */; };
-		12700E2A1D46D950002AFB90 /* hash.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700DF61D46D94F002AFB90 /* hash.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		12700E2B1D46D950002AFB90 /* hash_jenkins_lookup2.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700DF71D46D94F002AFB90 /* hash_jenkins_lookup2.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		12700E2C1D46D950002AFB90 /* exactfloat.cc in Sources */ = {isa = PBXBuildFile; fileRef = 12700DFA1D46D94F002AFB90 /* exactfloat.cc */; };
-		12700E2D1D46D950002AFB90 /* exactfloat.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700DFB1D46D94F002AFB90 /* exactfloat.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		12700E2E1D46D950002AFB90 /* mathlimits.cc in Sources */ = {isa = PBXBuildFile; fileRef = 12700DFC1D46D94F002AFB90 /* mathlimits.cc */; };
-		12700E2F1D46D950002AFB90 /* mathlimits.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700DFD1D46D94F002AFB90 /* mathlimits.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		12700E301D46D950002AFB90 /* mathutil.cc in Sources */ = {isa = PBXBuildFile; fileRef = 12700DFE1D46D94F002AFB90 /* mathutil.cc */; };
-		12700E311D46D950002AFB90 /* mathutil.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700DFF1D46D94F002AFB90 /* mathutil.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		12700E321D46D950002AFB90 /* matrix3x3-inl.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700E001D46D94F002AFB90 /* matrix3x3-inl.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		12700E331D46D950002AFB90 /* matrix3x3.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700E011D46D94F002AFB90 /* matrix3x3.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		12700E341D46D950002AFB90 /* vector2-inl.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700E021D46D94F002AFB90 /* vector2-inl.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		12700E351D46D950002AFB90 /* vector2.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700E031D46D94F002AFB90 /* vector2.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		12700E361D46D950002AFB90 /* vector3-inl.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700E041D46D94F002AFB90 /* vector3-inl.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		12700E371D46D950002AFB90 /* vector3.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700E051D46D94F002AFB90 /* vector3.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		12700E381D46D950002AFB90 /* vector4-inl.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700E061D46D94F002AFB90 /* vector4-inl.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		12700E391D46D950002AFB90 /* vector4.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700E071D46D94F002AFB90 /* vector4.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		004CF2F27F8FE7962EE865F5 /* Pods_libSphere_S2SphereCellId.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D1F375188BEEEDB0FA52EBC /* Pods_libSphere_S2SphereCellId.framework */; };
 		12700E3E1D46DA68002AFB90 /* s1angle.cc in Sources */ = {isa = PBXBuildFile; fileRef = 12700E3A1D46DA68002AFB90 /* s1angle.cc */; };
 		12700E3F1D46DA68002AFB90 /* s2.cc in Sources */ = {isa = PBXBuildFile; fileRef = 12700E3B1D46DA68002AFB90 /* s2.cc */; };
 		12700E401D46DA68002AFB90 /* s2cellid.cc in Sources */ = {isa = PBXBuildFile; fileRef = 12700E3C1D46DA68002AFB90 /* s2cellid.cc */; };
@@ -66,47 +17,61 @@
 		12700E481D46DA85002AFB90 /* s2cellid.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700E441D46DA85002AFB90 /* s2cellid.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		12700E491D46DA85002AFB90 /* s2latlng.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700E451D46DA85002AFB90 /* s2latlng.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		12700E4C1D46DA9A002AFB90 /* libS2SphereUtil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 12700DB41D46D900002AFB90 /* libS2SphereUtil.a */; };
-		12700E721D46DD1E002AFB90 /* r1interval.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700E4D1D46DD1E002AFB90 /* r1interval.h */; };
-		12700E731D46DD1E002AFB90 /* s1interval.cc in Sources */ = {isa = PBXBuildFile; fileRef = 12700E4E1D46DD1E002AFB90 /* s1interval.cc */; };
-		12700E741D46DD1E002AFB90 /* s1interval.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700E4F1D46DD1E002AFB90 /* s1interval.h */; };
-		12700E751D46DD1E002AFB90 /* s2cap.cc in Sources */ = {isa = PBXBuildFile; fileRef = 12700E501D46DD1E002AFB90 /* s2cap.cc */; };
-		12700E761D46DD1E002AFB90 /* s2cap.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700E511D46DD1E002AFB90 /* s2cap.h */; };
-		12700E771D46DD1E002AFB90 /* s2cell.cc in Sources */ = {isa = PBXBuildFile; fileRef = 12700E521D46DD1E002AFB90 /* s2cell.cc */; };
-		12700E781D46DD1E002AFB90 /* s2cell.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700E531D46DD1E002AFB90 /* s2cell.h */; };
-		12700E791D46DD1E002AFB90 /* s2cellunion.cc in Sources */ = {isa = PBXBuildFile; fileRef = 12700E541D46DD1E002AFB90 /* s2cellunion.cc */; };
-		12700E7A1D46DD1E002AFB90 /* s2cellunion.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700E551D46DD1E002AFB90 /* s2cellunion.h */; };
-		12700E7B1D46DD1E002AFB90 /* s2edgeindex.cc in Sources */ = {isa = PBXBuildFile; fileRef = 12700E561D46DD1E002AFB90 /* s2edgeindex.cc */; };
-		12700E7C1D46DD1E002AFB90 /* s2edgeindex.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700E571D46DD1E002AFB90 /* s2edgeindex.h */; };
-		12700E7D1D46DD1E002AFB90 /* s2edgeutil.cc in Sources */ = {isa = PBXBuildFile; fileRef = 12700E581D46DD1E002AFB90 /* s2edgeutil.cc */; };
-		12700E7E1D46DD1E002AFB90 /* s2edgeutil.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700E591D46DD1E002AFB90 /* s2edgeutil.h */; };
-		12700E7F1D46DD1E002AFB90 /* s2latlng.cc in Sources */ = {isa = PBXBuildFile; fileRef = 12700E5A1D46DD1E002AFB90 /* s2latlng.cc */; };
-		12700E801D46DD1E002AFB90 /* s2latlng.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700E5B1D46DD1E002AFB90 /* s2latlng.h */; };
-		12700E811D46DD1E002AFB90 /* s2latlngrect.cc in Sources */ = {isa = PBXBuildFile; fileRef = 12700E5C1D46DD1E002AFB90 /* s2latlngrect.cc */; };
-		12700E821D46DD1E002AFB90 /* s2latlngrect.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700E5D1D46DD1E002AFB90 /* s2latlngrect.h */; };
-		12700E831D46DD1E002AFB90 /* s2loop.cc in Sources */ = {isa = PBXBuildFile; fileRef = 12700E5E1D46DD1E002AFB90 /* s2loop.cc */; };
-		12700E841D46DD1E002AFB90 /* s2loop.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700E5F1D46DD1E002AFB90 /* s2loop.h */; };
-		12700E851D46DD1E002AFB90 /* s2pointregion.cc in Sources */ = {isa = PBXBuildFile; fileRef = 12700E601D46DD1E002AFB90 /* s2pointregion.cc */; };
-		12700E861D46DD1E002AFB90 /* s2pointregion.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700E611D46DD1E002AFB90 /* s2pointregion.h */; };
-		12700E871D46DD1E002AFB90 /* s2polygon.cc in Sources */ = {isa = PBXBuildFile; fileRef = 12700E621D46DD1E002AFB90 /* s2polygon.cc */; };
-		12700E881D46DD1E002AFB90 /* s2polygon.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700E631D46DD1E002AFB90 /* s2polygon.h */; };
-		12700E891D46DD1E002AFB90 /* s2polygonbuilder.cc in Sources */ = {isa = PBXBuildFile; fileRef = 12700E641D46DD1E002AFB90 /* s2polygonbuilder.cc */; };
-		12700E8A1D46DD1E002AFB90 /* s2polygonbuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700E651D46DD1E002AFB90 /* s2polygonbuilder.h */; };
-		12700E8B1D46DD1E002AFB90 /* s2polyline.cc in Sources */ = {isa = PBXBuildFile; fileRef = 12700E661D46DD1E002AFB90 /* s2polyline.cc */; };
-		12700E8C1D46DD1E002AFB90 /* s2polyline.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700E671D46DD1E002AFB90 /* s2polyline.h */; };
-		12700E8D1D46DD1E002AFB90 /* s2r2rect.cc in Sources */ = {isa = PBXBuildFile; fileRef = 12700E681D46DD1E002AFB90 /* s2r2rect.cc */; };
-		12700E8E1D46DD1E002AFB90 /* s2r2rect.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700E691D46DD1E002AFB90 /* s2r2rect.h */; };
-		12700E8F1D46DD1E002AFB90 /* s2region.cc in Sources */ = {isa = PBXBuildFile; fileRef = 12700E6A1D46DD1E002AFB90 /* s2region.cc */; };
-		12700E901D46DD1E002AFB90 /* s2region.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700E6B1D46DD1E002AFB90 /* s2region.h */; };
-		12700E911D46DD1E002AFB90 /* s2regioncoverer.cc in Sources */ = {isa = PBXBuildFile; fileRef = 12700E6C1D46DD1E002AFB90 /* s2regioncoverer.cc */; };
-		12700E921D46DD1E002AFB90 /* s2regioncoverer.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700E6D1D46DD1E002AFB90 /* s2regioncoverer.h */; };
-		12700E931D46DD1E002AFB90 /* s2regionintersection.cc in Sources */ = {isa = PBXBuildFile; fileRef = 12700E6E1D46DD1E002AFB90 /* s2regionintersection.cc */; };
-		12700E941D46DD1E002AFB90 /* s2regionintersection.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700E6F1D46DD1E002AFB90 /* s2regionintersection.h */; };
-		12700E951D46DD1E002AFB90 /* s2regionunion.cc in Sources */ = {isa = PBXBuildFile; fileRef = 12700E701D46DD1E002AFB90 /* s2regionunion.cc */; };
-		12700E961D46DD1E002AFB90 /* s2regionunion.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700E711D46DD1E002AFB90 /* s2regionunion.h */; };
-		12700E9B1D46DD3D002AFB90 /* libS2SphereCellId.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 12700DC31D46D910002AFB90 /* libS2SphereCellId.a */; };
-		12700E9C1D46DD3D002AFB90 /* libS2SphereUtil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 12700DB41D46D900002AFB90 /* libS2SphereUtil.a */; };
+		12700F041D46E7F9002AFB90 /* basictypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700ECB1D46E7F9002AFB90 /* basictypes.h */; };
+		12700F051D46E7F9002AFB90 /* casts.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700ECC1D46E7F9002AFB90 /* casts.h */; };
+		12700F061D46E7F9002AFB90 /* commandlineflags.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700ECD1D46E7F9002AFB90 /* commandlineflags.h */; };
+		12700F071D46E7F9002AFB90 /* int128.cc in Sources */ = {isa = PBXBuildFile; fileRef = 12700ECE1D46E7F9002AFB90 /* int128.cc */; };
+		12700F081D46E7F9002AFB90 /* int128.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700ECF1D46E7F9002AFB90 /* int128.h */; };
+		12700F091D46E7F9002AFB90 /* integral_types.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700ED01D46E7F9002AFB90 /* integral_types.h */; };
+		12700F0A1D46E7F9002AFB90 /* logging.cc in Sources */ = {isa = PBXBuildFile; fileRef = 12700ED11D46E7F9002AFB90 /* logging.cc */; };
+		12700F0B1D46E7F9002AFB90 /* logging.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700ED21D46E7F9002AFB90 /* logging.h */; };
+		12700F0C1D46E7F9002AFB90 /* macros.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700ED31D46E7F9002AFB90 /* macros.h */; };
+		12700F0D1D46E7F9002AFB90 /* port.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700ED41D46E7F9002AFB90 /* port.h */; };
+		12700F0E1D46E7F9002AFB90 /* scoped_ptr.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700ED51D46E7F9002AFB90 /* scoped_ptr.h */; };
+		12700F0F1D46E7F9002AFB90 /* stl_decl.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700ED61D46E7F9002AFB90 /* stl_decl.h */; };
+		12700F101D46E7F9002AFB90 /* stl_decl_msvc.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700ED71D46E7F9002AFB90 /* stl_decl_msvc.h */; };
+		12700F111D46E7F9002AFB90 /* stl_decl_osx.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700ED81D46E7F9002AFB90 /* stl_decl_osx.h */; };
+		12700F121D46E7F9002AFB90 /* stringprintf.cc in Sources */ = {isa = PBXBuildFile; fileRef = 12700ED91D46E7F9002AFB90 /* stringprintf.cc */; };
+		12700F131D46E7F9002AFB90 /* stringprintf.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700EDA1D46E7F9002AFB90 /* stringprintf.h */; };
+		12700F141D46E7F9002AFB90 /* strtoint.cc in Sources */ = {isa = PBXBuildFile; fileRef = 12700EDB1D46E7F9002AFB90 /* strtoint.cc */; };
+		12700F151D46E7F9002AFB90 /* strtoint.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700EDC1D46E7F9002AFB90 /* strtoint.h */; };
+		12700F161D46E7F9002AFB90 /* template_util.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700EDD1D46E7F9002AFB90 /* template_util.h */; };
+		12700F171D46E7F9002AFB90 /* type_traits.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700EDE1D46E7F9002AFB90 /* type_traits.h */; };
+		12700F181D46E7F9002AFB90 /* ascii_ctype.cc in Sources */ = {isa = PBXBuildFile; fileRef = 12700EE01D46E7F9002AFB90 /* ascii_ctype.cc */; };
+		12700F191D46E7F9002AFB90 /* ascii_ctype.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700EE11D46E7F9002AFB90 /* ascii_ctype.h */; };
+		12700F1A1D46E7F9002AFB90 /* split.cc in Sources */ = {isa = PBXBuildFile; fileRef = 12700EE21D46E7F9002AFB90 /* split.cc */; };
+		12700F1B1D46E7F9002AFB90 /* split.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700EE31D46E7F9002AFB90 /* split.h */; };
+		12700F1C1D46E7F9002AFB90 /* stringprintf.cc in Sources */ = {isa = PBXBuildFile; fileRef = 12700EE41D46E7F9002AFB90 /* stringprintf.cc */; };
+		12700F1D1D46E7F9002AFB90 /* stringprintf.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700EE51D46E7F9002AFB90 /* stringprintf.h */; };
+		12700F1E1D46E7F9002AFB90 /* strutil.cc in Sources */ = {isa = PBXBuildFile; fileRef = 12700EE61D46E7F9002AFB90 /* strutil.cc */; };
+		12700F1F1D46E7F9002AFB90 /* strutil.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700EE71D46E7F9002AFB90 /* strutil.h */; };
+		12700F201D46E7F9002AFB90 /* coder.cc in Sources */ = {isa = PBXBuildFile; fileRef = 12700EEA1D46E7F9002AFB90 /* coder.cc */; };
+		12700F211D46E7F9002AFB90 /* coder.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700EEB1D46E7F9002AFB90 /* coder.h */; };
+		12700F221D46E7F9002AFB90 /* varint.cc in Sources */ = {isa = PBXBuildFile; fileRef = 12700EEC1D46E7F9002AFB90 /* varint.cc */; };
+		12700F231D46E7F9002AFB90 /* varint.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700EED1D46E7F9002AFB90 /* varint.h */; };
+		12700F241D46E7F9002AFB90 /* endian.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700EEF1D46E7F9002AFB90 /* endian.h */; };
+		12700F251D46E7F9002AFB90 /* hash.cc in Sources */ = {isa = PBXBuildFile; fileRef = 12700EF11D46E7F9002AFB90 /* hash.cc */; };
+		12700F261D46E7F9002AFB90 /* hash.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700EF21D46E7F9002AFB90 /* hash.h */; };
+		12700F271D46E7F9002AFB90 /* hash_jenkins_lookup2.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700EF31D46E7F9002AFB90 /* hash_jenkins_lookup2.h */; };
+		12700F281D46E7F9002AFB90 /* exactfloat.cc in Sources */ = {isa = PBXBuildFile; fileRef = 12700EF61D46E7F9002AFB90 /* exactfloat.cc */; };
+		12700F291D46E7F9002AFB90 /* exactfloat.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700EF71D46E7F9002AFB90 /* exactfloat.h */; };
+		12700F2A1D46E7F9002AFB90 /* mathlimits.cc in Sources */ = {isa = PBXBuildFile; fileRef = 12700EF81D46E7F9002AFB90 /* mathlimits.cc */; };
+		12700F2B1D46E7F9002AFB90 /* mathlimits.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700EF91D46E7F9002AFB90 /* mathlimits.h */; };
+		12700F2C1D46E7F9002AFB90 /* mathutil.cc in Sources */ = {isa = PBXBuildFile; fileRef = 12700EFA1D46E7F9002AFB90 /* mathutil.cc */; };
+		12700F2D1D46E7F9002AFB90 /* mathutil.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700EFB1D46E7F9002AFB90 /* mathutil.h */; };
+		12700F2E1D46E7F9002AFB90 /* matrix3x3-inl.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700EFC1D46E7F9002AFB90 /* matrix3x3-inl.h */; };
+		12700F2F1D46E7F9002AFB90 /* matrix3x3.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700EFD1D46E7F9002AFB90 /* matrix3x3.h */; };
+		12700F301D46E7F9002AFB90 /* vector2-inl.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700EFE1D46E7F9002AFB90 /* vector2-inl.h */; };
+		12700F311D46E7F9002AFB90 /* vector2.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700EFF1D46E7F9002AFB90 /* vector2.h */; };
+		12700F321D46E7F9002AFB90 /* vector3-inl.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700F001D46E7F9002AFB90 /* vector3-inl.h */; };
+		12700F331D46E7F9002AFB90 /* vector3.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700F011D46E7F9002AFB90 /* vector3.h */; };
+		12700F341D46E7F9002AFB90 /* vector4-inl.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700F021D46E7F9002AFB90 /* vector4-inl.h */; };
+		12700F351D46E7F9002AFB90 /* vector4.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700F031D46E7F9002AFB90 /* vector4.h */; };
+		12700F3A1D46E81B002AFB90 /* base in Headers */ = {isa = PBXBuildFile; fileRef = 12700F371D46E80E002AFB90 /* base */; settings = {ATTRIBUTES = (Public, ); }; };
+		12700F3B1D46E81B002AFB90 /* strings in Headers */ = {isa = PBXBuildFile; fileRef = 12700F381D46E80E002AFB90 /* strings */; settings = {ATTRIBUTES = (Public, ); }; };
+		12700F3C1D46E81B002AFB90 /* util in Headers */ = {isa = PBXBuildFile; fileRef = 12700F391D46E80E002AFB90 /* util */; settings = {ATTRIBUTES = (Public, ); }; };
 		632C0A30FE6C8B563D9DCF42 /* Pods_S2SphereUtil.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A490D82428E7C50E2894E8EB /* Pods_S2SphereUtil.framework */; };
-		D353337EDD437B0DDE776081 /* Pods_S2Sphere.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F3D508A0EC6320EB76F0E13 /* Pods_S2Sphere.framework */; };
+		8ECC332FBA9A9E84DF9C15AC /* Pods_libSphere_S2SphereUtil.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59031666EE98C1D659388DB5 /* Pods_libSphere_S2SphereUtil.framework */; };
 		F1D378569C58C9C60AA2A11E /* Pods_S2SphereCellId.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E51028267FC77C2637722A67 /* Pods_S2SphereCellId.framework */; };
 /* End PBXBuildFile section */
 
@@ -118,77 +83,11 @@
 			remoteGlobalIDString = 12700DB31D46D900002AFB90;
 			remoteInfo = S2SphereUtil;
 		};
-		12700E971D46DD37002AFB90 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 12700D9A1D46D8CF002AFB90 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 12700DB31D46D900002AFB90;
-			remoteInfo = S2SphereUtil;
-		};
-		12700E991D46DD37002AFB90 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 12700D9A1D46D8CF002AFB90 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 12700DC21D46D910002AFB90;
-			remoteInfo = S2SphereCellId;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0E4B3D16D79E30C76C016CC7 /* Pods-S2SphereUtil.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-S2SphereUtil.release.xcconfig"; path = "../Pods/Target Support Files/Pods-S2SphereUtil/Pods-S2SphereUtil.release.xcconfig"; sourceTree = "<group>"; };
-		12700DA21D46D8CF002AFB90 /* libS2Sphere.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libS2Sphere.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		12700DB41D46D900002AFB90 /* libS2SphereUtil.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libS2SphereUtil.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		12700DC31D46D910002AFB90 /* libS2SphereCellId.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libS2SphereCellId.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		12700DCF1D46D94F002AFB90 /* basictypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = basictypes.h; sourceTree = "<group>"; };
-		12700DD01D46D94F002AFB90 /* casts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = casts.h; sourceTree = "<group>"; };
-		12700DD11D46D94F002AFB90 /* commandlineflags.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = commandlineflags.h; sourceTree = "<group>"; };
-		12700DD21D46D94F002AFB90 /* int128.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = int128.cc; sourceTree = "<group>"; };
-		12700DD31D46D94F002AFB90 /* int128.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = int128.h; sourceTree = "<group>"; };
-		12700DD41D46D94F002AFB90 /* integral_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = integral_types.h; sourceTree = "<group>"; };
-		12700DD51D46D94F002AFB90 /* logging.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = logging.cc; sourceTree = "<group>"; };
-		12700DD61D46D94F002AFB90 /* logging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = logging.h; sourceTree = "<group>"; };
-		12700DD71D46D94F002AFB90 /* macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = macros.h; sourceTree = "<group>"; };
-		12700DD81D46D94F002AFB90 /* port.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = port.h; sourceTree = "<group>"; };
-		12700DD91D46D94F002AFB90 /* scoped_ptr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scoped_ptr.h; sourceTree = "<group>"; };
-		12700DDA1D46D94F002AFB90 /* stl_decl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stl_decl.h; sourceTree = "<group>"; };
-		12700DDB1D46D94F002AFB90 /* stl_decl_msvc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stl_decl_msvc.h; sourceTree = "<group>"; };
-		12700DDC1D46D94F002AFB90 /* stl_decl_osx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stl_decl_osx.h; sourceTree = "<group>"; };
-		12700DDD1D46D94F002AFB90 /* stringprintf.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stringprintf.cc; sourceTree = "<group>"; };
-		12700DDE1D46D94F002AFB90 /* stringprintf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stringprintf.h; sourceTree = "<group>"; };
-		12700DDF1D46D94F002AFB90 /* strtoint.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = strtoint.cc; sourceTree = "<group>"; };
-		12700DE01D46D94F002AFB90 /* strtoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = strtoint.h; sourceTree = "<group>"; };
-		12700DE11D46D94F002AFB90 /* template_util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = template_util.h; sourceTree = "<group>"; };
-		12700DE21D46D94F002AFB90 /* type_traits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = type_traits.h; sourceTree = "<group>"; };
-		12700DE41D46D94F002AFB90 /* ascii_ctype.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ascii_ctype.cc; sourceTree = "<group>"; };
-		12700DE51D46D94F002AFB90 /* ascii_ctype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ascii_ctype.h; sourceTree = "<group>"; };
-		12700DE61D46D94F002AFB90 /* split.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = split.cc; sourceTree = "<group>"; };
-		12700DE71D46D94F002AFB90 /* split.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = split.h; sourceTree = "<group>"; };
-		12700DE81D46D94F002AFB90 /* stringprintf.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stringprintf.cc; sourceTree = "<group>"; };
-		12700DE91D46D94F002AFB90 /* stringprintf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stringprintf.h; sourceTree = "<group>"; };
-		12700DEA1D46D94F002AFB90 /* strutil.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = strutil.cc; sourceTree = "<group>"; };
-		12700DEB1D46D94F002AFB90 /* strutil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = strutil.h; sourceTree = "<group>"; };
-		12700DEE1D46D94F002AFB90 /* coder.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = coder.cc; sourceTree = "<group>"; };
-		12700DEF1D46D94F002AFB90 /* coder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = coder.h; sourceTree = "<group>"; };
-		12700DF01D46D94F002AFB90 /* varint.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = varint.cc; sourceTree = "<group>"; };
-		12700DF11D46D94F002AFB90 /* varint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = varint.h; sourceTree = "<group>"; };
-		12700DF31D46D94F002AFB90 /* endian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = endian.h; sourceTree = "<group>"; };
-		12700DF51D46D94F002AFB90 /* hash.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hash.cc; sourceTree = "<group>"; };
-		12700DF61D46D94F002AFB90 /* hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hash.h; sourceTree = "<group>"; };
-		12700DF71D46D94F002AFB90 /* hash_jenkins_lookup2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hash_jenkins_lookup2.h; sourceTree = "<group>"; };
-		12700DFA1D46D94F002AFB90 /* exactfloat.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = exactfloat.cc; sourceTree = "<group>"; };
-		12700DFB1D46D94F002AFB90 /* exactfloat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = exactfloat.h; sourceTree = "<group>"; };
-		12700DFC1D46D94F002AFB90 /* mathlimits.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mathlimits.cc; sourceTree = "<group>"; };
-		12700DFD1D46D94F002AFB90 /* mathlimits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mathlimits.h; sourceTree = "<group>"; };
-		12700DFE1D46D94F002AFB90 /* mathutil.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mathutil.cc; sourceTree = "<group>"; };
-		12700DFF1D46D94F002AFB90 /* mathutil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mathutil.h; sourceTree = "<group>"; };
-		12700E001D46D94F002AFB90 /* matrix3x3-inl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "matrix3x3-inl.h"; sourceTree = "<group>"; };
-		12700E011D46D94F002AFB90 /* matrix3x3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = matrix3x3.h; sourceTree = "<group>"; };
-		12700E021D46D94F002AFB90 /* vector2-inl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "vector2-inl.h"; sourceTree = "<group>"; };
-		12700E031D46D94F002AFB90 /* vector2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vector2.h; sourceTree = "<group>"; };
-		12700E041D46D94F002AFB90 /* vector3-inl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "vector3-inl.h"; sourceTree = "<group>"; };
-		12700E051D46D94F002AFB90 /* vector3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vector3.h; sourceTree = "<group>"; };
-		12700E061D46D94F002AFB90 /* vector4-inl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "vector4-inl.h"; sourceTree = "<group>"; };
-		12700E071D46D94F002AFB90 /* vector4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vector4.h; sourceTree = "<group>"; };
 		12700E3A1D46DA68002AFB90 /* s1angle.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = s1angle.cc; sourceTree = "<group>"; };
 		12700E3B1D46DA68002AFB90 /* s2.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = s2.cc; sourceTree = "<group>"; };
 		12700E3C1D46DA68002AFB90 /* s2cellid.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = s2cellid.cc; sourceTree = "<group>"; };
@@ -197,69 +96,80 @@
 		12700E431D46DA85002AFB90 /* s2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s2.h; sourceTree = "<group>"; };
 		12700E441D46DA85002AFB90 /* s2cellid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s2cellid.h; sourceTree = "<group>"; };
 		12700E451D46DA85002AFB90 /* s2latlng.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s2latlng.h; sourceTree = "<group>"; };
-		12700E4D1D46DD1E002AFB90 /* r1interval.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = r1interval.h; sourceTree = "<group>"; };
-		12700E4E1D46DD1E002AFB90 /* s1interval.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = s1interval.cc; sourceTree = "<group>"; };
-		12700E4F1D46DD1E002AFB90 /* s1interval.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s1interval.h; sourceTree = "<group>"; };
-		12700E501D46DD1E002AFB90 /* s2cap.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = s2cap.cc; sourceTree = "<group>"; };
-		12700E511D46DD1E002AFB90 /* s2cap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s2cap.h; sourceTree = "<group>"; };
-		12700E521D46DD1E002AFB90 /* s2cell.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = s2cell.cc; sourceTree = "<group>"; };
-		12700E531D46DD1E002AFB90 /* s2cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s2cell.h; sourceTree = "<group>"; };
-		12700E541D46DD1E002AFB90 /* s2cellunion.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = s2cellunion.cc; sourceTree = "<group>"; };
-		12700E551D46DD1E002AFB90 /* s2cellunion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s2cellunion.h; sourceTree = "<group>"; };
-		12700E561D46DD1E002AFB90 /* s2edgeindex.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = s2edgeindex.cc; sourceTree = "<group>"; };
-		12700E571D46DD1E002AFB90 /* s2edgeindex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s2edgeindex.h; sourceTree = "<group>"; };
-		12700E581D46DD1E002AFB90 /* s2edgeutil.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = s2edgeutil.cc; sourceTree = "<group>"; };
-		12700E591D46DD1E002AFB90 /* s2edgeutil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s2edgeutil.h; sourceTree = "<group>"; };
-		12700E5A1D46DD1E002AFB90 /* s2latlng.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = s2latlng.cc; sourceTree = "<group>"; };
-		12700E5B1D46DD1E002AFB90 /* s2latlng.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s2latlng.h; sourceTree = "<group>"; };
-		12700E5C1D46DD1E002AFB90 /* s2latlngrect.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = s2latlngrect.cc; sourceTree = "<group>"; };
-		12700E5D1D46DD1E002AFB90 /* s2latlngrect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s2latlngrect.h; sourceTree = "<group>"; };
-		12700E5E1D46DD1E002AFB90 /* s2loop.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = s2loop.cc; sourceTree = "<group>"; };
-		12700E5F1D46DD1E002AFB90 /* s2loop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s2loop.h; sourceTree = "<group>"; };
-		12700E601D46DD1E002AFB90 /* s2pointregion.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = s2pointregion.cc; sourceTree = "<group>"; };
-		12700E611D46DD1E002AFB90 /* s2pointregion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s2pointregion.h; sourceTree = "<group>"; };
-		12700E621D46DD1E002AFB90 /* s2polygon.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = s2polygon.cc; sourceTree = "<group>"; };
-		12700E631D46DD1E002AFB90 /* s2polygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s2polygon.h; sourceTree = "<group>"; };
-		12700E641D46DD1E002AFB90 /* s2polygonbuilder.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = s2polygonbuilder.cc; sourceTree = "<group>"; };
-		12700E651D46DD1E002AFB90 /* s2polygonbuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s2polygonbuilder.h; sourceTree = "<group>"; };
-		12700E661D46DD1E002AFB90 /* s2polyline.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = s2polyline.cc; sourceTree = "<group>"; };
-		12700E671D46DD1E002AFB90 /* s2polyline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s2polyline.h; sourceTree = "<group>"; };
-		12700E681D46DD1E002AFB90 /* s2r2rect.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = s2r2rect.cc; sourceTree = "<group>"; };
-		12700E691D46DD1E002AFB90 /* s2r2rect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s2r2rect.h; sourceTree = "<group>"; };
-		12700E6A1D46DD1E002AFB90 /* s2region.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = s2region.cc; sourceTree = "<group>"; };
-		12700E6B1D46DD1E002AFB90 /* s2region.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s2region.h; sourceTree = "<group>"; };
-		12700E6C1D46DD1E002AFB90 /* s2regioncoverer.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = s2regioncoverer.cc; sourceTree = "<group>"; };
-		12700E6D1D46DD1E002AFB90 /* s2regioncoverer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s2regioncoverer.h; sourceTree = "<group>"; };
-		12700E6E1D46DD1E002AFB90 /* s2regionintersection.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = s2regionintersection.cc; sourceTree = "<group>"; };
-		12700E6F1D46DD1E002AFB90 /* s2regionintersection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s2regionintersection.h; sourceTree = "<group>"; };
-		12700E701D46DD1E002AFB90 /* s2regionunion.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = s2regionunion.cc; sourceTree = "<group>"; };
-		12700E711D46DD1E002AFB90 /* s2regionunion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s2regionunion.h; sourceTree = "<group>"; };
-		168810B99B397A314A4807BF /* Pods-S2SphereCellId.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-S2SphereCellId.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-S2SphereCellId/Pods-S2SphereCellId.debug.xcconfig"; sourceTree = "<group>"; };
-		187FD0C21A548F3AD40D536B /* Pods-S2SphereCellId.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-S2SphereCellId.release.xcconfig"; path = "../Pods/Target Support Files/Pods-S2SphereCellId/Pods-S2SphereCellId.release.xcconfig"; sourceTree = "<group>"; };
-		1EDCEEF70583F53998E2BDB5 /* Pods-S2SphereUtil.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-S2SphereUtil.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-S2SphereUtil/Pods-S2SphereUtil.debug.xcconfig"; sourceTree = "<group>"; };
-		4A9CA516F73A067BFD4D6C4B /* Pods-S2Sphere.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-S2Sphere.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-S2Sphere/Pods-S2Sphere.debug.xcconfig"; sourceTree = "<group>"; };
+		12700ECB1D46E7F9002AFB90 /* basictypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = basictypes.h; sourceTree = "<group>"; };
+		12700ECC1D46E7F9002AFB90 /* casts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = casts.h; sourceTree = "<group>"; };
+		12700ECD1D46E7F9002AFB90 /* commandlineflags.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = commandlineflags.h; sourceTree = "<group>"; };
+		12700ECE1D46E7F9002AFB90 /* int128.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = int128.cc; sourceTree = "<group>"; };
+		12700ECF1D46E7F9002AFB90 /* int128.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = int128.h; sourceTree = "<group>"; };
+		12700ED01D46E7F9002AFB90 /* integral_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = integral_types.h; sourceTree = "<group>"; };
+		12700ED11D46E7F9002AFB90 /* logging.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = logging.cc; sourceTree = "<group>"; };
+		12700ED21D46E7F9002AFB90 /* logging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = logging.h; sourceTree = "<group>"; };
+		12700ED31D46E7F9002AFB90 /* macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = macros.h; sourceTree = "<group>"; };
+		12700ED41D46E7F9002AFB90 /* port.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = port.h; sourceTree = "<group>"; };
+		12700ED51D46E7F9002AFB90 /* scoped_ptr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scoped_ptr.h; sourceTree = "<group>"; };
+		12700ED61D46E7F9002AFB90 /* stl_decl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stl_decl.h; sourceTree = "<group>"; };
+		12700ED71D46E7F9002AFB90 /* stl_decl_msvc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stl_decl_msvc.h; sourceTree = "<group>"; };
+		12700ED81D46E7F9002AFB90 /* stl_decl_osx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stl_decl_osx.h; sourceTree = "<group>"; };
+		12700ED91D46E7F9002AFB90 /* stringprintf.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stringprintf.cc; sourceTree = "<group>"; };
+		12700EDA1D46E7F9002AFB90 /* stringprintf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stringprintf.h; sourceTree = "<group>"; };
+		12700EDB1D46E7F9002AFB90 /* strtoint.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = strtoint.cc; sourceTree = "<group>"; };
+		12700EDC1D46E7F9002AFB90 /* strtoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = strtoint.h; sourceTree = "<group>"; };
+		12700EDD1D46E7F9002AFB90 /* template_util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = template_util.h; sourceTree = "<group>"; };
+		12700EDE1D46E7F9002AFB90 /* type_traits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = type_traits.h; sourceTree = "<group>"; };
+		12700EE01D46E7F9002AFB90 /* ascii_ctype.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ascii_ctype.cc; sourceTree = "<group>"; };
+		12700EE11D46E7F9002AFB90 /* ascii_ctype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ascii_ctype.h; sourceTree = "<group>"; };
+		12700EE21D46E7F9002AFB90 /* split.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = split.cc; sourceTree = "<group>"; };
+		12700EE31D46E7F9002AFB90 /* split.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = split.h; sourceTree = "<group>"; };
+		12700EE41D46E7F9002AFB90 /* stringprintf.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stringprintf.cc; sourceTree = "<group>"; };
+		12700EE51D46E7F9002AFB90 /* stringprintf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stringprintf.h; sourceTree = "<group>"; };
+		12700EE61D46E7F9002AFB90 /* strutil.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = strutil.cc; sourceTree = "<group>"; };
+		12700EE71D46E7F9002AFB90 /* strutil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = strutil.h; sourceTree = "<group>"; };
+		12700EEA1D46E7F9002AFB90 /* coder.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = coder.cc; sourceTree = "<group>"; };
+		12700EEB1D46E7F9002AFB90 /* coder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = coder.h; sourceTree = "<group>"; };
+		12700EEC1D46E7F9002AFB90 /* varint.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = varint.cc; sourceTree = "<group>"; };
+		12700EED1D46E7F9002AFB90 /* varint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = varint.h; sourceTree = "<group>"; };
+		12700EEF1D46E7F9002AFB90 /* endian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = endian.h; sourceTree = "<group>"; };
+		12700EF11D46E7F9002AFB90 /* hash.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hash.cc; sourceTree = "<group>"; };
+		12700EF21D46E7F9002AFB90 /* hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hash.h; sourceTree = "<group>"; };
+		12700EF31D46E7F9002AFB90 /* hash_jenkins_lookup2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hash_jenkins_lookup2.h; sourceTree = "<group>"; };
+		12700EF61D46E7F9002AFB90 /* exactfloat.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = exactfloat.cc; sourceTree = "<group>"; };
+		12700EF71D46E7F9002AFB90 /* exactfloat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = exactfloat.h; sourceTree = "<group>"; };
+		12700EF81D46E7F9002AFB90 /* mathlimits.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mathlimits.cc; sourceTree = "<group>"; };
+		12700EF91D46E7F9002AFB90 /* mathlimits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mathlimits.h; sourceTree = "<group>"; };
+		12700EFA1D46E7F9002AFB90 /* mathutil.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mathutil.cc; sourceTree = "<group>"; };
+		12700EFB1D46E7F9002AFB90 /* mathutil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mathutil.h; sourceTree = "<group>"; };
+		12700EFC1D46E7F9002AFB90 /* matrix3x3-inl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "matrix3x3-inl.h"; sourceTree = "<group>"; };
+		12700EFD1D46E7F9002AFB90 /* matrix3x3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = matrix3x3.h; sourceTree = "<group>"; };
+		12700EFE1D46E7F9002AFB90 /* vector2-inl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "vector2-inl.h"; sourceTree = "<group>"; };
+		12700EFF1D46E7F9002AFB90 /* vector2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vector2.h; sourceTree = "<group>"; };
+		12700F001D46E7F9002AFB90 /* vector3-inl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "vector3-inl.h"; sourceTree = "<group>"; };
+		12700F011D46E7F9002AFB90 /* vector3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vector3.h; sourceTree = "<group>"; };
+		12700F021D46E7F9002AFB90 /* vector4-inl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "vector4-inl.h"; sourceTree = "<group>"; };
+		12700F031D46E7F9002AFB90 /* vector4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vector4.h; sourceTree = "<group>"; };
+		12700F371D46E80E002AFB90 /* base */ = {isa = PBXFileReference; lastKnownFileType = folder; path = base; sourceTree = "<group>"; };
+		12700F381D46E80E002AFB90 /* strings */ = {isa = PBXFileReference; lastKnownFileType = folder; path = strings; sourceTree = "<group>"; };
+		12700F391D46E80E002AFB90 /* util */ = {isa = PBXFileReference; lastKnownFileType = folder; path = util; sourceTree = "<group>"; };
+		17BA6EAFD90782C44FA950E9 /* Pods-libSphere-S2Sphere.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-libSphere-S2Sphere.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-libSphere-S2Sphere/Pods-libSphere-S2Sphere.debug.xcconfig"; sourceTree = "<group>"; };
+		1F8D107B389DB1C51BE5B2CA /* Pods-libSphere-S2Sphere.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-libSphere-S2Sphere.release.xcconfig"; path = "../Pods/Target Support Files/Pods-libSphere-S2Sphere/Pods-libSphere-S2Sphere.release.xcconfig"; sourceTree = "<group>"; };
+		47DE4924A243D0F02B92AB1D /* Pods-libSphere-S2SphereUtil.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-libSphere-S2SphereUtil.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-libSphere-S2SphereUtil/Pods-libSphere-S2SphereUtil.debug.xcconfig"; sourceTree = "<group>"; };
 		4F3D508A0EC6320EB76F0E13 /* Pods_S2Sphere.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_S2Sphere.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		59031666EE98C1D659388DB5 /* Pods_libSphere_S2SphereUtil.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_libSphere_S2SphereUtil.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D1F375188BEEEDB0FA52EBC /* Pods_libSphere_S2SphereCellId.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_libSphere_S2SphereCellId.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		99926FD3A1930910B3B1A471 /* Pods-libSphere-S2SphereUtil.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-libSphere-S2SphereUtil.release.xcconfig"; path = "../Pods/Target Support Files/Pods-libSphere-S2SphereUtil/Pods-libSphere-S2SphereUtil.release.xcconfig"; sourceTree = "<group>"; };
 		A490D82428E7C50E2894E8EB /* Pods_S2SphereUtil.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_S2SphereUtil.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C3017BB8A2BAE1E85FFE882D /* Pods-S2Sphere.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-S2Sphere.release.xcconfig"; path = "../Pods/Target Support Files/Pods-S2Sphere/Pods-S2Sphere.release.xcconfig"; sourceTree = "<group>"; };
+		A7A0E45F7E0751729D5A0A17 /* Pods_libSphere_S2Sphere.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_libSphere_S2Sphere.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1C34416EAA77D9F19C8E280 /* Pods-libSphere-S2SphereCellId.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-libSphere-S2SphereCellId.release.xcconfig"; path = "../Pods/Target Support Files/Pods-libSphere-S2SphereCellId/Pods-libSphere-S2SphereCellId.release.xcconfig"; sourceTree = "<group>"; };
+		DC9E5576C5244FA00C1EB5DE /* Pods-libSphere-S2SphereCellId.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-libSphere-S2SphereCellId.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-libSphere-S2SphereCellId/Pods-libSphere-S2SphereCellId.debug.xcconfig"; sourceTree = "<group>"; };
 		E51028267FC77C2637722A67 /* Pods_S2SphereCellId.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_S2SphereCellId.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		12700D9F1D46D8CF002AFB90 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				12700E9B1D46DD3D002AFB90 /* libS2SphereCellId.a in Frameworks */,
-				12700E9C1D46DD3D002AFB90 /* libS2SphereUtil.a in Frameworks */,
-				D353337EDD437B0DDE776081 /* Pods_S2Sphere.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		12700DB11D46D900002AFB90 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				632C0A30FE6C8B563D9DCF42 /* Pods_S2SphereUtil.framework in Frameworks */,
+				8ECC332FBA9A9E84DF9C15AC /* Pods_libSphere_S2SphereUtil.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +179,7 @@
 			files = (
 				12700E4C1D46DA9A002AFB90 /* libS2SphereUtil.a in Frameworks */,
 				F1D378569C58C9C60AA2A11E /* Pods_S2SphereCellId.framework in Frameworks */,
+				004CF2F27F8FE7962EE865F5 /* Pods_libSphere_S2SphereCellId.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,7 +189,6 @@
 		12700D991D46D8CF002AFB90 = {
 			isa = PBXGroup;
 			children = (
-				12700DA41D46D8CF002AFB90 /* S2Sphere */,
 				12700DB51D46D900002AFB90 /* S2SphereUtil */,
 				12700DC41D46D910002AFB90 /* S2SphereCellId */,
 				12700DA31D46D8CF002AFB90 /* Products */,
@@ -290,63 +200,19 @@
 		12700DA31D46D8CF002AFB90 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				12700DA21D46D8CF002AFB90 /* libS2Sphere.a */,
 				12700DB41D46D900002AFB90 /* libS2SphereUtil.a */,
 				12700DC31D46D910002AFB90 /* libS2SphereCellId.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		12700DA41D46D8CF002AFB90 /* S2Sphere */ = {
-			isa = PBXGroup;
-			children = (
-				12700E4D1D46DD1E002AFB90 /* r1interval.h */,
-				12700E4E1D46DD1E002AFB90 /* s1interval.cc */,
-				12700E4F1D46DD1E002AFB90 /* s1interval.h */,
-				12700E501D46DD1E002AFB90 /* s2cap.cc */,
-				12700E511D46DD1E002AFB90 /* s2cap.h */,
-				12700E521D46DD1E002AFB90 /* s2cell.cc */,
-				12700E531D46DD1E002AFB90 /* s2cell.h */,
-				12700E541D46DD1E002AFB90 /* s2cellunion.cc */,
-				12700E551D46DD1E002AFB90 /* s2cellunion.h */,
-				12700E561D46DD1E002AFB90 /* s2edgeindex.cc */,
-				12700E571D46DD1E002AFB90 /* s2edgeindex.h */,
-				12700E581D46DD1E002AFB90 /* s2edgeutil.cc */,
-				12700E591D46DD1E002AFB90 /* s2edgeutil.h */,
-				12700E5A1D46DD1E002AFB90 /* s2latlng.cc */,
-				12700E5B1D46DD1E002AFB90 /* s2latlng.h */,
-				12700E5C1D46DD1E002AFB90 /* s2latlngrect.cc */,
-				12700E5D1D46DD1E002AFB90 /* s2latlngrect.h */,
-				12700E5E1D46DD1E002AFB90 /* s2loop.cc */,
-				12700E5F1D46DD1E002AFB90 /* s2loop.h */,
-				12700E601D46DD1E002AFB90 /* s2pointregion.cc */,
-				12700E611D46DD1E002AFB90 /* s2pointregion.h */,
-				12700E621D46DD1E002AFB90 /* s2polygon.cc */,
-				12700E631D46DD1E002AFB90 /* s2polygon.h */,
-				12700E641D46DD1E002AFB90 /* s2polygonbuilder.cc */,
-				12700E651D46DD1E002AFB90 /* s2polygonbuilder.h */,
-				12700E661D46DD1E002AFB90 /* s2polyline.cc */,
-				12700E671D46DD1E002AFB90 /* s2polyline.h */,
-				12700E681D46DD1E002AFB90 /* s2r2rect.cc */,
-				12700E691D46DD1E002AFB90 /* s2r2rect.h */,
-				12700E6A1D46DD1E002AFB90 /* s2region.cc */,
-				12700E6B1D46DD1E002AFB90 /* s2region.h */,
-				12700E6C1D46DD1E002AFB90 /* s2regioncoverer.cc */,
-				12700E6D1D46DD1E002AFB90 /* s2regioncoverer.h */,
-				12700E6E1D46DD1E002AFB90 /* s2regionintersection.cc */,
-				12700E6F1D46DD1E002AFB90 /* s2regionintersection.h */,
-				12700E701D46DD1E002AFB90 /* s2regionunion.cc */,
-				12700E711D46DD1E002AFB90 /* s2regionunion.h */,
-			);
-			path = S2Sphere;
-			sourceTree = "<group>";
-		};
 		12700DB51D46D900002AFB90 /* S2SphereUtil */ = {
 			isa = PBXGroup;
 			children = (
-				12700DCE1D46D94F002AFB90 /* base */,
-				12700DE31D46D94F002AFB90 /* strings */,
-				12700DEC1D46D94F002AFB90 /* util */,
+				12700F361D46E7FC002AFB90 /* src */,
+				12700ECA1D46E7F9002AFB90 /* base */,
+				12700EDF1D46E7F9002AFB90 /* strings */,
+				12700EE81D46E7F9002AFB90 /* util */,
 			);
 			path = S2SphereUtil;
 			sourceTree = "<group>";
@@ -366,115 +232,125 @@
 			path = S2SphereCellId;
 			sourceTree = "<group>";
 		};
-		12700DCE1D46D94F002AFB90 /* base */ = {
+		12700ECA1D46E7F9002AFB90 /* base */ = {
 			isa = PBXGroup;
 			children = (
-				12700DCF1D46D94F002AFB90 /* basictypes.h */,
-				12700DD01D46D94F002AFB90 /* casts.h */,
-				12700DD11D46D94F002AFB90 /* commandlineflags.h */,
-				12700DD21D46D94F002AFB90 /* int128.cc */,
-				12700DD31D46D94F002AFB90 /* int128.h */,
-				12700DD41D46D94F002AFB90 /* integral_types.h */,
-				12700DD51D46D94F002AFB90 /* logging.cc */,
-				12700DD61D46D94F002AFB90 /* logging.h */,
-				12700DD71D46D94F002AFB90 /* macros.h */,
-				12700DD81D46D94F002AFB90 /* port.h */,
-				12700DD91D46D94F002AFB90 /* scoped_ptr.h */,
-				12700DDA1D46D94F002AFB90 /* stl_decl.h */,
-				12700DDB1D46D94F002AFB90 /* stl_decl_msvc.h */,
-				12700DDC1D46D94F002AFB90 /* stl_decl_osx.h */,
-				12700DDD1D46D94F002AFB90 /* stringprintf.cc */,
-				12700DDE1D46D94F002AFB90 /* stringprintf.h */,
-				12700DDF1D46D94F002AFB90 /* strtoint.cc */,
-				12700DE01D46D94F002AFB90 /* strtoint.h */,
-				12700DE11D46D94F002AFB90 /* template_util.h */,
-				12700DE21D46D94F002AFB90 /* type_traits.h */,
+				12700ECB1D46E7F9002AFB90 /* basictypes.h */,
+				12700ECC1D46E7F9002AFB90 /* casts.h */,
+				12700ECD1D46E7F9002AFB90 /* commandlineflags.h */,
+				12700ECE1D46E7F9002AFB90 /* int128.cc */,
+				12700ECF1D46E7F9002AFB90 /* int128.h */,
+				12700ED01D46E7F9002AFB90 /* integral_types.h */,
+				12700ED11D46E7F9002AFB90 /* logging.cc */,
+				12700ED21D46E7F9002AFB90 /* logging.h */,
+				12700ED31D46E7F9002AFB90 /* macros.h */,
+				12700ED41D46E7F9002AFB90 /* port.h */,
+				12700ED51D46E7F9002AFB90 /* scoped_ptr.h */,
+				12700ED61D46E7F9002AFB90 /* stl_decl.h */,
+				12700ED71D46E7F9002AFB90 /* stl_decl_msvc.h */,
+				12700ED81D46E7F9002AFB90 /* stl_decl_osx.h */,
+				12700ED91D46E7F9002AFB90 /* stringprintf.cc */,
+				12700EDA1D46E7F9002AFB90 /* stringprintf.h */,
+				12700EDB1D46E7F9002AFB90 /* strtoint.cc */,
+				12700EDC1D46E7F9002AFB90 /* strtoint.h */,
+				12700EDD1D46E7F9002AFB90 /* template_util.h */,
+				12700EDE1D46E7F9002AFB90 /* type_traits.h */,
 			);
 			path = base;
 			sourceTree = "<group>";
 		};
-		12700DE31D46D94F002AFB90 /* strings */ = {
+		12700EDF1D46E7F9002AFB90 /* strings */ = {
 			isa = PBXGroup;
 			children = (
-				12700DE41D46D94F002AFB90 /* ascii_ctype.cc */,
-				12700DE51D46D94F002AFB90 /* ascii_ctype.h */,
-				12700DE61D46D94F002AFB90 /* split.cc */,
-				12700DE71D46D94F002AFB90 /* split.h */,
-				12700DE81D46D94F002AFB90 /* stringprintf.cc */,
-				12700DE91D46D94F002AFB90 /* stringprintf.h */,
-				12700DEA1D46D94F002AFB90 /* strutil.cc */,
-				12700DEB1D46D94F002AFB90 /* strutil.h */,
+				12700EE01D46E7F9002AFB90 /* ascii_ctype.cc */,
+				12700EE11D46E7F9002AFB90 /* ascii_ctype.h */,
+				12700EE21D46E7F9002AFB90 /* split.cc */,
+				12700EE31D46E7F9002AFB90 /* split.h */,
+				12700EE41D46E7F9002AFB90 /* stringprintf.cc */,
+				12700EE51D46E7F9002AFB90 /* stringprintf.h */,
+				12700EE61D46E7F9002AFB90 /* strutil.cc */,
+				12700EE71D46E7F9002AFB90 /* strutil.h */,
 			);
 			path = strings;
 			sourceTree = "<group>";
 		};
-		12700DEC1D46D94F002AFB90 /* util */ = {
+		12700EE81D46E7F9002AFB90 /* util */ = {
 			isa = PBXGroup;
 			children = (
-				12700DED1D46D94F002AFB90 /* coding */,
-				12700DF21D46D94F002AFB90 /* endian */,
-				12700DF41D46D94F002AFB90 /* hash */,
-				12700DF81D46D94F002AFB90 /* math */,
+				12700EE91D46E7F9002AFB90 /* coding */,
+				12700EEE1D46E7F9002AFB90 /* endian */,
+				12700EF01D46E7F9002AFB90 /* hash */,
+				12700EF41D46E7F9002AFB90 /* math */,
 			);
 			path = util;
 			sourceTree = "<group>";
 		};
-		12700DED1D46D94F002AFB90 /* coding */ = {
+		12700EE91D46E7F9002AFB90 /* coding */ = {
 			isa = PBXGroup;
 			children = (
-				12700DEE1D46D94F002AFB90 /* coder.cc */,
-				12700DEF1D46D94F002AFB90 /* coder.h */,
-				12700DF01D46D94F002AFB90 /* varint.cc */,
-				12700DF11D46D94F002AFB90 /* varint.h */,
+				12700EEA1D46E7F9002AFB90 /* coder.cc */,
+				12700EEB1D46E7F9002AFB90 /* coder.h */,
+				12700EEC1D46E7F9002AFB90 /* varint.cc */,
+				12700EED1D46E7F9002AFB90 /* varint.h */,
 			);
 			path = coding;
 			sourceTree = "<group>";
 		};
-		12700DF21D46D94F002AFB90 /* endian */ = {
+		12700EEE1D46E7F9002AFB90 /* endian */ = {
 			isa = PBXGroup;
 			children = (
-				12700DF31D46D94F002AFB90 /* endian.h */,
+				12700EEF1D46E7F9002AFB90 /* endian.h */,
 			);
 			path = endian;
 			sourceTree = "<group>";
 		};
-		12700DF41D46D94F002AFB90 /* hash */ = {
+		12700EF01D46E7F9002AFB90 /* hash */ = {
 			isa = PBXGroup;
 			children = (
-				12700DF51D46D94F002AFB90 /* hash.cc */,
-				12700DF61D46D94F002AFB90 /* hash.h */,
-				12700DF71D46D94F002AFB90 /* hash_jenkins_lookup2.h */,
+				12700EF11D46E7F9002AFB90 /* hash.cc */,
+				12700EF21D46E7F9002AFB90 /* hash.h */,
+				12700EF31D46E7F9002AFB90 /* hash_jenkins_lookup2.h */,
 			);
 			path = hash;
 			sourceTree = "<group>";
 		};
-		12700DF81D46D94F002AFB90 /* math */ = {
+		12700EF41D46E7F9002AFB90 /* math */ = {
 			isa = PBXGroup;
 			children = (
-				12700DF91D46D94F002AFB90 /* exactfloat */,
-				12700DFC1D46D94F002AFB90 /* mathlimits.cc */,
-				12700DFD1D46D94F002AFB90 /* mathlimits.h */,
-				12700DFE1D46D94F002AFB90 /* mathutil.cc */,
-				12700DFF1D46D94F002AFB90 /* mathutil.h */,
-				12700E001D46D94F002AFB90 /* matrix3x3-inl.h */,
-				12700E011D46D94F002AFB90 /* matrix3x3.h */,
-				12700E021D46D94F002AFB90 /* vector2-inl.h */,
-				12700E031D46D94F002AFB90 /* vector2.h */,
-				12700E041D46D94F002AFB90 /* vector3-inl.h */,
-				12700E051D46D94F002AFB90 /* vector3.h */,
-				12700E061D46D94F002AFB90 /* vector4-inl.h */,
-				12700E071D46D94F002AFB90 /* vector4.h */,
+				12700EF51D46E7F9002AFB90 /* exactfloat */,
+				12700EF81D46E7F9002AFB90 /* mathlimits.cc */,
+				12700EF91D46E7F9002AFB90 /* mathlimits.h */,
+				12700EFA1D46E7F9002AFB90 /* mathutil.cc */,
+				12700EFB1D46E7F9002AFB90 /* mathutil.h */,
+				12700EFC1D46E7F9002AFB90 /* matrix3x3-inl.h */,
+				12700EFD1D46E7F9002AFB90 /* matrix3x3.h */,
+				12700EFE1D46E7F9002AFB90 /* vector2-inl.h */,
+				12700EFF1D46E7F9002AFB90 /* vector2.h */,
+				12700F001D46E7F9002AFB90 /* vector3-inl.h */,
+				12700F011D46E7F9002AFB90 /* vector3.h */,
+				12700F021D46E7F9002AFB90 /* vector4-inl.h */,
+				12700F031D46E7F9002AFB90 /* vector4.h */,
 			);
 			path = math;
 			sourceTree = "<group>";
 		};
-		12700DF91D46D94F002AFB90 /* exactfloat */ = {
+		12700EF51D46E7F9002AFB90 /* exactfloat */ = {
 			isa = PBXGroup;
 			children = (
-				12700DFA1D46D94F002AFB90 /* exactfloat.cc */,
-				12700DFB1D46D94F002AFB90 /* exactfloat.h */,
+				12700EF61D46E7F9002AFB90 /* exactfloat.cc */,
+				12700EF71D46E7F9002AFB90 /* exactfloat.h */,
 			);
 			path = exactfloat;
+			sourceTree = "<group>";
+		};
+		12700F361D46E7FC002AFB90 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				12700F371D46E80E002AFB90 /* base */,
+				12700F381D46E80E002AFB90 /* strings */,
+				12700F391D46E80E002AFB90 /* util */,
+			);
+			name = src;
 			sourceTree = "<group>";
 		};
 		1555B00FE990902EFF11C20D /* Frameworks */ = {
@@ -483,6 +359,9 @@
 				A490D82428E7C50E2894E8EB /* Pods_S2SphereUtil.framework */,
 				E51028267FC77C2637722A67 /* Pods_S2SphereCellId.framework */,
 				4F3D508A0EC6320EB76F0E13 /* Pods_S2Sphere.framework */,
+				A7A0E45F7E0751729D5A0A17 /* Pods_libSphere_S2Sphere.framework */,
+				5D1F375188BEEEDB0FA52EBC /* Pods_libSphere_S2SphereCellId.framework */,
+				59031666EE98C1D659388DB5 /* Pods_libSphere_S2SphereUtil.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -490,12 +369,12 @@
 		68FC66DBFF94D6C5CAE1C677 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				1EDCEEF70583F53998E2BDB5 /* Pods-S2SphereUtil.debug.xcconfig */,
-				0E4B3D16D79E30C76C016CC7 /* Pods-S2SphereUtil.release.xcconfig */,
-				168810B99B397A314A4807BF /* Pods-S2SphereCellId.debug.xcconfig */,
-				187FD0C21A548F3AD40D536B /* Pods-S2SphereCellId.release.xcconfig */,
-				4A9CA516F73A067BFD4D6C4B /* Pods-S2Sphere.debug.xcconfig */,
-				C3017BB8A2BAE1E85FFE882D /* Pods-S2Sphere.release.xcconfig */,
+				17BA6EAFD90782C44FA950E9 /* Pods-libSphere-S2Sphere.debug.xcconfig */,
+				1F8D107B389DB1C51BE5B2CA /* Pods-libSphere-S2Sphere.release.xcconfig */,
+				DC9E5576C5244FA00C1EB5DE /* Pods-libSphere-S2SphereCellId.debug.xcconfig */,
+				D1C34416EAA77D9F19C8E280 /* Pods-libSphere-S2SphereCellId.release.xcconfig */,
+				47DE4924A243D0F02B92AB1D /* Pods-libSphere-S2SphereUtil.debug.xcconfig */,
+				99926FD3A1930910B3B1A471 /* Pods-libSphere-S2SphereUtil.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -503,72 +382,49 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		12700DA01D46D8CF002AFB90 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				12700E941D46DD1E002AFB90 /* s2regionintersection.h in Headers */,
-				12700E7A1D46DD1E002AFB90 /* s2cellunion.h in Headers */,
-				12700E8C1D46DD1E002AFB90 /* s2polyline.h in Headers */,
-				12700E821D46DD1E002AFB90 /* s2latlngrect.h in Headers */,
-				12700E881D46DD1E002AFB90 /* s2polygon.h in Headers */,
-				12700E8A1D46DD1E002AFB90 /* s2polygonbuilder.h in Headers */,
-				12700E761D46DD1E002AFB90 /* s2cap.h in Headers */,
-				12700E861D46DD1E002AFB90 /* s2pointregion.h in Headers */,
-				12700E721D46DD1E002AFB90 /* r1interval.h in Headers */,
-				12700E8E1D46DD1E002AFB90 /* s2r2rect.h in Headers */,
-				12700E901D46DD1E002AFB90 /* s2region.h in Headers */,
-				12700E7C1D46DD1E002AFB90 /* s2edgeindex.h in Headers */,
-				12700E741D46DD1E002AFB90 /* s1interval.h in Headers */,
-				12700E781D46DD1E002AFB90 /* s2cell.h in Headers */,
-				12700E961D46DD1E002AFB90 /* s2regionunion.h in Headers */,
-				12700E841D46DD1E002AFB90 /* s2loop.h in Headers */,
-				12700E7E1D46DD1E002AFB90 /* s2edgeutil.h in Headers */,
-				12700E921D46DD1E002AFB90 /* s2regioncoverer.h in Headers */,
-				12700E801D46DD1E002AFB90 /* s2latlng.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		12700DB21D46D900002AFB90 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12700E0C1D46D94F002AFB90 /* int128.h in Headers */,
-				12700E111D46D94F002AFB90 /* port.h in Headers */,
-				12700E0D1D46D94F002AFB90 /* integral_types.h in Headers */,
-				12700E0A1D46D94F002AFB90 /* commandlineflags.h in Headers */,
-				12700E1D1D46D950002AFB90 /* ascii_ctype.h in Headers */,
-				12700E081D46D94F002AFB90 /* basictypes.h in Headers */,
-				12700E171D46D950002AFB90 /* stringprintf.h in Headers */,
-				12700E141D46D950002AFB90 /* stl_decl_msvc.h in Headers */,
-				12700E341D46D950002AFB90 /* vector2-inl.h in Headers */,
-				12700E311D46D950002AFB90 /* mathutil.h in Headers */,
-				12700E321D46D950002AFB90 /* matrix3x3-inl.h in Headers */,
-				12700E2F1D46D950002AFB90 /* mathlimits.h in Headers */,
-				12700E351D46D950002AFB90 /* vector2.h in Headers */,
-				12700E381D46D950002AFB90 /* vector4-inl.h in Headers */,
-				12700E361D46D950002AFB90 /* vector3-inl.h in Headers */,
-				12700E281D46D950002AFB90 /* endian.h in Headers */,
-				12700E331D46D950002AFB90 /* matrix3x3.h in Headers */,
-				12700E2A1D46D950002AFB90 /* hash.h in Headers */,
-				12700E391D46D950002AFB90 /* vector4.h in Headers */,
-				12700E371D46D950002AFB90 /* vector3.h in Headers */,
-				12700E271D46D950002AFB90 /* varint.h in Headers */,
-				12700E2B1D46D950002AFB90 /* hash_jenkins_lookup2.h in Headers */,
-				12700E251D46D950002AFB90 /* coder.h in Headers */,
-				12700E2D1D46D950002AFB90 /* exactfloat.h in Headers */,
-				12700E101D46D94F002AFB90 /* macros.h in Headers */,
-				12700E1F1D46D950002AFB90 /* split.h in Headers */,
-				12700E151D46D950002AFB90 /* stl_decl_osx.h in Headers */,
-				12700E0F1D46D94F002AFB90 /* logging.h in Headers */,
-				12700E091D46D94F002AFB90 /* casts.h in Headers */,
-				12700E1B1D46D950002AFB90 /* type_traits.h in Headers */,
-				12700E231D46D950002AFB90 /* strutil.h in Headers */,
-				12700E131D46D94F002AFB90 /* stl_decl.h in Headers */,
-				12700E121D46D94F002AFB90 /* scoped_ptr.h in Headers */,
-				12700E1A1D46D950002AFB90 /* template_util.h in Headers */,
-				12700E191D46D950002AFB90 /* strtoint.h in Headers */,
-				12700E211D46D950002AFB90 /* stringprintf.h in Headers */,
+				12700F3A1D46E81B002AFB90 /* base in Headers */,
+				12700F3B1D46E81B002AFB90 /* strings in Headers */,
+				12700F3C1D46E81B002AFB90 /* util in Headers */,
+				12700F301D46E7F9002AFB90 /* vector2-inl.h in Headers */,
+				12700F2D1D46E7F9002AFB90 /* mathutil.h in Headers */,
+				12700F2E1D46E7F9002AFB90 /* matrix3x3-inl.h in Headers */,
+				12700F2B1D46E7F9002AFB90 /* mathlimits.h in Headers */,
+				12700F311D46E7F9002AFB90 /* vector2.h in Headers */,
+				12700F081D46E7F9002AFB90 /* int128.h in Headers */,
+				12700F0D1D46E7F9002AFB90 /* port.h in Headers */,
+				12700F091D46E7F9002AFB90 /* integral_types.h in Headers */,
+				12700F341D46E7F9002AFB90 /* vector4-inl.h in Headers */,
+				12700F061D46E7F9002AFB90 /* commandlineflags.h in Headers */,
+				12700F321D46E7F9002AFB90 /* vector3-inl.h in Headers */,
+				12700F191D46E7F9002AFB90 /* ascii_ctype.h in Headers */,
+				12700F241D46E7F9002AFB90 /* endian.h in Headers */,
+				12700F041D46E7F9002AFB90 /* basictypes.h in Headers */,
+				12700F2F1D46E7F9002AFB90 /* matrix3x3.h in Headers */,
+				12700F131D46E7F9002AFB90 /* stringprintf.h in Headers */,
+				12700F261D46E7F9002AFB90 /* hash.h in Headers */,
+				12700F101D46E7F9002AFB90 /* stl_decl_msvc.h in Headers */,
+				12700F0C1D46E7F9002AFB90 /* macros.h in Headers */,
+				12700F1B1D46E7F9002AFB90 /* split.h in Headers */,
+				12700F111D46E7F9002AFB90 /* stl_decl_osx.h in Headers */,
+				12700F0B1D46E7F9002AFB90 /* logging.h in Headers */,
+				12700F351D46E7F9002AFB90 /* vector4.h in Headers */,
+				12700F331D46E7F9002AFB90 /* vector3.h in Headers */,
+				12700F231D46E7F9002AFB90 /* varint.h in Headers */,
+				12700F051D46E7F9002AFB90 /* casts.h in Headers */,
+				12700F171D46E7F9002AFB90 /* type_traits.h in Headers */,
+				12700F1F1D46E7F9002AFB90 /* strutil.h in Headers */,
+				12700F271D46E7F9002AFB90 /* hash_jenkins_lookup2.h in Headers */,
+				12700F211D46E7F9002AFB90 /* coder.h in Headers */,
+				12700F0F1D46E7F9002AFB90 /* stl_decl.h in Headers */,
+				12700F0E1D46E7F9002AFB90 /* scoped_ptr.h in Headers */,
+				12700F161D46E7F9002AFB90 /* template_util.h in Headers */,
+				12700F151D46E7F9002AFB90 /* strtoint.h in Headers */,
+				12700F1D1D46E7F9002AFB90 /* stringprintf.h in Headers */,
+				12700F291D46E7F9002AFB90 /* exactfloat.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -586,27 +442,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		12700DA11D46D8CF002AFB90 /* S2Sphere */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 12700DAD1D46D8CF002AFB90 /* Build configuration list for PBXNativeTarget "S2Sphere" */;
-			buildPhases = (
-				53EEFECC8147DBA17D31EE66 /* [CP] Check Pods Manifest.lock */,
-				12700D9E1D46D8CF002AFB90 /* Sources */,
-				12700D9F1D46D8CF002AFB90 /* Frameworks */,
-				12700DA01D46D8CF002AFB90 /* Headers */,
-				68057A05F0513389C9CBEBB7 /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				12700E981D46DD37002AFB90 /* PBXTargetDependency */,
-				12700E9A1D46DD37002AFB90 /* PBXTargetDependency */,
-			);
-			name = S2Sphere;
-			productName = S2Sphere;
-			productReference = 12700DA21D46D8CF002AFB90 /* libS2Sphere.a */;
-			productType = "com.apple.product-type.library.static";
-		};
 		12700DB31D46D900002AFB90 /* S2SphereUtil */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 12700DBC1D46D900002AFB90 /* Build configuration list for PBXNativeTarget "S2SphereUtil" */;
@@ -616,6 +451,7 @@
 				12700DB11D46D900002AFB90 /* Frameworks */,
 				12700DB21D46D900002AFB90 /* Headers */,
 				3E7D8C716AF505544837CCF2 /* [CP] Copy Pods Resources */,
+				12700EC31D46E74C002AFB90 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -655,9 +491,6 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Fantastik Solution";
 				TargetAttributes = {
-					12700DA11D46D8CF002AFB90 = {
-						CreatedOnToolsVersion = 7.3.1;
-					};
 					12700DB31D46D900002AFB90 = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
@@ -678,7 +511,6 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				12700DA11D46D8CF002AFB90 /* S2Sphere */,
 				12700DB31D46D900002AFB90 /* S2SphereUtil */,
 				12700DC21D46D910002AFB90 /* S2SphereCellId */,
 			);
@@ -686,6 +518,19 @@
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		12700EC31D46E74C002AFB90 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "find ${TARGET_BUILD_DIR}/${TARGET_NAME}  -name '*.cc' -exec rm -f {} \\;";
+		};
 		2A4A43FBB3978E809D8D56E5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -713,37 +558,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-S2SphereUtil/Pods-S2SphereUtil-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		53EEFECC8147DBA17D31EE66 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		68057A05F0513389C9CBEBB7 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-S2Sphere/Pods-S2Sphere-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-libSphere-S2SphereUtil/Pods-libSphere-S2SphereUtil-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		6E4BA94A4FB69AFFCBA48341 /* [CP] Check Pods Manifest.lock */ = {
@@ -773,55 +588,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-S2SphereCellId/Pods-S2SphereCellId-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-libSphere-S2SphereCellId/Pods-libSphere-S2SphereCellId-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		12700D9E1D46D8CF002AFB90 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				12700E811D46DD1E002AFB90 /* s2latlngrect.cc in Sources */,
-				12700E8F1D46DD1E002AFB90 /* s2region.cc in Sources */,
-				12700E7F1D46DD1E002AFB90 /* s2latlng.cc in Sources */,
-				12700E871D46DD1E002AFB90 /* s2polygon.cc in Sources */,
-				12700E791D46DD1E002AFB90 /* s2cellunion.cc in Sources */,
-				12700E911D46DD1E002AFB90 /* s2regioncoverer.cc in Sources */,
-				12700E931D46DD1E002AFB90 /* s2regionintersection.cc in Sources */,
-				12700E771D46DD1E002AFB90 /* s2cell.cc in Sources */,
-				12700E951D46DD1E002AFB90 /* s2regionunion.cc in Sources */,
-				12700E731D46DD1E002AFB90 /* s1interval.cc in Sources */,
-				12700E851D46DD1E002AFB90 /* s2pointregion.cc in Sources */,
-				12700E7D1D46DD1E002AFB90 /* s2edgeutil.cc in Sources */,
-				12700E831D46DD1E002AFB90 /* s2loop.cc in Sources */,
-				12700E751D46DD1E002AFB90 /* s2cap.cc in Sources */,
-				12700E8B1D46DD1E002AFB90 /* s2polyline.cc in Sources */,
-				12700E7B1D46DD1E002AFB90 /* s2edgeindex.cc in Sources */,
-				12700E8D1D46DD1E002AFB90 /* s2r2rect.cc in Sources */,
-				12700E891D46DD1E002AFB90 /* s2polygonbuilder.cc in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		12700DB01D46D900002AFB90 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12700E2E1D46D950002AFB90 /* mathlimits.cc in Sources */,
-				12700E241D46D950002AFB90 /* coder.cc in Sources */,
-				12700E0B1D46D94F002AFB90 /* int128.cc in Sources */,
-				12700E291D46D950002AFB90 /* hash.cc in Sources */,
-				12700E0E1D46D94F002AFB90 /* logging.cc in Sources */,
-				12700E2C1D46D950002AFB90 /* exactfloat.cc in Sources */,
-				12700E1E1D46D950002AFB90 /* split.cc in Sources */,
-				12700E1C1D46D950002AFB90 /* ascii_ctype.cc in Sources */,
-				12700E261D46D950002AFB90 /* varint.cc in Sources */,
-				12700E181D46D950002AFB90 /* strtoint.cc in Sources */,
-				12700E221D46D950002AFB90 /* strutil.cc in Sources */,
-				12700E161D46D950002AFB90 /* stringprintf.cc in Sources */,
-				12700E201D46D950002AFB90 /* stringprintf.cc in Sources */,
-				12700E301D46D950002AFB90 /* mathutil.cc in Sources */,
+				12700F2A1D46E7F9002AFB90 /* mathlimits.cc in Sources */,
+				12700F201D46E7F9002AFB90 /* coder.cc in Sources */,
+				12700F071D46E7F9002AFB90 /* int128.cc in Sources */,
+				12700F251D46E7F9002AFB90 /* hash.cc in Sources */,
+				12700F0A1D46E7F9002AFB90 /* logging.cc in Sources */,
+				12700F281D46E7F9002AFB90 /* exactfloat.cc in Sources */,
+				12700F1A1D46E7F9002AFB90 /* split.cc in Sources */,
+				12700F181D46E7F9002AFB90 /* ascii_ctype.cc in Sources */,
+				12700F221D46E7F9002AFB90 /* varint.cc in Sources */,
+				12700F141D46E7F9002AFB90 /* strtoint.cc in Sources */,
+				12700F1E1D46E7F9002AFB90 /* strutil.cc in Sources */,
+				12700F121D46E7F9002AFB90 /* stringprintf.cc in Sources */,
+				12700F1C1D46E7F9002AFB90 /* stringprintf.cc in Sources */,
+				12700F2C1D46E7F9002AFB90 /* mathutil.cc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -843,16 +633,6 @@
 			isa = PBXTargetDependency;
 			target = 12700DB31D46D900002AFB90 /* S2SphereUtil */;
 			targetProxy = 12700E4A1D46DA96002AFB90 /* PBXContainerItemProxy */;
-		};
-		12700E981D46DD37002AFB90 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 12700DB31D46D900002AFB90 /* S2SphereUtil */;
-			targetProxy = 12700E971D46DD37002AFB90 /* PBXContainerItemProxy */;
-		};
-		12700E9A1D46DD37002AFB90 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 12700DC21D46D910002AFB90 /* S2SphereCellId */;
-			targetProxy = 12700E991D46DD37002AFB90 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -902,6 +682,8 @@
 					"-DHASH_NAMESPACE=std",
 					"-DNDEBUG",
 				);
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PUBLIC_HEADERS_FOLDER_PATH = $TARGET_NAME;
 				SDKROOT = iphoneos9.3;
 			};
 			name = Debug;
@@ -944,61 +726,43 @@
 					"-DHASH_NAMESPACE=std",
 					"-DNDEBUG",
 				);
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PUBLIC_HEADERS_FOLDER_PATH = $TARGET_NAME;
 				SDKROOT = iphoneos9.3;
-			};
-			name = Release;
-		};
-		12700DAE1D46D8CF002AFB90 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4A9CA516F73A067BFD4D6C4B /* Pods-S2Sphere.debug.xcconfig */;
-			buildSettings = {
-				EXECUTABLE_PREFIX = lib;
-				GCC_ENABLE_CPP_EXCEPTIONS = YES;
-				GCC_ENABLE_CPP_RTTI = YES;
-				HEADER_SEARCH_PATHS = "$PROJECT_DIR/**";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		12700DAF1D46D8CF002AFB90 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C3017BB8A2BAE1E85FFE882D /* Pods-S2Sphere.release.xcconfig */;
-			buildSettings = {
-				EXECUTABLE_PREFIX = lib;
-				GCC_ENABLE_CPP_EXCEPTIONS = YES;
-				GCC_ENABLE_CPP_RTTI = YES;
-				HEADER_SEARCH_PATHS = "$PROJECT_DIR/**";
-				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
 		12700DBD1D46D900002AFB90 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1EDCEEF70583F53998E2BDB5 /* Pods-S2SphereUtil.debug.xcconfig */;
+			baseConfigurationReference = 47DE4924A243D0F02B92AB1D /* Pods-libSphere-S2SphereUtil.debug.xcconfig */;
 			buildSettings = {
 				EXECUTABLE_PREFIX = lib;
 				GCC_ENABLE_CPP_EXCEPTIONS = YES;
 				GCC_ENABLE_CPP_RTTI = YES;
 				HEADER_SEARCH_PATHS = "$PROJECT_DIR/**";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = $TARGET_NAME;
 			};
 			name = Debug;
 		};
 		12700DBE1D46D900002AFB90 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0E4B3D16D79E30C76C016CC7 /* Pods-S2SphereUtil.release.xcconfig */;
+			baseConfigurationReference = 99926FD3A1930910B3B1A471 /* Pods-libSphere-S2SphereUtil.release.xcconfig */;
 			buildSettings = {
 				EXECUTABLE_PREFIX = lib;
 				GCC_ENABLE_CPP_EXCEPTIONS = YES;
 				GCC_ENABLE_CPP_RTTI = YES;
 				HEADER_SEARCH_PATHS = "$PROJECT_DIR/**";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = $TARGET_NAME;
 			};
 			name = Release;
 		};
 		12700DCC1D46D910002AFB90 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 168810B99B397A314A4807BF /* Pods-S2SphereCellId.debug.xcconfig */;
+			baseConfigurationReference = DC9E5576C5244FA00C1EB5DE /* Pods-libSphere-S2SphereCellId.debug.xcconfig */;
 			buildSettings = {
 				EXECUTABLE_PREFIX = lib;
 				GCC_ENABLE_CPP_EXCEPTIONS = YES;
@@ -1010,7 +774,7 @@
 		};
 		12700DCD1D46D910002AFB90 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 187FD0C21A548F3AD40D536B /* Pods-S2SphereCellId.release.xcconfig */;
+			baseConfigurationReference = D1C34416EAA77D9F19C8E280 /* Pods-libSphere-S2SphereCellId.release.xcconfig */;
 			buildSettings = {
 				EXECUTABLE_PREFIX = lib;
 				GCC_ENABLE_CPP_EXCEPTIONS = YES;
@@ -1028,15 +792,6 @@
 			buildConfigurations = (
 				12700DAB1D46D8CF002AFB90 /* Debug */,
 				12700DAC1D46D8CF002AFB90 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		12700DAD1D46D8CF002AFB90 /* Build configuration list for PBXNativeTarget "S2Sphere" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				12700DAE1D46D8CF002AFB90 /* Debug */,
-				12700DAF1D46D8CF002AFB90 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

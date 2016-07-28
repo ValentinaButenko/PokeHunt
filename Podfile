@@ -11,20 +11,23 @@ target 'PokeHunt' do
     pod 'Alamofire'
     pod 'SSKeychain'
     pod 'Protobuf', '3.0.0-beta-4'
-end
-
-target 'S2SphereUtil' do
-    project 'S2Sphere/S2Sphere.xcodeproj'
     pod 'OpenSSL', '1.0.208'
 end
 
-target 'S2SphereCellId' do
+
+abstract_target 'libSphere' do
     project 'S2Sphere/S2Sphere.xcodeproj'
     pod 'OpenSSL', '1.0.208'
+
+    target 'S2SphereUtil' do
+    end
+
+    target 'S2SphereCellId' do
+    end
 end
 
-target 'S2Sphere' do
-    project 'S2Sphere/S2Sphere.xcodeproj'
+
+target 'S2SphereAdapter' do
     pod 'OpenSSL', '1.0.208'
 end
 

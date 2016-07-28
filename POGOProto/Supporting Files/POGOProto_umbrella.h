@@ -12,3 +12,5 @@
 #import "GetMapObjectsMessage.pbobjc.h"
 #import "AuthTicket.pbobjc.h"
 #import "GetMapObjectsResponse.pbobjc.h"
+#import "DownloadSettingsMessage.pbobjc.h"
+#import "MapCell.pbobjc.h"

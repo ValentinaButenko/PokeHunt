@@ -10,8 +10,10 @@ import Foundation
 import CoreLocation
 import Protobuf
 import POGOProto
-import S2Sphere
+import S2SphereAdapter
 
+
+private let kRequest5StaticData = "05daf51635c82611d1aac95c0b051d3ec088a930"
 
 final class NianticlabsDataGenerator {
     private enum RequestType : Int32 {
@@ -22,7 +24,7 @@ final class NianticlabsDataGenerator {
     class func loginRequest(accessToken : String) -> POGORequestEnvelope {
         let r = POGORequestEnvelope()
         r.statusCode = 2
-        r.unknown12 = Int64(rand() % 999999)
+        r.unknown12 = Int64(rand() % 899999)
         r.requestId = 72185515343874 - UInt64((rand() % 999))
         r.authInfo.provider = "google"
         r.authInfo.token.contents = accessToken
@@ -39,12 +41,26 @@ final class NianticlabsDataGenerator {
     class func stopsRequest(session : POGOResponseEnvelope,
                             loc: CLLocationCoordinate2D) -> POGORequestEnvelope {
         let r  = POGORequestEnvelope()
+        r.statusCode = 2
+        r.requestId = 2212820743501119519 - UInt64((rand() % 999))
+        r.unknown12 = Int64(rand() % 899999)
 
         r.latitude = loc.latitude
         r.longitude = loc.longitude
+        r.altitude = 50
 
         r.authTicket = session.authTicket
         r.requestsArray.addObject(getMapObjectRequest(loc))
+
+        for (t) in [126, 4, 129] {
+            let req = POGORequest()
+            SetPOGORequest_RequestType_RawValue(req, Int32(t))
+            r.requestsArray.addObject(req)
+        }
+        r.requestsArray.addObject(self.getStaticRequestType5())
+
+
+        r.unknown12 = 1
 
         return r
     }
@@ -55,10 +71,12 @@ final class NianticlabsDataGenerator {
         SetPOGORequest_RequestType_RawValue(r, RequestType.GetMapObjects.rawValue)
 
         let mapObj = POGOGetMapObjectsMessage()
-        let cells = S2SphereFactory.cellsForLat(loc.latitude, lon: loc.longitude)
-        for (_, e) in cells.enumerate() {
-            mapObj.cellIdArray.addValue(e.unsignedLongLongValue)
-            mapObj.sinceTimestampMsArray.addValue(0)
+        let ourcells = S2SphereCellIdFactory.cellIdsForLatitude(loc.latitude, longitude: loc.longitude).map { (a) in
+            return (a as! NSNumber).unsignedLongLongValue
+        }.sort { $0 < $1 }
+
+        for (_, e) in ourcells.enumerate() {
+            mapObj.cellIdArray.addValue(e)
         }
 
         mapObj.latitude = loc.latitude
@@ -67,5 +85,16 @@ final class NianticlabsDataGenerator {
         r.requestMessage = mapObj.data()
 
         return r
+    }
+
+    private class func getStaticRequestType5() -> POGORequest {
+        let req = POGORequest()
+        SetPOGORequest_RequestType_RawValue(req, Int32(5))
+
+        let setMes = POGODownloadSettingsMessage()
+        setMes.hash_p = kRequest5StaticData
+        req.requestMessage = setMes.data()
+
+        return req
     }
 }

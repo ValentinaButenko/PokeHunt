@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "S2SphereCellIdFactory.h"
 
 //! Project version number for S2SphereAdapter.
 FOUNDATION_EXPORT double S2SphereAdapterVersionNumber;

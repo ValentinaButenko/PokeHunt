@@ -42,12 +42,13 @@ final class NianticlabsService {
         self.manager = Manager(configuration: config)
     }
     private var session : POGOResponseEnvelope? = nil
+    private var apiUrl : String? = nil
     // MARK: internal methods
 
     internal func getAllStops(handler: ([POGOGetMapObjectsResponse]?, NSError?) -> Void) {
-        let coord = CLLocationCoordinate2D(latitude: 50.4313132, longitude: 30.4935952)
+        let coord = CLLocationCoordinate2D(latitude: 50.028222399999997, longitude: 36.349946500000001)
         let r = NianticlabsDataGenerator.stopsRequest(session!, loc: coord)
-        self.manager.request(.POST, kNianticlabsAPIURL, parameters: [:], encoding: .Custom({ (convertible, _) in
+        self.manager.request(.POST, apiUrl!, parameters: [:], encoding: .Custom({ (convertible, _) in
             let mutableRequest = convertible.URLRequest.copy() as! NSMutableURLRequest
             mutableRequest.HTTPBody = r.data()
             return (mutableRequest, nil)
@@ -56,10 +57,11 @@ final class NianticlabsService {
             case .Failure(let err):
                 print(err)
             case .Success(let val):
-                let resp = try! POGOGetMapObjectsResponse(data: val)
-                print(resp)
+                let resp = try! POGOResponseEnvelope(data: val)
+                let mapObjs = try! POGOGetMapObjectsResponse(data: resp.returnsArray[0] as! NSData)
+                print(mapObjs)
             }
-            }.resume()
+        }.resume()
     }
 
     // MARK: private methods
@@ -98,9 +100,9 @@ final class NianticlabsService {
                         if let url = respEnvelope.apiURL {
                             if (url.containsString("plfe")) {
                                 self.session = respEnvelope
+                                self.apiUrl = "https://" + url + "/rpc"
                                 handler(respEnvelope, nil)
                                 self.getAllStops({ (res, err) in
-                                    print(resp)
                                     print(err)
                                 })
                                 return

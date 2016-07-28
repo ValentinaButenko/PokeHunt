@@ -10,6 +10,9 @@
 		12700EA91D46DE95002AFB90 /* S2SphereAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12700EA21D46DE95002AFB90 /* S2SphereAdapter.framework */; };
 		12700EAA1D46DE95002AFB90 /* S2SphereAdapter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 12700EA21D46DE95002AFB90 /* S2SphereAdapter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		12700EB21D46DEB1002AFB90 /* S2SphereAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700EB01D46DEB1002AFB90 /* S2SphereAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		12700EB71D46DF4B002AFB90 /* S2SphereCellIdFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 12700EB51D46DF4B002AFB90 /* S2SphereCellIdFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		12700EB81D46DF4B002AFB90 /* S2SphereCellIdFactory.mm in Sources */ = {isa = PBXBuildFile; fileRef = 12700EB61D46DF4B002AFB90 /* S2SphereCellIdFactory.mm */; };
+		12700EBC1D46E4D1002AFB90 /* libS2SphereCellId.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 12700EBB1D46E4D1002AFB90 /* libS2SphereCellId.a */; };
 		12760BAF1D4424A200F446FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12760B971D4424A200F446FA /* Assets.xcassets */; };
 		12760BB01D4424A200F446FA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12760B981D4424A200F446FA /* LaunchScreen.xib */; };
 		12760BB21D4424A200F446FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12760B9C1D4424A200F446FA /* AppDelegate.swift */; };
@@ -469,7 +472,9 @@
 		127616D31D450A7A00F446FA /* TypeEffectiveSettings.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = 127615191D450A7800F446FA /* TypeEffectiveSettings.pbobjc.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		127616D41D450A7A00F446FA /* TypeEffectiveSettings.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 1276151A1D450A7800F446FA /* TypeEffectiveSettings.pbobjc.m */; };
 		127616D61D450E0700F446FA /* POGOProto_umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 127616D51D450DB300F446FA /* POGOProto_umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		12D357C91D4783DE008843CE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12D357C81D4783DE008843CE /* CoreLocation.framework */; };
 		39A0F50EAE19156C026555D7 /* Pods_PokeHunt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58DD6499E2E6B4CA44BAA4CB /* Pods_PokeHunt.framework */; };
+		B9EB67A4B94B69575D77C4F7 /* Pods_S2SphereAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8677FFB7C51819037FE83EF1 /* Pods_S2SphereAdapter.framework */; };
 		BB8605387F2A7B4E86193BE2 /* Pods_POGOProto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7F36E17C694A1331B5CC162 /* Pods_POGOProto.framework */; };
 		F64A96631D40E8C000A72182 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64A96621D40E8C000A72182 /* Social.framework */; };
 /* End PBXBuildFile section */
@@ -512,6 +517,10 @@
 		12700EA21D46DE95002AFB90 /* S2SphereAdapter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = S2SphereAdapter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		12700EAF1D46DEB1002AFB90 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		12700EB01D46DEB1002AFB90 /* S2SphereAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = S2SphereAdapter.h; sourceTree = "<group>"; };
+		12700EB51D46DF4B002AFB90 /* S2SphereCellIdFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = S2SphereCellIdFactory.h; sourceTree = "<group>"; };
+		12700EB61D46DF4B002AFB90 /* S2SphereCellIdFactory.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = S2SphereCellIdFactory.mm; sourceTree = "<group>"; };
+		12700EB91D46E1B3002AFB90 /* libS2Sphere.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libS2Sphere.a; path = "../../../../Library/Developer/Xcode/DerivedData/PokeHunt-chygmqumvzluhnhchpvuonyftxtp/Build/Products/Debug-iphonesimulator/libS2Sphere.a"; sourceTree = "<group>"; };
+		12700EBB1D46E4D1002AFB90 /* libS2SphereCellId.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libS2SphereCellId.a; path = "../../../../Library/Developer/Xcode/DerivedData/PokeHunt-chygmqumvzluhnhchpvuonyftxtp/Build/Products/Debug-iphonesimulator/libS2SphereCellId.a"; sourceTree = "<group>"; };
 		12760B951D4424A200F446FA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		12760B971D4424A200F446FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		12760B981D4424A200F446FA /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
@@ -1198,9 +1207,13 @@
 		127616D51D450DB300F446FA /* POGOProto_umbrella.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = POGOProto_umbrella.h; sourceTree = "<group>"; };
 		127616DE1D45375E00F446FA /* libc++abi.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++abi.tbd"; path = "usr/lib/libc++abi.tbd"; sourceTree = SDKROOT; };
 		127616E01D45379600F446FA /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		12D357C81D4783DE008843CE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		31CF62A75AD969201AB06A47 /* Pods-PokeHunt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeHunt.release.xcconfig"; path = "Pods/Target Support Files/Pods-PokeHunt/Pods-PokeHunt.release.xcconfig"; sourceTree = "<group>"; };
 		58DD6499E2E6B4CA44BAA4CB /* Pods_PokeHunt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PokeHunt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DB32231B143C99551631409 /* Pods-S2SphereAdapter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-S2SphereAdapter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-S2SphereAdapter/Pods-S2SphereAdapter.debug.xcconfig"; sourceTree = "<group>"; };
 		701B67ED30CCD092DC53B694 /* Pods-PokeHunt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeHunt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PokeHunt/Pods-PokeHunt.debug.xcconfig"; sourceTree = "<group>"; };
+		72DB4795FACB9729520B3B6B /* Pods-S2SphereAdapter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-S2SphereAdapter.release.xcconfig"; path = "Pods/Target Support Files/Pods-S2SphereAdapter/Pods-S2SphereAdapter.release.xcconfig"; sourceTree = "<group>"; };
+		8677FFB7C51819037FE83EF1 /* Pods_S2SphereAdapter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_S2SphereAdapter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBE8A56A51BCC041D12316A5 /* Pods-POGOProto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-POGOProto.release.xcconfig"; path = "Pods/Target Support Files/Pods-POGOProto/Pods-POGOProto.release.xcconfig"; sourceTree = "<group>"; };
 		CF5492EA19E73916733032D7 /* Pods-POGOProto.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-POGOProto.debug.xcconfig"; path = "Pods/Target Support Files/Pods-POGOProto/Pods-POGOProto.debug.xcconfig"; sourceTree = "<group>"; };
 		D7F36E17C694A1331B5CC162 /* Pods_POGOProto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_POGOProto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1214,6 +1227,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12D357C91D4783DE008843CE /* CoreLocation.framework in Frameworks */,
+				12700EBC1D46E4D1002AFB90 /* libS2SphereCellId.a in Frameworks */,
+				B9EB67A4B94B69575D77C4F7 /* Pods_S2SphereAdapter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1243,6 +1259,8 @@
 			isa = PBXGroup;
 			children = (
 				12700EAE1D46DEB1002AFB90 /* Supporting Files */,
+				12700EB51D46DF4B002AFB90 /* S2SphereCellIdFactory.h */,
+				12700EB61D46DF4B002AFB90 /* S2SphereCellIdFactory.mm */,
 			);
 			path = S2SphereAdapter;
 			sourceTree = "<group>";
@@ -2394,6 +2412,9 @@
 		4DB5BD027634F7D57F2F15B3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				12D357C81D4783DE008843CE /* CoreLocation.framework */,
+				12700EBB1D46E4D1002AFB90 /* libS2SphereCellId.a */,
+				12700EB91D46E1B3002AFB90 /* libS2Sphere.a */,
 				12700D791D46D4BA002AFB90 /* libpthread.tbd */,
 				127616E01D45379600F446FA /* libc++.tbd */,
 				127616DE1D45375E00F446FA /* libc++abi.tbd */,
@@ -2402,6 +2423,7 @@
 				076FF728795DAC574D838F61 /* Pods_PHProtobufModels.framework */,
 				D7F36E17C694A1331B5CC162 /* Pods_POGOProto.framework */,
 				DE36EC42E0C3E7D9665FDE5C /* Pods_S2Sphere.framework */,
+				8677FFB7C51819037FE83EF1 /* Pods_S2SphereAdapter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -2413,6 +2435,8 @@
 				31CF62A75AD969201AB06A47 /* Pods-PokeHunt.release.xcconfig */,
 				CF5492EA19E73916733032D7 /* Pods-POGOProto.debug.xcconfig */,
 				BBE8A56A51BCC041D12316A5 /* Pods-POGOProto.release.xcconfig */,
+				6DB32231B143C99551631409 /* Pods-S2SphereAdapter.debug.xcconfig */,
+				72DB4795FACB9729520B3B6B /* Pods-S2SphereAdapter.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -2456,6 +2480,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12700EB71D46DF4B002AFB90 /* S2SphereCellIdFactory.h in Headers */,
 				12700EB21D46DEB1002AFB90 /* S2SphereAdapter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2697,10 +2722,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 12700EAB1D46DE96002AFB90 /* Build configuration list for PBXNativeTarget "S2SphereAdapter" */;
 			buildPhases = (
+				A6D250FC22DB1A45CB8039C7 /* [CP] Check Pods Manifest.lock */,
 				12700E9D1D46DE95002AFB90 /* Sources */,
 				12700E9E1D46DE95002AFB90 /* Frameworks */,
 				12700E9F1D46DE95002AFB90 /* Headers */,
 				12700EA01D46DE95002AFB90 /* Resources */,
+				87518C94089FCCA04CC8476F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -2883,6 +2910,36 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-POGOProto/Pods-POGOProto-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		87518C94089FCCA04CC8476F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-S2SphereAdapter/Pods-S2SphereAdapter-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A6D250FC22DB1A45CB8039C7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		EB6B6CAC185D9D5F20222A3F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -2918,6 +2975,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12700EB81D46DF4B002AFB90 /* S2SphereCellIdFactory.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3185,18 +3243,26 @@
 /* Begin XCBuildConfiguration section */
 		12700EAC1D46DE96002AFB90 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DB32231B143C99551631409 /* Pods-S2SphereAdapter.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = S2SphereAdapter/Info.plist;
+				HEADER_SEARCH_PATHS = (
+					"$PROJECT_DIR/../S2Sphere/**",
+					$TARGET_BUILD_DIR/S2SphereUtil,
+					$TARGET_BUILD_DIR/S2SphereCellId,
+				);
+				INFOPLIST_FILE = "S2SphereAdapter/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fantastik.S2SphereAdapter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -3204,13 +3270,20 @@
 		};
 		12700EAD1D46DE96002AFB90 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72DB4795FACB9729520B3B6B /* Pods-S2SphereAdapter.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = S2SphereAdapter/Info.plist;
+				HEADER_SEARCH_PATHS = (
+					"$PROJECT_DIR/../S2Sphere/**",
+					$TARGET_BUILD_DIR/S2SphereUtil,
+					$TARGET_BUILD_DIR/S2SphereCellId,
+				);
+				INFOPLIST_FILE = "S2SphereAdapter/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fantastik.S2SphereAdapter;
@@ -3396,6 +3469,7 @@
 				12700EAD1D46DE96002AFB90 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		12760C0D1D45091F00F446FA /* Build configuration list for PBXNativeTarget "POGOProto" */ = {
 			isa = XCConfigurationList;
