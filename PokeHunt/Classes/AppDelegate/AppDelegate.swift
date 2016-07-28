@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Flurry_iOS_SDK
 
 
 @UIApplicationMain
@@ -15,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        Flurry.startSession("5QXDCJZDK33WH856TY5B")
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
 
         Bootstrapper.bootstrap()
