@@ -257,7 +257,7 @@ class SettingsTableVC: UITableViewController, UITextFieldDelegate{
     }
 
     func refreshSwitchChangeState(sender: UISwitch){
-        Flurry.logEvent("User change refresh state")
+        Flurry.logEvent("Change_refresh_state")
         if sender.on{
             print("Autorefresh on")
         }
@@ -267,7 +267,7 @@ class SettingsTableVC: UITableViewController, UITextFieldDelegate{
     }
 
     func showPokeSwitchChangeState(sender: UISwitch){
-        Flurry.logEvent("User change showPoke state")
+        Flurry.logEvent("Change_showPoke_state")
         if sender.on{
             print("ShowPoke on")
         }
@@ -277,7 +277,7 @@ class SettingsTableVC: UITableViewController, UITextFieldDelegate{
     }
 
     func showPokestopSwitchChangeState(sender: UISwitch){
-        Flurry.logEvent("User change show pokestop state")
+        Flurry.logEvent("Change_show_pokestop_state")
         if sender.on{
             print("Show Pokestop on")
         }
@@ -287,7 +287,7 @@ class SettingsTableVC: UITableViewController, UITextFieldDelegate{
     }
 
     func showJymsSwitchChangeState(sender: UISwitch){
-        Flurry.logEvent("User change show jym state")
+        Flurry.logEvent("Change_show_jym_state")
         if sender.on{
             print("Show Jyms on")
         }
@@ -320,8 +320,19 @@ class SettingsTableVC: UITableViewController, UITextFieldDelegate{
 
     func dismissKeyboard() {
         view.endEditing(true)
+
+        let initialArea = "30"
+        guard let finalArea = self.stepsArea.text else{
+            return print(NSError.description())
+        }
+        if initialArea != finalArea{
+            let statsParams = ["New_Steps_Area" : finalArea]
+            Flurry.logEvent("Steps_Area_Change", withParameters: statsParams)
+            print("User did change text field")
+        }
+        else{
+            print("User did not changed text field")
+        }
     }
-
-
 }
 
