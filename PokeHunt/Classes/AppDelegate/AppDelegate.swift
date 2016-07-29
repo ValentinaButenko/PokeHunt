@@ -17,6 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         Flurry.startSession("5QXDCJZDK33WH856TY5B")
+        Flurry.setDebugLogEnabled(true)
+        Flurry.setCrashReportingEnabled(true)
+        
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
 
         Bootstrapper.bootstrap()

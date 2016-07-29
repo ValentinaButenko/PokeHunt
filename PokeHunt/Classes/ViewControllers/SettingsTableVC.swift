@@ -85,10 +85,12 @@ class SettingsTableVC: UITableViewController, UITextFieldDelegate{
 
         switch (identifier) {
         case "aboutUs":
+            Flurry.logEvent("About_Us_tapped")
             print("aboutUs tapped")
             let vc = AboutUsVC()
             self.navigationController?.pushViewController(vc, animated: true)
         case "privacyPolicy":
+            Flurry.logEvent("Privacy_Policy_tapped")
             let vc = PrivacyPolicyVC()
             self.navigationController?.pushViewController(vc, animated: true)
         case "rateUs":
