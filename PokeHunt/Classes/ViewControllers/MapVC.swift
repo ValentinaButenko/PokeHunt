@@ -29,8 +29,18 @@ class MapVC: UIViewController {
         self.setupMap()
         self.setupSearchButton()
         self.setupPayButton()
+
+        let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(10 * Double(NSEC_PER_SEC)))
+        dispatch_after(delayTime, dispatch_get_main_queue()) {
+            self.request()
+        }
+    }
+
+    func request() {
         NianticlabsService.mainService.stopsTask().success { map in
             print(map)
+        }.failure { (error, isCancelled) in
+            print(error)
         }
     }
 

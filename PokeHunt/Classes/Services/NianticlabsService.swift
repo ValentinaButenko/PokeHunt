@@ -12,6 +12,7 @@ import Alamofire
 import POGOProto
 import Protobuf
 import SwiftTask
+import INTULocationManager
 
 
 private let NianticlabsErrorDomain = GlobalErrorDomain + ".nianticlabs"
@@ -24,6 +25,7 @@ final class NianticlabsService {
         case IncorrectSessionAPIURL
         case SessionResponseConstructionFail
         case TaskHasBeenCanceled
+        case BadLocation
     }
     private typealias NianticlabsSessionTask = Task<Void, Void, NSError>
     internal typealias NianticlabsStopsTask = Task<Void, POGOGetMapObjectsResponse, NSError>
@@ -41,8 +43,7 @@ final class NianticlabsService {
         get { return instance! }
     }
 
-    private let manager : Manager
-    private let tokenGetter : ((String?) -> Void) -> Void
+
     private init(tokenGetter: ((String?) -> Void) -> Void) {
         self.tokenGetter = tokenGetter
 
@@ -51,6 +52,21 @@ final class NianticlabsService {
         config.HTTPAdditionalHeaders!["User-Agent"] = "Niantic App"
         
         self.manager = Manager(configuration: config)
+        self.configureLocationUpdater()
+    }
+
+    private func configureLocationUpdater() {
+        let locMgr = INTULocationManager.sharedInstance()
+        locMgr.subscribeToLocationUpdatesWithBlock { (loc, accuracy, status) in
+            // TODO: log accuracy and status
+            if status == .Success {
+                self.location = loc
+            }
+            else {
+                print(status)
+                // provide callback for error
+            }
+        }
     }
     
     // MARK: internal methods
@@ -58,8 +74,12 @@ final class NianticlabsService {
         let task = NianticlabsStopsTask { _, fulfill, reject, configure in
             let session = self.sessionTask()
             session.success { _ in
-                let coord = CLLocationCoordinate2D(latitude: 50.028222399999997, longitude: 36.349946500000001)
-                let data = NianticlabsDataGenerator.stopsRequest(self.session!, loc: coord)
+                guard let loc = self.location else {
+                    let err = NSError(domain: NianticlabsErrorDomain, code: ErrorType.BadLocation.rawValue, userInfo: nil)
+                    reject(err)
+                    return
+                }
+                let data = NianticlabsDataGenerator.stopsRequest(self.session!, loc: loc.coordinate)
 
                 self.manager.request(.POST, self.apiUrl!, parameters: [:], encoding: .Custom({ (convertible, _) in
                     let mutableRequest = convertible.URLRequest.copy() as! NSMutableURLRequest
@@ -104,6 +124,10 @@ final class NianticlabsService {
     // MARK: private methods
     private var session : POGOResponseEnvelope? = nil
     private var apiUrl : String? = nil
+    private var location : CLLocation? = nil
+
+    private let manager : Manager
+    private let tokenGetter : ((String?) -> Void) -> Void
 }
 
 
@@ -156,6 +180,7 @@ extension NianticlabsService {
                             let err = NSError(domain: NianticlabsErrorDomain,
                                 code: ErrorType.SessionResponseConstructionFail.rawValue,
                                 userInfo: ["data":val])
+                            // TODO: add logging
                             reject(err)
                         }
                     }
