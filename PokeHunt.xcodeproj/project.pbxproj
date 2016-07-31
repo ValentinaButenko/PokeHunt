@@ -472,6 +472,7 @@
 		127616D31D450A7A00F446FA /* TypeEffectiveSettings.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = 127615191D450A7800F446FA /* TypeEffectiveSettings.pbobjc.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		127616D41D450A7A00F446FA /* TypeEffectiveSettings.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 1276151A1D450A7800F446FA /* TypeEffectiveSettings.pbobjc.m */; };
 		127616D61D450E0700F446FA /* POGOProto_umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 127616D51D450DB300F446FA /* POGOProto_umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1277590D1D4E5D8300F18598 /* MapPokemonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1277590C1D4E5D8300F18598 /* MapPokemonModel.swift */; };
 		12D357C91D4783DE008843CE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12D357C81D4783DE008843CE /* CoreLocation.framework */; };
 		39A0F50EAE19156C026555D7 /* Pods_PokeHunt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58DD6499E2E6B4CA44BAA4CB /* Pods_PokeHunt.framework */; };
 		B9EB67A4B94B69575D77C4F7 /* Pods_S2SphereAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8677FFB7C51819037FE83EF1 /* Pods_S2SphereAdapter.framework */; };
@@ -1207,6 +1208,7 @@
 		127616D51D450DB300F446FA /* POGOProto_umbrella.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = POGOProto_umbrella.h; sourceTree = "<group>"; };
 		127616DE1D45375E00F446FA /* libc++abi.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++abi.tbd"; path = "usr/lib/libc++abi.tbd"; sourceTree = SDKROOT; };
 		127616E01D45379600F446FA /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		1277590C1D4E5D8300F18598 /* MapPokemonModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapPokemonModel.swift; sourceTree = "<group>"; };
 		12D357C81D4783DE008843CE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		31CF62A75AD969201AB06A47 /* Pods-PokeHunt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeHunt.release.xcconfig"; path = "Pods/Target Support Files/Pods-PokeHunt/Pods-PokeHunt.release.xcconfig"; sourceTree = "<group>"; };
 		58DD6499E2E6B4CA44BAA4CB /* Pods_PokeHunt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PokeHunt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1294,6 +1296,7 @@
 		12760B9A1D4424A200F446FA /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				1277590B1D4E5D6700F18598 /* Models */,
 				12760B9B1D4424A200F446FA /* AppDelegate */,
 				12760B9D1D4424A200F446FA /* Authorization */,
 				12760BA01D4424A200F446FA /* Bootstrapper */,
@@ -2409,6 +2412,14 @@
 			path = Pokemon;
 			sourceTree = "<group>";
 		};
+		1277590B1D4E5D6700F18598 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1277590C1D4E5D8300F18598 /* MapPokemonModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		4DB5BD027634F7D57F2F15B3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -3211,6 +3222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1277590D1D4E5D8300F18598 /* MapPokemonModel.swift in Sources */,
 				12760BB61D4424A200F446FA /* UIView.bgSnapshot.swift in Sources */,
 				12760BB41D4424A200F446FA /* GoogleAuthorizationController.swift in Sources */,
 				12760BB91D4424A200F446FA /* LoginVC.swift in Sources */,

@@ -15,7 +15,7 @@ import SwiftTask
 import INTULocationManager
 
 
-private let NianticlabsErrorDomain = GlobalErrorDomain + ".nianticlabs"
+private let NianticlabsErrorDomain = GlobalErrorDomain + ".NianticlabsService"
 private let NianticlabsAPIURL = "https://pgorelease.nianticlabs.com/plfe/rpc"
 
 

@@ -14,3 +14,7 @@
 #import "GetMapObjectsResponse.pbobjc.h"
 #import "DownloadSettingsMessage.pbobjc.h"
 #import "MapCell.pbobjc.h"
+#import "WildPokemon.pbobjc.h"
+#import "MapPokemon.pbobjc.h"
+#import "PokemonData.pbobjc.h"
+#import "PokemonId.pbobjc.h"
