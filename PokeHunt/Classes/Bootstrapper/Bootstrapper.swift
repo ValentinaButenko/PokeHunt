@@ -10,6 +10,10 @@ import Foundation
 import GoogleMaps
 
 
+internal let GlobalDomain = "com.fantastik.pokehunt"
+internal let GlobalErrorDomain = "com.fantastik.pokehunt.error"
+
+
 internal struct Bootstrapper {
     internal static func bootstrap() {
         do {

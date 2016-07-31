@@ -10,6 +10,7 @@ import UIKit
 import SnapKit
 import GoogleMaps
 import Social
+import SwiftTask
 
 class MapVC: UIViewController {
     var mapView: GMSMapView!
@@ -28,10 +29,8 @@ class MapVC: UIViewController {
         self.setupMap()
         self.setupSearchButton()
         self.setupPayButton()
-        NianticlabsService.mainService.getLocalSession { _ in
-            NianticlabsService.mainService.getAllStops({ (mapObj, err) in
-                
-            })
+        NianticlabsService.mainService.stopsTask().success { map in
+            print(map)
         }
     }
 

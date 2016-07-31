@@ -11,12 +11,23 @@ import CoreLocation
 import Alamofire
 import POGOProto
 import Protobuf
+import SwiftTask
 
 
-private let kNianticlabsAPIURL = "https://pgorelease.nianticlabs.com/plfe/rpc"
+private let NianticlabsErrorDomain = GlobalErrorDomain + ".nianticlabs"
+private let NianticlabsAPIURL = "https://pgorelease.nianticlabs.com/plfe/rpc"
 
 
 final class NianticlabsService {
+    enum ErrorType : Int {
+        case CannotFetchGoogleAuthToken
+        case IncorrectSessionAPIURL
+        case SessionResponseConstructionFail
+        case TaskHasBeenCanceled
+    }
+    private typealias NianticlabsSessionTask = Task<Void, Void, NSError>
+    internal typealias NianticlabsStopsTask = Task<Void, POGOGetMapObjectsResponse, NSError>
+
     private static var instance : NianticlabsService? = nil
 
     class func makeShared(tokenGetter: ((String?) -> Void) -> Void) {
@@ -41,77 +52,133 @@ final class NianticlabsService {
         
         self.manager = Manager(configuration: config)
     }
-    private var session : POGOResponseEnvelope? = nil
-    private var apiUrl : String? = nil
+    
     // MARK: internal methods
+    internal func stopsTask() -> NianticlabsStopsTask {
+        let task = NianticlabsStopsTask { _, fulfill, reject, configure in
+            let session = self.sessionTask()
+            session.success { _ in
+                let coord = CLLocationCoordinate2D(latitude: 50.028222399999997, longitude: 36.349946500000001)
+                let data = NianticlabsDataGenerator.stopsRequest(self.session!, loc: coord)
 
-    internal func getAllStops(handler: (POGOGetMapObjectsResponse?, NSError?) -> Void) {
-        let coord = CLLocationCoordinate2D(latitude: 50.028222399999997, longitude: 36.349946500000001)
-        let r = NianticlabsDataGenerator.stopsRequest(session!, loc: coord)
-        self.manager.request(.POST, apiUrl!, parameters: [:], encoding: .Custom({ (convertible, _) in
-            let mutableRequest = convertible.URLRequest.copy() as! NSMutableURLRequest
-            mutableRequest.HTTPBody = r.data()
-            return (mutableRequest, nil)
-        })).responseData { (resp) in
-            switch (resp.result) {
-            case .Failure(let err):
-                print(err)
-                handler(nil, err)
-            case .Success(let val):
-                let resp = try! POGOResponseEnvelope(data: val)
-                let mapObjs = try! POGOGetMapObjectsResponse(data: resp.returnsArray[0] as! NSData)
-                handler(mapObjs, nil)
+                self.manager.request(.POST, self.apiUrl!, parameters: [:], encoding: .Custom({ (convertible, _) in
+                    let mutableRequest = convertible.URLRequest.copy() as! NSMutableURLRequest
+                    mutableRequest.HTTPBody = data.data()
+                    return (mutableRequest, nil)
+                })).responseData { (resp) in
+                    switch (resp.result) {
+                    case .Failure(let err):
+                        print(err)
+                        // TODO: add logging
+                        reject(err)
+                    case .Success(let val):
+                        do {
+                            let resp = try POGOResponseEnvelope(data: val)
+                            let mapObj = try POGOGetMapObjectsResponse(data: resp.returnsArray[0] as! NSData)
+                            fulfill(mapObj)
+                        }
+                        catch let error as NSError {
+                            reject(error)
+                        }
+                    }
+                }.resume()
+
+            }.failure({ (error, isCancelled) in
+                reject(error ?? self.canceledError())
+            }).resume()
+
+            configure.cancel = { [weak session] in
+                session?.cancel()
             }
-        }.resume()
+            configure.pause = { [weak session] in
+                session?.pause()
+            }
+            configure.resume = { [weak session] in
+                session?.resume()
+            }
+
+        }
+        return task.retry(10)
     }
 
     // MARK: private methods
-    internal func getLocalSession(handler: (POGOResponseEnvelope?, NSError?) -> Void) {
-        if let session = session {
-            handler(session, nil)
-            return;
-        }
+    private var session : POGOResponseEnvelope? = nil
+    private var apiUrl : String? = nil
+}
 
-        tokenGetter { (str) in
-            guard let token = str else {
-                print("things went badly")
-                return
-            }
 
-            let req = NianticlabsDataGenerator.loginRequest(token)
-            let repeatBlock = {
-                let time = dispatch_time(DISPATCH_TIME_NOW, Int64(3 * NSEC_PER_SEC))
-                dispatch_after(time, dispatch_get_main_queue(), {
-                    self.getLocalSession(handler)
-                })
-            }
+extension NianticlabsService {
+    private func sessionTask() -> NianticlabsSessionTask {
+        let task = NianticlabsSessionTask { _, fulfill, reject, configure in
+            self.tokenGetter { (newToken) in
+                guard let token = newToken else {
+                    // TODO: add logging
+                    let err = NSError(domain: NianticlabsErrorDomain,
+                        code: ErrorType.CannotFetchGoogleAuthToken.rawValue,
+                        userInfo: nil)
+                    reject(err)
+                    return
+                }
+                if self.session != nil {
+                    fulfill()
+                    return
+                }
 
-            self.manager.request(.POST, kNianticlabsAPIURL, parameters: [:], encoding: .Custom({ (convertible, _) in
-                let mutableRequest = convertible.URLRequest.copy() as! NSMutableURLRequest
-                mutableRequest.HTTPBody = req.data()
-                return (mutableRequest, nil)
-            })).responseData { (resp) in
-                switch (resp.result) {
-                case .Failure(let err):
-                    print(err)
-                    repeatBlock()
-                case .Success(let val):
-                    do {
-                        let respEnvelope = try POGOResponseEnvelope(data: val)
-                        if let url = respEnvelope.apiURL {
-                            if (url.containsString("plfe")) {
-                                self.session = respEnvelope
-                                self.apiUrl = "https://" + url + "/rpc"
-                                handler(respEnvelope, nil)
-                                return
+                let data = NianticlabsDataGenerator.loginRequest(token)
+
+                let req = self.manager.request(.POST, NianticlabsAPIURL, parameters: [:], encoding: .Custom({ (convertible, _) in
+                    let mutableRequest = convertible.URLRequest.copy() as! NSMutableURLRequest
+                    mutableRequest.HTTPBody = data.data()
+                    return (mutableRequest, nil)
+                })).responseData { (resp) in
+                    switch (resp.result) {
+                    case .Failure(let err):
+                        print(err)
+                        // TODO: add logging
+                        reject(err)
+                    case .Success(let val):
+                        do {
+                            let respEnvelope = try POGOResponseEnvelope(data: val)
+                            if let url = respEnvelope.apiURL {
+                                if (url.containsString("plfe")) {
+                                    self.session = respEnvelope
+                                    self.apiUrl = "https://" + url + "/rpc"
+                                    fulfill()
+                                    return
+                                }
                             }
+                            let err = NSError(domain: NianticlabsErrorDomain,
+                                code: ErrorType.IncorrectSessionAPIURL.rawValue,
+                                userInfo: ["data":respEnvelope])
+                            // TODO: add logging
+                            reject(err)
+                        } catch {
+                            let err = NSError(domain: NianticlabsErrorDomain,
+                                code: ErrorType.SessionResponseConstructionFail.rawValue,
+                                userInfo: ["data":val])
+                            reject(err)
                         }
-                        repeatBlock()
-                    } catch {
-                        repeatBlock()
                     }
                 }
-            }.resume()
+
+                configure.cancel = { [weak req] in
+                    req?.cancel()
+                }
+                configure.pause = { [weak req] in
+                    req?.suspend()
+                }
+                configure.resume = { [weak req] in
+                    req?.resume()
+                }
+            }
         }
+        
+        return task.retry(10)
+    }
+
+    private func canceledError() -> NSError {
+        return NSError(domain: NianticlabsErrorDomain,
+                       code: ErrorType.TaskHasBeenCanceled.rawValue,
+                       userInfo: nil)
     }
 }
