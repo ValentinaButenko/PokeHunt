@@ -28,7 +28,7 @@ final class NianticlabsService {
         case BadLocation
     }
     private typealias NianticlabsSessionTask = Task<Void, Void, NSError>
-    internal typealias NianticlabsStopsTask = Task<Void, POGOGetMapObjectsResponse, NSError>
+    internal typealias NianticlabsStopsTask = Task<Void, MapPokemonModel, NSError>
 
     private static var instance : NianticlabsService? = nil
 
@@ -63,8 +63,7 @@ final class NianticlabsService {
                 self.location = loc
             }
             else {
-                print(status)
-                // provide callback for error
+                self.locationErrorHandler?(status)
             }
         }
     }
@@ -95,7 +94,7 @@ final class NianticlabsService {
                         do {
                             let resp = try POGOResponseEnvelope(data: val)
                             let mapObj = try POGOGetMapObjectsResponse(data: resp.returnsArray[0] as! NSData)
-                            fulfill(mapObj)
+                            fulfill(MapPokemonModel(proto: mapObj))
                         }
                         catch let error as NSError {
                             reject(error)
@@ -121,7 +120,10 @@ final class NianticlabsService {
         return task.retry(10)
     }
 
-    // MARK: private methods
+    // MARK: internal vars
+    var locationErrorHandler : ((INTULocationStatus) -> Void)?
+
+    // MARK: private vars
     private var session : POGOResponseEnvelope? = nil
     private var apiUrl : String? = nil
     private var location : CLLocation? = nil
