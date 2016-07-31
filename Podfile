@@ -12,6 +12,7 @@ target 'PokeHunt' do
     pod 'SSKeychain'
     pod 'Protobuf', '3.0.0-beta-4'
     pod 'OpenSSL', '1.0.208'
+    pod 'SwiftTask'
 end
 
 

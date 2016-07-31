@@ -9,6 +9,7 @@ PODS:
   - R.swift.Library (2.2.0)
   - SnapKit (0.15.0)
   - SSKeychain (1.4.0)
+  - SwiftTask (5.0.0)
   - TOWebViewController (2.2.6):
     - TOWebViewController/Core (= 2.2.6)
   - TOWebViewController/Core (2.2.6)
@@ -22,6 +23,7 @@ DEPENDENCIES:
   - R.swift
   - SnapKit (~> 0.15.0)
   - SSKeychain
+  - SwiftTask
   - TOWebViewController
 
 EXTERNAL SOURCES:
@@ -38,8 +40,9 @@ SPEC CHECKSUMS:
   R.swift.Library: 31a487b65381f37a7d203a6f1f935b43c9be35b0
   SnapKit: 4962eed2ee18e48cbd2b2292fffc57efe7235f87
   SSKeychain: c71293fa57216a40ab06c23f4085387583293de4
+  SwiftTask: 7fcd92f8ac16876e82c0e4ced0cea7e028456b6b
   TOWebViewController: a29908019f7e0e0f8eccfab8a1ee8dcdf4fc5aac
 
-PODFILE CHECKSUM: 8c72330fce6ee06327d41cb74aa55421173ce086
+PODFILE CHECKSUM: b26e1f42f79256a708f912751b1f8855ceb18e82
 
 COCOAPODS: 1.0.1
