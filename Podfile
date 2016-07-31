@@ -14,6 +14,8 @@ target 'PokeHunt' do
     pod 'OpenSSL', '1.0.208'
     pod 'SwiftTask'
     pod 'INTULocationManager'
+    pod 'SwiftyTimer'
+    pod 'SwiftEventBus'
 end
 
 
