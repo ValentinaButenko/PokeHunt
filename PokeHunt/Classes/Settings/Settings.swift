@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftEventBus
 
 
 private let kSettingsKey = "com.fantastik.pokehunt.settings"
@@ -14,16 +15,20 @@ private let kStepsKey = "steps"
 private let kRefreshIntervalKey = "refreshInterval"
 
 class Settings : NSObject {
+    static let DidUpdated = "com.fantastik.pokehunt.Settings.DidUpdated"
+
     static let instance = Settings()
 
     var steps : UInt8 = 15 {
         didSet {
             save()
+            notify()
         }
     }
     var refreshInterval : NSTimeInterval = 30 {
         didSet {
             save()
+            notify()
         }
     }
 
@@ -38,6 +43,10 @@ class Settings : NSObject {
     private func save() {
         NSUserDefaults.standardUserDefaults().setObject(self, forKey: kSettingsKey)
         NSUserDefaults.standardUserDefaults().synchronize()
+    }
+
+    private func notify() {
+        SwiftEventBus.post(Settings.DidUpdated)
     }
 
     private func encodeWithCoder(aCoder: NSCoder) {
