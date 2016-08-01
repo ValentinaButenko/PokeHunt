@@ -9,7 +9,7 @@
 import UIKit
 import SnapKit
 import MessageUI
-import Flurry_iOS_SDK
+import FirebaseAnalytics
 
 class AboutUsVC: UIViewController, UITextViewDelegate{
 
@@ -23,7 +23,7 @@ class AboutUsVC: UIViewController, UITextViewDelegate{
     }
     
     override func viewDidAppear(animated: Bool) {
-        Flurry.logPageView()
+        FIRAnalytics.logEventWithName("About_us_page_load", parameters: nil)
     }
 
     func setup(){

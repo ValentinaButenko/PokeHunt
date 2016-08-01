@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Flurry_iOS_SDK
+import FirebaseAnalytics
 
 class PrivacyPolicyVC: UIViewController, UITextViewDelegate {
     var header: UIView!
@@ -20,7 +20,7 @@ class PrivacyPolicyVC: UIViewController, UITextViewDelegate {
     }
 
     override func viewDidAppear(animated: Bool) {
-        Flurry.logPageView()
+        FIRAnalytics.logEventWithName("Privacy_policy_page_load", parameters: nil)
     }
     
     func setup(){

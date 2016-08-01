@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 import GoogleMaps
 import Social
-import Flurry_iOS_SDK
+import FirebaseAnalytics
 import GoogleMobileAds
 
 class MapVC: UIViewController {
@@ -140,17 +140,17 @@ class MapVC: UIViewController {
     }
 
     func searchPokemon(sender: UIButton){
-        Flurry.logEvent("User tap pokemon search")
+        FIRAnalytics.logEventWithName("User_tap_pokesearch", parameters: nil)
         print("Searching...")
     }
 
     func removeAds(sender: UIButton){
-        Flurry.logEvent("User tap share Btn")
+        FIRAnalytics.logEventWithName("User_tap_remove_ads", parameters: nil)
         print("I'll give U all my money honey!")
     }
 
     func shapshotBg(sender: UIButton){
-        Flurry.logEvent("User tap share Btn")
+        FIRAnalytics.logEventWithName("User_tap_share", parameters: nil)
         guard let snpShot = self.view?.pb_takeSnapshot() else{
             return
         }
@@ -159,7 +159,7 @@ class MapVC: UIViewController {
     }
 
     func selectedSettings(sender: UIButton){
-        Flurry.logEvent("User select settings")
+        FIRAnalytics.logEventWithName("User_select_settings", parameters: nil)
         let storyboard = UIStoryboard(name: "Settings", bundle: nil)
         let vc = storyboard.instantiateViewControllerWithIdentifier("SettingsStrBrd")
         self.navigationController!.pushViewController(vc, animated: true)

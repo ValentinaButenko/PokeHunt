@@ -8,7 +8,7 @@
 
 import UIKit
 import SnapKit
-import Flurry_iOS_SDK
+import FirebaseAnalytics
 
 class SettingsTableVC: UITableViewController, UITextFieldDelegate{
 
@@ -85,12 +85,10 @@ class SettingsTableVC: UITableViewController, UITextFieldDelegate{
 
         switch (identifier) {
         case "aboutUs":
-            Flurry.logEvent("About_Us_tapped")
             print("aboutUs tapped")
             let vc = AboutUsVC()
             self.navigationController?.pushViewController(vc, animated: true)
         case "privacyPolicy":
-            Flurry.logEvent("Privacy_Policy_tapped")
             let vc = PrivacyPolicyVC()
             self.navigationController?.pushViewController(vc, animated: true)
         case "rateUs":
@@ -259,7 +257,7 @@ class SettingsTableVC: UITableViewController, UITextFieldDelegate{
     }
 
     func refreshSwitchChangeState(sender: UISwitch){
-        Flurry.logEvent("Change_refresh_state")
+        FIRAnalytics.logEventWithName("Change_refresh_state", parameters: nil)
         if sender.on{
             print("Autorefresh on")
         }
@@ -269,7 +267,7 @@ class SettingsTableVC: UITableViewController, UITextFieldDelegate{
     }
 
     func showPokeSwitchChangeState(sender: UISwitch){
-        Flurry.logEvent("Change_showPoke_state")
+        FIRAnalytics.logEventWithName("Change_show_pokeshow_state", parameters: nil)
         if sender.on{
             print("ShowPoke on")
         }
@@ -279,7 +277,7 @@ class SettingsTableVC: UITableViewController, UITextFieldDelegate{
     }
 
     func showPokestopSwitchChangeState(sender: UISwitch){
-        Flurry.logEvent("Change_show_pokestop_state")
+        FIRAnalytics.logEventWithName("Change_show_pokestop_state", parameters: nil)
         if sender.on{
             print("Show Pokestop on")
         }
@@ -289,7 +287,7 @@ class SettingsTableVC: UITableViewController, UITextFieldDelegate{
     }
 
     func showJymsSwitchChangeState(sender: UISwitch){
-        Flurry.logEvent("Change_show_jym_state")
+        FIRAnalytics.logEventWithName("Change_show_jym_state", parameters: nil)
         if sender.on{
             print("Show Jyms on")
         }
@@ -329,7 +327,7 @@ class SettingsTableVC: UITableViewController, UITextFieldDelegate{
         }
         if initialArea != finalArea{
             let statsParams = ["New_Steps_Area" : finalArea]
-            Flurry.logEvent("Steps_Area_Change", withParameters: statsParams)
+            FIRAnalytics.logEventWithName("Steps_area_chaged", parameters: statsParams)
             print("User did change text field")
         }
         else{
