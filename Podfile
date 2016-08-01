@@ -12,5 +12,6 @@ target 'PokeHunt' do
     pod 'SSKeychain'
 	pod 'Firebase/Core'
   	pod 'Firebase/AdMob'
+	pod "HockeySDK"
 end
 
