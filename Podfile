@@ -10,5 +10,7 @@ target 'PokeHunt' do
     pod 'AppAuth'
     pod 'Alamofire'
     pod 'SSKeychain'
+	pod 'Firebase/Core'
+  	pod 'Firebase/AdMob'
 end
 

@@ -9,6 +9,7 @@
 import UIKit
 import SnapKit
 import MessageUI
+import FirebaseAnalytics
 
 class AboutUsVC: UIViewController, UITextViewDelegate{
 
@@ -19,6 +20,10 @@ class AboutUsVC: UIViewController, UITextViewDelegate{
         super.viewDidLoad()
         view.backgroundColor = UIColor.whiteColor()
         self.setup()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        FIRAnalytics.logEventWithName("About_us_page_load", parameters: nil)
     }
 
     func setup(){

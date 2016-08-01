@@ -10,11 +10,16 @@ import UIKit
 import SnapKit
 import GoogleMaps
 import Social
+import FirebaseAnalytics
+import GoogleMobileAds
 
 class MapVC: UIViewController {
     var mapView: GMSMapView!
     var searchBtn: UIButton!
     var payBtn: UIButton!
+    var adsView: GADBannerView!
+
+    var isPayed = false
 
     var snapShot: UIImage!
 
@@ -25,9 +30,17 @@ class MapVC: UIViewController {
 
     func setup(){
         self.setupNavigationController()
-        self.setupMap()
-        self.setupSearchButton()
-        self.setupPayButton()
+
+        if isPayed == true {
+            self.setupMap()
+            self.setupSearchButton()
+        }
+        else{
+            self.setupAdsView()
+            self.setupUnpurchasedMap()
+            self.setupSearchButton()
+            self.setupPayButton()
+        }
     }
 
     func setupNavigationController(){
@@ -48,6 +61,8 @@ class MapVC: UIViewController {
                                                                  action: #selector(MapVC.shapshotBg(_:)))
         self.navigationItem.titleView = titleView
     }
+
+    // setup map & searchBtn in purchased App
 
     func setupMap(){
         let camera = GMSCameraPosition.cameraWithLatitude(-33.86,longitude: 151.20, zoom: 10)
@@ -70,10 +85,42 @@ class MapVC: UIViewController {
         view.addSubview(searchBtn)
 
         searchBtn.snp_makeConstraints { (make) in
-            make.trailing.equalTo(view).inset(12)
-            make.bottom.equalTo(view).inset(18)
+            make.trailing.equalTo(mapView.snp_trailing).inset(12)
+            make.bottom.equalTo(mapView.snp_bottom).inset(18)
         }
         self.searchBtn = searchBtn
+    }
+
+    // setup map, payBtn, and adsView in unpurchased App
+
+    func setupAdsView(){
+        let adsView = GADBannerView()
+        adsView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        adsView.rootViewController = self
+        view.backgroundColor = UIColor.grayColor()
+        view.addSubview(adsView)
+
+        adsView.snp_makeConstraints { (make) in
+            make.leading.trailing.equalTo(view)
+            make.bottom.equalTo(view)
+            make.height.equalTo(72)
+        }
+        adsView.loadRequest(GADRequest())
+        self.adsView = adsView
+    }
+
+    func setupUnpurchasedMap(){
+        let camera = GMSCameraPosition.cameraWithLatitude(-33.86, longitude: 151.20, zoom: 10)
+        let mapView = GMSMapView.mapWithFrame(CGRectZero, camera: camera)
+
+        view.addSubview(mapView)
+
+        mapView.snp_makeConstraints { (make) in
+            make.leading.trailing.equalTo(view)
+            make.top.equalTo(view)
+            make.bottom.equalTo(adsView.snp_top)
+        }
+        self.mapView = mapView
     }
 
     func setupPayButton(){
@@ -86,21 +133,24 @@ class MapVC: UIViewController {
         view.addSubview(payBtn)
 
         payBtn.snp_makeConstraints { (make) in
-            make.leading.equalTo(view).inset(12)
-            make.bottom.equalTo(view).inset(18)
+            make.leading.equalTo(mapView.snp_leading).inset(12)
+            make.bottom.equalTo(mapView.snp_bottom).inset(18)
         }
         self.payBtn = payBtn
     }
 
     func searchPokemon(sender: UIButton){
+        FIRAnalytics.logEventWithName("User_tap_pokesearch", parameters: nil)
         print("Searching...")
     }
 
     func removeAds(sender: UIButton){
+        FIRAnalytics.logEventWithName("User_tap_remove_ads", parameters: nil)
         print("I'll give U all my money honey!")
     }
 
     func shapshotBg(sender: UIButton){
+        FIRAnalytics.logEventWithName("User_tap_share", parameters: nil)
         guard let snpShot = self.view?.pb_takeSnapshot() else{
             return
         }
@@ -109,6 +159,7 @@ class MapVC: UIViewController {
     }
 
     func selectedSettings(sender: UIButton){
+        FIRAnalytics.logEventWithName("User_select_settings", parameters: nil)
         let storyboard = UIStoryboard(name: "Settings", bundle: nil)
         let vc = storyboard.instantiateViewControllerWithIdentifier("SettingsStrBrd")
         self.navigationController!.pushViewController(vc, animated: true)

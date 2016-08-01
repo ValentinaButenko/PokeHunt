@@ -8,6 +8,7 @@
 
 import UIKit
 import SnapKit
+import FirebaseAnalytics
 
 class SettingsTableVC: UITableViewController, UITextFieldDelegate{
 
@@ -256,6 +257,7 @@ class SettingsTableVC: UITableViewController, UITextFieldDelegate{
     }
 
     func refreshSwitchChangeState(sender: UISwitch){
+        FIRAnalytics.logEventWithName("Change_refresh_state", parameters: nil)
         if sender.on{
             print("Autorefresh on")
         }
@@ -265,6 +267,7 @@ class SettingsTableVC: UITableViewController, UITextFieldDelegate{
     }
 
     func showPokeSwitchChangeState(sender: UISwitch){
+        FIRAnalytics.logEventWithName("Change_show_pokeshow_state", parameters: nil)
         if sender.on{
             print("ShowPoke on")
         }
@@ -274,6 +277,7 @@ class SettingsTableVC: UITableViewController, UITextFieldDelegate{
     }
 
     func showPokestopSwitchChangeState(sender: UISwitch){
+        FIRAnalytics.logEventWithName("Change_show_pokestop_state", parameters: nil)
         if sender.on{
             print("Show Pokestop on")
         }
@@ -283,6 +287,7 @@ class SettingsTableVC: UITableViewController, UITextFieldDelegate{
     }
 
     func showJymsSwitchChangeState(sender: UISwitch){
+        FIRAnalytics.logEventWithName("Change_show_jym_state", parameters: nil)
         if sender.on{
             print("Show Jyms on")
         }
@@ -315,8 +320,19 @@ class SettingsTableVC: UITableViewController, UITextFieldDelegate{
 
     func dismissKeyboard() {
         view.endEditing(true)
+
+        let initialArea = "30"
+        guard let finalArea = self.stepsArea.text else{
+            return print(NSError.description())
+        }
+        if initialArea != finalArea{
+            let statsParams = ["New_Steps_Area" : finalArea]
+            FIRAnalytics.logEventWithName("Steps_area_chaged", parameters: statsParams)
+            print("User did change text field")
+        }
+        else{
+            print("User did not changed text field")
+        }
     }
-
-
 }
 
