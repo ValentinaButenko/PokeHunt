@@ -230,9 +230,29 @@ THE SOFTWARE.
    limitations under the License.
 
 
+## Firebase
+
+Copyright 2016 Google Inc.
+
+## FirebaseAnalytics
+
+Copyright 2016 Google
+
+## FirebaseInstanceID
+
+Copyright 2016 Google Inc.
+
 ## Flurry-iOS-SDK
 
 Developer's use of the SDK is governed by the license in the applicable Flurry Terms of Service. Some components of the SDK are governed by open source software licenses. In the event of any conflict between the license in the applicable Flurry Terms of Service and the applicable open source license, the terms of the open source license shall prevail with respect to those components.
+
+## Google-Mobile-Ads-SDK
+
+Copyright 2011 Google Inc. All Rights Reserved.
+
+## GoogleInterchangeUtilities
+
+Copyright 2015 Google Inc.
 
 ## GoogleMaps
 
@@ -244,6 +264,14 @@ part of an "About" menu item, is recommended.
 You can get the attribution text by making a call to
 [GMSServices openSourceLicenseInfo].
 
+
+## GoogleSymbolUtilities
+
+Copyright 2015 Google Inc.
+
+## GoogleUtilities
+
+Copyright 2015 Google Inc.
 
 ## R.swift
 

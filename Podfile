@@ -11,5 +11,7 @@ target 'PokeHunt' do
     pod 'Alamofire'
     pod 'SSKeychain'
 	pod 'Flurry-iOS-SDK/FlurrySDK'
+	pod 'Firebase/Core'
+  	pod 'Firebase/AdMob'
 end
 

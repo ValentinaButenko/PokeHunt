@@ -11,12 +11,13 @@ import SnapKit
 import GoogleMaps
 import Social
 import Flurry_iOS_SDK
+import GoogleMobileAds
 
 class MapVC: UIViewController {
     var mapView: GMSMapView!
     var searchBtn: UIButton!
     var payBtn: UIButton!
-    var adsView: UIView!
+    var adsView: GADBannerView!
 
     var isPayed = false
 
@@ -93,7 +94,9 @@ class MapVC: UIViewController {
     // setup map, payBtn, and adsView in unpurchased App
 
     func setupAdsView(){
-        let adsView = UIView()
+        let adsView = GADBannerView()
+        adsView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        adsView.rootViewController = self
         view.backgroundColor = UIColor.grayColor()
         view.addSubview(adsView)
 
@@ -102,6 +105,7 @@ class MapVC: UIViewController {
             make.bottom.equalTo(view)
             make.height.equalTo(72)
         }
+        adsView.loadRequest(GADRequest())
         self.adsView = adsView
     }
 

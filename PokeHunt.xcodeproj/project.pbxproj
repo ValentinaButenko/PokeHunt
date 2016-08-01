@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		39A0F50EAE19156C026555D7 /* Pods_PokeHunt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58DD6499E2E6B4CA44BAA4CB /* Pods_PokeHunt.framework */; };
+		F60F11841D4F2F0A00DA4BB0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F60F11831D4F2F0A00DA4BB0 /* GoogleService-Info.plist */; };
 		F64A96631D40E8C000A72182 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64A96621D40E8C000A72182 /* Social.framework */; };
 		F69A44831D44B85800D56AEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69A44691D44B85800D56AEA /* AppDelegate.swift */; };
 		F69A44841D44B85800D56AEA /* AuthorizationModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69A446B1D44B85800D56AEA /* AuthorizationModule.swift */; };
@@ -37,6 +38,7 @@
 		31CF62A75AD969201AB06A47 /* Pods-PokeHunt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeHunt.release.xcconfig"; path = "Pods/Target Support Files/Pods-PokeHunt/Pods-PokeHunt.release.xcconfig"; sourceTree = "<group>"; };
 		58DD6499E2E6B4CA44BAA4CB /* Pods_PokeHunt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PokeHunt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		701B67ED30CCD092DC53B694 /* Pods-PokeHunt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeHunt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PokeHunt/Pods-PokeHunt.debug.xcconfig"; sourceTree = "<group>"; };
+		F60F11831D4F2F0A00DA4BB0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F64A96621D40E8C000A72182 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		F69A44691D44B85800D56AEA /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F69A446B1D44B85800D56AEA /* AuthorizationModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationModule.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 		F69A44811D44B85800D56AEA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F60F11831D4F2F0A00DA4BB0 /* GoogleService-Info.plist */,
 				F69A44821D44B85800D56AEA /* Info.plist */,
 			);
 			path = "Supporting Files";
@@ -298,6 +301,7 @@
 				F69A449D1D48D0F900D56AEA /* aboutUs.txt in Resources */,
 				F69A448F1D44B85800D56AEA /* LaunchScreen.xib in Resources */,
 				F69A448E1D44B85800D56AEA /* Assets.xcassets in Resources */,
+				F60F11841D4F2F0A00DA4BB0 /* GoogleService-Info.plist in Resources */,
 				F69A44CC1D4914A500D56AEA /* privacy.txt in Resources */,
 				F69A44921D44B85800D56AEA /* Settings.storyboard in Resources */,
 			);
