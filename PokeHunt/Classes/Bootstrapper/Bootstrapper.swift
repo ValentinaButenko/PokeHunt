@@ -20,8 +20,18 @@ internal struct Bootstrapper {
     static let instance = Bootstrapper()
     private init() {
         do {
-            GMSServices.provideAPIKey("AIzaSyBuZpNjqeaG65T53YfwDkBBow_fANZ05HA")
-            LoginModule.sharedModule
+            if let path = NSBundle.mainBundle().pathForResource("GMService-APIkeys", ofType: "plist"){
+                if let dict = NSDictionary(contentsOfFile: path) as? Dictionary<String,AnyObject>{
+                    if let APIkeys = dict["GMService_API_keys"]{
+                    let randomIndex = Int(arc4random_uniform(UInt32(APIkeys.count)))
+                        let randomAPI = APIkeys[randomIndex] as! String
+                        GMSServices.provideAPIKey(randomAPI)
+                        LoginModule.sharedModule
+                    }
+                }
+            }
+//            GMSServices.provideAPIKey("AIzaSyBuZpNjqeaG65T53YfwDkBBow_fANZ05HA")
+//            LoginModule.sharedModule
         }
 
         let vc : UIViewController = (LoginModule.sharedModule.isAuthorized) ?
