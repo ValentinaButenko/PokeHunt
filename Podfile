@@ -13,5 +13,6 @@ target 'PokeHunt' do
 	pod 'Firebase/Core'
   	pod 'Firebase/AdMob'
 	pod "HockeySDK"
+	pod 'KLCPopup', '~> 1.0'
 end
 

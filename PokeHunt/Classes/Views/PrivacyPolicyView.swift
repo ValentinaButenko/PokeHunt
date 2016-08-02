@@ -33,6 +33,7 @@ class PrivacyPolicyView: UIView{
 
         self.setupDeclineBtn()
         self.setupConfirmBtn()
+        
     }
 
     func setupTextView(){
@@ -72,7 +73,6 @@ class PrivacyPolicyView: UIView{
                                                 width: self.frame.width/2 - 2.5,
                                                 height: 30))
         declineBtn.enabled = true
-
         confirmBtn.backgroundColor = UIColor(red: 3/255, green: 201/255, blue: 169/255, alpha: 1.0)
         confirmBtn.setTitle("Confirm", forState: .Normal)
         confirmBtn.setTitleColor(UIColor.whiteColor(), forState: .Normal)
