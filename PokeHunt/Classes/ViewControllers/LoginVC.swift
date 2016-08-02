@@ -120,11 +120,6 @@ class LoginVC: UIViewController {
         }
     }
 
-    func popupWillDismiss(){
-        self.popup.dismiss(true)
-        self.view.dismissPresentingPopup()
-    }
-
     func logoViewWillMove(){
         self.logoView.snp_updateConstraints(closure: { (make) in
             make.centerY.equalTo(self.view).offset(-80)
