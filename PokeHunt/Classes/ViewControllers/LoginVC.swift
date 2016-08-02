@@ -10,17 +10,19 @@ import UIKit
 import SnapKit
 import AppAuth
 import FirebaseAnalytics
+import KLCPopup
 
 class LoginVC: UIViewController {
 
     var logoView: LogoView!
     var loginBtn: UIButton!
     var warningLbl: UILabel!
+    var privacyView: PrivacyPolicyView!
+    var popup: KLCPopup!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setup()
-//        Flurry.logPageView()
 
         view.backgroundColor = UIColor.whiteColor()
     }
@@ -28,13 +30,28 @@ class LoginVC: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
 
-        self.logoViewWillMove()
+        self.setupPrivacyView()
     }
 
     func setup(){
         self.setupLogoView()
         self.setupLoginBtn()
         self.setupWarningLbl()
+    }
+
+    func setupPrivacyView(){
+        let privacyView = PrivacyPolicyView(frame: CGRect(x: 40, y: 70, width: self.view.frame.size.width - 80, height: self.view.frame.size.height - 140))
+        let popup = KLCPopup(contentView: privacyView)
+        popup.showType = .BounceInFromTop
+        popup.dismissType = .BounceOutToBottom
+        privacyView.comfirmBtn.addTarget(self, action: #selector(LoginVC.logoViewWillMove), forControlEvents: .TouchUpInside)
+        privacyView.declineBtn.addTarget(self, action: #selector(LoginVC.popupWillDismiss), forControlEvents: .TouchUpInside)
+        popup.shouldDismissOnBackgroundTouch = false
+        popup.shouldDismissOnContentTouch = false
+        popup.maskType = .Dimmed
+        popup.show()
+
+        self.popup = popup
     }
 
     func setupLogoView(){
@@ -82,6 +99,11 @@ class LoginVC: UIViewController {
             make.centerX.equalTo(view.snp_centerX)
         }
         self.warningLbl = warningLbl
+    }
+
+    func popupWillDismiss(){
+        self.popup.dismiss(true)
+        self.view.dismissPresentingPopup()
     }
 
     func logoViewWillMove(){
