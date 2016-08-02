@@ -32,6 +32,7 @@
 		F69A449D1D48D0F900D56AEA /* aboutUs.txt in Resources */ = {isa = PBXBuildFile; fileRef = F69A449C1D48D0F900D56AEA /* aboutUs.txt */; };
 		F69A44CA1D490DE400D56AEA /* PrivacyPolicyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69A44C91D490DE400D56AEA /* PrivacyPolicyVC.swift */; };
 		F69A44CC1D4914A500D56AEA /* privacy.txt in Resources */ = {isa = PBXBuildFile; fileRef = F69A44CB1D4914A500D56AEA /* privacy.txt */; };
+		F6D14DFE1D50DCEA002BE44D /* GMService-APIkeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = F6D14DFD1D50DCEA002BE44D /* GMService-APIkeys.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		F69A449C1D48D0F900D56AEA /* aboutUs.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = aboutUs.txt; sourceTree = "<group>"; };
 		F69A44C91D490DE400D56AEA /* PrivacyPolicyVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyVC.swift; sourceTree = "<group>"; };
 		F69A44CB1D4914A500D56AEA /* privacy.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = privacy.txt; sourceTree = "<group>"; };
+		F6D14DFD1D50DCEA002BE44D /* GMService-APIkeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GMService-APIkeys.plist"; sourceTree = "<group>"; };
 		F6DCD15A1D3FB09900FA576E /* PokeHunt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeHunt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -200,6 +202,7 @@
 			children = (
 				F60F11831D4F2F0A00DA4BB0 /* GoogleService-Info.plist */,
 				F69A44821D44B85800D56AEA /* Info.plist */,
+				F6D14DFD1D50DCEA002BE44D /* GMService-APIkeys.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6D14DFE1D50DCEA002BE44D /* GMService-APIkeys.plist in Resources */,
 				F69A44911D44B85800D56AEA /* pokemon.proto in Resources */,
 				F69A44901D44B85800D56AEA /* OpenSans-Semibold.ttf in Resources */,
 				F69A44931D44B85800D56AEA /* Info.plist in Resources */,
