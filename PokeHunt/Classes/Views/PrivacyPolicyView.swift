@@ -62,6 +62,7 @@ class PrivacyPolicyView: UIView{
         declineBtn.setTitle("Decline", forState: .Normal)
         declineBtn.setTitleColor(UIColor.whiteColor(), forState: .Normal)
         declineBtn.titleLabel?.font = UIFont(name: "OpenSans", size: 14)
+        declineBtn.tag = 1
 
         self .addSubview(declineBtn)
         self.declineBtn = declineBtn
@@ -77,6 +78,7 @@ class PrivacyPolicyView: UIView{
         confirmBtn.setTitle("Confirm", forState: .Normal)
         confirmBtn.setTitleColor(UIColor.whiteColor(), forState: .Normal)
         confirmBtn.titleLabel?.font = UIFont(name: "OpenSans", size: 14)
+        confirmBtn.tag = 2
 
         self .addSubview(confirmBtn)
         self.comfirmBtn = confirmBtn
