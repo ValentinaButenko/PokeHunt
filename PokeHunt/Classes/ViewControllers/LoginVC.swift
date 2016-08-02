@@ -46,12 +46,11 @@ class LoginVC: UIViewController {
         popup.dismissType = .BounceOutToBottom
         privacyView.comfirmBtn.addTarget(self, action: #selector(LoginVC.logoViewWillMove), forControlEvents: .TouchUpInside)
         privacyView.declineBtn.addTarget(self, action: #selector(LoginVC.popupWillDismiss), forControlEvents: .TouchUpInside)
-        popup.shouldDismissOnContentTouch = true
+        popup.shouldDismissOnBackgroundTouch = false
+        popup.shouldDismissOnContentTouch = false
         popup.maskType = .Dimmed
         popup.show()
 
-        view.addSubview(privacyView)
-        self.privacyView = privacyView
         self.popup = popup
     }
 
@@ -103,6 +102,7 @@ class LoginVC: UIViewController {
     }
 
     func popupWillDismiss(){
+        self.popup.dismiss(true)
         self.view.dismissPresentingPopup()
     }
 
