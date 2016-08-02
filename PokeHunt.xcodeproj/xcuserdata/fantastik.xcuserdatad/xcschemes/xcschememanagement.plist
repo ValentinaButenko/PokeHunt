@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>POGOProto.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>PokeHunt.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+		<key>S2SphereAdapter.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>12700EA11D46DE95002AFB90</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>12760BC01D44312800F446FA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>12760C031D45091F00F446FA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>127616E51D455C3800F446FA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>127617C51D4568CD00F446FA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F6DCD1591D3FB09900FA576E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,11 @@
+﻿syntax = "proto3";
+option objc_class_prefix = "POGO";
+package POGOProtos.Data.Gym;
+
+import "POGOProtos/Data/PokemonData.proto";
+import "POGOProtos/Data/Player/PlayerPublicProfile.proto";
+
+message GymMembership {
+	.POGOProtos.Data.PokemonData pokemon_data = 1;
+	.POGOProtos.Data.Player.PlayerPublicProfile trainer_public_profile = 2;
+}

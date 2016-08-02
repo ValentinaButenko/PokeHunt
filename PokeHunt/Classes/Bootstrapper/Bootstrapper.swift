@@ -10,6 +10,10 @@ import Foundation
 import GoogleMaps
 
 
+internal let GlobalDomain = "com.fantastik.pokehunt"
+internal let GlobalErrorDomain = "com.fantastik.pokehunt.error"
+
+
 internal struct Bootstrapper {
     internal static func bootstrap() {
         do {
@@ -30,8 +34,11 @@ internal struct Bootstrapper {
                     }
                 }
             }
-//            GMSServices.provideAPIKey("AIzaSyBuZpNjqeaG65T53YfwDkBBow_fANZ05HA")
-//            LoginModule.sharedModule
+            NianticlabsService.makeShared({ (tokenDelegate) in
+                LoginModule.sharedModule.getUpdatedToken({ (token) in
+                    tokenDelegate(token)
+                })
+            })
         }
 
         let vc : UIViewController = (LoginModule.sharedModule.isAuthorized) ?
