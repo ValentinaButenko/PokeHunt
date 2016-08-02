@@ -1,8 +1,0 @@
-syntax = "proto3";
-option objc_class_prefix = "POGO";
-package POGOProtos.Data.Player;
-
-message ContactSettings {
-	bool send_marketing_emails = 1;
-	bool send_push_notifications = 2;
-}
