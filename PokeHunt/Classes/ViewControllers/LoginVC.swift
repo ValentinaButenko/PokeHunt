@@ -17,7 +17,6 @@ class LoginVC: UIViewController {
     var logoView: LogoView!
     var loginBtn: UIButton!
     var warningLbl: UILabel!
-  //  var privacyView: PrivacyPolicyView!
     var popup: KLCPopup!
 
     var isPrivacyAssepted: Bool!
