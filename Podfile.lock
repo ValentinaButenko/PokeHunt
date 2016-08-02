@@ -24,6 +24,7 @@ PODS:
   - HockeySDK (4.0.2):
     - HockeySDK/AllFeaturesLib (= 4.0.2)
   - HockeySDK/AllFeaturesLib (4.0.2)
+  - iRate (1.11.5)
   - KLCPopup (1.0)
   - R.swift (2.4.0):
     - R.swift.Library (~> 2.2.0)
@@ -41,6 +42,7 @@ DEPENDENCIES:
   - Firebase/Core
   - GoogleMaps
   - HockeySDK
+  - iRate
   - KLCPopup (~> 1.0)
   - R.swift
   - SnapKit (~> 0.15.0)
@@ -59,6 +61,7 @@ SPEC CHECKSUMS:
   GoogleSymbolUtilities: 33117db1b5f290c6fbf259585e4885b4c84b98d7
   GoogleUtilities: 56c5ac05b7aa5dc417a1bb85221a9516e04d7032
   HockeySDK: ebaabf41808b4e4ea85b4d5266d425aef0d19c88
+  iRate: 1546f8ae5ed1565e688bd529f7484780734757e9
   KLCPopup: 76c5a19227977f1e53d85236f9ef42257c168d98
   R.swift: 0ef9c42dc6c94ac44a3c78a7639c73f855a8e159
   R.swift.Library: 31a487b65381f37a7d203a6f1f935b43c9be35b0
@@ -66,6 +69,6 @@ SPEC CHECKSUMS:
   SSKeychain: c71293fa57216a40ab06c23f4085387583293de4
   TOWebViewController: a29908019f7e0e0f8eccfab8a1ee8dcdf4fc5aac
 
-PODFILE CHECKSUM: 671a647c24910498a5299e0bbda8525b14a0fec9
+PODFILE CHECKSUM: d5329f8ddf38e9cfffd204b8a27ff433d7418237
 
 COCOAPODS: 1.0.1

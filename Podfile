@@ -12,7 +12,8 @@ target 'PokeHunt' do
     pod 'SSKeychain'
 	pod 'Firebase/Core'
   	pod 'Firebase/AdMob'
-	pod "HockeySDK"
+	pod 'HockeySDK'
+    pod 'iRate'
 	pod 'KLCPopup', '~> 1.0'
 end
 
