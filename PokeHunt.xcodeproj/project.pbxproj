@@ -7,7 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12FF73631D510F530063D271 /* S2SphereAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12FF735C1D510F530063D271 /* S2SphereAdapter.framework */; };
+		12FF73641D510F530063D271 /* S2SphereAdapter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 12FF735C1D510F530063D271 /* S2SphereAdapter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		12FF736E1D510F6B0063D271 /* S2SphereCellIdFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 12FF73691D510F6B0063D271 /* S2SphereCellIdFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		12FF736F1D510F6B0063D271 /* S2SphereCellIdFactory.mm in Sources */ = {isa = PBXBuildFile; fileRef = 12FF736A1D510F6B0063D271 /* S2SphereCellIdFactory.mm */; };
+		12FF73711D510F6B0063D271 /* S2SphereAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 12FF736D1D510F6B0063D271 /* S2SphereAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		12FF73731D510F960063D271 /* libS2SphereCellId.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 12FF73721D510F960063D271 /* libS2SphereCellId.a */; };
+		12FF73751D5110610063D271 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12FF73741D5110610063D271 /* CoreLocation.framework */; };
 		39A0F50EAE19156C026555D7 /* Pods_PokeHunt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58DD6499E2E6B4CA44BAA4CB /* Pods_PokeHunt.framework */; };
+		89261B7B95D3CA993461AC13 /* Pods_S2SphereAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8AAB78F7D948475280F8EFF /* Pods_S2SphereAdapter.framework */; };
 		F60F11841D4F2F0A00DA4BB0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F60F11831D4F2F0A00DA4BB0 /* GoogleService-Info.plist */; };
 		F64A96631D40E8C000A72182 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64A96621D40E8C000A72182 /* Social.framework */; };
 		F69A44831D44B85800D56AEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69A44691D44B85800D56AEA /* AppDelegate.swift */; };
@@ -32,14 +40,47 @@
 		F69A449D1D48D0F900D56AEA /* aboutUs.txt in Resources */ = {isa = PBXBuildFile; fileRef = F69A449C1D48D0F900D56AEA /* aboutUs.txt */; };
 		F69A44CA1D490DE400D56AEA /* PrivacyPolicyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69A44C91D490DE400D56AEA /* PrivacyPolicyVC.swift */; };
 		F69A44CC1D4914A500D56AEA /* privacy.txt in Resources */ = {isa = PBXBuildFile; fileRef = F69A44CB1D4914A500D56AEA /* privacy.txt */; };
-		F6F4B9671D50850E0086F430 /* PrivacyPolicyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F4B9661D50850E0086F430 /* PrivacyPolicyView.swift */; };
 		F6D14DFE1D50DCEA002BE44D /* GMService-APIkeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = F6D14DFD1D50DCEA002BE44D /* GMService-APIkeys.plist */; };
+		F6F4B9671D50850E0086F430 /* PrivacyPolicyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F4B9661D50850E0086F430 /* PrivacyPolicyView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		12FF73611D510F530063D271 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6DCD1521D3FB09900FA576E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 12FF735B1D510F530063D271;
+			remoteInfo = S2SphereAdapter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		12FF73681D510F530063D271 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				12FF73641D510F530063D271 /* S2SphereAdapter.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		12FF735C1D510F530063D271 /* S2SphereAdapter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = S2SphereAdapter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		12FF73691D510F6B0063D271 /* S2SphereCellIdFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = S2SphereCellIdFactory.h; sourceTree = "<group>"; };
+		12FF736A1D510F6B0063D271 /* S2SphereCellIdFactory.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = S2SphereCellIdFactory.mm; sourceTree = "<group>"; };
+		12FF736C1D510F6B0063D271 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12FF736D1D510F6B0063D271 /* S2SphereAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = S2SphereAdapter.h; sourceTree = "<group>"; };
+		12FF73721D510F960063D271 /* libS2SphereCellId.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libS2SphereCellId.a; path = "../../../../Library/Developer/Xcode/DerivedData/PokeHunt-chygmqumvzluhnhchpvuonyftxtp/Build/Products/Debug-iphonesimulator/libS2SphereCellId.a"; sourceTree = "<group>"; };
+		12FF73741D5110610063D271 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		31CF62A75AD969201AB06A47 /* Pods-PokeHunt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeHunt.release.xcconfig"; path = "Pods/Target Support Files/Pods-PokeHunt/Pods-PokeHunt.release.xcconfig"; sourceTree = "<group>"; };
+		4BFA9B9D843806440FC9059E /* Pods-S2SphereAdapter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-S2SphereAdapter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-S2SphereAdapter/Pods-S2SphereAdapter.debug.xcconfig"; sourceTree = "<group>"; };
 		58DD6499E2E6B4CA44BAA4CB /* Pods_PokeHunt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PokeHunt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		701B67ED30CCD092DC53B694 /* Pods-PokeHunt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeHunt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PokeHunt/Pods-PokeHunt.debug.xcconfig"; sourceTree = "<group>"; };
+		C550BE8E89894640234ECE3F /* Pods-S2SphereAdapter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-S2SphereAdapter.release.xcconfig"; path = "Pods/Target Support Files/Pods-S2SphereAdapter/Pods-S2SphereAdapter.release.xcconfig"; sourceTree = "<group>"; };
 		F60F11831D4F2F0A00DA4BB0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F64A96621D40E8C000A72182 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		F69A44691D44B85800D56AEA /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -67,13 +108,25 @@
 		F6D14DFD1D50DCEA002BE44D /* GMService-APIkeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GMService-APIkeys.plist"; sourceTree = "<group>"; };
 		F6DCD15A1D3FB09900FA576E /* PokeHunt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeHunt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6F4B9661D50850E0086F430 /* PrivacyPolicyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyView.swift; sourceTree = "<group>"; };
+		F8AAB78F7D948475280F8EFF /* Pods_S2SphereAdapter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_S2SphereAdapter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		12FF73581D510F530063D271 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12FF73751D5110610063D271 /* CoreLocation.framework in Frameworks */,
+				12FF73731D510F960063D271 /* libS2SphereCellId.a in Frameworks */,
+				89261B7B95D3CA993461AC13 /* Pods_S2SphereAdapter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F6DCD1571D3FB09900FA576E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12FF73631D510F530063D271 /* S2SphereAdapter.framework in Frameworks */,
 				F64A96631D40E8C000A72182 /* Social.framework in Frameworks */,
 				39A0F50EAE19156C026555D7 /* Pods_PokeHunt.framework in Frameworks */,
 			);
@@ -82,11 +135,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		12FF735D1D510F530063D271 /* S2SphereAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				12FF73691D510F6B0063D271 /* S2SphereCellIdFactory.h */,
+				12FF736A1D510F6B0063D271 /* S2SphereCellIdFactory.mm */,
+				12FF736B1D510F6B0063D271 /* Supporting Files */,
+			);
+			path = S2SphereAdapter;
+			sourceTree = "<group>";
+		};
+		12FF736B1D510F6B0063D271 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				12FF736C1D510F6B0063D271 /* Info.plist */,
+				12FF736D1D510F6B0063D271 /* S2SphereAdapter.h */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		4DB5BD027634F7D57F2F15B3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				12FF73741D5110610063D271 /* CoreLocation.framework */,
+				12FF73721D510F960063D271 /* libS2SphereCellId.a */,
 				F64A96621D40E8C000A72182 /* Social.framework */,
 				58DD6499E2E6B4CA44BAA4CB /* Pods_PokeHunt.framework */,
+				F8AAB78F7D948475280F8EFF /* Pods_S2SphereAdapter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -96,6 +171,8 @@
 			children = (
 				701B67ED30CCD092DC53B694 /* Pods-PokeHunt.debug.xcconfig */,
 				31CF62A75AD969201AB06A47 /* Pods-PokeHunt.release.xcconfig */,
+				4BFA9B9D843806440FC9059E /* Pods-S2SphereAdapter.debug.xcconfig */,
+				C550BE8E89894640234ECE3F /* Pods-S2SphereAdapter.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -214,6 +291,7 @@
 			isa = PBXGroup;
 			children = (
 				F6DCD15C1D3FB09900FA576E /* PokeHunt */,
+				12FF735D1D510F530063D271 /* S2SphereAdapter */,
 				F6DCD15B1D3FB09900FA576E /* Products */,
 				7930856956B0E95939E0942E /* Pods */,
 				4DB5BD027634F7D57F2F15B3 /* Frameworks */,
@@ -224,6 +302,7 @@
 			isa = PBXGroup;
 			children = (
 				F6DCD15A1D3FB09900FA576E /* PokeHunt.app */,
+				12FF735C1D510F530063D271 /* S2SphereAdapter.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -240,7 +319,39 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		12FF73591D510F530063D271 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12FF73711D510F6B0063D271 /* S2SphereAdapter.h in Headers */,
+				12FF736E1D510F6B0063D271 /* S2SphereCellIdFactory.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		12FF735B1D510F530063D271 /* S2SphereAdapter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 12FF73671D510F530063D271 /* Build configuration list for PBXNativeTarget "S2SphereAdapter" */;
+			buildPhases = (
+				1DE2BD0CD732706D6F47EE67 /* [CP] Check Pods Manifest.lock */,
+				12FF73571D510F530063D271 /* Sources */,
+				12FF73581D510F530063D271 /* Frameworks */,
+				12FF73591D510F530063D271 /* Headers */,
+				12FF735A1D510F530063D271 /* Resources */,
+				9EC99C5D4F25E73BCC210677 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = S2SphereAdapter;
+			productName = S2SphereAdapter;
+			productReference = 12FF735C1D510F530063D271 /* S2SphereAdapter.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		F6DCD1591D3FB09900FA576E /* PokeHunt */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F6DCD16C1D3FB09900FA576E /* Build configuration list for PBXNativeTarget "PokeHunt" */;
@@ -252,10 +363,12 @@
 				F6DCD1581D3FB09900FA576E /* Resources */,
 				EB6B6CAC185D9D5F20222A3F /* [CP] Embed Pods Frameworks */,
 				16C8A0B5BFD5CC9B12E04F66 /* [CP] Copy Pods Resources */,
+				12FF73681D510F530063D271 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				12FF73621D510F530063D271 /* PBXTargetDependency */,
 			);
 			name = PokeHunt;
 			productName = PokeHunt;
@@ -272,6 +385,9 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Fantastik Solution";
 				TargetAttributes = {
+					12FF735B1D510F530063D271 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
 					F6DCD1591D3FB09900FA576E = {
 						CreatedOnToolsVersion = 7.3;
 					};
@@ -291,11 +407,19 @@
 			projectRoot = "";
 			targets = (
 				F6DCD1591D3FB09900FA576E /* PokeHunt */,
+				12FF735B1D510F530063D271 /* S2SphereAdapter */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		12FF735A1D510F530063D271 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F6DCD1581D3FB09900FA576E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -347,6 +471,36 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		1DE2BD0CD732706D6F47EE67 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9EC99C5D4F25E73BCC210677 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-S2SphereAdapter/Pods-S2SphereAdapter-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		EB6B6CAC185D9D5F20222A3F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -378,6 +532,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		12FF73571D510F530063D271 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12FF736F1D510F6B0063D271 /* S2SphereCellIdFactory.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F6DCD1561D3FB09900FA576E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -401,7 +563,65 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		12FF73621D510F530063D271 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 12FF735B1D510F530063D271 /* S2SphereAdapter */;
+			targetProxy = 12FF73611D510F530063D271 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		12FF73651D510F530063D271 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BFA9B9D843806440FC9059E /* Pods-S2SphereAdapter.debug.xcconfig */;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				HEADER_SEARCH_PATHS = (
+					"$PROJECT_DIR/../S2Sphere/**",
+					$TARGET_BUILD_DIR/S2SphereUtil,
+					$TARGET_BUILD_DIR/S2SphereCellId,
+				);
+				INFOPLIST_FILE = "S2SphereAdapter/Supporting Files/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fantastik.S2SphereAdapter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		12FF73661D510F530063D271 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C550BE8E89894640234ECE3F /* Pods-S2SphereAdapter.release.xcconfig */;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				HEADER_SEARCH_PATHS = (
+					"$PROJECT_DIR/../S2Sphere/**",
+					$TARGET_BUILD_DIR/S2SphereUtil,
+					$TARGET_BUILD_DIR/S2SphereCellId,
+				);
+				INFOPLIST_FILE = "S2SphereAdapter/Supporting Files/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fantastik.S2SphereAdapter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		F6DCD16A1D3FB09900FA576E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -514,6 +734,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		12FF73671D510F530063D271 /* Build configuration list for PBXNativeTarget "S2SphereAdapter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				12FF73651D510F530063D271 /* Debug */,
+				12FF73661D510F530063D271 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F6DCD1551D3FB09900FA576E /* Build configuration list for PBXProject "PokeHunt" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

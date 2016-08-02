@@ -4,11 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>POGOProto.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
-		</dict>
 		<key>PokeHunt.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -17,7 +12,7 @@
 		<key>S2SphereAdapter.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>19</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -43,6 +38,11 @@
 			<true/>
 		</dict>
 		<key>127617C51D4568CD00F446FA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>12FF735B1D510F530063D271</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "12700EA11D46DE95002AFB90"
+               BlueprintIdentifier = "12FF735B1D510F530063D271"
                BuildableName = "S2SphereAdapter.framework"
                BlueprintName = "S2SphereAdapter"
                ReferencedContainer = "container:PokeHunt.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "12700EA11D46DE95002AFB90"
+            BlueprintIdentifier = "12FF735B1D510F530063D271"
             BuildableName = "S2SphereAdapter.framework"
             BlueprintName = "S2SphereAdapter"
             ReferencedContainer = "container:PokeHunt.xcodeproj">
@@ -63,7 +63,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "12700EA11D46DE95002AFB90"
+            BlueprintIdentifier = "12FF735B1D510F530063D271"
             BuildableName = "S2SphereAdapter.framework"
             BlueprintName = "S2SphereAdapter"
             ReferencedContainer = "container:PokeHunt.xcodeproj">
