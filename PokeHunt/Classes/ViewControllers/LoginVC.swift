@@ -17,8 +17,10 @@ class LoginVC: UIViewController {
     var logoView: LogoView!
     var loginBtn: UIButton!
     var warningLbl: UILabel!
-    var privacyView: PrivacyPolicyView!
+  //  var privacyView: PrivacyPolicyView!
     var popup: KLCPopup!
+
+    var isPrivacyAssepted: Bool!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,8 +46,8 @@ class LoginVC: UIViewController {
         let popup = KLCPopup(contentView: privacyView)
         popup.showType = .BounceInFromTop
         popup.dismissType = .BounceOutToBottom
-        privacyView.comfirmBtn.addTarget(self, action: #selector(LoginVC.logoViewWillMove), forControlEvents: .TouchUpInside)
-        privacyView.declineBtn.addTarget(self, action: #selector(LoginVC.popupWillDismiss), forControlEvents: .TouchUpInside)
+        privacyView.comfirmBtn.addTarget(self, action: #selector(LoginVC.handlePrivacySelection), forControlEvents: .TouchUpInside)
+        privacyView.declineBtn.addTarget(self, action: #selector(LoginVC.handlePrivacySelection), forControlEvents: .TouchUpInside)
         popup.shouldDismissOnBackgroundTouch = false
         popup.shouldDismissOnContentTouch = false
         popup.maskType = .Dimmed
@@ -99,6 +101,23 @@ class LoginVC: UIViewController {
             make.centerX.equalTo(view.snp_centerX)
         }
         self.warningLbl = warningLbl
+    }
+
+    func handlePrivacySelection(sender:UIButton){
+        switch sender.tag{
+        case 1:
+            print("decline")
+            self.isPrivacyAssepted = false
+            self.popup.dismiss(true)
+            self.logoViewWillMove()
+        case 2:
+            print("confirm")
+            self.isPrivacyAssepted = true
+            self.popup.dismiss(true)
+            self.logoViewWillMove()
+        default:
+            print("Think more")
+        }
     }
 
     func popupWillDismiss(){
