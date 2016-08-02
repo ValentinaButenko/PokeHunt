@@ -143,6 +143,7 @@ class MapVC: UIViewController {
     func searchPokemon(sender: UIButton){
         FIRAnalytics.logEventWithName("User_tap_pokesearch", parameters: nil)
         print("Searching...")
+        self.showLocationAlert()
     }
 
     func removeAds(sender: UIButton){
@@ -157,6 +158,17 @@ class MapVC: UIViewController {
         }
         UIImageWriteToSavedPhotosAlbum(snpShot, self, #selector(MapVC.image(_:didFinishSavingWithError:contextInfo:)), nil)
         self.snapShot = snpShot
+    }
+
+    func showLocationAlert(){
+        let ac = UIAlertController(title: "Allow 'PokeHunt' to access your location while you are use the app?", message: "PokeHunt deals with location, so in order to work, the PokeHunt needs to know your location", preferredStyle: .Alert)
+        ac.addAction(UIAlertAction(title: "Don't Allow",
+                                    style: .Default,
+                                    handler: {_ in print("User has fobia")}))
+        ac.addAction(UIAlertAction(title: "Allow",
+                                    style: .Default,
+                                    handler: {_ in print("User allows")}))
+        self.presentViewController(ac, animated: true, completion: nil)
     }
 
     func selectedSettings(sender: UIButton){
