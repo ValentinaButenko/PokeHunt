@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAnalytics
+import HockeySDK
 
 
 @UIApplicationMain
@@ -17,11 +18,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         FIRApp.configure()
+        BITHockeyManager.sharedHockeyManager().configureWithIdentifier("b082d61d33344cf29e7e65ad44de4c3b")
+        BITHockeyManager.sharedHockeyManager().debugLogEnabled = true
+        BITHockeyManager.sharedHockeyManager().startManager()
+        BITHockeyManager.sharedHockeyManager().authenticator.authenticateInstallation()
+        BITHockeyManager.sharedHockeyManager().crashManager.crashManagerStatus = .AutoSend
 
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
-
         Bootstrapper.bootstrap()
-
         window!.makeKeyAndVisible()
         return true
     }

@@ -12,6 +12,7 @@ import GoogleMaps
 import Social
 import FirebaseAnalytics
 import GoogleMobileAds
+import HockeySDK
 
 class MapVC: UIViewController {
     var mapView: GMSMapView!
