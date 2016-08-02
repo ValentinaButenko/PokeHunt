@@ -32,6 +32,7 @@
 		F69A449D1D48D0F900D56AEA /* aboutUs.txt in Resources */ = {isa = PBXBuildFile; fileRef = F69A449C1D48D0F900D56AEA /* aboutUs.txt */; };
 		F69A44CA1D490DE400D56AEA /* PrivacyPolicyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69A44C91D490DE400D56AEA /* PrivacyPolicyVC.swift */; };
 		F69A44CC1D4914A500D56AEA /* privacy.txt in Resources */ = {isa = PBXBuildFile; fileRef = F69A44CB1D4914A500D56AEA /* privacy.txt */; };
+		F6F4B9671D50850E0086F430 /* PrivacyPolicyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F4B9661D50850E0086F430 /* PrivacyPolicyView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		F69A44C91D490DE400D56AEA /* PrivacyPolicyVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyVC.swift; sourceTree = "<group>"; };
 		F69A44CB1D4914A500D56AEA /* privacy.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = privacy.txt; sourceTree = "<group>"; };
 		F6DCD15A1D3FB09900FA576E /* PokeHunt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeHunt.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6F4B9661D50850E0086F430 /* PrivacyPolicyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				F69A447A1D44B85800D56AEA /* LogoView.swift */,
+				F6F4B9661D50850E0086F430 /* PrivacyPolicyView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F69A44871D44B85800D56AEA /* UIView.bgSnapshot.swift in Sources */,
+				F6F4B9671D50850E0086F430 /* PrivacyPolicyView.swift in Sources */,
 				F69A44851D44B85800D56AEA /* GoogleAuthorizationController.swift in Sources */,
 				F69A448D1D44B85800D56AEA /* LogoView.swift in Sources */,
 				F69A448A1D44B85800D56AEA /* LoginVC.swift in Sources */,

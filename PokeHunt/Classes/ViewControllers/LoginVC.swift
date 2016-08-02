@@ -16,11 +16,11 @@ class LoginVC: UIViewController {
     var logoView: LogoView!
     var loginBtn: UIButton!
     var warningLbl: UILabel!
+    var privacyView: PrivacyPolicyView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setup()
-//        Flurry.logPageView()
 
         view.backgroundColor = UIColor.whiteColor()
     }
@@ -28,13 +28,23 @@ class LoginVC: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
 
-        self.logoViewWillMove()
+     //   self.logoViewWillMove()
     }
 
     func setup(){
-        self.setupLogoView()
-        self.setupLoginBtn()
-        self.setupWarningLbl()
+        self.setupPrivacyView()
+
+
+
+//        self.setupLogoView()
+//        self.setupLoginBtn()
+//        self.setupWarningLbl()
+    }
+
+    func setupPrivacyView(){
+        let privacyView = PrivacyPolicyView(frame: CGRect(x: 40, y: 70, width: self.view.frame.size.width - 80, height: self.view.frame.size.height - 140))
+        view.addSubview(privacyView)
+        self.privacyView = privacyView
     }
 
     func setupLogoView(){
@@ -53,7 +63,7 @@ class LoginVC: UIViewController {
         loginBtn.setImage(UIImage(named: R.image.gmail.name), forState: .Normal)
         loginBtn.imageView?.contentMode = .ScaleAspectFit
         loginBtn.alpha = 0.0
-        loginBtn.addTarget(self, action: #selector(LoginVC.tappedLoginBtn(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+  //      loginBtn.addTarget(self, action: #selector(LoginVC.tappedLoginBtn(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         view.addSubview(loginBtn)
 
         loginBtn.snp_makeConstraints { (make) in
@@ -84,57 +94,57 @@ class LoginVC: UIViewController {
         self.warningLbl = warningLbl
     }
 
-    func logoViewWillMove(){
-        self.logoView.snp_updateConstraints(closure: { (make) in
-            make.centerY.equalTo(self.view).offset(-80)
-        })
+//    func logoViewWillMove(){
+//        self.logoView.snp_updateConstraints(closure: { (make) in
+//            make.centerY.equalTo(self.view).offset(-80)
+//        })
+//
+//        let animation = {
+//            self.view.layoutIfNeeded()
+//        }
+//
+//        UIView.animateWithDuration(0.45,
+//                                   delay: 0.5,
+//                                   options: UIViewAnimationOptions.CurveEaseIn,
+//                                   animations: animation,
+//                                   completion: { _ in self.loginBtnWillAppear() })
+//    }
 
-        let animation = {
-            self.view.layoutIfNeeded()
-        }
+//    func loginBtnWillAppear(){
+//        self.loginBtn.snp_updateConstraints(closure: { (make) in
+//            make.top.equalTo(self.logoView.snp_bottom).inset(-10)
+//        })
+//
+//        let animation = {
+//            self.loginBtn.alpha = 1.0
+//            self.view.layoutIfNeeded()
+//        }
+//        UIView.animateWithDuration(0.45,
+//                                   animations: animation,
+//                                   completion: {_ in self.warningLblWillAppear()})
+//    }
 
-        UIView.animateWithDuration(0.45,
-                                   delay: 0.5,
-                                   options: UIViewAnimationOptions.CurveEaseIn,
-                                   animations: animation,
-                                   completion: { _ in self.loginBtnWillAppear() })
-    }
+//    func warningLblWillAppear(){
+//        let animation = {
+//            self.warningLbl.alpha = 1.0
+//            self.view.layoutIfNeeded()
+//        }
+//        UIView.animateWithDuration(0.5,
+//                                   animations: animation,
+//                                   completion: nil)
+//    }
 
-    func loginBtnWillAppear(){
-        self.loginBtn.snp_updateConstraints(closure: { (make) in
-            make.top.equalTo(self.logoView.snp_bottom).inset(-10)
-        })
-
-        let animation = {
-            self.loginBtn.alpha = 1.0
-            self.view.layoutIfNeeded()
-        }
-        UIView.animateWithDuration(0.45,
-                                   animations: animation,
-                                   completion: {_ in self.warningLblWillAppear()})
-    }
-
-    func warningLblWillAppear(){
-        let animation = {
-            self.warningLbl.alpha = 1.0
-            self.view.layoutIfNeeded()
-        }
-        UIView.animateWithDuration(0.5,
-                                   animations: animation,
-                                   completion: nil)
-    }
-
-    func tappedLoginBtn(sender: UIButton!){
-        FIRAnalytics.logEventWithName("User_log_in", parameters: nil)
-        LoginModule.sharedModule.performLoginOnController(self) { res in
-            switch (res) {
-            case .LoggedIn:
-                let vc = MapVC()
-                Bootstrapper.exchangeRoot(viewController: UINavigationController(rootViewController: vc))
-            case .Failed:
-                print("failed")
-            }
-        }
-    }
+//    func tappedLoginBtn(sender: UIButton!){
+//        FIRAnalytics.logEventWithName("User_log_in", parameters: nil)
+//        LoginModule.sharedModule.performLoginOnController(self) { res in
+//            switch (res) {
+//            case .LoggedIn:
+//                let vc = MapVC()
+//                Bootstrapper.exchangeRoot(viewController: UINavigationController(rootViewController: vc))
+//            case .Failed:
+//                print("failed")
+//            }
+//        }
+//    }
 }
 
