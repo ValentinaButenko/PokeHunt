@@ -51,11 +51,11 @@ class MapVC: UIViewController {
     }
 
     func request() {
-        NianticlabsService.mainService.stopsTask().success { map in
-            print(map)
-        }.failure { (error, isCancelled) in
-            print(error)
-        }
+//        NianticlabsService.mainService.stopsTask().success { map in
+//            print(map)
+//        }.failure { (error, isCancelled) in
+//            print(error)
+//        }
     }
 
     func setupNavigationController(){

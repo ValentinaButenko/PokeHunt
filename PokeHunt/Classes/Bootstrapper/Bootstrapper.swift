@@ -34,11 +34,11 @@ internal struct Bootstrapper {
                     }
                 }
             }
-            NianticlabsService.makeShared({ (tokenDelegate) in
-                LoginModule.sharedModule.getUpdatedToken({ (token) in
-                    tokenDelegate(token)
-                })
-            })
+//            NianticlabsService.makeShared({ (tokenDelegate) in
+//                LoginModule.sharedModule.getUpdatedToken({ (token) in
+//                    tokenDelegate(token)
+//                })
+//            })
         }
 
         let vc : UIViewController = (LoginModule.sharedModule.isAuthorized) ?

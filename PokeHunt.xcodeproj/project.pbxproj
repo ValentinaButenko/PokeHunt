@@ -14,8 +14,6 @@
 		12FF73711D510F6B0063D271 /* S2SphereAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 12FF736D1D510F6B0063D271 /* S2SphereAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		12FF73731D510F960063D271 /* libS2SphereCellId.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 12FF73721D510F960063D271 /* libS2SphereCellId.a */; };
 		12FF73751D5110610063D271 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12FF73741D5110610063D271 /* CoreLocation.framework */; };
-		12FF73821D5110C40063D271 /* POGOProto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12FF737B1D5110C40063D271 /* POGOProto.framework */; };
-		12FF73831D5110C40063D271 /* POGOProto.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 12FF737B1D5110C40063D271 /* POGOProto.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		12FF76511D5110DE0063D271 /* AssetDigestEntry.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = 12FF73891D5110DD0063D271 /* AssetDigestEntry.pbobjc.h */; };
 		12FF76521D5110DE0063D271 /* AssetDigestEntry.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 12FF738A1D5110DD0063D271 /* AssetDigestEntry.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		12FF76531D5110DE0063D271 /* BattleAction.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = 12FF738C1D5110DD0063D271 /* BattleAction.pbobjc.h */; };
@@ -460,7 +458,6 @@
 		12FF780A1D5110E00063D271 /* TypeEffectiveSettings.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 12FF75561D5110DE0063D271 /* TypeEffectiveSettings.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		12FF78EC1D5110E00063D271 /* POGOProto.h in Headers */ = {isa = PBXBuildFile; fileRef = 12FF764F1D5110DE0063D271 /* POGOProto.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		12FF78ED1D5110E00063D271 /* POGOProto_umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 12FF76501D5110DE0063D271 /* POGOProto_umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		12FF79091D5112330063D271 /* MapPokemonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF78EF1D5112330063D271 /* MapPokemonModel.swift */; };
 		12FF790A1D5112330063D271 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF78F11D5112330063D271 /* Settings.swift */; };
 		12FF790B1D5112330063D271 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF78F31D5112330063D271 /* AppDelegate.swift */; };
 		12FF790C1D5112330063D271 /* AuthorizationModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF78F51D5112330063D271 /* AuthorizationModule.swift */; };
@@ -475,8 +472,6 @@
 		12FF79151D5112330063D271 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF79021D5112330063D271 /* LogoView.swift */; };
 		12FF79161D5112330063D271 /* PrivacyPolicyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF79031D5112330063D271 /* PrivacyPolicyView.swift */; };
 		12FF79171D5112330063D271 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF79051D5112330063D271 /* R.generated.swift */; };
-		12FF79181D5112330063D271 /* NianticlabsDataGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF79071D5112330063D271 /* NianticlabsDataGenerator.swift */; };
-		12FF79191D5112330063D271 /* NianticlabsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF79081D5112330063D271 /* NianticlabsService.swift */; };
 		36FB34DCDCDB2254B44A8955 /* Pods_POGOProto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BFBBE56DA6BE9B4D1232865 /* Pods_POGOProto.framework */; };
 		39A0F50EAE19156C026555D7 /* Pods_PokeHunt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58DD6499E2E6B4CA44BAA4CB /* Pods_PokeHunt.framework */; };
 		89261B7B95D3CA993461AC13 /* Pods_S2SphereAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8AAB78F7D948475280F8EFF /* Pods_S2SphereAdapter.framework */; };
@@ -487,7 +482,6 @@
 		F69A44901D44B85800D56AEA /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F69A447E1D44B85800D56AEA /* OpenSans-Semibold.ttf */; };
 		F69A44911D44B85800D56AEA /* pokemon.proto in Resources */ = {isa = PBXBuildFile; fileRef = F69A447F1D44B85800D56AEA /* pokemon.proto */; };
 		F69A44921D44B85800D56AEA /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F69A44801D44B85800D56AEA /* Settings.storyboard */; };
-		F69A44931D44B85800D56AEA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F69A44821D44B85800D56AEA /* Info.plist */; };
 		F69A44991D44F20A00D56AEA /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F69A44981D44F20A00D56AEA /* OpenSans-Regular.ttf */; };
 		F69A449D1D48D0F900D56AEA /* aboutUs.txt in Resources */ = {isa = PBXBuildFile; fileRef = F69A449C1D48D0F900D56AEA /* aboutUs.txt */; };
 		F69A44CC1D4914A500D56AEA /* privacy.txt in Resources */ = {isa = PBXBuildFile; fileRef = F69A44CB1D4914A500D56AEA /* privacy.txt */; };
@@ -502,13 +496,6 @@
 			remoteGlobalIDString = 12FF735B1D510F530063D271;
 			remoteInfo = S2SphereAdapter;
 		};
-		12FF73801D5110C40063D271 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F6DCD1521D3FB09900FA576E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 12FF737A1D5110C40063D271;
-			remoteInfo = POGOProto;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -518,7 +505,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				12FF73831D5110C40063D271 /* POGOProto.framework in Embed Frameworks */,
 				12FF73641D510F530063D271 /* S2SphereAdapter.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -1268,7 +1254,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12FF73821D5110C40063D271 /* POGOProto.framework in Frameworks */,
 				12FF73631D510F530063D271 /* S2SphereAdapter.framework in Frameworks */,
 				F64A96631D40E8C000A72182 /* Social.framework in Frameworks */,
 				39A0F50EAE19156C026555D7 /* Pods_PokeHunt.framework in Frameworks */,
@@ -2822,7 +2807,6 @@
 			);
 			dependencies = (
 				12FF73621D510F530063D271 /* PBXTargetDependency */,
-				12FF73811D5110C40063D271 /* PBXTargetDependency */,
 			);
 			name = PokeHunt;
 			productName = PokeHunt;
@@ -2892,7 +2876,6 @@
 				F6D14DFE1D50DCEA002BE44D /* GMService-APIkeys.plist in Resources */,
 				F69A44911D44B85800D56AEA /* pokemon.proto in Resources */,
 				F69A44901D44B85800D56AEA /* OpenSans-Semibold.ttf in Resources */,
-				F69A44931D44B85800D56AEA /* Info.plist in Resources */,
 				F69A44991D44F20A00D56AEA /* OpenSans-Regular.ttf in Resources */,
 				F69A449D1D48D0F900D56AEA /* aboutUs.txt in Resources */,
 				F69A448F1D44B85800D56AEA /* LaunchScreen.xib in Resources */,
@@ -3269,19 +3252,16 @@
 			files = (
 				12FF790E1D5112330063D271 /* Bootstrapper.swift in Sources */,
 				12FF79161D5112330063D271 /* PrivacyPolicyView.swift in Sources */,
-				12FF79181D5112330063D271 /* NianticlabsDataGenerator.swift in Sources */,
 				12FF79171D5112330063D271 /* R.generated.swift in Sources */,
 				12FF790B1D5112330063D271 /* AppDelegate.swift in Sources */,
 				12FF790A1D5112330063D271 /* Settings.swift in Sources */,
 				12FF790F1D5112330063D271 /* UIView.bgSnapshot.swift in Sources */,
 				12FF79131D5112330063D271 /* PrivacyPolicyVC.swift in Sources */,
-				12FF79091D5112330063D271 /* MapPokemonModel.swift in Sources */,
 				12FF79121D5112330063D271 /* MapVC.swift in Sources */,
 				12FF79111D5112330063D271 /* LoginVC.swift in Sources */,
 				12FF790C1D5112330063D271 /* AuthorizationModule.swift in Sources */,
 				12FF79101D5112330063D271 /* AboutUsVC.swift in Sources */,
 				12FF79141D5112330063D271 /* SettingsTableVC.swift in Sources */,
-				12FF79191D5112330063D271 /* NianticlabsService.swift in Sources */,
 				12FF79151D5112330063D271 /* LogoView.swift in Sources */,
 				12FF790D1D5112330063D271 /* GoogleAuthorizationController.swift in Sources */,
 			);
@@ -3294,11 +3274,6 @@
 			isa = PBXTargetDependency;
 			target = 12FF735B1D510F530063D271 /* S2SphereAdapter */;
 			targetProxy = 12FF73611D510F530063D271 /* PBXContainerItemProxy */;
-		};
-		12FF73811D5110C40063D271 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 12FF737A1D5110C40063D271 /* POGOProto */;
-			targetProxy = 12FF73801D5110C40063D271 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
