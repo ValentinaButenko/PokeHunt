@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SwiftyMarkdown
 
 class PrivacyPolicyView: UIView{
 
@@ -86,14 +87,10 @@ class PrivacyPolicyView: UIView{
 
 
     func showTextToView(){
-        if let txtURL = NSBundle.mainBundle().URLForResource("privacy", withExtension: "txt"){
-            do{
-                let text = try NSString(contentsOfURL: txtURL, encoding: NSUTF8StringEncoding)
-                textView.text = text as String
-            }
-            catch{
-                print(NSError.description())
-            }
+        if let txtURL = NSBundle.mainBundle().URLForResource("privacy", withExtension: "md"), md = SwiftyMarkdown(url: txtURL){
+            md.attributedString()
+            md.body.fontName = "OpenSans"
+            self.textView.attributedText = md.attributedString()
         }else{
             print(NSError.description())
         }

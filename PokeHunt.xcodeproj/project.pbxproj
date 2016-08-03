@@ -475,6 +475,7 @@
 		39A0F50EAE19156C026555D7 /* Pods_PokeHunt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58DD6499E2E6B4CA44BAA4CB /* Pods_PokeHunt.framework */; };
 		89261B7B95D3CA993461AC13 /* Pods_S2SphereAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8AAB78F7D948475280F8EFF /* Pods_S2SphereAdapter.framework */; };
 		F60F11841D4F2F0A00DA4BB0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F60F11831D4F2F0A00DA4BB0 /* GoogleService-Info.plist */; };
+		F630FFCA1D51F6A50078A25C /* privacy_launch.md in Sources */ = {isa = PBXBuildFile; fileRef = F630FFC91D51F6A50078A25C /* privacy_launch.md */; };
 		F64A96631D40E8C000A72182 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64A96621D40E8C000A72182 /* Social.framework */; };
 		F69A448E1D44B85800D56AEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F69A447C1D44B85800D56AEA /* Assets.xcassets */; };
 		F69A448F1D44B85800D56AEA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F69A447D1D44B85800D56AEA /* LaunchScreen.xib */; };
@@ -483,7 +484,7 @@
 		F69A44921D44B85800D56AEA /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F69A44801D44B85800D56AEA /* Settings.storyboard */; };
 		F69A44991D44F20A00D56AEA /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F69A44981D44F20A00D56AEA /* OpenSans-Regular.ttf */; };
 		F69A449D1D48D0F900D56AEA /* aboutUs.txt in Resources */ = {isa = PBXBuildFile; fileRef = F69A449C1D48D0F900D56AEA /* aboutUs.txt */; };
-		F69A44CC1D4914A500D56AEA /* privacy.txt in Resources */ = {isa = PBXBuildFile; fileRef = F69A44CB1D4914A500D56AEA /* privacy.txt */; };
+		F69A44CC1D4914A500D56AEA /* privacy.md in Resources */ = {isa = PBXBuildFile; fileRef = F69A44CB1D4914A500D56AEA /* privacy.md */; };
 		F6D14DFE1D50DCEA002BE44D /* GMService-APIkeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = F6D14DFD1D50DCEA002BE44D /* GMService-APIkeys.plist */; };
 /* End PBXBuildFile section */
 
@@ -1213,6 +1214,7 @@
 		701B67ED30CCD092DC53B694 /* Pods-PokeHunt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeHunt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PokeHunt/Pods-PokeHunt.debug.xcconfig"; sourceTree = "<group>"; };
 		C550BE8E89894640234ECE3F /* Pods-S2SphereAdapter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-S2SphereAdapter.release.xcconfig"; path = "Pods/Target Support Files/Pods-S2SphereAdapter/Pods-S2SphereAdapter.release.xcconfig"; sourceTree = "<group>"; };
 		F60F11831D4F2F0A00DA4BB0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F630FFC91D51F6A50078A25C /* privacy_launch.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = privacy_launch.md; sourceTree = "<group>"; };
 		F64A96621D40E8C000A72182 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		F69A447C1D44B85800D56AEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F69A447D1D44B85800D56AEA /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
@@ -1222,7 +1224,7 @@
 		F69A44821D44B85800D56AEA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F69A44981D44F20A00D56AEA /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		F69A449C1D48D0F900D56AEA /* aboutUs.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = aboutUs.txt; sourceTree = "<group>"; };
-		F69A44CB1D4914A500D56AEA /* privacy.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = privacy.txt; sourceTree = "<group>"; };
+		F69A44CB1D4914A500D56AEA /* privacy.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = privacy.md; sourceTree = "<group>"; };
 		F6D14DFD1D50DCEA002BE44D /* GMService-APIkeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GMService-APIkeys.plist"; sourceTree = "<group>"; };
 		F6DCD15A1D3FB09900FA576E /* PokeHunt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeHunt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8AAB78F7D948475280F8EFF /* Pods_S2SphereAdapter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_S2SphereAdapter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -2445,7 +2447,8 @@
 		F69A447B1D44B85800D56AEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				F69A44CB1D4914A500D56AEA /* privacy.txt */,
+				F630FFC91D51F6A50078A25C /* privacy_launch.md */,
+				F69A44CB1D4914A500D56AEA /* privacy.md */,
 				F69A449C1D48D0F900D56AEA /* aboutUs.txt */,
 				F69A44981D44F20A00D56AEA /* OpenSans-Regular.ttf */,
 				F69A447C1D44B85800D56AEA /* Assets.xcassets */,
@@ -2875,7 +2878,7 @@
 				F69A448F1D44B85800D56AEA /* LaunchScreen.xib in Resources */,
 				F69A448E1D44B85800D56AEA /* Assets.xcassets in Resources */,
 				F60F11841D4F2F0A00DA4BB0 /* GoogleService-Info.plist in Resources */,
-				F69A44CC1D4914A500D56AEA /* privacy.txt in Resources */,
+				F69A44CC1D4914A500D56AEA /* privacy.md in Resources */,
 				F69A44921D44B85800D56AEA /* Settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -3258,6 +3261,7 @@
 				12FF79141D5112330063D271 /* SettingsTableVC.swift in Sources */,
 				12FF79151D5112330063D271 /* LogoView.swift in Sources */,
 				12FF790D1D5112330063D271 /* GoogleAuthorizationController.swift in Sources */,
+				F630FFCA1D51F6A50078A25C /* privacy_launch.md in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

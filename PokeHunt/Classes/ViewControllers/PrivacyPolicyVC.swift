@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAnalytics
+import SwiftyMarkdown
 
 class PrivacyPolicyVC: UIViewController, UITextViewDelegate {
     var header: UIView!
@@ -82,7 +83,6 @@ class PrivacyPolicyVC: UIViewController, UITextViewDelegate {
         textView.backgroundColor = UIColor.whiteColor()
         textView.editable = false
 
-        textView.font = UIFont(name: "OpenSans-Semibold", size: 12)
         textView.textContainerInset = UIEdgeInsets(top: 23, left: 15, bottom: 10, right: 15)
         textView.textColor = UIColor(red: 28/255, green: 28/255, blue: 28/255, alpha: 1.0)
         textView.dataDetectorTypes = .All
@@ -96,14 +96,10 @@ class PrivacyPolicyVC: UIViewController, UITextViewDelegate {
     }
 
     func showTextToView(){
-        if let txtURL = NSBundle.mainBundle().URLForResource("privacy", withExtension: "txt"){
-            do{
-                let text = try NSString(contentsOfURL: txtURL, encoding: NSUTF8StringEncoding)
-                textView.text = text as String
-            }
-            catch{
-                print(NSError.description())
-            }
+        if let txtURL = NSBundle.mainBundle().URLForResource("privacy", withExtension: "md"), md = SwiftyMarkdown(url: txtURL){
+            md.attributedString()
+            md.body.fontName = "OpenSans"
+            self.textView.attributedText = md.attributedString()
         }else{
             print(NSError.description())
         }
