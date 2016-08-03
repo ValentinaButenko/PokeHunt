@@ -266,6 +266,9 @@ class SettingsTableVC: UITableViewController, UITextFieldDelegate{
     func setupStepsAreaCell(){
         let separator = UIView(frame: CGRect(x: 0, y: stepsAreaCell.frame.size.height - 1, width: stepsAreaCell.frame.size.width, height: 1))
         separator.backgroundColor = UIColor(red: (170/255), green: (170/255), blue: (170/255), alpha: 0.8)
+
+        self.stepsArea.text = String(Settings.instance.stepsArea)
+        
         stepsAreaCell.addSubview(separator)
     }
 
