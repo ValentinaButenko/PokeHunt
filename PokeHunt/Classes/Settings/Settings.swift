@@ -14,6 +14,7 @@ private let kSettingsKey = "com.fantastik.pokehunt.settings"
 private let kStepsKey = "steps"
 private let kRefreshIntervalKey = "refreshInterval"
 private let kIsPrivacyAcceptedKey = "isPrivacyAccepted"
+private let kIsPayedKey = "isPayed"
 
 class Settings : NSObject, NSCoding {
     static let DidUpdated = "com.fantastik.pokehunt.Settings.DidUpdated"
@@ -40,6 +41,13 @@ class Settings : NSObject, NSCoding {
         }
     }
 
+    var isPayed: Bool = false {
+        didSet{
+            save()
+            notify()
+        }
+    }
+
     private override init() {
         if let data = NSUserDefaults.standardUserDefaults().dataForKey(kSettingsKey) {
             guard data.length != 0 else{
@@ -49,6 +57,7 @@ class Settings : NSObject, NSCoding {
             self.steps = restore.steps
             self.refreshInterval = restore.refreshInterval
             self.isPrivacyAccepted = restore.isPrivacyAccepted
+            self.isPayed = restore.isPayed
         }
     }
 
@@ -66,11 +75,13 @@ class Settings : NSObject, NSCoding {
         aCoder.encodeInt(Int32(steps), forKey: kStepsKey)
         aCoder.encodeDouble(refreshInterval, forKey: kRefreshIntervalKey)
         aCoder.encodeBool(isPrivacyAccepted, forKey: kIsPrivacyAcceptedKey)
+        aCoder.encodeBool(isPayed, forKey: kIsPayedKey)
     }
     
     internal required init?(coder aDecoder: NSCoder) {
         self.steps = UInt8(aDecoder.decodeIntForKey(kStepsKey))
         self.refreshInterval = aDecoder.decodeDoubleForKey(kRefreshIntervalKey)
         self.isPrivacyAccepted = aDecoder.decodeBoolForKey(kIsPrivacyAcceptedKey)
+        self.isPayed = aDecoder.decodeBoolForKey(kIsPayedKey)
     }
 }

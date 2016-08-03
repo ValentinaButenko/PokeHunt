@@ -32,17 +32,7 @@ class MapVC: UIViewController {
 
     func setup(){
         self.setupNavigationController()
-
-        if isPayed == true {
-            self.setupMap()
-            self.setupSearchButton()
-        }
-        else{
-            self.setupAdsView()
-            self.setupUnpurchasedMap()
-            self.setupSearchButton()
-            self.setupPayButton()
-        }
+        self.setupScreenBasedOnPayment()
 
         let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(10 * Double(NSEC_PER_SEC)))
         dispatch_after(delayTime, dispatch_get_main_queue()) {
@@ -162,6 +152,8 @@ class MapVC: UIViewController {
 
     func removeAds(sender: UIButton){
         FIRAnalytics.logEventWithName("User_tap_remove_ads", parameters: nil)
+        // Add payment logic here!
+        Settings.instance.isPayed = true
         print("I'll give U all my money honey!")
     }
 
@@ -201,6 +193,19 @@ class MapVC: UIViewController {
             let ac = UIAlertController(title: "Oops!", message: error?.localizedDescription, preferredStyle: .Alert)
             ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
             self.presentViewController(ac, animated: true, completion: nil)
+        }
+    }
+
+    func setupScreenBasedOnPayment(){
+        if Settings.instance.isPayed == true {
+            self.setupMap()
+            self.setupSearchButton()
+        }
+        else{
+            self.setupAdsView()
+            self.setupUnpurchasedMap()
+            self.setupSearchButton()
+            self.setupPayButton()
         }
     }
 }
