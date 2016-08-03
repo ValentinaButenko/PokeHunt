@@ -1,6 +1,0 @@
-framework module Pods_POGOProto {
-  umbrella header "Pods-POGOProto-umbrella.h"
-
-  export *
-  module * { export * }
-}

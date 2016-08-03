@@ -21,6 +21,7 @@ target 'PokeHunt' do
     pod 'INTULocationManager'
     pod 'SwiftyTimer'
     pod 'SwiftEventBus'
+    pod 'SwiftyMarkdown'
 end
 
 
@@ -41,6 +42,6 @@ target 'S2SphereAdapter' do
 end
 
 
-target 'POGOProto' do
-    pod 'Protobuf', '3.0.0-beta-4'
-end
+# target 'POGOProto' do
+#   pod 'Protobuf', '3.0.0-beta-4'
+# end

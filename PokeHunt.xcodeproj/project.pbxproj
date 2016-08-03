@@ -472,7 +472,6 @@
 		12FF79151D5112330063D271 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF79021D5112330063D271 /* LogoView.swift */; };
 		12FF79161D5112330063D271 /* PrivacyPolicyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF79031D5112330063D271 /* PrivacyPolicyView.swift */; };
 		12FF79171D5112330063D271 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FF79051D5112330063D271 /* R.generated.swift */; };
-		36FB34DCDCDB2254B44A8955 /* Pods_POGOProto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BFBBE56DA6BE9B4D1232865 /* Pods_POGOProto.framework */; };
 		39A0F50EAE19156C026555D7 /* Pods_PokeHunt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58DD6499E2E6B4CA44BAA4CB /* Pods_PokeHunt.framework */; };
 		89261B7B95D3CA993461AC13 /* Pods_S2SphereAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8AAB78F7D948475280F8EFF /* Pods_S2SphereAdapter.framework */; };
 		F60F11841D4F2F0A00DA4BB0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F60F11831D4F2F0A00DA4BB0 /* GoogleService-Info.plist */; };
@@ -1212,9 +1211,7 @@
 		58DD6499E2E6B4CA44BAA4CB /* Pods_PokeHunt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PokeHunt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BFBBE56DA6BE9B4D1232865 /* Pods_POGOProto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_POGOProto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		701B67ED30CCD092DC53B694 /* Pods-PokeHunt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeHunt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PokeHunt/Pods-PokeHunt.debug.xcconfig"; sourceTree = "<group>"; };
-		A8C478747BE485AB5E000AF5 /* Pods-POGOProto.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-POGOProto.debug.xcconfig"; path = "Pods/Target Support Files/Pods-POGOProto/Pods-POGOProto.debug.xcconfig"; sourceTree = "<group>"; };
 		C550BE8E89894640234ECE3F /* Pods-S2SphereAdapter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-S2SphereAdapter.release.xcconfig"; path = "Pods/Target Support Files/Pods-S2SphereAdapter/Pods-S2SphereAdapter.release.xcconfig"; sourceTree = "<group>"; };
-		D8665D72B3D849085D4D66C2 /* Pods-POGOProto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-POGOProto.release.xcconfig"; path = "Pods/Target Support Files/Pods-POGOProto/Pods-POGOProto.release.xcconfig"; sourceTree = "<group>"; };
 		F60F11831D4F2F0A00DA4BB0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F64A96621D40E8C000A72182 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		F69A447C1D44B85800D56AEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -1246,7 +1243,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36FB34DCDCDB2254B44A8955 /* Pods_POGOProto.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2425,8 +2421,6 @@
 				31CF62A75AD969201AB06A47 /* Pods-PokeHunt.release.xcconfig */,
 				4BFA9B9D843806440FC9059E /* Pods-S2SphereAdapter.debug.xcconfig */,
 				C550BE8E89894640234ECE3F /* Pods-S2SphereAdapter.release.xcconfig */,
-				A8C478747BE485AB5E000AF5 /* Pods-POGOProto.debug.xcconfig */,
-				D8665D72B3D849085D4D66C2 /* Pods-POGOProto.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -3330,7 +3324,6 @@
 		};
 		12FF73851D5110C40063D271 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A8C478747BE485AB5E000AF5 /* Pods-POGOProto.debug.xcconfig */;
 			buildSettings = {
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -3351,7 +3344,6 @@
 		};
 		12FF73861D5110C40063D271 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D8665D72B3D849085D4D66C2 /* Pods-POGOProto.release.xcconfig */;
 			buildSettings = {
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
