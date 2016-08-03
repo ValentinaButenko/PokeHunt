@@ -54,10 +54,11 @@ class PrivacyPolicyView: UIView{
     }
 
     func setupDeclineBtn(){
-        let declineBtn = UIButton(frame: CGRect(x: 0,
-                                                y: self.textView.frame.size.height + 5,
-                                                width: self.frame.size.width/2 - 2.5,
-                                                height: 30))
+        let declineBtn = UIButton(type: .System)
+        declineBtn.frame = CGRect(x: 0,
+                                  y: self.textView.frame.size.height + 5,
+                                  width: self.frame.size.width/2 - 2.5,
+                                  height: 30)
         declineBtn.enabled = true
         declineBtn.backgroundColor = UIColor(red: 214/255, green: 69/255, blue: 65/255, alpha: 1.0)
         declineBtn.setTitle("Decline", forState: .Normal)
@@ -70,11 +71,12 @@ class PrivacyPolicyView: UIView{
     }
 
     func setupConfirmBtn(){
-        let confirmBtn = UIButton(frame: CGRect(x: self.declineBtn.frame.size.width + 5,
-                                                y: self.textView.frame.size.height + 5,
-                                                width: self.frame.width/2 - 2.5,
-                                                height: 30))
-        declineBtn.enabled = true
+        let confirmBtn = UIButton(type: .System)
+        confirmBtn.frame = CGRect(x: self.declineBtn.frame.size.width + 5,
+                                                        y: self.textView.frame.size.height + 5,
+                                                        width: self.frame.width/2 - 2.5,
+                                                        height: 30)
+        confirmBtn.enabled = true
         confirmBtn.backgroundColor = UIColor(red: 3/255, green: 201/255, blue: 169/255, alpha: 1.0)
         confirmBtn.setTitle("Confirm", forState: .Normal)
         confirmBtn.setTitleColor(UIColor.whiteColor(), forState: .Normal)

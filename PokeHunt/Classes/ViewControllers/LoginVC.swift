@@ -41,7 +41,7 @@ class LoginVC: UIViewController {
     }
 
     func setupPrivacyView(){
-        let privacyView = PrivacyPolicyView(frame: CGRect(x: 40, y: 70, width: self.view.frame.size.width - 80, height: self.view.frame.size.height - 140))
+        let privacyView = PrivacyPolicyView(frame: CGRect(x: 20, y: 70, width: self.view.frame.size.width - 40, height: self.view.frame.size.height - 140))
         let popup = KLCPopup(contentView: privacyView)
         popup.showType = .BounceInFromTop
         popup.dismissType = .BounceOutToBottom
