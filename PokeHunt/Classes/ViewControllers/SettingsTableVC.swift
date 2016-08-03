@@ -139,7 +139,14 @@ class SettingsTableVC: UITableViewController, UITextFieldDelegate{
         autorefreshSwitch.tintColor = UIColor(red: (167/255), green: (167/255), blue: (167/255), alpha: 1.0)
         autorefreshSwitch.layer.cornerRadius = 18.0
         autorefreshSwitch.transform = CGAffineTransformMakeScale(1.27, 1.27)
-        autorefreshSwitch.setOn(true, animated: false)
+
+        if Settings.instance.aurorefresh == true {
+             autorefreshSwitch.setOn(true, animated: false)
+        }
+        else{
+            autorefreshSwitch.setOn(false, animated: false)
+        }
+
 
         autorefreshSwitch.addTarget(self, action: #selector(SettingsTableVC.refreshSwitchChangeState(_:)), forControlEvents: .ValueChanged)
 
@@ -168,7 +175,14 @@ class SettingsTableVC: UITableViewController, UITextFieldDelegate{
         displayPokeSwitch.tintColor = UIColor(red: (167/255), green: (167/255), blue: (167/255), alpha: 1.0)
         displayPokeSwitch.layer.cornerRadius = 18.0
         displayPokeSwitch.transform = CGAffineTransformMakeScale(1.27, 1.27)
-        displayPokeSwitch.setOn(false, animated: false)
+
+        if Settings.instance.showPokemons == true {
+            displayPokeSwitch.setOn(true, animated: false)
+        }
+        else{
+            displayPokeSwitch.setOn(false, animated: false)
+        }
+
 
         displayPokeSwitch.addTarget(self, action: #selector(SettingsTableVC.showPokeSwitchChangeState(_:)), forControlEvents: .ValueChanged)
 
@@ -194,7 +208,13 @@ class SettingsTableVC: UITableViewController, UITextFieldDelegate{
         displayPokestopSwitch.tintColor = UIColor(red: (167/255), green: (167/255), blue: (167/255), alpha: 1.0)
         displayPokestopSwitch.layer.cornerRadius = 18.0
         displayPokestopSwitch.transform = CGAffineTransformMakeScale(1.27, 1.27)
-        displayPokestopSwitch.setOn(true, animated: false)
+
+        if Settings.instance.showPokestop == true {
+            displayPokestopSwitch.setOn(true, animated: false)
+        }
+        else{
+            displayPokestopSwitch.setOn(false, animated: false)
+        }
 
         displayPokestopSwitch.addTarget(self, action: #selector(SettingsTableVC.showPokestopSwitchChangeState(_:)), forControlEvents: .ValueChanged)
 
@@ -220,7 +240,13 @@ class SettingsTableVC: UITableViewController, UITextFieldDelegate{
         displayJymsSwitch.tintColor = UIColor(red: (167/255), green: (167/255), blue: (167/255), alpha: 1.0)
         displayJymsSwitch.layer.cornerRadius = 18.0
         displayJymsSwitch.transform = CGAffineTransformMakeScale(1.27, 1.27)
-        displayJymsSwitch.setOn(true, animated: false)
+
+        if Settings.instance.showJym == true {
+            displayJymsSwitch.setOn(true, animated: false)
+        }
+        else{
+            displayJymsSwitch.setOn(false, animated: false)
+        }
 
         displayJymsSwitch.addTarget(self, action: #selector(SettingsTableVC.showJymsSwitchChangeState(_:)), forControlEvents: .ValueChanged)
 
@@ -276,40 +302,40 @@ class SettingsTableVC: UITableViewController, UITextFieldDelegate{
     func refreshSwitchChangeState(sender: UISwitch){
         FIRAnalytics.logEventWithName("Change_refresh_state", parameters: nil)
         if sender.on{
-            print("Autorefresh on")
+            Settings.instance.aurorefresh = true
         }
         else{
-            print("Autorefresh off")
+            Settings.instance.aurorefresh = false
         }
     }
 
     func showPokeSwitchChangeState(sender: UISwitch){
         FIRAnalytics.logEventWithName("Change_show_pokeshow_state", parameters: nil)
         if sender.on{
-            print("ShowPoke on")
+            Settings.instance.showPokemons = true
         }
         else{
-            print("ShowPoke off")
+            Settings.instance.showPokemons = false
         }
     }
 
     func showPokestopSwitchChangeState(sender: UISwitch){
         FIRAnalytics.logEventWithName("Change_show_pokestop_state", parameters: nil)
         if sender.on{
-            print("Show Pokestop on")
+            Settings.instance.showPokestop = true
         }
         else{
-            print("Show Pokestop off")
+            Settings.instance.showPokestop = false
         }
     }
 
     func showJymsSwitchChangeState(sender: UISwitch){
         FIRAnalytics.logEventWithName("Change_show_jym_state", parameters: nil)
         if sender.on{
-            print("Show Jyms on")
+            Settings.instance.showJym = true
         }
         else{
-            print("Show Jyms off")
+            Settings.instance.showJym = false
         }
     }
 

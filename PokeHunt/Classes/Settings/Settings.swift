@@ -15,6 +15,11 @@ private let kStepsKey = "steps"
 private let kRefreshIntervalKey = "refreshInterval"
 private let kIsPrivacyAcceptedKey = "isPrivacyAccepted"
 private let kIsPayedKey = "isPayed"
+private let kAutorefreshKey = "autorefresh"
+private let kShowPokemonsKey = "showPokemons"
+private let kShowPokestopKey = "showPokestop"
+private let kShowJymKey = "showJym"
+private let kStepsAreaKey = "stepsArea"
 
 class Settings : NSObject, NSCoding {
     static let DidUpdated = "com.fantastik.pokehunt.Settings.DidUpdated"
@@ -48,6 +53,41 @@ class Settings : NSObject, NSCoding {
         }
     }
 
+    var aurorefresh: Bool = false {
+        didSet{
+            save()
+            notify()
+        }
+    }
+
+    var showPokemons: Bool = false {
+        didSet{
+            save()
+            notify()
+        }
+    }
+
+    var showPokestop: Bool = false {
+        didSet{
+            save()
+            notify()
+        }
+    }
+
+    var showJym: Bool = false {
+        didSet{
+            save()
+            notify()
+        }
+    }
+
+    var stepsArea: UInt8 = 30 {
+        didSet{
+            save()
+            notify()
+        }
+    }
+
     private override init() {
         if let data = NSUserDefaults.standardUserDefaults().dataForKey(kSettingsKey) {
             guard data.length != 0 else{
@@ -58,6 +98,11 @@ class Settings : NSObject, NSCoding {
             self.refreshInterval = restore.refreshInterval
             self.isPrivacyAccepted = restore.isPrivacyAccepted
             self.isPayed = restore.isPayed
+            self.aurorefresh = restore.aurorefresh
+            self.showPokemons = restore.showPokemons
+            self.showPokestop = restore.showPokestop
+            self.showJym = restore.showJym
+            self.stepsArea = restore.stepsArea
         }
     }
 
@@ -76,6 +121,11 @@ class Settings : NSObject, NSCoding {
         aCoder.encodeDouble(refreshInterval, forKey: kRefreshIntervalKey)
         aCoder.encodeBool(isPrivacyAccepted, forKey: kIsPrivacyAcceptedKey)
         aCoder.encodeBool(isPayed, forKey: kIsPayedKey)
+        aCoder.encodeBool(aurorefresh, forKey: kAutorefreshKey)
+        aCoder.encodeBool(showPokemons, forKey: kShowPokemonsKey)
+        aCoder.encodeBool(showPokestop, forKey: kShowPokestopKey)
+        aCoder.encodeBool(showJym, forKey: kShowJymKey)
+        aCoder.encodeInt(Int32(stepsArea), forKey: kStepsAreaKey)
     }
     
     internal required init?(coder aDecoder: NSCoder) {
@@ -83,5 +133,10 @@ class Settings : NSObject, NSCoding {
         self.refreshInterval = aDecoder.decodeDoubleForKey(kRefreshIntervalKey)
         self.isPrivacyAccepted = aDecoder.decodeBoolForKey(kIsPrivacyAcceptedKey)
         self.isPayed = aDecoder.decodeBoolForKey(kIsPayedKey)
+        self.aurorefresh = aDecoder.decodeBoolForKey(kAutorefreshKey)
+        self.showPokemons = aDecoder.decodeBoolForKey(kShowPokemonsKey)
+        self.showPokestop = aDecoder.decodeBoolForKey(kShowPokestopKey)
+        self.showJym = aDecoder.decodeBoolForKey(kShowJymKey)
+        self.stepsArea = UInt8(aDecoder.decodeIntForKey(kStepsAreaKey))
     }
 }
