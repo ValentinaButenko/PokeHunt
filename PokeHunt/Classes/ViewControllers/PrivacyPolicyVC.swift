@@ -25,12 +25,29 @@ class PrivacyPolicyVC: UIViewController, UITextViewDelegate {
     }
     
     func setup(){
+        self.setupNavigationController()
         self.setupHeader()
         self.setupTextView()
         self.showTextToView()
 
         textView.delegate = self
     }
+
+    func setupNavigationController(){
+        guard let nc = self.navigationController else{
+            return
+        }
+
+        let titleView = UIImageView(image: R.image.pokehunt()?.imageWithRenderingMode(.AlwaysOriginal))
+
+        nc.navigationBar.barTintColor = UIColor(white: (255/255), alpha: 1.0)
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: R.image.back()?.imageWithRenderingMode(.AlwaysOriginal),
+                                                                style: .Plain,
+                                                                target: self,
+                                                                action: #selector(PrivacyPolicyVC.leftBarButtonAction(_:)))
+        self.navigationItem.titleView = titleView
+    }
+
 
     func setupHeader(){
         guard let navController = self.navigationController else {
@@ -103,6 +120,10 @@ class PrivacyPolicyVC: UIViewController, UITextViewDelegate {
         }else{
             print(NSError.description())
         }
+    }
+
+    func leftBarButtonAction(sender: UIBarButtonItem){
+        self.navigationController?.popViewControllerAnimated(true)
     }
 
     func textView(textView: UITextView, shouldInteractWithURL URL: NSURL, inRange characterRange: NSRange) -> Bool {

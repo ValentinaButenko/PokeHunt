@@ -13,6 +13,7 @@ import SwiftEventBus
 private let kSettingsKey = "com.fantastik.pokehunt.settings"
 private let kStepsKey = "steps"
 private let kRefreshIntervalKey = "refreshInterval"
+private let kIsPrivacyAcceptedKey = "isPrivacyAccepted"
 
 class Settings : NSObject {
     static let DidUpdated = "com.fantastik.pokehunt.Settings.DidUpdated"
@@ -32,11 +33,19 @@ class Settings : NSObject {
         }
     }
 
+    var isPrivacyAccepted: Bool = false {
+        didSet {
+            save()
+            notify()
+        }
+    }
+
     private override init() {
         if let data = NSUserDefaults.standardUserDefaults().dataForKey(kSettingsKey) {
             let restore = NSKeyedUnarchiver.unarchiveObjectWithData(data) as! Settings
             self.steps = restore.steps
             self.refreshInterval = restore.refreshInterval
+            self.isPrivacyAccepted = restore.isPrivacyAccepted
         }
     }
 
@@ -52,9 +61,11 @@ class Settings : NSObject {
     private func encodeWithCoder(aCoder: NSCoder) {
         aCoder.encodeInt(Int32(steps), forKey: kStepsKey)
         aCoder.encodeDouble(refreshInterval, forKey: kRefreshIntervalKey)
+        aCoder.encodeBool(isPrivacyAccepted, forKey: kIsPrivacyAcceptedKey)
     }
     internal required init?(coder aDecoder: NSCoder) {
         self.steps = UInt8(aDecoder.decodeIntForKey(kStepsKey))
         self.refreshInterval = aDecoder.decodeDoubleForKey(kRefreshIntervalKey)
+        self.isPrivacyAccepted = aDecoder.decodeBoolForKey(kIsPrivacyAcceptedKey)
     }
 }

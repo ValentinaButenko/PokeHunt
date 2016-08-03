@@ -102,6 +102,7 @@ class SettingsTableVC: UITableViewController, UITextFieldDelegate{
     }
 
     func setup(){
+        self.setupNavigationController()
         self.setupAutorefreshCell()
         self.setupDisplayPokemonsCell()
         self.setupDisplayPokestopCell()
@@ -112,6 +113,21 @@ class SettingsTableVC: UITableViewController, UITextFieldDelegate{
         self.setupRateUsCell()
         self.setupLogOutCell()
         self.addDoneButtonOnKeyboard()
+    }
+
+    func setupNavigationController(){
+        guard let nc = self.navigationController else{
+            return
+        }
+
+        let titleView = UIImageView(image: R.image.pokehunt()?.imageWithRenderingMode(.AlwaysOriginal))
+
+        nc.navigationBar.barTintColor = UIColor(white: (255/255), alpha: 1.0)
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: R.image.back()?.imageWithRenderingMode(.AlwaysOriginal),
+                                                                style: .Plain,
+                                                                target: self,
+                                                                action: #selector(SettingsTableVC.leftBarButtonAction(_:)))
+        self.navigationItem.titleView = titleView
     }
 
     func setupAutorefreshCell(){
@@ -317,6 +333,10 @@ class SettingsTableVC: UITableViewController, UITextFieldDelegate{
     func doneButtonAction(sender: UIBarButtonItem){
         print("user tapped done")
         self.dismissKeyboard()
+    }
+
+    func leftBarButtonAction(sender: UIBarButtonItem){
+         self.navigationController?.popViewControllerAnimated(true)
     }
 
     func dismissKeyboard() {

@@ -106,7 +106,8 @@ class LoginVC: UIViewController {
         switch sender.tag{
         case 1:
             print("decline")
-            self.isPrivacyAssepted = false
+            Settings.instance.isPrivacyAccepted = false
+         //   self.isPrivacyAssepted = false
             self.popup.dismiss(true)
             self.logoViewWillMove()
         case 2:
