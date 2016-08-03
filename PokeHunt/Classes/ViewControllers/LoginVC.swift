@@ -31,7 +31,7 @@ class LoginVC: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
 
-        self.setupPrivacyView()
+        self.privacyPolicyWillAppear()
     }
 
     func setup(){
@@ -102,24 +102,6 @@ class LoginVC: UIViewController {
         self.warningLbl = warningLbl
     }
 
-    func handlePrivacySelection(sender:UIButton){
-        switch sender.tag{
-        case 1:
-            print("decline")
-            Settings.instance.isPrivacyAccepted = false
-         //   self.isPrivacyAssepted = false
-            self.popup.dismiss(true)
-            self.logoViewWillMove()
-        case 2:
-            print("confirm")
-            self.isPrivacyAssepted = true
-            self.popup.dismiss(true)
-            self.logoViewWillMove()
-        default:
-            print("Think more")
-        }
-    }
-
     func logoViewWillMove(){
         self.logoView.snp_updateConstraints(closure: { (make) in
             make.centerY.equalTo(self.view).offset(-80)
@@ -170,6 +152,29 @@ class LoginVC: UIViewController {
             case .Failed:
                 print("failed")
             }
+        }
+    }
+
+    func privacyPolicyWillAppear(){
+        if Settings.instance.isPrivacyAccepted == false {
+            self.setupPrivacyView()
+        }else{
+            self.logoViewWillMove()
+        }
+    }
+
+    func handlePrivacySelection(sender:UIButton){
+        switch sender.tag{
+        case 1:
+            Settings.instance.isPrivacyAccepted = false
+            self.popup.dismiss(true)
+            self.logoViewWillMove()
+        case 2:
+            Settings.instance.isPrivacyAccepted = true
+            self.popup.dismiss(true)
+            self.logoViewWillMove()
+        default:
+            print("Think more")
         }
     }
 }
