@@ -8,6 +8,9 @@
 
 import Foundation
 import GoogleMaps
+import FirebaseAnalytics
+import HockeySDK
+import iRate
 
 
 internal let GlobalDomain = "com.fantastik.pokehunt"
@@ -41,6 +44,10 @@ internal struct Bootstrapper {
 //            })
         }
 
+        self.setupHockeyApp()
+        self.setupFirebaseAnalytics()
+        self.setupIRate()
+
         let vc : UIViewController = (LoginModule.sharedModule.isAuthorized) ?
             UINavigationController(rootViewController: MapVC()) : LoginVC()
         if let del = UIApplication.sharedApplication().delegate {
@@ -60,4 +67,28 @@ internal struct Bootstrapper {
                 screenshot.removeFromSuperview()
         })
     }
+
+    func setupHockeyApp(){
+        BITHockeyManager.sharedHockeyManager().configureWithIdentifier("b082d61d33344cf29e7e65ad44de4c3b")
+        BITHockeyManager.sharedHockeyManager().debugLogEnabled = true
+        BITHockeyManager.sharedHockeyManager().startManager()
+        BITHockeyManager.sharedHockeyManager().authenticator.authenticateInstallation()
+        BITHockeyManager.sharedHockeyManager().crashManager.crashManagerStatus = .AutoSend
+    }
+
+    func setupFirebaseAnalytics(){
+        FIRApp.configure()
+    }
+
+    func setupIRate(){
+        iRate.sharedInstance().daysUntilPrompt = 3
+        iRate.sharedInstance().usesUntilPrompt = 5
+        iRate.sharedInstance().remindPeriod = 5
+
+        iRate.sharedInstance().messageTitle = "Rate our App"
+        iRate.sharedInstance().message = "If you enjoy using PokeHunt App, please take a moment to rate us on the App Store. Thanks for your support!"
+
+        iRate.sharedInstance().promptForNewVersionIfUserRated = true
+    }
 }
+

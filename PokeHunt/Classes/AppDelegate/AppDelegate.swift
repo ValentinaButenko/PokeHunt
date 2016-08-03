@@ -7,9 +7,6 @@
 //
 
 import UIKit
-import FirebaseAnalytics
-import HockeySDK
-import iRate
 
 
 @UIApplicationMain
@@ -18,30 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        FIRApp.configure()
-        BITHockeyManager.sharedHockeyManager().configureWithIdentifier("b082d61d33344cf29e7e65ad44de4c3b")
-        BITHockeyManager.sharedHockeyManager().debugLogEnabled = true
-        BITHockeyManager.sharedHockeyManager().startManager()
-        BITHockeyManager.sharedHockeyManager().authenticator.authenticateInstallation()
-        BITHockeyManager.sharedHockeyManager().crashManager.crashManagerStatus = .AutoSend
-
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         Bootstrapper.bootstrap()
         window!.makeKeyAndVisible()
         return true
     }
-
-    override class func initialize() -> Void{
-        iRate.sharedInstance().daysUntilPrompt = 3
-        iRate.sharedInstance().usesUntilPrompt = 5
-        iRate.sharedInstance().remindPeriod = 5
-
-        iRate.sharedInstance().messageTitle = "Rate our App"
-        iRate.sharedInstance().message = "If you enjoy using PokeHunt App, please take a moment to rate us on the App Store. Thanks for your support!"
-
-        iRate.sharedInstance().promptForNewVersionIfUserRated = true
-    }
-
+    
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
