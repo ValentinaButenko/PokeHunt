@@ -14,6 +14,7 @@ import FirebaseAnalytics
 import GoogleMobileAds
 import HockeySDK
 import SwiftTask
+import INTULocationManager
 
 class MapVC: UIViewController {
     var mapView: GMSMapView!
