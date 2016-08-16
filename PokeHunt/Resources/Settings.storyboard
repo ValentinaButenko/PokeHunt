@@ -209,7 +209,7 @@
                                                         <constraint firstAttribute="height" constant="30" id="tiu-yD-iaA"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="17"/>
-                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="go"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="go"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>

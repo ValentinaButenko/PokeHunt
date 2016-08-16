@@ -154,6 +154,7 @@ class SettingsTableVC: UITableViewController, UITextFieldDelegate{
         topSeparator.backgroundColor = UIColor(red: (170/255), green: (170/255), blue: (170/255), alpha: 0.8)
         let separator = UIView(frame: CGRect(x: 0, y: autorefreshCell.frame.size.height - 1, width: autorefreshCell.frame.size.width, height: 1))
         separator.backgroundColor = UIColor(red: (170/255), green: (170/255), blue: (170/255), alpha: 0.8)
+        autorefreshCell.selectionStyle = .None
 
         autorefreshCell.addSubview(autorefreshSwitch)
         autorefreshCell.addSubview(topSeparator)
@@ -188,6 +189,7 @@ class SettingsTableVC: UITableViewController, UITextFieldDelegate{
 
         let separator = UIView(frame: CGRect(x: 0, y: displayPokemonsCell.frame.size.height - 1, width: displayPokemonsCell.frame.size.width, height: 1))
         separator.backgroundColor = UIColor(red: (170/255), green: (170/255), blue: (170/255), alpha: 0.8)
+        displayPokemonsCell.selectionStyle = .None
 
         displayPokemonsCell.addSubview(displayPokeSwitch)
         displayPokemonsCell.addSubview(separator)
@@ -220,6 +222,7 @@ class SettingsTableVC: UITableViewController, UITextFieldDelegate{
 
         let separator = UIView(frame: CGRect(x: 0, y: displayPokestopCell.frame.size.height - 1, width: displayPokestopCell.frame.size.width, height: 1))
         separator.backgroundColor = UIColor(red: (170/255), green: (170/255), blue: (170/255), alpha: 0.8)
+        displayPokestopCell.selectionStyle = .None
 
         displayPokestopCell.addSubview(displayPokestopSwitch)
         displayPokestopCell.addSubview(separator)
@@ -252,6 +255,7 @@ class SettingsTableVC: UITableViewController, UITextFieldDelegate{
 
         let separator = UIView(frame: CGRect(x: 0, y: displayJymsCell.frame.size.height - 1, width: displayJymsCell.frame.size.width, height: 1))
         separator.backgroundColor = UIColor(red: (170/255), green: (170/255), blue: (170/255), alpha: 0.8)
+        displayJymsCell.selectionStyle = .None
 
         displayJymsCell.addSubview(displayJymsSwitch)
         displayJymsCell.addSubview(separator)
@@ -268,6 +272,7 @@ class SettingsTableVC: UITableViewController, UITextFieldDelegate{
         separator.backgroundColor = UIColor(red: (170/255), green: (170/255), blue: (170/255), alpha: 0.8)
 
         self.stepsArea.text = String(Settings.instance.stepsArea)
+        stepsAreaCell.selectionStyle = .None
         
         stepsAreaCell.addSubview(separator)
     }
@@ -279,6 +284,7 @@ class SettingsTableVC: UITableViewController, UITextFieldDelegate{
         
         privacyPolicyCell.accessoryType = .DetailDisclosureButton
         privacyPolicyCell.accessoryView = UIImageView(image: UIImage(named: R.image.disclosure.name))
+        privacyPolicyCell.selectionStyle = .None
     }
 
     func setupAboutUsCell(){
@@ -288,18 +294,21 @@ class SettingsTableVC: UITableViewController, UITextFieldDelegate{
 
         aboutUsCell.accessoryType = .DetailDisclosureButton
         aboutUsCell.accessoryView = UIImageView(image: UIImage(named: R.image.disclosure.name))
+        aboutUsCell.selectionStyle = .None
     }
 
     func setupRateUsCell(){
         let separator = UIView(frame: CGRect(x: 0, y: rateUsCell.frame.size.height - 1, width: rateUsCell.frame.size.width, height: 1))
         separator.backgroundColor = UIColor(red: (170/255), green: (170/255), blue: (170/255), alpha: 0.8)
         rateUsCell.addSubview(separator)
+        rateUsCell.selectionStyle = .None
     }
 
     func setupLogOutCell(){
         let separator = UIView(frame: CGRect(x: 0, y: logOutCell.frame.size.height - 1, width: logOutCell.frame.size.width, height: 1))
         separator.backgroundColor = UIColor(red: (170/255), green: (170/255), blue: (170/255), alpha: 0.8)
         logOutCell.addSubview(separator)
+        rateUsCell.selectionStyle = .None
     }
 
     func refreshSwitchChangeState(sender: UISwitch){
