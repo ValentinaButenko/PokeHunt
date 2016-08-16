@@ -244,19 +244,6 @@ class MapVC: UIViewController {
 
         }
 
-//
-//        if error == nil{
-//            let vc = UIActivityViewController(activityItems: [snapShot], applicationActivities: [])
-//            self.presentViewController(vc, animated: true, completion: nil)
-//        }
-//        else{
-//            UIImageWriteToSavedPhotosAlbum(snapShot, self, #selector(MapVC.image(_:didFinishSavingWithError:contextInfo:)), nil)
-//            let ac = UIAlertController(title: "'PokeHunt' would like to access your Photos", message: error?.localizedDescription, preferredStyle: .Alert)
-//            ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-//            self.presentViewController(ac, animated: true, completion: nil)
-        //}
-    //}
-
     func setupScreenBasedOnPayment(){
         if Settings.instance.isPayed == true {
             self.setupMap()
