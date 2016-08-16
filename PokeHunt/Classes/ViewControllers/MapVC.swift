@@ -24,8 +24,6 @@ class MapVC: UIViewController {
     var adsView: GADBannerView!
     var notificationView: CSNotificationView!
 
-    var isPayed = false
-
     var snapShot: UIImage!
 
     override func viewDidLoad() {
@@ -101,8 +99,12 @@ class MapVC: UIViewController {
     // setup map & searchBtn in purchased App
 
     func setupMap(){
-        let camera = GMSCameraPosition.cameraWithLatitude(-33.86,longitude: 151.20, zoom: 10)
-        let mapView = GMSMapView.mapWithFrame(CGRectZero, camera: camera)
+        let newcamera = GMSCameraPosition(target: CLLocationCoordinate2D(latitude: 50.45, longitude: 30.52), zoom: 14, bearing: 100, viewingAngle: 0)
+        let mapView = GMSMapView.mapWithFrame(CGRectZero, camera: newcamera)
+        let marker = GMSMarker()
+        marker.position = newcamera.target
+        marker.appearAnimation = kGMSMarkerAnimationPop
+        marker.map = mapView
 
         view.addSubview(mapView)
 
@@ -146,8 +148,12 @@ class MapVC: UIViewController {
     }
 
     func setupUnpurchasedMap(){
-        let camera = GMSCameraPosition.cameraWithLatitude(-33.86, longitude: 151.20, zoom: 10)
-        let mapView = GMSMapView.mapWithFrame(CGRectZero, camera: camera)
+        let newcamera = GMSCameraPosition(target: CLLocationCoordinate2D(latitude: 50.45, longitude: 30.52), zoom: 14, bearing: 100, viewingAngle: 0)
+        let mapView = GMSMapView.mapWithFrame(CGRectZero, camera: newcamera)
+        let marker = GMSMarker()
+        marker.position = newcamera.target
+        marker.appearAnimation = kGMSMarkerAnimationPop
+        marker.map = mapView
 
         view.addSubview(mapView)
 
