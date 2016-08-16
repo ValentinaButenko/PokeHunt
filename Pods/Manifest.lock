@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (3.4.1)
   - AppAuth (0.4.0)
+  - DFNotificationView (0.5.4)
   - Firebase/AdMob (3.3.0):
     - Firebase/Analytics (= 3.3.0)
     - Google-Mobile-Ads-SDK (= 7.8.1)
@@ -49,6 +50,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - AppAuth (from `LocalPods/AppAuth/`)
+  - DFNotificationView (~> 0.5)
   - Firebase/AdMob
   - Firebase/Core
   - GoogleMaps
@@ -74,6 +76,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
   AppAuth: 7ebdb7f96c1165094d2841512bd31c2b2adcc18f
+  DFNotificationView: 1034c4c70c490cb29cdc652232d580069e489411
   Firebase: 6250071f0e2440a5c4c67b8cb6b868f868237ac3
   FirebaseAnalytics: 0fd6532cb2c3d03cd5cf26ad295ccb091efd3104
   FirebaseInstanceID: a9d923f3d0b6fbf9fac89310860357aaadc34be5
@@ -98,6 +101,6 @@ SPEC CHECKSUMS:
   SwiftyTimer: db4458cfaf67fc71e16ad6e4637c60b86f76a649
   TOWebViewController: a29908019f7e0e0f8eccfab8a1ee8dcdf4fc5aac
 
-PODFILE CHECKSUM: 85b43043ba937c73899928e58844bca988c356f0
+PODFILE CHECKSUM: e71e13be86f2176c50f998d11a5a28a435ab360a
 
 COCOAPODS: 1.0.1

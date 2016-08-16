@@ -15,12 +15,14 @@ import GoogleMobileAds
 import HockeySDK
 import SwiftTask
 import INTULocationManager
+import DFNotificationView
 
 class MapVC: UIViewController {
     var mapView: GMSMapView!
     var searchBtn: UIButton!
     var payBtn: UIButton!
     var adsView: GADBannerView!
+    var notificationView: CSNotificationView!
 
     var isPayed = false
 
@@ -29,6 +31,34 @@ class MapVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setup()
+    }
+
+    override func viewWillAppear(animated: Bool) {
+        self.checkLocationStatus()
+    }
+
+    func checkLocationStatus(){
+        let locMngrState = INTULocationManager.locationServicesState()
+        if locMngrState != .Available{
+            print("Disabled location manager")
+            let notification = CSNotificationView(parentViewController: self,
+                                                  tintColor: UIColor(red: 231/255, green: 76/255, blue: 60/255, alpha: 1.0),
+                                                  image: nil,
+                                                  message: "The location services are unavailable. Tap to open Settings")
+            notification.textLabel.textAlignment = .Center
+            notification.textLabel.font = UIFont(name: "OpenSans", size: 15)
+            notification.setVisible(true, animated: true, completion: nil)
+            notification.tapHandler = {
+                guard let mainSettings = NSURL(string: UIApplicationOpenSettingsURLString) else{
+                    return
+                }
+                UIApplication.sharedApplication().openURL(mainSettings)
+            }
+            self.notificationView = notification
+        }
+        else{
+            print("Enabled loc manager")
+        }
     }
 
     func setup(){
@@ -182,6 +212,7 @@ class MapVC: UIViewController {
         FIRAnalytics.logEventWithName("User_select_settings", parameters: nil)
         let storyboard = UIStoryboard(name: "Settings", bundle: nil)
         let vc = storyboard.instantiateViewControllerWithIdentifier("SettingsStrBrd")
+        self.notificationView.setVisible(false, animated: true, completion: nil)
         self.navigationController!.pushViewController(vc, animated: true)
     }
 
