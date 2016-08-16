@@ -16,6 +16,7 @@ import HockeySDK
 import SwiftTask
 import INTULocationManager
 import DFNotificationView
+import Photos
 
 class MapVC: UIViewController {
     var mapView: GMSMapView!
@@ -148,7 +149,7 @@ class MapVC: UIViewController {
     }
 
     func setupUnpurchasedMap(){
-        let newcamera = GMSCameraPosition(target: CLLocationCoordinate2D(latitude: 50.45, longitude: 30.52), zoom: 14, bearing: 100, viewingAngle: 0)
+        let newcamera = GMSCameraPosition(target: CLLocationCoordinate2D(latitude: 50.45, longitude: 30.52), zoom: 18, bearing: 100, viewingAngle: 0)
         let mapView = GMSMapView.mapWithFrame(CGRectZero, camera: newcamera)
         let marker = GMSMarker()
         marker.position = newcamera.target
@@ -184,7 +185,6 @@ class MapVC: UIViewController {
     func searchPokemon(sender: UIButton){
         FIRAnalytics.logEventWithName("User_tap_pokesearch", parameters: nil)
         print("Searching...")
-        self.showLocationAlert()
     }
 
     func removeAds(sender: UIButton){
@@ -203,17 +203,6 @@ class MapVC: UIViewController {
         self.snapShot = snpShot
     }
 
-    func showLocationAlert(){
-        let ac = UIAlertController(title: "Allow 'PokeHunt' to access your location while you are use the app?", message: "PokeHunt deals with location, so in order to work, the PokeHunt needs to know your location", preferredStyle: .Alert)
-        ac.addAction(UIAlertAction(title: "Don't Allow",
-                                    style: .Default,
-                                    handler: {_ in print("User has fobia")}))
-        ac.addAction(UIAlertAction(title: "Allow",
-                                    style: .Default,
-                                    handler: {_ in print("User allows")}))
-        self.presentViewController(ac, animated: true, completion: nil)
-    }
-
     func selectedSettings(sender: UIButton){
         FIRAnalytics.logEventWithName("User_select_settings", parameters: nil)
         let storyboard = UIStoryboard(name: "Settings", bundle: nil)
@@ -223,16 +212,50 @@ class MapVC: UIViewController {
     }
 
     func image(image: UIImage, didFinishSavingWithError error: NSError?, contextInfo:UnsafePointer<Void>){
+
         if error == nil{
-            let vc = UIActivityViewController(activityItems: [snapShot], applicationActivities: [])
+            let vc = UIActivityViewController(activityItems: [self.snapShot], applicationActivities: [])
             self.presentViewController(vc, animated: true, completion: nil)
         }
         else{
-            let ac = UIAlertController(title: "Oops!", message: error?.localizedDescription, preferredStyle: .Alert)
-            ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-            self.presentViewController(ac, animated: true, completion: nil)
+            PHPhotoLibrary.requestAuthorization() { (status) -> Void in
+                switch status {
+                case .Restricted:
+                    let ac = UIAlertController(title: "Restricted", message: "PokeHunt was restricted to access your photos", preferredStyle: .Alert)
+                    ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+                    self.presentViewController(ac, animated: true, completion: nil)
+                    break
+                case .Denied, .NotDetermined:
+                    let ac = UIAlertController(title: "Denied", message: "PokeHunt has no permission to access your photos. Please, manage the access policy in Settings", preferredStyle: .Alert)
+                    ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+                    ac.addAction(UIAlertAction(title: "Settings",
+                        style: .Default,
+                        handler: {_ in
+                            UIApplication.sharedApplication().openURL(NSURL(string: UIApplicationOpenSettingsURLString)!)}))
+                    self.presentViewController(ac, animated: true, completion: nil)
+                    break
+                default:
+                    let ac = UIAlertController(title: "Error", message: "Please, check the access policy in Settings", preferredStyle: .Alert)
+                    ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+                    break
+                }
+            }
         }
-    }
+
+        }
+
+//
+//        if error == nil{
+//            let vc = UIActivityViewController(activityItems: [snapShot], applicationActivities: [])
+//            self.presentViewController(vc, animated: true, completion: nil)
+//        }
+//        else{
+//            UIImageWriteToSavedPhotosAlbum(snapShot, self, #selector(MapVC.image(_:didFinishSavingWithError:contextInfo:)), nil)
+//            let ac = UIAlertController(title: "'PokeHunt' would like to access your Photos", message: error?.localizedDescription, preferredStyle: .Alert)
+//            ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+//            self.presentViewController(ac, animated: true, completion: nil)
+        //}
+    //}
 
     func setupScreenBasedOnPayment(){
         if Settings.instance.isPayed == true {
@@ -247,4 +270,5 @@ class MapVC: UIViewController {
         }
     }
 }
+
 
