@@ -143,13 +143,14 @@ class LoginVC: UIViewController {
     }
 
     func tappedLoginBtn(sender: UIButton!){
-        FIRAnalytics.logEventWithName("User_log_in", parameters: nil)
         LoginModule.sharedModule.performLoginOnController(self) { res in
             switch (res) {
             case .LoggedIn:
+                FIRAnalytics.logEventWithName("User_log_in", parameters: nil)
                 let vc = MapVC()
                 Bootstrapper.exchangeRoot(viewController: UINavigationController(rootViewController: vc))
             case .Failed:
+                FIRAnalytics.logEventWithName("User_log_in_failed", parameters: nil)
                 print("failed")
             }
         }
