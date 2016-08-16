@@ -81,7 +81,7 @@ class Settings : NSObject, NSCoding {
         }
     }
 
-    var stepsArea: UInt8 = 30 {
+    var stepsArea: Int = 30 {
         didSet{
             save()
             notify()
@@ -137,6 +137,6 @@ class Settings : NSObject, NSCoding {
         self.showPokemons = aDecoder.decodeBoolForKey(kShowPokemonsKey)
         self.showPokestop = aDecoder.decodeBoolForKey(kShowPokestopKey)
         self.showJym = aDecoder.decodeBoolForKey(kShowJymKey)
-        self.stepsArea = UInt8(aDecoder.decodeIntForKey(kStepsAreaKey))
+        self.stepsArea = Int(aDecoder.decodeIntForKey(kStepsAreaKey))
     }
 }

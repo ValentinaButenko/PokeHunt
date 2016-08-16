@@ -371,17 +371,22 @@ class SettingsTableVC: UITableViewController, UITextFieldDelegate{
     func dismissKeyboard() {
         view.endEditing(true)
 
-        let initialArea = "30"
-        guard let finalArea = self.stepsArea.text else{
-            return print(NSError.description())
+        guard let finalArea =  self.stepsArea.text else{
+            return
         }
-        if initialArea != finalArea{
-            let statsParams = ["New_Steps_Area" : finalArea]
+
+        guard let finalIntArea = Int(finalArea) else{
+            return self.stepsArea.text = String(Settings.instance.stepsArea)
+        }
+
+        if Int(Settings.instance.stepsArea) != finalIntArea{
+            let statsParams = ["New_Steps_Area" : finalIntArea]
             FIRAnalytics.logEventWithName("Steps_area_chaged", parameters: statsParams)
+            Settings.instance.stepsArea = finalIntArea
             print("User did change text field")
         }
         else{
-            print("User did not changed text field")
+            print("User did not chenge text field")
         }
     }
 }
