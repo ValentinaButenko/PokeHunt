@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:../../../Desktop/New York City Marathon.gpx">
+   </FileRef>
+   <FileRef
       location = "group:S2Sphere/S2Sphere.xcodeproj">
    </FileRef>
    <FileRef

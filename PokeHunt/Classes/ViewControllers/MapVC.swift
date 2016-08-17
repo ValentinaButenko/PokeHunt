@@ -24,8 +24,10 @@ class MapVC: UIViewController {
     var payBtn: UIButton!
     var adsView: GADBannerView!
     var notificationView: CSNotificationView!
-
     var snapShot: UIImage!
+    var userLocation: CLLocation!
+
+    var searchFinished = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,27 +39,41 @@ class MapVC: UIViewController {
     }
 
     func checkLocationStatus(){
-        let locMngrState = INTULocationManager.locationServicesState()
-        if locMngrState != .Available{
-            print("Disabled location manager")
-            let notification = CSNotificationView(parentViewController: self,
-                                                  tintColor: UIColor(red: 231/255, green: 76/255, blue: 60/255, alpha: 1.0),
-                                                  image: nil,
-                                                  message: "The location services are unavailable. Tap to open Settings")
-            notification.textLabel.textAlignment = .Center
-            notification.textLabel.font = UIFont(name: "OpenSans", size: 15)
-            notification.setVisible(true, animated: true, completion: nil)
-            notification.tapHandler = {
-                guard let mainSettings = NSURL(string: UIApplicationOpenSettingsURLString) else{
-                    return
-                }
-                UIApplication.sharedApplication().openURL(mainSettings)
+        let notification = CSNotificationView(parentViewController: self, tintColor: UIColor(red: 231/255, green: 76/255, blue: 60/255, alpha: 1.0), image: nil, message: "Location services are unavailable. Tap to open Settings")
+        notification.textLabel.textAlignment = .Center
+        notification.textLabel.font = UIFont(name: "OpenSans", size: 15)
+        notification.setVisible(false, animated: true, completion: nil)
+        notification.tapHandler = {
+
+            guard let mainSettings = NSURL(string: UIApplicationOpenSettingsURLString) else{
+                return
             }
-            self.notificationView = notification
+                UIApplication.sharedApplication().openURL(mainSettings)
         }
-        else{
-            print("Enabled loc manager")
+
+        INTULocationManager.sharedInstance().subscribeToLocationUpdatesWithBlock { (location, accuracy, status) in
+                switch status{
+                case .Success:
+                    notification.setVisible(false, animated: true, completion: nil)
+                case .ServicesDenied:
+                    notification.setVisible(true, animated: true, completion: nil)
+                    notification.textLabel.text = "Denied access to he location services. Tap to open Settings"
+                    break
+                case .ServicesDisabled:
+                    notification.setVisible(true, animated: true, completion: nil)
+                    notification.textLabel.text = "Disabled access to the location services. Tap to open Settings"
+                    break
+                case .ServicesRestricted:
+                    notification.setVisible(true, animated: true, completion: nil)
+                    notification.textLabel.text = "Resticted access to the location services. Tap to open Settings"
+                    break
+                default:
+                    notification.setVisible(true, animated: true, completion: nil)
+                    notification.textLabel.text = "Location services are unavailable. Tap to open Settings"
+                    break
+            }
         }
+        self.notificationView = notification
     }
 
     func setup(){
@@ -103,6 +119,7 @@ class MapVC: UIViewController {
         let newcamera = GMSCameraPosition(target: CLLocationCoordinate2D(latitude: 50.45, longitude: 30.52), zoom: 14, bearing: 100, viewingAngle: 0)
         let mapView = GMSMapView.mapWithFrame(CGRectZero, camera: newcamera)
         let marker = GMSMarker()
+        mapView.myLocationEnabled = true
         marker.position = newcamera.target
         marker.appearAnimation = kGMSMarkerAnimationPop
         marker.map = mapView
@@ -149,12 +166,25 @@ class MapVC: UIViewController {
     }
 
     func setupUnpurchasedMap(){
-        let newcamera = GMSCameraPosition(target: CLLocationCoordinate2D(latitude: 50.45, longitude: 30.52), zoom: 18, bearing: 100, viewingAngle: 0)
-        let mapView = GMSMapView.mapWithFrame(CGRectZero, camera: newcamera)
-        let marker = GMSMarker()
-        marker.position = newcamera.target
-        marker.appearAnimation = kGMSMarkerAnimationPop
-        marker.map = mapView
+        let userCamera = GMSCameraPosition()
+        let mapView = GMSMapView.mapWithFrame(CGRectZero, camera: userCamera)
+        mapView.myLocationEnabled = true
+
+        INTULocationManager.sharedInstance().subscribeToLocationUpdatesWithBlock { (location, accuracy, status) in
+            if status == .Success{
+                self.userLocation = location
+                let definedUserCamera = GMSCameraPosition.cameraWithLatitude(self.userLocation.coordinate.latitude,
+                    longitude: self.userLocation.coordinate.longitude,
+                    zoom: MapSettingsConstants.defaultZoom)
+                mapView.camera = definedUserCamera
+            }
+            else{
+                let definedUserCamera = GMSCameraPosition.cameraWithLatitude(MapSettingsConstants.statringUserLatitude,
+                    longitude: MapSettingsConstants.startingUserLongitude,
+                    zoom: MapSettingsConstants.defaultZoom)
+                mapView.camera = definedUserCamera
+            }
+        }
 
         view.addSubview(mapView)
 
@@ -164,6 +194,50 @@ class MapVC: UIViewController {
             make.bottom.equalTo(adsView.snp_top)
         }
         self.mapView = mapView
+    }
+
+    func setupMapBehaviour(){
+        let userLatitude = 40.606641
+        let userLongitude = -74.044835
+
+        mapView.setMinZoom(14, maxZoom: 21)
+
+        if searchFinished == true {
+            switch Settings.instance.stepsArea{
+            case 10 ... 35:
+                let newCamera = GMSCameraPosition.cameraWithLatitude(userLatitude, longitude: userLongitude, zoom: 21)
+                mapView.camera = newCamera
+                break
+            case 36 ... 65:
+                let newCamera = GMSCameraPosition.cameraWithLatitude(userLatitude, longitude: userLongitude, zoom: 20)
+                mapView.camera = newCamera
+                break
+            case 66 ... 135:
+                let newCamera = GMSCameraPosition.cameraWithLatitude(userLatitude, longitude: userLongitude, zoom: 19)
+                mapView.camera = newCamera
+                break
+            case 136 ... 265:
+                let newCamera = GMSCameraPosition.cameraWithLatitude(userLatitude, longitude: userLongitude, zoom: 18)
+                mapView.camera = newCamera
+                break
+            case 266 ... 525:
+                let newCamera = GMSCameraPosition.cameraWithLatitude(userLatitude, longitude: userLongitude, zoom: 17)
+                mapView.camera = newCamera
+                break
+            case 526 ... 1050:
+                let newCamera = GMSCameraPosition.cameraWithLatitude(userLatitude, longitude: userLongitude, zoom: 16)
+                mapView.camera = newCamera
+                break
+            case 1051 ... 2100:
+                let newCamera = GMSCameraPosition.cameraWithLatitude(userLatitude, longitude: userLongitude, zoom: 15)
+                mapView.camera = newCamera
+                break
+            default:
+                let newCamera = GMSCameraPosition.cameraWithLatitude(userLatitude, longitude: userLongitude, zoom: MapSettingsConstants.defaultZoom)
+                mapView.camera = newCamera
+                break
+            }
+        }
     }
 
     func setupPayButton(){
@@ -184,6 +258,11 @@ class MapVC: UIViewController {
 
     func searchPokemon(sender: UIButton){
         FIRAnalytics.logEventWithName("User_tap_pokesearch", parameters: nil)
+
+        // TESTING the camera moving when search finishes
+        searchFinished = true
+        self.setupMapBehaviour()
+
         print("Searching...")
     }
 
@@ -207,6 +286,7 @@ class MapVC: UIViewController {
         FIRAnalytics.logEventWithName("User_select_settings", parameters: nil)
         let storyboard = UIStoryboard(name: "Settings", bundle: nil)
         let vc = storyboard.instantiateViewControllerWithIdentifier("SettingsStrBrd")
+
         self.notificationView.setVisible(false, animated: true, completion: nil)
         self.navigationController!.pushViewController(vc, animated: true)
     }
@@ -241,7 +321,6 @@ class MapVC: UIViewController {
                 }
             }
         }
-
         }
 
     func setupScreenBasedOnPayment(){
@@ -257,5 +336,4 @@ class MapVC: UIViewController {
         }
     }
 }
-
 

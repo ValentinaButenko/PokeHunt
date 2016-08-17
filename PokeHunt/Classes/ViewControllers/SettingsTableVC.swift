@@ -391,7 +391,7 @@ class SettingsTableVC: UITableViewController, UITextFieldDelegate{
         }
 
         if steps != finalIntArea{
-            if finalIntArea >= 15 && finalIntArea <= 1500{
+            if finalIntArea >= Int(MapSettingsConstants.minStepsArea) && finalIntArea <= Int(MapSettingsConstants.maxStepsArea){
                 let statsParams = ["New_Steps_Area" : finalIntArea]
                 FIRAnalytics.logEventWithName("Steps_area_chaged", parameters: statsParams)
                 Settings.instance.stepsArea = finalIntArea
