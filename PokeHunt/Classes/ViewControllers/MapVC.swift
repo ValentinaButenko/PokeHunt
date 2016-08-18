@@ -166,25 +166,13 @@ class MapVC: UIViewController {
     }
 
     func setupUnpurchasedMap(){
-        let userCamera = GMSCameraPosition()
-        let mapView = GMSMapView.mapWithFrame(CGRectZero, camera: userCamera)
-        mapView.myLocationEnabled = true
 
-        INTULocationManager.sharedInstance().subscribeToLocationUpdatesWithBlock { (location, accuracy, status) in
-            if status == .Success{
-                self.userLocation = location
-                let definedUserCamera = GMSCameraPosition.cameraWithLatitude(self.userLocation.coordinate.latitude,
-                    longitude: self.userLocation.coordinate.longitude,
-                    zoom: MapSettingsConstants.defaultZoom)
-                mapView.camera = definedUserCamera
-            }
-            else{
-                let definedUserCamera = GMSCameraPosition.cameraWithLatitude(MapSettingsConstants.statringUserLatitude,
-                    longitude: MapSettingsConstants.startingUserLongitude,
-                    zoom: MapSettingsConstants.defaultZoom)
-                mapView.camera = definedUserCamera
-            }
-        }
+        let camera = GMSCameraPosition.cameraWithLatitude(MapSettingsConstants.statringUserLatitude,
+                                                          longitude: MapSettingsConstants.startingUserLongitude,
+                                                          zoom: MapSettingsConstants.defaultZoom)
+
+        let mapView = GMSMapView.mapWithFrame(CGRectZero, camera: camera)
+        mapView.myLocationEnabled = false
 
         view.addSubview(mapView)
 
@@ -194,9 +182,22 @@ class MapVC: UIViewController {
             make.bottom.equalTo(adsView.snp_top)
         }
         self.mapView = mapView
+        self.setupMapBehaviour()
     }
 
     func setupMapBehaviour(){
+        //Grab initial location to show user on map
+        INTULocationManager.sharedInstance().requestLocationWithDesiredAccuracy(.Neighborhood, timeout: 0.0) { (location, accuracy, status) in
+            if status == .Success{
+                self.userLocation = location
+                self.mapView.myLocationEnabled = true
+                let userPosition = CLLocationCoordinate2DMake(self.userLocation.coordinate.latitude, self.userLocation.coordinate.longitude)
+                self.mapView.animateWithCameraUpdate(GMSCameraUpdate.setTarget(userPosition))
+            }
+            else{
+                self.userLocation = CLLocation(latitude: MapSettingsConstants.statringUserLatitude, longitude: MapSettingsConstants.startingUserLongitude)
+            }
+        }
         let userLatitude = 40.606641
         let userLongitude = -74.044835
 
@@ -240,6 +241,10 @@ class MapVC: UIViewController {
         }
     }
 
+//    func selectZoom() -> Float(){
+//    
+//    }
+
     func setupPayButton(){
         let payBtn = UIButton()
 
@@ -261,7 +266,7 @@ class MapVC: UIViewController {
 
         // TESTING the camera moving when search finishes
         searchFinished = true
-        self.setupMapBehaviour()
+  //      self.setupMapBehaviour()
 
         print("Searching...")
     }
