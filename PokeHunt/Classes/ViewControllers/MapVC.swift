@@ -28,7 +28,6 @@ class MapVC: UIViewController {
     var snapShot: UIImage!
     var userLocation: CLLocation!
     var ongoingCamera: GMSCameraPosition!
-    var ongoingZoom = MapSettingsConstants.defaultZoom
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,34 +82,34 @@ class MapVC: UIViewController {
             switch Settings.instance.stepsArea{
             case 10 ... 35:
                 self.mapView.animateToZoom(21)
-                self.ongoingZoom = 21
+                Settings.instance.userZoom = 21.0
                 break
             case 36 ... 65:
                 self.mapView.animateToZoom(20)
-                self.ongoingZoom = 20
+                Settings.instance.userZoom = 20.0
                 break
             case 66 ... 135:
                 self.mapView.animateToZoom(19)
-                self.ongoingZoom = 19
+                Settings.instance.userZoom = 19.0
                 break
             case 136 ... 265:
                 self.mapView.animateToZoom(18)
-                self.ongoingZoom = 18
+                Settings.instance.userZoom = 18.0
                 break
             case 266 ... 525:
                 self.mapView.animateToZoom(17)
-                self.ongoingZoom = 17
+                Settings.instance.userZoom = 17.0
                 break
             case 526 ... 1050:
                 self.mapView.animateToZoom(16)
-                self.ongoingZoom = 16
+                Settings.instance.userZoom = 16.0
                 break
             case 1051 ... 2100:
                 self.mapView.animateToZoom(15)
-                self.ongoingZoom = 15
+                Settings.instance.userZoom = 15.0
                 break
             default:
-                self.mapView.animateToZoom(MapSettingsConstants.defaultZoom)
+                self.mapView.animateToZoom(Settings.instance.userZoom)
                 break
             }
             self.mapView.myLocationEnabled = true
@@ -157,9 +156,9 @@ class MapVC: UIViewController {
     // setup map & searchBtn in purchased App
 
     func setupMap(){
-        let camera = GMSCameraPosition.cameraWithLatitude(MapSettingsConstants.statringUserLatitude,
-                                                          longitude: MapSettingsConstants.startingUserLongitude,
-                                                          zoom: MapSettingsConstants.defaultZoom)
+        let camera = GMSCameraPosition.cameraWithLatitude(Settings.instance.userLatitude,
+                                                          longitude: Settings.instance.userLongitude,
+                                                          zoom: Settings.instance.userZoom)
 
         let mapView = GMSMapView.mapWithFrame(CGRectZero, camera: camera)
         mapView.myLocationEnabled = false
@@ -209,9 +208,9 @@ class MapVC: UIViewController {
 
     func setupUnpurchasedMap(){
 
-        let camera = GMSCameraPosition.cameraWithLatitude(MapSettingsConstants.statringUserLatitude,
-                                                          longitude: MapSettingsConstants.startingUserLongitude,
-                                                          zoom: MapSettingsConstants.defaultZoom)
+        let camera = GMSCameraPosition.cameraWithLatitude(Settings.instance.userLatitude,
+                                                          longitude: Settings.instance.userLongitude,
+                                                          zoom: Settings.instance.userZoom)
 
         let mapView = GMSMapView.mapWithFrame(CGRectZero, camera: camera)
         mapView.myLocationEnabled = false
@@ -231,13 +230,11 @@ class MapVC: UIViewController {
     func setupInitialUserLocation(){
         INTULocationManager.sharedInstance().requestLocationWithDesiredAccuracy(.Neighborhood, timeout: 0.0) { (location, accuracy, status) in
             if status == .Success{
-                self.userLocation = location
+                Settings.instance.userLatitude = location.coordinate.latitude
+                Settings.instance.userLongitude = location.coordinate.longitude
                 self.mapView.myLocationEnabled = true
-                let userPosition = CLLocationCoordinate2DMake(self.userLocation.coordinate.latitude, self.userLocation.coordinate.longitude)
+                let userPosition = CLLocationCoordinate2DMake(Settings.instance.userLatitude, Settings.instance.userLongitude)
                 self.mapView.animateWithCameraUpdate(GMSCameraUpdate.setTarget(userPosition))
-            }
-            else{
-                self.userLocation = CLLocation(latitude: MapSettingsConstants.statringUserLatitude, longitude: MapSettingsConstants.startingUserLongitude)
             }
         }
     }

@@ -91,21 +91,21 @@ class Settings : NSObject, NSCoding {
         }
     }
 
-    var userLatitude: Float = 0.0{
+    var userLatitude: Double = 0.0{
         didSet{
             save()
             notify()
         }
     }
 
-    var userLongitude: Float = 0.0{
+    var userLongitude: Double = 0.0{
         didSet{
             save()
             notify()
         }
     }
 
-    var userZoom: Float = 0.0{
+    var userZoom: Float = 15.0{
         didSet{
             save()
             notify()
@@ -153,8 +153,8 @@ class Settings : NSObject, NSCoding {
         aCoder.encodeBool(showPokestop, forKey: kShowPokestopKey)
         aCoder.encodeBool(showJym, forKey: kShowJymKey)
         aCoder.encodeInt(Int32(stepsArea), forKey: kStepsAreaKey)
-        aCoder.encodeFloat(userLatitude, forKey: kLatitudeKey)
-        aCoder.encodeFloat(userLongitude, forKey: kLongitudeKey)
+        aCoder.encodeDouble(userLatitude, forKey: kLatitudeKey)
+        aCoder.encodeDouble(userLongitude, forKey: kLongitudeKey)
         aCoder.encodeFloat(userZoom, forKey: kZoomKey)
     }
     
@@ -168,8 +168,8 @@ class Settings : NSObject, NSCoding {
         self.showPokestop = aDecoder.decodeBoolForKey(kShowPokestopKey)
         self.showJym = aDecoder.decodeBoolForKey(kShowJymKey)
         self.stepsArea = Int(aDecoder.decodeIntForKey(kStepsAreaKey))
-        self.userLatitude = aDecoder.decodeFloatForKey(kLatitudeKey)
-        self.userLongitude = aDecoder.decodeFloatForKey(kLongitudeKey)
+        self.userLatitude = aDecoder.decodeDoubleForKey(kLatitudeKey)
+        self.userLongitude = aDecoder.decodeDoubleForKey(kLongitudeKey)
         self.userZoom = aDecoder.decodeFloatForKey(kZoomKey)
     }
 }
