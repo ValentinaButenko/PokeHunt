@@ -487,6 +487,7 @@
 		F69A44CC1D4914A500D56AEA /* privacy.md in Resources */ = {isa = PBXBuildFile; fileRef = F69A44CB1D4914A500D56AEA /* privacy.md */; };
 		F6C3B7341D645E73003E5C2A /* MapSettingsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C3B7331D645E73003E5C2A /* MapSettingsConstants.swift */; };
 		F6C3B7361D65B068003E5C2A /* UserMapActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C3B7351D65B068003E5C2A /* UserMapActions.swift */; };
+		F6C3B7381D65F89A003E5C2A /* UIView.myLocationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C3B7371D65F89A003E5C2A /* UIView.myLocationButton.swift */; };
 		F6D14DFE1D50DCEA002BE44D /* GMService-APIkeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = F6D14DFD1D50DCEA002BE44D /* GMService-APIkeys.plist */; };
 /* End PBXBuildFile section */
 
@@ -1229,6 +1230,7 @@
 		F69A44CB1D4914A500D56AEA /* privacy.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = privacy.md; sourceTree = "<group>"; };
 		F6C3B7331D645E73003E5C2A /* MapSettingsConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapSettingsConstants.swift; sourceTree = "<group>"; };
 		F6C3B7351D65B068003E5C2A /* UserMapActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserMapActions.swift; sourceTree = "<group>"; };
+		F6C3B7371D65F89A003E5C2A /* UIView.myLocationButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.myLocationButton.swift; sourceTree = "<group>"; };
 		F6D14DFD1D50DCEA002BE44D /* GMService-APIkeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GMService-APIkeys.plist"; sourceTree = "<group>"; };
 		F6DCD15A1D3FB09900FA576E /* PokeHunt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeHunt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8AAB78F7D948475280F8EFF /* Pods_S2SphereAdapter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_S2SphereAdapter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -2367,6 +2369,7 @@
 			isa = PBXGroup;
 			children = (
 				12FF78FA1D5112330063D271 /* UIView.bgSnapshot.swift */,
+				F6C3B7371D65F89A003E5C2A /* UIView.myLocationButton.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -3253,6 +3256,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6C3B7381D65F89A003E5C2A /* UIView.myLocationButton.swift in Sources */,
 				12FF790E1D5112330063D271 /* Bootstrapper.swift in Sources */,
 				F6C3B7361D65B068003E5C2A /* UserMapActions.swift in Sources */,
 				F6C3B7341D645E73003E5C2A /* MapSettingsConstants.swift in Sources */,

@@ -37,6 +37,7 @@ class MapVC: UIViewController {
     override func viewWillAppear(animated: Bool) {
         self.checkLocationStatus()
         self.updateZoom()
+        self.centerUserLocationOnMapView()
     }
 
     func checkLocationStatus(){
@@ -79,6 +80,10 @@ class MapVC: UIViewController {
         self.notificationView = notification
     }
 
+    func centerUserLocationOnMapView(){
+        self.mapView.animateWithCameraUpdate(GMSCameraUpdate.setTarget(CLLocationCoordinate2DMake(Settings.instance.userLatitude, Settings.instance.userLongitude), zoom: Settings.instance.userZoom))
+    }
+
     func updateZoom(){
         SwiftEventBus.onMainThread(self, name: UserMapActions.StepsAreaChange.rawValue) { (notification) in
             switch Settings.instance.stepsArea{
@@ -111,7 +116,7 @@ class MapVC: UIViewController {
                 Settings.instance.userZoom = 15.0
                 break
             default:
-                self.mapView.animateToZoom(Settings.instance.userZoom)
+                self.mapView.animateWithCameraUpdate(GMSCameraUpdate.setTarget(CLLocationCoordinate2DMake(Settings.instance.userLatitude, Settings.instance.userLongitude), zoom: Settings.instance.userZoom))
                 break
             }
             self.mapView.myLocationEnabled = true
@@ -217,6 +222,7 @@ class MapVC: UIViewController {
         let mapView = GMSMapView.mapWithFrame(CGRectZero, camera: camera)
         mapView.myLocationEnabled = true
         mapView.setMinZoom(14, maxZoom: 21)
+   //     mapView.settings.myLocationButton = true
 
         view.addSubview(mapView)
 
@@ -227,6 +233,14 @@ class MapVC: UIViewController {
         }
         self.mapView = mapView
         self.setupInitialUserLocation()
+    }
+
+    func setupMyLocButton(){
+        let myLocBtn = mapView.flattenSearch{ $0.accessibilityIdentifier == kGMSAccessibilityMyLocation}
+        self.mapView.settings.myLocationButton = true
+
+        view.addSubview(myLocBtn!)
+        myLocBtn?.frame = CGRect(x: 10, y: 10, width: 50, height: 50)
     }
 
     func setupInitialUserLocation(){
@@ -323,12 +337,14 @@ class MapVC: UIViewController {
         if Settings.instance.isPayed == true {
             self.setupMap()
             self.setupSearchButton()
+            self.setupMyLocButton()
         }
         else{
             self.setupAdsView()
             self.setupUnpurchasedMap()
             self.setupSearchButton()
             self.setupPayButton()
+            self.setupMyLocButton()
         }
     }
 }
