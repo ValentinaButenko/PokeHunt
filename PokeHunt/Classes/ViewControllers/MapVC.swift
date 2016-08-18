@@ -17,6 +17,7 @@ import SwiftTask
 import INTULocationManager
 import DFNotificationView
 import Photos
+import SwiftEventBus
 
 class MapVC: UIViewController {
     var mapView: GMSMapView!
@@ -26,8 +27,8 @@ class MapVC: UIViewController {
     var notificationView: CSNotificationView!
     var snapShot: UIImage!
     var userLocation: CLLocation!
-
-    var searchFinished = false
+    var ongoingCamera: GMSCameraPosition!
+    var ongoingZoom = MapSettingsConstants.defaultZoom
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +36,7 @@ class MapVC: UIViewController {
     }
 
     override func viewWillAppear(animated: Bool) {
+        self.updateZoom()
         self.checkLocationStatus()
     }
 
@@ -74,6 +76,45 @@ class MapVC: UIViewController {
             }
         }
         self.notificationView = notification
+    }
+
+    func updateZoom(){
+        SwiftEventBus.onMainThread(self, name: UserMapActions.StepsAreaChange.rawValue) { (notification) in
+            switch Settings.instance.stepsArea{
+            case 10 ... 35:
+                self.mapView.animateToZoom(21)
+                self.ongoingZoom = 21
+                break
+            case 36 ... 65:
+                self.mapView.animateToZoom(20)
+                self.ongoingZoom = 20
+                break
+            case 66 ... 135:
+                self.mapView.animateToZoom(19)
+                self.ongoingZoom = 19
+                break
+            case 136 ... 265:
+                self.mapView.animateToZoom(18)
+                self.ongoingZoom = 18
+                break
+            case 266 ... 525:
+                self.mapView.animateToZoom(17)
+                self.ongoingZoom = 17
+                break
+            case 526 ... 1050:
+                self.mapView.animateToZoom(16)
+                self.ongoingZoom = 16
+                break
+            case 1051 ... 2100:
+                self.mapView.animateToZoom(15)
+                self.ongoingZoom = 15
+                break
+            default:
+                self.mapView.animateToZoom(MapSettingsConstants.defaultZoom)
+                break
+            }
+            self.mapView.myLocationEnabled = true
+        }
     }
 
     func setup(){
@@ -116,13 +157,13 @@ class MapVC: UIViewController {
     // setup map & searchBtn in purchased App
 
     func setupMap(){
-        let newcamera = GMSCameraPosition(target: CLLocationCoordinate2D(latitude: 50.45, longitude: 30.52), zoom: 14, bearing: 100, viewingAngle: 0)
-        let mapView = GMSMapView.mapWithFrame(CGRectZero, camera: newcamera)
-        let marker = GMSMarker()
-        mapView.myLocationEnabled = true
-        marker.position = newcamera.target
-        marker.appearAnimation = kGMSMarkerAnimationPop
-        marker.map = mapView
+        let camera = GMSCameraPosition.cameraWithLatitude(MapSettingsConstants.statringUserLatitude,
+                                                          longitude: MapSettingsConstants.startingUserLongitude,
+                                                          zoom: MapSettingsConstants.defaultZoom)
+
+        let mapView = GMSMapView.mapWithFrame(CGRectZero, camera: camera)
+        mapView.myLocationEnabled = false
+        mapView.setMinZoom(14, maxZoom: 21)
 
         view.addSubview(mapView)
 
@@ -130,6 +171,7 @@ class MapVC: UIViewController {
             make.edges.equalTo(view)
         }
         self.mapView = mapView
+        self.setupInitialUserLocation()
     }
 
     func setupSearchButton(){
@@ -173,6 +215,7 @@ class MapVC: UIViewController {
 
         let mapView = GMSMapView.mapWithFrame(CGRectZero, camera: camera)
         mapView.myLocationEnabled = false
+        mapView.setMinZoom(14, maxZoom: 21)
 
         view.addSubview(mapView)
 
@@ -182,11 +225,10 @@ class MapVC: UIViewController {
             make.bottom.equalTo(adsView.snp_top)
         }
         self.mapView = mapView
-        self.setupMapBehaviour()
+        self.setupInitialUserLocation()
     }
 
-    func setupMapBehaviour(){
-        //Grab initial location to show user on map
+    func setupInitialUserLocation(){
         INTULocationManager.sharedInstance().requestLocationWithDesiredAccuracy(.Neighborhood, timeout: 0.0) { (location, accuracy, status) in
             if status == .Success{
                 self.userLocation = location
@@ -198,52 +240,7 @@ class MapVC: UIViewController {
                 self.userLocation = CLLocation(latitude: MapSettingsConstants.statringUserLatitude, longitude: MapSettingsConstants.startingUserLongitude)
             }
         }
-        let userLatitude = 40.606641
-        let userLongitude = -74.044835
-
-        mapView.setMinZoom(14, maxZoom: 21)
-
-        if searchFinished == true {
-            switch Settings.instance.stepsArea{
-            case 10 ... 35:
-                let newCamera = GMSCameraPosition.cameraWithLatitude(userLatitude, longitude: userLongitude, zoom: 21)
-                mapView.camera = newCamera
-                break
-            case 36 ... 65:
-                let newCamera = GMSCameraPosition.cameraWithLatitude(userLatitude, longitude: userLongitude, zoom: 20)
-                mapView.camera = newCamera
-                break
-            case 66 ... 135:
-                let newCamera = GMSCameraPosition.cameraWithLatitude(userLatitude, longitude: userLongitude, zoom: 19)
-                mapView.camera = newCamera
-                break
-            case 136 ... 265:
-                let newCamera = GMSCameraPosition.cameraWithLatitude(userLatitude, longitude: userLongitude, zoom: 18)
-                mapView.camera = newCamera
-                break
-            case 266 ... 525:
-                let newCamera = GMSCameraPosition.cameraWithLatitude(userLatitude, longitude: userLongitude, zoom: 17)
-                mapView.camera = newCamera
-                break
-            case 526 ... 1050:
-                let newCamera = GMSCameraPosition.cameraWithLatitude(userLatitude, longitude: userLongitude, zoom: 16)
-                mapView.camera = newCamera
-                break
-            case 1051 ... 2100:
-                let newCamera = GMSCameraPosition.cameraWithLatitude(userLatitude, longitude: userLongitude, zoom: 15)
-                mapView.camera = newCamera
-                break
-            default:
-                let newCamera = GMSCameraPosition.cameraWithLatitude(userLatitude, longitude: userLongitude, zoom: MapSettingsConstants.defaultZoom)
-                mapView.camera = newCamera
-                break
-            }
-        }
     }
-
-//    func selectZoom() -> Float(){
-//    
-//    }
 
     func setupPayButton(){
         let payBtn = UIButton()
@@ -263,11 +260,6 @@ class MapVC: UIViewController {
 
     func searchPokemon(sender: UIButton){
         FIRAnalytics.logEventWithName("User_tap_pokesearch", parameters: nil)
-
-        // TESTING the camera moving when search finishes
-        searchFinished = true
-  //      self.setupMapBehaviour()
-
         print("Searching...")
     }
 

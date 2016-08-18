@@ -10,6 +10,7 @@ import UIKit
 import SnapKit
 import FirebaseAnalytics
 import iRate
+import SwiftEventBus
 
 class SettingsTableVC: UITableViewController, UITextFieldDelegate{
 
@@ -395,6 +396,8 @@ class SettingsTableVC: UITableViewController, UITextFieldDelegate{
                 let statsParams = ["New_Steps_Area" : finalIntArea]
                 FIRAnalytics.logEventWithName("Steps_area_chaged", parameters: statsParams)
                 Settings.instance.stepsArea = finalIntArea
+
+                SwiftEventBus.post(UserMapActions.StepsAreaChange.rawValue)
                 print("User did change text field")
             }
             else{
