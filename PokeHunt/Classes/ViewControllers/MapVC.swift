@@ -35,8 +35,8 @@ class MapVC: UIViewController {
     }
 
     override func viewWillAppear(animated: Bool) {
-        self.updateZoom()
         self.checkLocationStatus()
+        self.updateZoom()
     }
 
     func checkLocationStatus(){
@@ -56,6 +56,8 @@ class MapVC: UIViewController {
                 switch status{
                 case .Success:
                     notification.setVisible(false, animated: true, completion: nil)
+                    Settings.instance.userLatitude = location.coordinate.latitude
+                    Settings.instance.userLongitude = location.coordinate.longitude
                 case .ServicesDenied:
                     notification.setVisible(true, animated: true, completion: nil)
                     notification.textLabel.text = "Denied access to he location services. Tap to open Settings"
@@ -81,31 +83,31 @@ class MapVC: UIViewController {
         SwiftEventBus.onMainThread(self, name: UserMapActions.StepsAreaChange.rawValue) { (notification) in
             switch Settings.instance.stepsArea{
             case 10 ... 35:
-                self.mapView.animateToZoom(21)
+                self.mapView.animateWithCameraUpdate(GMSCameraUpdate.setTarget(CLLocationCoordinate2DMake(Settings.instance.userLatitude, Settings.instance.userLongitude), zoom: 21))
                 Settings.instance.userZoom = 21.0
                 break
             case 36 ... 65:
-                self.mapView.animateToZoom(20)
+                self.mapView.animateWithCameraUpdate(GMSCameraUpdate.setTarget(CLLocationCoordinate2DMake(Settings.instance.userLatitude, Settings.instance.userLongitude), zoom: 20))
                 Settings.instance.userZoom = 20.0
                 break
             case 66 ... 135:
-                self.mapView.animateToZoom(19)
+                self.mapView.animateWithCameraUpdate(GMSCameraUpdate.setTarget(CLLocationCoordinate2DMake(Settings.instance.userLatitude, Settings.instance.userLongitude), zoom: 19))
                 Settings.instance.userZoom = 19.0
                 break
             case 136 ... 265:
-                self.mapView.animateToZoom(18)
+                self.mapView.animateWithCameraUpdate(GMSCameraUpdate.setTarget(CLLocationCoordinate2DMake(Settings.instance.userLatitude, Settings.instance.userLongitude), zoom: 18))
                 Settings.instance.userZoom = 18.0
                 break
             case 266 ... 525:
-                self.mapView.animateToZoom(17)
+                self.mapView.animateWithCameraUpdate(GMSCameraUpdate.setTarget(CLLocationCoordinate2DMake(Settings.instance.userLatitude, Settings.instance.userLongitude), zoom: 17))
                 Settings.instance.userZoom = 17.0
                 break
             case 526 ... 1050:
-                self.mapView.animateToZoom(16)
+                self.mapView.animateWithCameraUpdate(GMSCameraUpdate.setTarget(CLLocationCoordinate2DMake(Settings.instance.userLatitude, Settings.instance.userLongitude), zoom: 16))
                 Settings.instance.userZoom = 16.0
                 break
             case 1051 ... 2100:
-                self.mapView.animateToZoom(15)
+                self.mapView.animateWithCameraUpdate(GMSCameraUpdate.setTarget(CLLocationCoordinate2DMake(Settings.instance.userLatitude, Settings.instance.userLongitude), zoom: 15))
                 Settings.instance.userZoom = 15.0
                 break
             default:
@@ -213,7 +215,7 @@ class MapVC: UIViewController {
                                                           zoom: Settings.instance.userZoom)
 
         let mapView = GMSMapView.mapWithFrame(CGRectZero, camera: camera)
-        mapView.myLocationEnabled = false
+        mapView.myLocationEnabled = true
         mapView.setMinZoom(14, maxZoom: 21)
 
         view.addSubview(mapView)
