@@ -20,6 +20,9 @@ private let kShowPokemonsKey = "showPokemons"
 private let kShowPokestopKey = "showPokestop"
 private let kShowJymKey = "showJym"
 private let kStepsAreaKey = "stepsArea"
+private let kLatitudeKey = "userLatitude"
+private let kLongitudeKey = "userLongitude"
+private let kZoomKey = "userZoom"
 
 class Settings : NSObject, NSCoding {
     static let DidUpdated = "com.fantastik.pokehunt.Settings.DidUpdated"
@@ -88,6 +91,27 @@ class Settings : NSObject, NSCoding {
         }
     }
 
+    var userLatitude: Float = 0.0{
+        didSet{
+            save()
+            notify()
+        }
+    }
+
+    var userLongitude: Float = 0.0{
+        didSet{
+            save()
+            notify()
+        }
+    }
+
+    var userZoom: Float = 0.0{
+        didSet{
+            save()
+            notify()
+        }
+    }
+
     private override init() {
         if let data = NSUserDefaults.standardUserDefaults().dataForKey(kSettingsKey) {
             guard data.length != 0 else{
@@ -103,6 +127,9 @@ class Settings : NSObject, NSCoding {
             self.showPokestop = restore.showPokestop
             self.showJym = restore.showJym
             self.stepsArea = restore.stepsArea
+            self.userLatitude = restore.userLatitude
+            self.userLongitude = restore.userLongitude
+            self.userZoom = restore.userZoom
         }
     }
 
@@ -126,6 +153,9 @@ class Settings : NSObject, NSCoding {
         aCoder.encodeBool(showPokestop, forKey: kShowPokestopKey)
         aCoder.encodeBool(showJym, forKey: kShowJymKey)
         aCoder.encodeInt(Int32(stepsArea), forKey: kStepsAreaKey)
+        aCoder.encodeFloat(userLatitude, forKey: kLatitudeKey)
+        aCoder.encodeFloat(userLongitude, forKey: kLongitudeKey)
+        aCoder.encodeFloat(userZoom, forKey: kZoomKey)
     }
     
     internal required init?(coder aDecoder: NSCoder) {
@@ -138,5 +168,8 @@ class Settings : NSObject, NSCoding {
         self.showPokestop = aDecoder.decodeBoolForKey(kShowPokestopKey)
         self.showJym = aDecoder.decodeBoolForKey(kShowJymKey)
         self.stepsArea = Int(aDecoder.decodeIntForKey(kStepsAreaKey))
+        self.userLatitude = aDecoder.decodeFloatForKey(kLatitudeKey)
+        self.userLongitude = aDecoder.decodeFloatForKey(kLongitudeKey)
+        self.userZoom = aDecoder.decodeFloatForKey(kZoomKey)
     }
 }
