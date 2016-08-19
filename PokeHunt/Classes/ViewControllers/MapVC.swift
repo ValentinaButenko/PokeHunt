@@ -205,7 +205,7 @@ class MapVC: UIViewController {
         view.addSubview(locationBtn)
 
         locationBtn.snp_makeConstraints { (make) in
-            make.bottom.equalTo(searchBtn.snp_top).inset(-10)
+            make.bottom.equalTo(searchBtn.snp_top).inset(-20)
             make.centerX.equalTo(searchBtn.snp_centerX)
         }
         self.locationBtn = locationBtn
