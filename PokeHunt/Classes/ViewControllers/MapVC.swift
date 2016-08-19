@@ -28,6 +28,7 @@ class MapVC: UIViewController {
     var snapShot: UIImage!
     var userLocation: CLLocation!
     var ongoingCamera: GMSCameraPosition!
+    var locationBtn: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -195,6 +196,21 @@ class MapVC: UIViewController {
         self.searchBtn = searchBtn
     }
 
+    func setupMyLocButton(){
+        let locationBtn = UIButton()
+        locationBtn.setBackgroundImage(R.image.location()!.imageWithRenderingMode(.AlwaysOriginal),
+                                       forState: UIControlState.Normal)
+        locationBtn.addTarget(self, action: #selector(MapVC.centerUserLocationOnMapView), forControlEvents: UIControlEvents.TouchUpInside)
+
+        view.addSubview(locationBtn)
+
+        locationBtn.snp_makeConstraints { (make) in
+            make.bottom.equalTo(searchBtn.snp_top).inset(-10)
+            make.centerX.equalTo(searchBtn.snp_centerX)
+        }
+        self.locationBtn = locationBtn
+    }
+
     // setup map, payBtn, and adsView in unpurchased App
 
     func setupAdsView(){
@@ -222,7 +238,6 @@ class MapVC: UIViewController {
         let mapView = GMSMapView.mapWithFrame(CGRectZero, camera: camera)
         mapView.myLocationEnabled = true
         mapView.setMinZoom(14, maxZoom: 21)
-   //     mapView.settings.myLocationButton = true
 
         view.addSubview(mapView)
 
@@ -233,14 +248,6 @@ class MapVC: UIViewController {
         }
         self.mapView = mapView
         self.setupInitialUserLocation()
-    }
-
-    func setupMyLocButton(){
-        let myLocBtn = mapView.flattenSearch{ $0.accessibilityIdentifier == kGMSAccessibilityMyLocation}
-        self.mapView.settings.myLocationButton = true
-
-        view.addSubview(myLocBtn!)
-        myLocBtn?.frame = CGRect(x: 10, y: 10, width: 50, height: 50)
     }
 
     func setupInitialUserLocation(){
