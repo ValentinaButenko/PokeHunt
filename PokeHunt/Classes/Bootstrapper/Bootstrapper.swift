@@ -69,7 +69,7 @@ internal struct Bootstrapper {
     }
 
     func setupHockeyApp(){
-        BITHockeyManager.sharedHockeyManager().configureWithIdentifier("b082d61d33344cf29e7e65ad44de4c3b")
+        BITHockeyManager.sharedHockeyManager().configureWithIdentifier("HockeyApp_API_key_goes_here")
         BITHockeyManager.sharedHockeyManager().debugLogEnabled = true
         BITHockeyManager.sharedHockeyManager().startManager()
         BITHockeyManager.sharedHockeyManager().authenticator.authenticateInstallation()
