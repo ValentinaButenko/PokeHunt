@@ -22,7 +22,7 @@ target 'PokeHunt' do
     pod 'SwiftyTimer'
     pod 'SwiftEventBus'
     pod 'SwiftyMarkdown'
-    pod 'DFNotificationView', '~> 0.5'
+    pod 'DFNotificationView', '~> 0.5'    
 end
 
 

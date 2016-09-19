@@ -82,38 +82,3 @@ strip_invalid_archs() {
   fi
 }
 
-
-if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/Alamofire/Alamofire.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/AppAuth/AppAuth.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/DFNotificationView/DFNotificationView.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/INTULocationManager/INTULocationManager.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/KLCPopup/KLCPopup.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/Protobuf/Protobuf.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/R.swift.Library/Rswift.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/SSKeychain/SSKeychain.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/SnapKit/SnapKit.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/SwiftEventBus/SwiftEventBus.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/SwiftTask/SwiftTask.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/SwiftyMarkdown/SwiftyMarkdown.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/SwiftyTimer/SwiftyTimer.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/TOWebViewController/TOWebViewController.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/iRate/iRate.framework"
-fi
-if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/Alamofire/Alamofire.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/AppAuth/AppAuth.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/DFNotificationView/DFNotificationView.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/INTULocationManager/INTULocationManager.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/KLCPopup/KLCPopup.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/Protobuf/Protobuf.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/R.swift.Library/Rswift.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/SSKeychain/SSKeychain.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/SnapKit/SnapKit.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/SwiftEventBus/SwiftEventBus.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/SwiftTask/SwiftTask.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/SwiftyMarkdown/SwiftyMarkdown.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/SwiftyTimer/SwiftyTimer.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/TOWebViewController/TOWebViewController.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/iRate/iRate.framework"
-fi

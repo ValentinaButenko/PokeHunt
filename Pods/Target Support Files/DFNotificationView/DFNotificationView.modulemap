@@ -1,6 +1,0 @@
-framework module DFNotificationView {
-  umbrella header "DFNotificationView-umbrella.h"
-
-  export *
-  module * { export * }
-}
