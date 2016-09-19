@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         FIRApp.configure()
-        BITHockeyManager.sharedHockeyManager().configureWithIdentifier("b082d61d33344cf29e7e65ad44de4c3b")
+        BITHockeyManager.sharedHockeyManager().configureWithIdentifier("HOCKEYAPP_API_key")
         BITHockeyManager.sharedHockeyManager().debugLogEnabled = true
         BITHockeyManager.sharedHockeyManager().startManager()
         BITHockeyManager.sharedHockeyManager().authenticator.authenticateInstallation()
